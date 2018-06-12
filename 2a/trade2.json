@@ -1,0 +1,235 @@
+{
+  "name": "DEFORESTATION RISK COMMODITY",
+  "children":[
+  {
+    "name": "SOY",
+    "children": [
+      {
+        "name": "ACEITERA GENERAL DEHEZA SA.",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4413830.0107
+          }
+        ]
+      },
+      {
+        "name": "ADM",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1390002.4618
+          },
+          {
+            "name": "BRAZIL",
+            "size": 6883015.5882
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 949744.87
+          }
+        ]
+      },
+      {
+        "name": "AMAGGI",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 579325.1057
+          },
+          {
+            "name": "BRAZIL",
+            "size": 4614985.5981
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 59950.69
+          }
+        ]
+      },
+      {
+        "name": "BUNGE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4256320.5298
+          },
+          {
+            "name": "BRAZIL",
+            "size": 11548228.6839
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 281286.277
+          }
+        ]
+      },
+      {
+        "name": "CARGILL",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4859951.2572
+          },
+          {
+            "name": "BRAZIL",
+            "size": 8872367.1665
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 831647.984
+          }
+        ]
+      },
+      {
+        "name": "CHS",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 2405883.3582
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1523958.943
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 119492.559
+          }
+        ]
+      },
+      {
+        "name": "COFCO",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 6578443.9192
+          },
+          {
+            "name": "BRAZIL",
+            "size": 5495711.5584
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 394772.336
+          }
+        ]
+      },
+      {
+        "name": "LOUIS DREYFUS",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 3213537.8985
+          },
+          {
+            "name": "BRAZIL",
+            "size": 5080049.108
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 5434.63
+          }
+        ]
+      },
+      {
+        "name": "OTHER",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 20100668.3886
+          },
+          {
+            "name": "BRAZIL",
+            "size": 25901199.0048
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 1526444.641
+          }
+        ]
+      },
+      {
+        "name": "VICENTIN",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 7233484.4542
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 75070.073
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BEEF",
+    "children": [
+      {
+        "name": "OFFAL EXP S.A.",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 78818.5928
+          }
+        ]
+      },
+      {
+        "name": "OTHER",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 348857.6517
+          },
+          {
+            "name": "BRAZIL",
+            "size": 467702.7813
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 222916.6485
+          }
+        ]
+      },
+      {
+        "name": "JBS SA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 564453.8371
+          }
+        ]
+      },
+      {
+        "name": "MARFRIG GLOBAL FOODS S.A.",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 135632.1529
+          }
+        ]
+      },
+      {
+        "name": "MINERVA S.A.",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 191412.6408
+          }
+        ]
+      },
+      {
+        "name": "FRIGORIFICO CONCEPCION S A",
+        "children": [
+          {
+            "name": "PARAGUAY",
+            "size": 97523.135
+          }
+        ]
+      }
+    ]
+  }
+]
+}

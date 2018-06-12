@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Decima Mono';
+    src: url('../fonts/decimamonopro-webfont.woff2') format('woff2'),
+         url('../fonts/decimamonopro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Sans-serif;
+    font-size: 11px;
+}
+
+.root {
+    cursor: zoom-out;
+}
+
+.slice {
+    cursor: zoom-in;
+}
+
+.slice .main-arc {
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+.slice .hidden-arc {
+    fill: none;
+}
+
+.slice text {
+    font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+    pointer-events: none;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
