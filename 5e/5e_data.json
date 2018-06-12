@@ -1,0 +1,1343 @@
+{
+  "name": "SOY",
+  "children": [
+    {
+      "name": "ABC INDUSTRIA E COMERCIO",
+      "dfrs_risk": 22866.215338959286,
+      "sum_soy_vol": 3737732.779597207,
+      "dfrs_risk_per_ton": 0.006117669905076371
+    },
+    {
+      "name": "ABENGOA BIOENERGIA AGROINDUSTRIA LTDA",
+      "dfrs_risk": 0.0024689586004408306,
+      "sum_soy_vol": 2307,
+      "dfrs_risk_per_ton": 0.0000010702031211273649
+    },
+    {
+      "name": "ABJ TRADING",
+      "dfrs_risk": 64.16515945832907,
+      "sum_soy_vol": 134136.139899775,
+      "dfrs_risk_per_ton": 0.00047835847599515347
+    },
+    {
+      "name": "ADECO AGROPECUARIA BRASIL SA",
+      "dfrs_risk": 0.2570032285361139,
+      "sum_soy_vol": 77.25400001,
+      "dfrs_risk_per_ton": 0.003326730376457486
+    },
+    {
+      "name": "ADM",
+      "dfrs_risk": 44801.03333559096,
+      "sum_soy_vol": 24483423.444868147,
+      "dfrs_risk_per_ton": 0.0018298516723559543
+    },
+    {
+      "name": "AFG BRASIL",
+      "dfrs_risk": 126.4564124330965,
+      "sum_soy_vol": 93938.684057524,
+      "dfrs_risk_per_ton": 0.0013461590792102223
+    },
+    {
+      "name": "AGAP BRASIL TRADING LTDA.",
+      "dfrs_risk": 535.2586628222692,
+      "sum_soy_vol": 582048.052542479,
+      "dfrs_risk_per_ton": 0.0009196124967417618
+    },
+    {
+      "name": "AGRA AGROINDUSTRIAL DE ALIMENTOS SA",
+      "dfrs_risk": 1.4892290986579515,
+      "sum_soy_vol": 795.264165562,
+      "dfrs_risk_per_ton": 0.0018726219074708817
+    },
+    {
+      "name": "AGRENCO DO BRASIL",
+      "dfrs_risk": 2566.235324527577,
+      "sum_soy_vol": 477593.877494094,
+      "dfrs_risk_per_ton": 0.005373258421972362
+    },
+    {
+      "name": "AGREX INC",
+      "dfrs_risk": 7015.245739771901,
+      "sum_soy_vol": 1709128.369953829,
+      "dfrs_risk_per_ton": 0.0041045750940062
+    },
+    {
+      "name": "AGRICOLA & PECUARIA MORRO AZUL",
+      "dfrs_risk": 64.3586570755217,
+      "sum_soy_vol": 348031.676,
+      "dfrs_risk_per_ton": 0.00018492183761894624
+    },
+    {
+      "name": "AGRICOLA ALVORADA",
+      "dfrs_risk": 109.98951415215761,
+      "sum_soy_vol": 218034.61984762,
+      "dfrs_risk_per_ton": 0.0005044589443136464
+    },
+    {
+      "name": "AGRICOLA XINGU",
+      "dfrs_risk": 4447.482874443283,
+      "sum_soy_vol": 454450.15303086,
+      "dfrs_risk_per_ton": 0.009786514196951479
+    },
+    {
+      "name": "AGRINVEST BRASIL SA",
+      "dfrs_risk": 0.0009374453341111706,
+      "sum_soy_vol": 875.951,
+      "dfrs_risk_per_ton": 0.0000010702029384191246
+    },
+    {
+      "name": "AGRO INDUSTRIAL SAO LUIZ LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 11.14365072,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "AGRO PECUARIA BARRA DO GARCAS S A",
+      "dfrs_risk": 0.9559186712751577,
+      "sum_soy_vol": 2556.04779556,
+      "dfrs_risk_per_ton": 0.00037398309723927803
+    },
+    {
+      "name": "AGRO SOJA COMERCIO E EXPORTACAO DE CEREAIS LTDA",
+      "dfrs_risk": 6.4283775026985355,
+      "sum_soy_vol": 9999.999999745,
+      "dfrs_risk_per_ton": 0.0006428377502862459
+    },
+    {
+      "name": "AGROMON",
+      "dfrs_risk": 642.6420376155949,
+      "sum_soy_vol": 251258.2629843,
+      "dfrs_risk_per_ton": 0.002557695137993335
+    },
+    {
+      "name": "AGROVERDE AGRONEGOCIOS & LOGISTICA LTDA",
+      "dfrs_risk": 17.270631905855165,
+      "sum_soy_vol": 33222.337972561,
+      "dfrs_risk_per_ton": 0.0005198499852755495
+    },
+    {
+      "name": "ALGODOEIRA PALMEIRENSE SOCIEDADE ANONIMA APSA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 4575.7041545,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "ALIANCA AGRICOLA DO CERRADO S.A",
+      "dfrs_risk": 66.4346290338616,
+      "sum_soy_vol": 270816.29287291,
+      "dfrs_risk_per_ton": 0.00024531252654373485
+    },
+    {
+      "name": "AMAGGI",
+      "dfrs_risk": 20231.370200836966,
+      "sum_soy_vol": 20604419.049764425,
+      "dfrs_risk_per_ton": 0.0009818947164670618
+    },
+    {
+      "name": "AMAGGI & LD COMMODITIES",
+      "dfrs_risk": 15337.830310233698,
+      "sum_soy_vol": 1409050.224983693,
+      "dfrs_risk_per_ton": 0.010885226117763972
+    },
+    {
+      "name": "ANDIEGO ZONTA",
+      "dfrs_risk": 1.5475423297511424,
+      "sum_soy_vol": 2800,
+      "dfrs_risk_per_ton": 0.0005526936891968366
+    },
+    {
+      "name": "ATLAS AGROINDUSTRIAL LTDA",
+      "dfrs_risk": 43.781018058452005,
+      "sum_soy_vol": 19653.563160902,
+      "dfrs_risk_per_ton": 0.0022276376909378033
+    },
+    {
+      "name": "BETANIA DE BARROS GODOY GARCIA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 732.060000038,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "BIOPAR PRODUCAO DE BIODIESEL PARECIS LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 42106.75791,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "BOM JESUS AGROPECUARIA",
+      "dfrs_risk": 239.45555957293536,
+      "sum_soy_vol": 554000.000738881,
+      "dfrs_risk_per_ton": 0.00043223025136023224
+    },
+    {
+      "name": "BP BIOENERGIA ITUIUTABA LTDA.",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 68454.61136475,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "BP BIOENERGIA TROPICAL S.A",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 55898.068,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "BRASIL AGRI COMMODITIES - IMPORTACAO E EXPORTACAO LTDA",
+      "dfrs_risk": 0.0005701947737576201,
+      "sum_soy_vol": 294.53082956,
+      "dfrs_risk_per_ton": 0.0000019359425789464382
+    },
+    {
+      "name": "BRASIL ALIMENTOS COMERCIAL EXPORTACAO & IMPORTACAO LTDA",
+      "dfrs_risk": 0.014132632074831205,
+      "sum_soy_vol": 46.746268678999996,
+      "dfrs_risk_per_ton": 0.0003023264203583389
+    },
+    {
+      "name": "BTG PACTUAL COMMODITIES",
+      "dfrs_risk": 196.84374956519636,
+      "sum_soy_vol": 282888.868517657,
+      "dfrs_risk_per_ton": 0.0006958342001813692
+    },
+    {
+      "name": "BUNGE",
+      "dfrs_risk": 156795.61728321106,
+      "sum_soy_vol": 48580301.62648504,
+      "dfrs_risk_per_ton": 0.003227555450123618
+    },
+    {
+      "name": "C. VALE",
+      "dfrs_risk": 212.47795203842972,
+      "sum_soy_vol": 326490.763000015,
+      "dfrs_risk_per_ton": 0.0006507931498154512
+    },
+    {
+      "name": "CAAP COOPERATIVA ALIANCA DOS PRODUT",
+      "dfrs_risk": 3.1548307738693095,
+      "sum_soy_vol": 6597.753,
+      "dfrs_risk_per_ton": 0.0004781674569916924
+    },
+    {
+      "name": "CAMERA AGROALIMENTOS SA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 45691.055,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "CAMIL ALIMENTOS S/A",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 0.613229775,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "CANTAGALO",
+      "dfrs_risk": 89.96409714505931,
+      "sum_soy_vol": 64010.784,
+      "dfrs_risk_per_ton": 0.0014054521991959871
+    },
+    {
+      "name": "CARAMURU",
+      "dfrs_risk": 1676.9906361301505,
+      "sum_soy_vol": 7215451.021937051,
+      "dfrs_risk_per_ton": 0.0002324166058409399
+    },
+    {
+      "name": "CARGILL",
+      "dfrs_risk": 77205.9056328135,
+      "sum_soy_vol": 27613319.023055807,
+      "dfrs_risk_per_ton": 0.0027959661628632997
+    },
+    {
+      "name": "CARLOS ALBERTO POLATO",
+      "dfrs_risk": 0.568505871203766,
+      "sum_soy_vol": 1188.451547726,
+      "dfrs_risk_per_ton": 0.00047835847602836914
+    },
+    {
+      "name": "CARRER ALIMENTOS LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 4470.06,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "CATARATAS DO IGUACU PRODUTOS ORGANICOS LTDA",
+      "dfrs_risk": 0.2142306428799391,
+      "sum_soy_vol": 446.023307226,
+      "dfrs_risk_per_ton": 0.0004803126639554476
+    },
+    {
+      "name": "CDA - COMPANHIA DE DISTRIBUICAO ARAGUAIA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 3000.000000009,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "CEAGRO",
+      "dfrs_risk": 7945.609078772861,
+      "sum_soy_vol": 740889.731007811,
+      "dfrs_risk_per_ton": 0.010724415181142647
+    },
+    {
+      "name": "CEREAL COM EXPORT E REPRESENTACOES AGROPECUARIA LTDA",
+      "dfrs_risk": 42.76854711821305,
+      "sum_soy_vol": 333740.319166143,
+      "dfrs_risk_per_ton": 0.0001281491766564829
+    },
+    {
+      "name": "CERVEJARIA PETROPOLIS",
+      "dfrs_risk": 468.01227683711716,
+      "sum_soy_vol": 402932.14843405597,
+      "dfrs_risk_per_ton": 0.0011615163462533004
+    },
+    {
+      "name": "CGG TRADING",
+      "dfrs_risk": 784.460927835412,
+      "sum_soy_vol": 758064.958920488,
+      "dfrs_risk_per_ton": 0.0010348201939745544
+    },
+    {
+      "name": "CHS",
+      "dfrs_risk": 1446.803051273755,
+      "sum_soy_vol": 834827.097834893,
+      "dfrs_risk_per_ton": 0.0017330571264708695
+    },
+    {
+      "name": "CISAM SIDERURGIA LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 4086.42542409,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "CITYGUSA SIDERURGIA LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 15252.451293467,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "CLARION AGROINDUSTRIAL",
+      "dfrs_risk": 45.28121087065596,
+      "sum_soy_vol": 112365.350245579,
+      "dfrs_risk_per_ton": 0.00040298197595337043
+    },
+    {
+      "name": "COABRA COOPERATIVA AGRO IND",
+      "dfrs_risk": 45.83490046472943,
+      "sum_soy_vol": 51106.373911745,
+      "dfrs_risk_per_ton": 0.0008968529159177127
+    },
+    {
+      "name": "COAMO",
+      "dfrs_risk": 146.4029262436673,
+      "sum_soy_vol": 250318.764070776,
+      "dfrs_risk_per_ton": 0.0005848659679474641
+    },
+    {
+      "name": "COFCO",
+      "dfrs_risk": 3592.714043965387,
+      "sum_soy_vol": 3051186.551111537,
+      "dfrs_risk_per_ton": 0.0011774809516830668
+    },
+    {
+      "name": "COIMBRA IMPORTACAO E EXPORTACAO LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 0.047498507,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "COMERCIAL VEBRA LTDA - ME",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 50,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "COMIGO",
+      "dfrs_risk": 61.892567796623005,
+      "sum_soy_vol": 231521.97024293,
+      "dfrs_risk_per_ton": 0.00026732913395510906
+    },
+    {
+      "name": "COMPANHIA BRASILEIRA DE DISTRIBUICAO",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 34370.995,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "COMPANHIA DE ALIMENTOS UNIAVES",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 1302.38,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "COMPANHIA SIDERURGICA VALE DO PINDARE",
+      "dfrs_risk": 86.80000000000001,
+      "sum_soy_vol": 6196.8848591900005,
+      "dfrs_risk_per_ton": 0.014007037724974884
+    },
+    {
+      "name": "CONACENTRO COOPERATIVA DOS PRODUTORES DO CENTRO OESTE",
+      "dfrs_risk": 1011.1636279361066,
+      "sum_soy_vol": 296252.1557742,
+      "dfrs_risk_per_ton": 0.003413185721108487
+    },
+    {
+      "name": "COOAMAT COOPERATIVA AGROINDUSTRIAL DO MATO GROSSO",
+      "dfrs_risk": 35.11878612920838,
+      "sum_soy_vol": 13999.99999926,
+      "dfrs_risk_per_ton": 0.0025084847236474758
+    },
+    {
+      "name": "COONAGRO COOPERATIVA NACIONAL AGROINDUSTRIAL",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 819.228345178,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "COOPERATIVA AGRARIA AGROINDUSTRIAL",
+      "dfrs_risk": 3.3696929544641123,
+      "sum_soy_vol": 31812.706246574002,
+      "dfrs_risk_per_ton": 0.00010592286391312603
+    },
+    {
+      "name": "COOPERATIVA AGRICOLA MISTA GENERAL OSORIO LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 26135.670000000002,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "COOPERATIVA AGROPECUARIA DO ALTO PARANAIBA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 20,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "COOPERATIVA AGROPECUARIA E INDUSTRIAL CELEIRO DO NORTE",
+      "dfrs_risk": 90.29207277737214,
+      "sum_soy_vol": 146672.58999987,
+      "dfrs_risk_per_ton": 0.0006156029069743173
+    },
+    {
+      "name": "COOPERATIVA AGROPECUARIA INDUSTRIAL EM LIQUIDACAO",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 619.782758324,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "COOPERATIVA DE PRODUCAO AGROPECUARIA DO EXTREMO NORTE BRASIL",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 3150,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "COOPERATIVA DOS AGRICULTORES DA REG",
+      "dfrs_risk": 3.8629765880837117,
+      "sum_soy_vol": 99286.96700257,
+      "dfrs_risk_per_ton": 0.00003890718696224974
+    },
+    {
+      "name": "COOPERATIVA DOS AGRICULTORES DE PLA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 11695.925000000001,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "COOPERATIVA DOS COTONICULTORES DE CAMPO VERDE",
+      "dfrs_risk": 53.484088118789764,
+      "sum_soy_vol": 130623.474212596,
+      "dfrs_risk_per_ton": 0.0004094523472231479
+    },
+    {
+      "name": "COPAGRI - COMERCIAL PARANAENSE AGRICOLA LTDA",
+      "dfrs_risk": 0.7352179753164839,
+      "sum_soy_vol": 1112.561149577,
+      "dfrs_risk_per_ton": 0.000660833766841505
+    },
+    {
+      "name": "CORRECTA INDUSTRIA E COMERCIO LTDA.",
+      "dfrs_risk": 155.00311086308588,
+      "sum_soy_vol": 326902.79055668,
+      "dfrs_risk_per_ton": 0.00047415658520116145
+    },
+    {
+      "name": "CUTRALE",
+      "dfrs_risk": 235.92746023101444,
+      "sum_soy_vol": 1225823.86264474,
+      "dfrs_risk_per_ton": 0.0001924644048958193
+    },
+    {
+      "name": "DALFERTIL COMERCIO E REPRESENTACOES",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 86.913301442,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "DASSOLER AGRONEGOCIOS LTDA",
+      "dfrs_risk": 5.283855081173789,
+      "sum_soy_vol": 29403.034999586,
+      "dfrs_risk_per_ton": 0.0001797044108286164
+    },
+    {
+      "name": "DELTA INDUSTRIA COMERCIO IMPORTACAO E EXPORTACAO DE ALI",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 295.905,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "DOUGLAS ALEXSANDERE RANDOLL",
+      "dfrs_risk": 3.8706031644044825,
+      "sum_soy_vol": 1200,
+      "dfrs_risk_per_ton": 0.0032255026370037352
+    },
+    {
+      "name": "DRILLMINE EXPORTADORA E IMPORTADORA LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 938.9000000000001,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "DU PONT DO BRASIL S.A",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 0.01922,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "EDUARDO ALVES DE MOURA",
+      "dfrs_risk": 103.56039930347318,
+      "sum_soy_vol": 248317.9730037,
+      "dfrs_risk_per_ton": 0.000417047538085091
+    },
+    {
+      "name": "EL TEJAR",
+      "dfrs_risk": 515.0080903259764,
+      "sum_soy_vol": 659218.32000085,
+      "dfrs_risk_per_ton": 0.0007812405612837221
+    },
+    {
+      "name": "EMPRESA DE COMERCIO AGRICOLA LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 850,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "FAUSTO VINICIUS DE GUIMARAES GARCIA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 1958.1100000000001,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "FERGUMAR FERRO GUSA DO MARANHAO LTDA",
+      "dfrs_risk": 775.4060678536131,
+      "sum_soy_vol": 11551.964999099,
+      "dfrs_risk_per_ton": 0.06712330481559554
+    },
+    {
+      "name": "FERTILIZANTES CENTRO OESTE LTDA",
+      "dfrs_risk": 253.58223753827684,
+      "sum_soy_vol": 493647.0542588,
+      "dfrs_risk_per_ton": 0.0005136913820320976
+    },
+    {
+      "name": "FERTIMIG",
+      "dfrs_risk": 75.69805305806406,
+      "sum_soy_vol": 218690.470484409,
+      "dfrs_risk_per_ton": 0.00034614243999928095
+    },
+    {
+      "name": "FERTIPAR FERTILIZANTES DO PARANA LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 1514.275633881,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "FIAGRIL",
+      "dfrs_risk": 3483.582982229585,
+      "sum_soy_vol": 1986700.52015948,
+      "dfrs_risk_per_ton": 0.0017534514874692562
+    },
+    {
+      "name": "FRANGO DM INDUSTRIA E COMERCIO DE ALIMENTOS LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 157.65,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "FRISIA COOPERATIVA AGROINDUSTRIAL",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 1.207244587,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "FRONTEIRA COM DE CEREAIS E REP DE PROD AGROP LTDA",
+      "dfrs_risk": 113.90213099199406,
+      "sum_soy_vol": 258223.035397,
+      "dfrs_risk_per_ton": 0.00044109980667246605
+    },
+    {
+      "name": "GAMA S/A.",
+      "dfrs_risk": 0.0007156243242406528,
+      "sum_soy_vol": 5.8171709499999995,
+      "dfrs_risk_per_ton": 0.00012301930446803405
+    },
+    {
+      "name": "GAVILON",
+      "dfrs_risk": 74.81536543416483,
+      "sum_soy_vol": 90204.87900201,
+      "dfrs_risk_per_ton": 0.0008293937784950385
+    },
+    {
+      "name": "GELINDO LIRA NETO",
+      "dfrs_risk": 2.9191547849696913,
+      "sum_soy_vol": 5098.02,
+      "dfrs_risk_per_ton": 0.000572605596872843
+    },
+    {
+      "name": "GERBO ENGENHARIA E MANUFATURA LTDA EM RECUPERACAO JUDICIAL",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 285.5744688,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "GIANCARLOS BAVARESCO",
+      "dfrs_risk": 20.002887778008652,
+      "sum_soy_vol": 28950.8,
+      "dfrs_risk_per_ton": 0.0006909269442643606
+    },
+    {
+      "name": "GIOVELLI",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 7923.405,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "GIRASSOL AGRICOLA",
+      "dfrs_risk": 49.98616325120233,
+      "sum_soy_vol": 176826.36821106,
+      "dfrs_risk_per_ton": 0.00028268500765416855
+    },
+    {
+      "name": "GLENCORE",
+      "dfrs_risk": 1226.857457910955,
+      "sum_soy_vol": 784561.028728189,
+      "dfrs_risk_per_ton": 0.0015637501902175154
+    },
+    {
+      "name": "GOEMIL S/A INDUSTRIA DE PRODUTOS ALIMENTICIOS",
+      "dfrs_risk": 12.363133795000326,
+      "sum_soy_vol": 39675.170792,
+      "dfrs_risk_per_ton": 0.000311608836161411
+    },
+    {
+      "name": "GOIAS VERDE ALIMENTOS LTDA",
+      "dfrs_risk": 0.2437031238405894,
+      "sum_soy_vol": 675,
+      "dfrs_risk_per_ton": 0.00036104166494902134
+    },
+    {
+      "name": "GRAIN IMPORTACAO E EXPORTACAO DE GRAOS LTDA.",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 160.9612125,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "GRANOL",
+      "dfrs_risk": 703.9703417262722,
+      "sum_soy_vol": 4553397.422702015,
+      "dfrs_risk_per_ton": 0.00015460331624392488
+    },
+    {
+      "name": "GRANULE EXPORTADORA E IMPORTADORA LTDA",
+      "dfrs_risk": 687.9236914258275,
+      "sum_soy_vol": 419418.583272153,
+      "dfrs_risk_per_ton": 0.0016401840997575601
+    },
+    {
+      "name": "GRAZZIMETAL INDUSTRIA E COMERCIO DE AUTO PECAS LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 584.02,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "GRUPAL",
+      "dfrs_risk": 28.295014317650704,
+      "sum_soy_vol": 15411.851493714,
+      "dfrs_risk_per_ton": 0.0018359257049155536
+    },
+    {
+      "name": "GUERMAND INDUSTRIA E COMERCIO DE MADEIRAS LTDA",
+      "dfrs_risk": 1.4649667686585235,
+      "sum_soy_vol": 1842.8075103,
+      "dfrs_risk_per_ton": 0.0007949646181005818
+    },
+    {
+      "name": "HAT INTERNACIONAL S.A",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 1415.46,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "HILARIO SCHNEIDER",
+      "dfrs_risk": 2.5836033255722866,
+      "sum_soy_vol": 2000,
+      "dfrs_risk_per_ton": 0.0012918016627861432
+    },
+    {
+      "name": "IBEMA COMPANHIA BRASILEIRA DE PAPEL",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 7510.675,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "IDECIO ANGELO LOCATELLI",
+      "dfrs_risk": 4.7873429258676765,
+      "sum_soy_vol": 5170,
+      "dfrs_risk_per_ton": 0.000925985092044038
+    },
+    {
+      "name": "IMCOPA IMPORTACAO EXPORTACAO E INDUSTRIA DE OLEOS LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 15502.217082535999,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "INDUSTRIA VITORIA LTDA - ME",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 2081.000000036,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "INSOL INTERTRADING DO BRASIL INDUSTRIA E COMERCIO S A",
+      "dfrs_risk": 14.547212161244165,
+      "sum_soy_vol": 21637.049996976,
+      "dfrs_risk_per_ton": 0.0006723288139222902
+    },
+    {
+      "name": "INSUAGRO AGROINDUSTRIAL S/A",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 389.60638587,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "INTERCOOP INTEGRACAO DOS SUINOCULTORES DO MEDIO NORTE",
+      "dfrs_risk": 333.56276770838,
+      "sum_soy_vol": 189978.346861323,
+      "dfrs_risk_per_ton": 0.0017557936113207061
+    },
+    {
+      "name": "ISABEL CRISTINA DINARDI GARCIA",
+      "dfrs_risk": 7.482236606157134,
+      "sum_soy_vol": 979.37499998,
+      "dfrs_risk_per_ton": 0.0076398076388614474
+    },
+    {
+      "name": "ISRAEL BABORA JUNIOR",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 55,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "JACOBSEN COMPANHIA DE CULTIVOS LTDA",
+      "dfrs_risk": 29.970350611670536,
+      "sum_soy_vol": 4811.972999789999,
+      "dfrs_risk_per_ton": 0.006228287360086701
+    },
+    {
+      "name": "JARI CELULOSE PAPEL E EMBALAGENS S/A",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 24223.72,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "JC COMERCIAL ASSIS",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 5002.8969918,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "JERRI VANI GUIZZO",
+      "dfrs_risk": 1.1097551935927294,
+      "sum_soy_vol": 992,
+      "dfrs_risk_per_ton": 0.0011187048322507354
+    },
+    {
+      "name": "JOSE PUPIN",
+      "dfrs_risk": 97.58050152853136,
+      "sum_soy_vol": 66866.627288851,
+      "dfrs_risk_per_ton": 0.0014593303937254427
+    },
+    {
+      "name": "JUPARANA COMERCIAL AGRICOLA LTDA",
+      "dfrs_risk": 48.17399880521866,
+      "sum_soy_vol": 18640.59,
+      "dfrs_risk_per_ton": 0.002584360194887536
+    },
+    {
+      "name": "KAEFER AGRO INDUSTRIAL LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 10313.775,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "KEPLER WEBER SA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 357.681,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "KPM EMPREENDIMENTOS E PARTICIPACOES LTDA",
+      "dfrs_risk": 92.90972507036415,
+      "sum_soy_vol": 31999.370000513,
+      "dfrs_risk_per_ton": 0.0029034860707843513
+    },
+    {
+      "name": "LAR COOPERATIVA AGROINDUSTRIAL",
+      "dfrs_risk": 11.936184065386765,
+      "sum_soy_vol": 12086.28,
+      "dfrs_risk_per_ton": 0.0009875812959311522
+    },
+    {
+      "name": "LAVOURA COMERCIAL AGRICOLA LTDA",
+      "dfrs_risk": 1.6638777627899606,
+      "sum_soy_vol": 2733.945395314,
+      "dfrs_risk_per_ton": 0.0006085994861645217
+    },
+    {
+      "name": "LAVOURA INDUSTRIA COMERCIO OESTE SA",
+      "dfrs_risk": 3.34734067923076,
+      "sum_soy_vol": 6816.486145337,
+      "dfrs_risk_per_ton": 0.000491065426945905
+    },
+    {
+      "name": "LEANDRO CUNHA CANDIOTTO",
+      "dfrs_risk": 9.60998378232299,
+      "sum_soy_vol": 1035.844,
+      "dfrs_risk_per_ton": 0.009277443111436655
+    },
+    {
+      "name": "LIBERO COMMODITIES BRASIL COMERCIO DE PRODUTOS AGRICOLA",
+      "dfrs_risk": 70.39558265237636,
+      "sum_soy_vol": 38343.372209747,
+      "dfrs_risk_per_ton": 0.001835925704898788
+    },
+    {
+      "name": "LIBERO TRADING LTDA.",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 23300,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "LOUIS DREYFUS",
+      "dfrs_risk": 5198.01368918014,
+      "sum_soy_vol": 16528865.446752861,
+      "dfrs_risk_per_ton": 0.00031448097305440307
+    },
+    {
+      "name": "MACROFERTIL INDUSTRIA E COMERCIO DE FERTILIZANTES LTDA",
+      "dfrs_risk": 0.13313940903627836,
+      "sum_soy_vol": 115.23082862000001,
+      "dfrs_risk_per_ton": 0.0011554148367303335
+    },
+    {
+      "name": "MAEDA AGROINDL",
+      "dfrs_risk": 60.77067043673423,
+      "sum_soy_vol": 112661.482413046,
+      "dfrs_risk_per_ton": 0.0005394094692801334
+    },
+    {
+      "name": "MANTIQUEIRA ALIMENTOS LTDA",
+      "dfrs_risk": 8.462519848062271,
+      "sum_soy_vol": 22481.6360004,
+      "dfrs_risk_per_ton": 0.0003764192182415774
+    },
+    {
+      "name": "MAQFRAN COMERCIAL AGRICOLA LTDA - ME",
+      "dfrs_risk": 210.4111460592496,
+      "sum_soy_vol": 21014.005981000002,
+      "dfrs_risk_per_ton": 0.010012900265160992
+    },
+    {
+      "name": "MARCIO ANTONIO GIROLETTI",
+      "dfrs_risk": 0.8715521437062711,
+      "sum_soy_vol": 1200,
+      "dfrs_risk_per_ton": 0.0007262934530885592
+    },
+    {
+      "name": "MARCIO DA CUNHA",
+      "dfrs_risk": 216.8716939355918,
+      "sum_soy_vol": 17916.789999919998,
+      "dfrs_risk_per_ton": 0.012104383315122863
+    },
+    {
+      "name": "MARCOS ANDRE MOSCON",
+      "dfrs_risk": 0.7374775288977067,
+      "sum_soy_vol": 1541.683832977,
+      "dfrs_risk_per_ton": 0.00047835847605253373
+    },
+    {
+      "name": "MARINO JOSE FRANZ",
+      "dfrs_risk": 15.272985802566941,
+      "sum_soy_vol": 3981.74800043,
+      "dfrs_risk_per_ton": 0.0038357489727922434
+    },
+    {
+      "name": "MAURICIO BERNARDO SCHOLTEN",
+      "dfrs_risk": 0.0016398617065207233,
+      "sum_soy_vol": 2093.60900002,
+      "dfrs_risk_per_ton": 7.832702794576531e-7
+    },
+    {
+      "name": "MBR ALIMENTOS LTDA",
+      "dfrs_risk": 0.3675970810244875,
+      "sum_soy_vol": 976.563,
+      "dfrs_risk_per_ton": 0.0003764192182424355
+    },
+    {
+      "name": "METAXAS IMPORTACAO E EXPORTACAO LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 5170.4620002,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "MGT BRASIL COMERCIAL IMPORTADORA E EXPORTADORA LTDA",
+      "dfrs_risk": 2.1808522584464844,
+      "sum_soy_vol": 1612.6214940309999,
+      "dfrs_risk_per_ton": 0.0013523646227702837
+    },
+    {
+      "name": "MIGUEL VAZ RIBEIRO",
+      "dfrs_risk": 3.1457190259595316,
+      "sum_soy_vol": 6495.37799992,
+      "dfrs_risk_per_ton": 0.00048430114860109386
+    },
+    {
+      "name": "MINAS EXPORT LTDA",
+      "dfrs_risk": 0.056696246393125316,
+      "sum_soy_vol": 38243.17046515,
+      "dfrs_risk_per_ton": 0.0000014825195114194606
+    },
+    {
+      "name": "MIRANDA IMPORTADORA E EXPORTADORA EIRELI",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 0.053349254,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "MONSANTO ARGENTINA SAIC.",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 0.429011105,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "MONSOY LTDA",
+      "dfrs_risk": 2.2231169671862714e-7,
+      "sum_soy_vol": 0.540633,
+      "dfrs_risk_per_ton": 4.112063020914874e-7
+    },
+    {
+      "name": "MULTIGRAIN S.A.",
+      "dfrs_risk": 34158.58739138659,
+      "sum_soy_vol": 7393034.355304376,
+      "dfrs_risk_per_ton": 0.004620374497093792
+    },
+    {
+      "name": "NADIR SUCOLOTTI",
+      "dfrs_risk": 10.495588014535,
+      "sum_soy_vol": 13089.23,
+      "dfrs_risk_per_ton": 0.0008018491549567851
+    },
+    {
+      "name": "NATURAL PORK ALIMENTOS S.A.",
+      "dfrs_risk": 0.6280123442285204,
+      "sum_soy_vol": 11501.76670442,
+      "dfrs_risk_per_ton": 0.0000546013808458819
+    },
+    {
+      "name": "NATURALLE AGRO MERCANTIL",
+      "dfrs_risk": 434.50868934501244,
+      "sum_soy_vol": 88015.72733260201,
+      "dfrs_risk_per_ton": 0.004936716454129279
+    },
+    {
+      "name": "NEURO ANTONIO CORADINI",
+      "dfrs_risk": 6.030312293971609,
+      "sum_soy_vol": 2400,
+      "dfrs_risk_per_ton": 0.0025126301224881703
+    },
+    {
+      "name": "NIDERA",
+      "dfrs_risk": 1979.8741381117677,
+      "sum_soy_vol": 2332833.684461315,
+      "dfrs_risk_per_ton": 0.000848699224166488
+    },
+    {
+      "name": "NPK TRANS OPERADORA LOGISTICA LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 639.91434938,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "ODENIR ORTOLAN",
+      "dfrs_risk": 0.2761912008436652,
+      "sum_soy_vol": 1327.355,
+      "dfrs_risk_per_ton": 0.00020807636302546434
+    },
+    {
+      "name": "OLFAR INDUSTRIA E COMERCIO DE OLEOS VEGETAIS LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 640.692378486,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "PACIFIC TRADERS IMP. E EXP. LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 101.92244781,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "PAULO MASSAYOSHI MIZOTE",
+      "dfrs_risk": 89.5648637663387,
+      "sum_soy_vol": 22900,
+      "dfrs_risk_per_ton": 0.00391112942211086
+    },
+    {
+      "name": "PEDRO RIVA",
+      "dfrs_risk": 17.528050091037986,
+      "sum_soy_vol": 14062,
+      "dfrs_risk_per_ton": 0.0012464834369960167
+    },
+    {
+      "name": "PENINSULA INTERNATIONAL LTDA.",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 1017.34879126,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "PETROVINA SEMENTES LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 19732.778170999998,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "PHAEL CONFECCOES DE AURIFLAMA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 484.13429540000004,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "PMG TRADING SA",
+      "dfrs_risk": 352.4552440086581,
+      "sum_soy_vol": 319695.981340658,
+      "dfrs_risk_per_ton": 0.001102470048358515
+    },
+    {
+      "name": "PRIMO TEDESCO SA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 971.705,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "PRODUTOS ALIMENTICIOS ORLANDIA S A COMERCIO E INDUSTRIA",
+      "dfrs_risk": 105.01659664655156,
+      "sum_soy_vol": 1092598.757957236,
+      "dfrs_risk_per_ton": 0.00009611634269372096
+    },
+    {
+      "name": "PRODUZIR AGROPECUARIA LTDA",
+      "dfrs_risk": 48.62978297164795,
+      "sum_soy_vol": 39496.475564,
+      "dfrs_risk_per_ton": 0.0012312436053401362
+    },
+    {
+      "name": "QUALY MARCAS COMERCIO E EXPORTACAO DE CEREAIS LTDA",
+      "dfrs_risk": 0.024419802261666932,
+      "sum_soy_vol": 20124.658919739,
+      "dfrs_risk_per_ton": 0.0000012134268888261803
+    },
+    {
+      "name": "QUEIROZ GALVAO ALIMENTOS S A",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 8378.38,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "RAYTON INDUSTRIAL SA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 597.29,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "RODRIGUES & COUTINHO LTDA.",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 0.036000000000000004,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "RONAN BARBOSA GARCIA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 1838.995,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "RUETTE SPICES",
+      "dfrs_risk": 1.3430909866603473,
+      "sum_soy_vol": 119.9601194,
+      "dfrs_risk_per_ton": 0.01119614579727025
+    },
+    {
+      "name": "RUI CARLOS OTTONI PRADO",
+      "dfrs_risk": 2.4980270166983805,
+      "sum_soy_vol": 4703.348,
+      "dfrs_risk_per_ton": 0.0005311167739870366
+    },
+    {
+      "name": "SABARA QUIMICOS E INGREDIENTES S/A",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 1846.805,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "SALLES AGROPECUARIA S/A",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 382.183,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "SANTISTA WORK SOLUTION SA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 5801.23071998,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "SBA PECAS ACABADAS DE ALUMINIO LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 421.17,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "SEARA",
+      "dfrs_risk": 198.58136516388342,
+      "sum_soy_vol": 528942.926046535,
+      "dfrs_risk_per_ton": 0.00037543060958983835
+    },
+    {
+      "name": "SELECTA",
+      "dfrs_risk": 549.847121316916,
+      "sum_soy_vol": 2329050.130835746,
+      "dfrs_risk_per_ton": 0.00023608213238399093
+    },
+    {
+      "name": "SERGIO GUIMARAES GARCIA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 1928.88,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "SERRARIAS CAMPOS DE PALMAS S/A",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 147,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "SIGMA AGROPECUARIA LTDA",
+      "dfrs_risk": 0.02043464304561941,
+      "sum_soy_vol": 3000.00000027,
+      "dfrs_risk_per_ton": 0.000006811547681260098
+    },
+    {
+      "name": "SINA INDUSTRIA DE ALIMENTOS",
+      "dfrs_risk": 0.005386828737222704,
+      "sum_soy_vol": 35918.868070833,
+      "dfrs_risk_per_ton": 1.4997211845873676e-7
+    },
+    {
+      "name": "SIPAL",
+      "dfrs_risk": 329.55506647938427,
+      "sum_soy_vol": 454351.766574662,
+      "dfrs_risk_per_ton": 0.0007253302192789641
+    },
+    {
+      "name": "SJC BIOENERGIA LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 29011.793608329997,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "SOLO VIVO IND COM FERTIL",
+      "dfrs_risk": 17.602828074451207,
+      "sum_soy_vol": 13759.134857872,
+      "dfrs_risk_per_ton": 0.001279355733938469
+    },
+    {
+      "name": "SOMA RC IMP EXP",
+      "dfrs_risk": 0.06764452264278763,
+      "sum_soy_vol": 1925.189931501,
+      "dfrs_risk_per_ton": 0.000035136544990159837
+    },
+    {
+      "name": "SONORA ESTANCIA S/A",
+      "dfrs_risk": 0.07232237964953589,
+      "sum_soy_vol": 4562.6964833,
+      "dfrs_risk_per_ton": 0.000015850797859170386
+    },
+    {
+      "name": "SOYBRASIL AGRO TRADING LTDA",
+      "dfrs_risk": 0.0008929712741976872,
+      "sum_soy_vol": 10362.154,
+      "dfrs_risk_per_ton": 8.617622110206886e-8
+    },
+    {
+      "name": "SOYCOMEX COMERCIAL E EXPORTADORA LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 3136.00236793,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "SPERAFICO DA AMAZONIA SA",
+      "dfrs_risk": 92.22261637265524,
+      "sum_soy_vol": 36764.272671695,
+      "dfrs_risk_per_ton": 0.00250848472363926
+    },
+    {
+      "name": "STA INDUSTRIA LTDA  - ME",
+      "dfrs_risk": 0.000033927083684255986,
+      "sum_soy_vol": 0.19247,
+      "dfrs_risk_per_ton": 0.00017627206153819289
+    },
+    {
+      "name": "SUL TRADING LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 55.850890389999996,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "SYNAGRO COMERCIAL AGRICOLA",
+      "dfrs_risk": 68.20859722069154,
+      "sum_soy_vol": 214643.10481749,
+      "dfrs_risk_per_ton": 0.000317776791752472
+    },
+    {
+      "name": "TABACOS NOVO HORIZONTE LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 1871.51,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "TMSA - TECNOLOGIA EM MOVIMENTACAO S/A",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 5149.105,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "TMT DO BRASIL LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 3713.992,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "TONON BIOENERGIA",
+      "dfrs_risk": 3.9517056611139223,
+      "sum_soy_vol": 10128.356553011,
+      "dfrs_risk_per_ton": 0.0003901625738026711
+    },
+    {
+      "name": "TORRE INDUSTRIA TEXTIL E ARMAZENS GERAIS LTDA",
+      "dfrs_risk": 55.308255610213486,
+      "sum_soy_vol": 62120.926018148,
+      "dfrs_risk_per_ton": 0.0008903321176193629
+    },
+    {
+      "name": "TOZAN ALIMENTOS ORGANICOS",
+      "dfrs_risk": 0.31780453486179167,
+      "sum_soy_vol": 682.984936738,
+      "dfrs_risk_per_ton": 0.0004653170483959074
+    },
+    {
+      "name": "UGGERI AGROP LTDA",
+      "dfrs_risk": 3.5082910440877644,
+      "sum_soy_vol": 1000,
+      "dfrs_risk_per_ton": 0.0035082910440877644
+    },
+    {
+      "name": "UNA ACUCAR E ENERGIA LTDA EM RECUPERACAO JUDICIAL",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 328.925,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "UNIBAHIA SOCIEDADE COOPERATIVA",
+      "dfrs_risk": 6.501677263910859,
+      "sum_soy_vol": 1842.547,
+      "dfrs_risk_per_ton": 0.003528635776406713
+    },
+    {
+      "name": "UNISAGRO S.A",
+      "dfrs_risk": 36.255226162383046,
+      "sum_soy_vol": 92725.461823062,
+      "dfrs_risk_per_ton": 0.00039099536901272044
+    },
+    {
+      "name": "USINA FRUTAL ACUCAR E ALCOOL LTDA.",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 125972.14113952,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "USINA MANDU SA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 5651.2070619999995,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "VALE FERTILIZANTES S.A.",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 3327.846,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "VANDA BECKER PECCIN",
+      "dfrs_risk": 1.6884407956288991,
+      "sum_soy_vol": 1296,
+      "dfrs_risk_per_ton": 0.0013028092558864963
+    },
+    {
+      "name": "VANGUARDA AGRO",
+      "dfrs_risk": 844.7302873330414,
+      "sum_soy_vol": 590176.193729703,
+      "dfrs_risk_per_ton": 0.0014313188100567855
+    },
+    {
+      "name": "VERTENTE AGROPECUARIA LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 455.8439017,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "VIANA TRADING IMPORTACAO E EXPORTACAO DE CEREAIS LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 15000,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "WALTER YUKIO HORITA",
+      "dfrs_risk": 249.14150514375942,
+      "sum_soy_vol": 28123.09999977,
+      "dfrs_risk_per_ton": 0.008858963099579953
+    },
+    {
+      "name": "WEISUL AGRICOLA LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 318.066,
+      "dfrs_risk_per_ton": 0
+    },
+    {
+      "name": "WILSON HIDEKI HORITA",
+      "dfrs_risk": 181.58219708973547,
+      "sum_soy_vol": 12699.87,
+      "dfrs_risk_per_ton": 0.014297957151509067
+    },
+    {
+      "name": "ZANINI INDUSTRIA DE AUTOPECAS LTDA",
+      "dfrs_risk": 0,
+      "sum_soy_vol": 484.275,
+      "dfrs_risk_per_ton": 0
+    }
+  ]
+}
