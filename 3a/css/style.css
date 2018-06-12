@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Decima Mono';
+    font-family: 'Merriweather';
     src: url('../fonts/decimamonopro-webfont.woff2') format('woff2'),
          url('../fonts/decimamonopro-webfont.woff') format('woff');
     font-weight: normal;
@@ -7,30 +7,15 @@
 }
 
 body {
-    font-family: Sans-serif;
-    font-size: 11px;
-}
+    font-family: Merriweather;
+    font-size: 14px;
+    color: #34444C;
+    height: 100%;
+    width: 100%;
 
-.root {
-    cursor: zoom-out;
-}
-
-.slice {
-    cursor: zoom-in;
-}
-
-.slice .main-arc {
-    stroke: #fff;
-    stroke-width: 1px;
-}
-
-.slice .hidden-arc {
-    fill: none;
-}
-
-.slice text {
-    font-family: 'Decima Mono', 'Courier New', Courier, monospace;
-    pointer-events: none;
-    dominant-baseline: middle;
-    text-anchor: middle;
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 }
