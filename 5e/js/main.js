@@ -10,7 +10,7 @@ const color = d3.scaleLinear()
     .clamp(true);
 
 var svg = d3.select("svg"),
-    diameter = width,
+    diameter = width - 10,
     g = svg.append("g").attr("transform", "translate(2,2)"),
     format = d3.format(",d"),
     format2 = d3.format(".4f");
@@ -25,7 +25,7 @@ const textFits = d => {
     return d.data.name.length * CHAR_SPACE < perimeter;
 };
 
-var currentValue = 'sum_soy_vol';
+var defaultValue = 'sum_soy_vol';
 var packRoot;
 var node;
 
@@ -33,7 +33,7 @@ d3.json("5e_data.json", function (error, root) {
     if (error) throw error;
 
     packRoot = d3.hierarchy(root)
-        .sum(function (d) { return d[currentValue]; })
+        .sum(function (d) { return d[defaultValue]; })
         .sort(function (a, b) { return b.value - a.value; });
 
     node = g.selectAll(".node")
@@ -61,18 +61,17 @@ d3.json("5e_data.json", function (error, root) {
 
 });
 
-d3.select('#resize-soy').on('click', () => changeValue('sum_soy_vol'));
-d3.select('#resize-total-deforestation').on('click', () => changeValue('dfrs_risk'));
-d3.select('#resize-relative-deforestation').on('click', () => changeValue('dfrs_risk_per_ton'));
-
 function changeValue(newValue) {
 
-    currentValue = newValue;
-    //currentValue === 'sum_soy_vol' ? 'dfrs_risk' : 'sum_soy_vol';
-
+    if (newValue === 'sum_soy_vol' ) 
+        document.querySelector('.title').innerHTML = 'Volume of soy traded per company';
+    else if (newValue === 'dfrs_risk' ) 
+        document.querySelector('.title').innerHTML = 'Total deforestation risk per company';
+    else if (newValue === 'dfrs_risk_per_ton' ) 
+        document.querySelector('.title').innerHTML = 'Relative deforestation risk per company';
     // update value 
     packRoot
-        .sum(function (d) { return d[currentValue]; })
+        .sum(function (d) { return d[newValue]; })
         .sort(function (a, b) { return b.value - a.value; });
 
     // update Pack layout

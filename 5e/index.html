@@ -11,13 +11,13 @@
 </head>
 
 <body>
-  <h1>Volume of soy traded and deforestation risk per company</h1>
+  <h1 class="title">Volume of soy traded per company</h1>
   <svg width="500" height="500"></svg>
   <div class="selector">
     <p>RESIZE BY</p>
-    <button id="resize-soy" class="current">soy traded</button>
-    <button id="resize-total-deforestation">total deforestation risk</button>
-    <button id="resize-relative-deforestation">relative deforestation risk</button>
+    <button onclick="changeValue('sum_soy_vol')" id="resize-soy" class="current">soy traded</button>
+    <button onclick="changeValue('dfrs_risk')" id="resize-total-deforestation">total deforestation risk</button>
+    <button onclick="changeValue('dfrs_risk_per_ton')" id="resize-relative-deforestation">relative deforestation risk</button>
   </div>
   <script src='https://d3js.org/d3.v4.min.js'></script>
   <script src="js/main.js"></script>
