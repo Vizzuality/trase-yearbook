@@ -6,7 +6,7 @@ const width = 500,
 const color = d3.scaleLinear()
     // .domain([1000, 5000, 10000, 20000, 40000, 80000, 160000])
     .domain([0, 0.0005, 0.001, 0.005, 0.01])
-    .range(['#60B81F', '#9FD579', '#FFF0C2', '#FA9EA8','#F65E6E'])
+    .range(['#60B81F', '#9FD579', '#FFF0C2', '#FA9EA8', '#F65E6E'])
     .clamp(true);
 
 var svg = d3.select("svg"),
@@ -25,15 +25,19 @@ const textFits = d => {
     return d.data.name.length * CHAR_SPACE < perimeter;
 };
 
+var currentValue = 'sum_soy_vol';
+var packRoot;
+var node;
+
 d3.json("5e_data.json", function (error, root) {
     if (error) throw error;
 
-    root = d3.hierarchy(root)
-        .sum(function (d) { return d.sum_soy_vol; })
+    packRoot = d3.hierarchy(root)
+        .sum(function (d) { return d[currentValue]; })
         .sort(function (a, b) { return b.value - a.value; });
 
-    var node = g.selectAll(".node")
-        .data(pack(root).descendants())
+    node = g.selectAll(".node")
+        .data(pack(packRoot).descendants())
         .enter().append("g")
         .attr("class", function (d) { return d.children ? "node" : "leaf node"; })
         .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
@@ -50,10 +54,47 @@ d3.json("5e_data.json", function (error, root) {
         .style('fill', d => color(d.data.dfrs_risk_per_ton));
 
     node.filter(function (d) { return !d.children; }).append("text")
-        .attr("dy", "0.3em")
         .attr('display', d => textFits(d) ? null : 'none')
         .style('fill', '#34444C')
         .style('opacity', .8)
         .text(function (d) { return d.data.name });
 
 });
+
+d3.select('#resize-soy').on('click', () => changeValue('sum_soy_vol'));
+d3.select('#resize-total-deforestation').on('click', () => changeValue('dfrs_risk'));
+d3.select('#resize-relative-deforestation').on('click', () => changeValue('dfrs_risk_per_ton'));
+
+function changeValue(newValue) {
+
+    currentValue = newValue;
+    //currentValue === 'sum_soy_vol' ? 'dfrs_risk' : 'sum_soy_vol';
+
+    // update value 
+    packRoot
+        .sum(function (d) { return d[currentValue]; })
+        .sort(function (a, b) { return b.value - a.value; });
+
+    // update Pack layout
+    node.selectAll("g")
+        .data(pack(packRoot).descendants());
+
+    // relocate circles
+    node.transition()
+        .duration(500)
+        .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+    // resize circles
+    node.selectAll("circle").transition()
+        .duration(500)
+        .attr("r", function (d) { return d.r; })
+
+    node.filter(function (d) { return !d.children; })
+        .select("text")
+        .attr('display', d => textFits(d) ? null : 'none')
+        .style('fill', '#34444C')
+        .style('opacity', .8)
+        .text(function (d) { return d.data.name });
+
+}
+
