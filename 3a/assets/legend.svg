@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="101px" viewBox="0 0 45 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#FDFED0" offset="0%"></stop>
+            <stop stop-color="#FB8E64" offset="24.8519814%"></stop>
+            <stop stop-color="#BA3877" offset="49.0804616%"></stop>
+            <stop stop-color="#54137C" offset="72.607559%"></stop>
+            <stop stop-color="#000004" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="datavis" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3a" transform="translate(-287.000000, -257.000000)">
+            <g id="Group-6">
+                <g id="Group-7" transform="translate(61.000000, 29.000000)">
+                    <g id="Group-2" transform="translate(226.000000, 228.000000)">
+                        <rect id="Rectangle-3" fill="url(#linearGradient-1)" x="0" y="21" width="10" height="80"></rect>
+                        <text id="300K" opacity="0.600000024" font-family="DecimaMonoPro" font-size="10" font-weight="normal" letter-spacing="-0.5" fill="#34444C">
+                            <tspan x="20" y="85">300K</tspan>
+                        </text>
+                        <text id="600K" opacity="0.600000024" font-family="DecimaMonoPro" font-size="10" font-weight="normal" letter-spacing="-0.5" fill="#34444C">
+                            <tspan x="20" y="66">600K</tspan>
+                        </text>
+                        <text id="900K" opacity="0.600000024" font-family="DecimaMonoPro" font-size="10" font-weight="normal" letter-spacing="-0.5" fill="#34444C">
+                            <tspan x="20" y="47">900K</tspan>
+                        </text>
+                        <text id="1,2M" opacity="0.600000024" font-family="DecimaMonoPro" font-size="10" font-weight="normal" letter-spacing="-0.5" fill="#34444C">
+                            <tspan x="20" y="28">1,2M</tspan>
+                        </text>
+                        <text id="Hectares" opacity="0.600000024" font-family="DecimaMonoPro" font-size="11" font-weight="normal" letter-spacing="-1" fill="#34444C">
+                            <tspan x="0" y="9">HECTARE</tspan>
+                            <tspan x="39.2" y="9">S</tspan>
+                        </text>
+                        <path d="M10,63 L16,63" id="Shape" stroke="#34444C" opacity="0.300000012" stroke-linejoin="round"></path>
+                        <path d="M10,44 L16,44" id="Shape" stroke="#34444C" opacity="0.300000012" stroke-linejoin="round"></path>
+                        <path d="M10,25 L16,25" id="Shape" stroke="#34444C" opacity="0.300000012" stroke-linejoin="round"></path>
+                        <path d="M10,82 L16,82" id="Shape" stroke="#34444C" opacity="0.300000012" stroke-linejoin="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
