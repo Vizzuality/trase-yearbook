@@ -9,11 +9,11 @@ const color = d3.scaleLinear()
     .range(['#60B81F', '#9FD579', '#FFF0C2', '#FA9EA8', '#F65E6E'])
     .clamp(true);
 
-var svg = d3.select("svg"),
+var svg = d3.select('svg'),
     diameter = width - 10,
-    g = svg.append("g").attr("transform", "translate(2,2)"),
-    format = d3.format(",d"),
-    format2 = d3.format(".4f");
+    g = svg.append('g').attr('transform', 'translate(2,2)'),
+    format = d3.format(',d'),
+    format2 = d3.format('.4f');
 
 var pack = d3.pack()
     .size([diameter, diameter]);
@@ -29,31 +29,34 @@ var defaultValue = 'sum_soy_vol';
 var packRoot;
 var node;
 
-d3.json("5e_data.json", function (error, root) {
+d3.json('5e_data.json', function (error, root) {
     if (error) throw error;
 
     packRoot = d3.hierarchy(root)
         .sum(function (d) { return d[defaultValue]; })
         .sort(function (a, b) { return b.value - a.value; });
 
-    node = g.selectAll(".node")
+    node = g.selectAll('.node')
         .data(pack(packRoot).descendants())
-        .enter().append("g")
-        .attr("class", function (d) { return d.children ? "node" : "leaf node"; })
-        .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+        .enter().append('g')
+        .attr('class', function (d) { return d.children ? 'node' : 'leaf node'; })
+        .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; })
+        .on("click", function() {
+            d3.select(this).classed("selected", d3.select(this).classed("selected") ? false : true);
+          });
 
-    node.append("title")
+    node.append('title')
         .text(function (d) {
-            return d.data.name + "\nSoy traded: " + format(d.value) +
-                "t \nDeforestation risk: " + format(d.data.dfrs_risk) +
-                "ha \nDeforestation risk per ton: " + format2(d.data.dfrs_risk_per_ton) + "ha";
+            return d.data.name + '\nSoy traded: ' + format(d.value) +
+                't \nDeforestation risk: ' + format(d.data.dfrs_risk) +
+                'ha \nDeforestation risk per ton: ' + format2(d.data.dfrs_risk_per_ton) + 'ha';
         });
 
-    node.append("circle")
-        .attr("r", function (d) { return d.r; })
+    node.append('circle')
+        .attr('r', function (d) { return d.r; })
         .style('fill', d => color(d.data.dfrs_risk_per_ton));
 
-    node.filter(function (d) { return !d.children; }).append("text")
+    node.filter(function (d) { return !d.children; }).append('text')
         .attr('display', d => textFits(d) ? null : 'none')
         .style('fill', '#34444C')
         .style('opacity', .8)
@@ -76,20 +79,20 @@ function changeValue(newValue) {
         .sort(function (a, b) { return b.value - a.value; });
 
     // update Pack layout
-    node.selectAll("g")
+    node.selectAll('g')
         .data(pack(packRoot).descendants());
 
     // relocate circles
     node.transition()
         .duration(1500)
-        .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; })
-        .select("text")
+        .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; })
+        .select('text')
         .transition()
         .attr('display', d => textFits(d) ? null : 'none');
 
     // resize circles
-    node.selectAll("circle")
+    node.selectAll('circle')
         .transition()
         .duration(1500)
-        .attr("r", function (d) { return d.r; })
+        .attr('r', function (d) { return d.r; })
 }

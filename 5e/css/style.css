@@ -22,6 +22,7 @@ text {
     pointer-events: none;
     dominant-baseline: middle;
     text-anchor: middle;
+    stroke: none;
 }
 
 .node circle{
@@ -35,6 +36,11 @@ text {
 .leaf circle {
     fill: #ff7f0e;
     fill-opacity: 1;
+}
+
+.selected {
+    stroke: #34444c;
+    stroke-width: 1px;
 }
 
 .selector {
