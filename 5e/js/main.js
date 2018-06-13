@@ -25,7 +25,7 @@ const textFits = d => {
     return d.data.name.length * CHAR_SPACE < perimeter;
 };
 
-var defaultValue = 'sum_soy_vol';
+var currentValue = 'sum_soy_vol';
 var packRoot;
 var node;
 
@@ -33,7 +33,7 @@ d3.json('5e_data.json', function (error, root) {
     if (error) throw error;
 
     packRoot = d3.hierarchy(root)
-        .sum(function (d) { return d[defaultValue]; })
+        .sum(function (d) { return d[currentValue]; })
         .sort(function (a, b) { return b.value - a.value; });
 
     node = g.selectAll('.node')
@@ -41,16 +41,24 @@ d3.json('5e_data.json', function (error, root) {
         .enter().append('g')
         .attr('class', function (d) { return d.children ? 'node' : 'leaf node'; })
         .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; })
-        .on("click", function() {
+        .on("click", function () {
             d3.select(this).classed("selected", !d3.select(this).classed("selected"));
-          });
-
-    node.append('title')
-        .text(function (d) {
-            return d.data.name + '\nSoy traded: ' + format(d.value) +
-                't \nDeforestation risk: ' + format(d.data.dfrs_risk) +
-                'ha \nDeforestation risk per ton: ' + format2(d.data.dfrs_risk_per_ton) + 'ha';
+        })
+        .on('mouseover', d => {
+            d3.event.stopPropagation();
+            showTooltip(d);
+        })
+        .on('mouseout', d => {
+            d3.event.stopPropagation();
+            hideTooltip();
         });
+
+    // node.append('title')
+    //     .text(function (d) {
+    //         return d.data.name + '\nSoy traded: ' + format(d.value) +
+    //             't \nDeforestation risk: ' + format(d.data.dfrs_risk) +
+    //             'ha \nDeforestation risk per ton: ' + format2(d.data.dfrs_risk_per_ton) + 'ha';
+    //     });
 
     node.append('circle')
         .attr('r', function (d) { return d.r; })
@@ -64,15 +72,43 @@ d3.json('5e_data.json', function (error, root) {
 
 });
 
+function showTooltip(d) {
+    document.querySelector('.tooltip').style.opacity = 1;
+    document.querySelector('.tooltip .name').innerHTML = d.data.name;
+    document.querySelector('.tooltip .content .value').innerHTML = 
+        currentValue === 'dfrs_risk_per_ton' ? format2(d.value) : format(d.value);
+}
+
+function hideTooltip() {
+    document.querySelector('.tooltip').style.opacity = 0;
+}
+
+
+document.addEventListener("mousemove", function (e) {
+    var tooltip = document.querySelector('.tooltip');
+    var offsetX = 0;
+    var offsetY = 0;
+    if (e.clientX + tooltip.offsetWidth > width) offsetX = -tooltip.offsetWidth;
+    if (e.clientY + tooltip.offsetHeight > height) offsetY = -tooltip.offsetHeight;
+    tooltip.style.left = Math.max(0, e.clientX + offsetX) + 'px';
+    tooltip.style.top = e.clientY + offsetY + 'px';
+});
+
 function changeValue(newValue) {
 
-    if (newValue === 'sum_soy_vol' ) 
+    currentValue = newValue;
+
+    if (currentValue === 'sum_soy_vol') {
         document.querySelector('.title').innerHTML = 'Volume of soy traded per company';
-    else if (newValue === 'dfrs_risk' ) 
+        document.querySelector('.tooltip .content .unit').innerHTML = 't';
+    } else if (currentValue === 'dfrs_risk') {
         document.querySelector('.title').innerHTML = 'Total deforestation risk per company';
-    else if (newValue === 'dfrs_risk_per_ton' ) 
+        document.querySelector('.tooltip .content .unit').innerHTML = 'ha';
+    } else if (currentValue === 'dfrs_risk_per_ton') {
         document.querySelector('.title').innerHTML = 'Relative deforestation risk per company';
-        
+        document.querySelector('.tooltip .content .unit').innerHTML = 'ha/t';
+    }
+
     // update value 
     packRoot
         .sum(function (d) { return d[newValue]; })

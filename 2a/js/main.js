@@ -109,7 +109,7 @@ d3.json('trade2.json', (error, root) => {
         .attr('display', d => textFits(d) ? null : 'none')
         .style('fill', '#34444C')
         .style('opacity', .8)
-
+        
     text.append('textPath')
         .attr('startOffset', '50%')
         .attr('xlink:href', (_, i) => `#hiddenArc${i}`)

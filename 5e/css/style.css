@@ -6,6 +6,12 @@
     font-style: normal;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 h1 {
     font-family: 'Merriweather', serif;
     font-size: 14px;
@@ -35,7 +41,6 @@ text {
 }
   
 .leaf circle {
-    fill: #ff7f0e;
     fill-opacity: 1;
 }
 
@@ -59,4 +64,30 @@ button {
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2);
     border-radius: 4px;
     cursor: pointer;
+}
+
+.tooltip {
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2);
+    color: #34444c;
+    font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+    font-size: 13px;
+    position: absolute;
+    pointer-events: none;
+    transition: all 200ms ease-out;
+    opacity: 0;
+}
+
+.tooltip .name {
+    padding: 10px;
+    text-transform: uppercase;
+    background: #FFF0C2;
+}
+
+.tooltip .content {
+    padding: 10px;
+}
+
+.tooltip .content .unit {
+    opacity: .5;
 }
