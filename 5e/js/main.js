@@ -42,7 +42,7 @@ d3.json('5e_data.json', function (error, root) {
         .attr('class', function (d) { return d.children ? 'node' : 'leaf node'; })
         .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; })
         .on("click", function() {
-            d3.select(this).classed("selected", d3.select(this).classed("selected") ? false : true);
+            d3.select(this).classed("selected", !d3.select(this).classed("selected"));
           });
 
     node.append('title')

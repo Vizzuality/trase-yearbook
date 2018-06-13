@@ -79,10 +79,18 @@ d3.json('trade2.json', (error, root) => {
         .on('click', d => {
             d3.event.stopPropagation();
             focusOn(d);
+        })
+        .on('mouseover', d => {
+            d3.event.stopPropagation();
+            showTooltip(d);
+        })
+        .on('mouseout', d => {
+            d3.event.stopPropagation();
+            hideTooltip();
         });
 
-    newSlice.append('title')
-        .text(d => d.data.name + '\n' + formatNumber(d.value));
+    // newSlice.append('title')
+    //     .text(d => d.data.name + '\n' + formatNumber(d.value));
 
     newSlice.append('path')
         .attr('class', 'main-arc')
@@ -106,6 +114,26 @@ d3.json('trade2.json', (error, root) => {
         .attr('startOffset', '50%')
         .attr('xlink:href', (_, i) => `#hiddenArc${i}`)
         .text(d => d.data.name);
+});
+
+function showTooltip(d) {
+    document.querySelector('.tooltip').style.opacity = 1;
+    document.querySelector('.tooltip .name').innerHTML = d.data.name;
+    document.querySelector('.tooltip .content .value').innerHTML = formatNumber(d.value);
+}
+
+function hideTooltip() {
+    document.querySelector('.tooltip').style.opacity = 0;
+}
+
+document.addEventListener("mousemove", function(e){
+    var tooltip = document.querySelector('.tooltip');
+    var offsetX = 0;
+    var offsetY = 0;
+    if(e.clientX + tooltip.offsetWidth > width) offsetX = -tooltip.offsetWidth;
+    if(e.clientY + tooltip.offsetHeight > height) offsetY = -tooltip.offsetHeight;
+    tooltip.style.left = e.clientX + offsetX + 'px';
+    tooltip.style.top = e.clientY + offsetY + 'px';
 });
 
 function focusOn(d) {
