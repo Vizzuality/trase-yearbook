@@ -18,11 +18,14 @@ var svg = d3.select('svg'),
 var pack = d3.pack()
     .size([diameter, diameter]);
 
-const textFits = d => {
+const cropText = d => {
     const CHAR_SPACE = 8;
     const r = d.r;
-    const perimeter = r * 2 + 10;
-    return d.data.name.length * CHAR_SPACE < perimeter;
+    const perimeter = r * 2 + -10;
+    const characters = Math.floor(perimeter / CHAR_SPACE);
+    if (characters >= d.data.name.length) return d.data.name;
+    else if (perimeter > 50) return d.data.name.substring(0, characters) + '…'
+    else return '';
 };
 
 var currentValue = 'sum_soy_vol';
@@ -53,29 +56,21 @@ d3.json('5e_data.json', function (error, root) {
             hideTooltip();
         });
 
-    // node.append('title')
-    //     .text(function (d) {
-    //         return d.data.name + '\nSoy traded: ' + format(d.value) +
-    //             't \nDeforestation risk: ' + format(d.data.dfrs_risk) +
-    //             'ha \nDeforestation risk per ton: ' + format2(d.data.dfrs_risk_per_ton) + 'ha';
-    //     });
-
     node.append('circle')
         .attr('r', function (d) { return d.r; })
         .style('fill', d => color(d.data.dfrs_risk_per_ton));
 
     node.filter(function (d) { return !d.children; }).append('text')
-        .attr('display', d => textFits(d) ? null : 'none')
         .style('fill', '#34444C')
         .style('opacity', .8)
-        .text(function (d) { return d.data.name });
+        .text(d => cropText(d));
 
 });
 
 function showTooltip(d) {
     document.querySelector('.tooltip').style.opacity = 1;
     document.querySelector('.tooltip .name').innerHTML = d.data.name;
-    document.querySelector('.tooltip .content .value').innerHTML = 
+    document.querySelector('.tooltip .content .value').innerHTML =
         currentValue === 'dfrs_risk_per_ton' ? format2(d.value) : format(d.value);
 }
 
@@ -124,7 +119,7 @@ function changeValue(newValue) {
         .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; })
         .select('text')
         .transition()
-        .attr('display', d => textFits(d) ? null : 'none');
+        .text(d => cropText(d));;
 
     // resize circles
     node.selectAll('circle')
