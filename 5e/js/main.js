@@ -21,7 +21,7 @@ var pack = d3.pack()
 const textFits = d => {
     const CHAR_SPACE = 8;
     const r = d.r;
-    const perimeter = r * 2;
+    const perimeter = r * 2 + 10;
     return d.data.name.length * CHAR_SPACE < perimeter;
 };
 
@@ -69,6 +69,7 @@ function changeValue(newValue) {
         document.querySelector('.title').innerHTML = 'Total deforestation risk per company';
     else if (newValue === 'dfrs_risk_per_ton' ) 
         document.querySelector('.title').innerHTML = 'Relative deforestation risk per company';
+        
     // update value 
     packRoot
         .sum(function (d) { return d[newValue]; })
@@ -80,20 +81,15 @@ function changeValue(newValue) {
 
     // relocate circles
     node.transition()
-        .duration(500)
-        .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+        .duration(1500)
+        .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; })
+        .select("text")
+        .transition()
+        .attr('display', d => textFits(d) ? null : 'none');
 
     // resize circles
-    node.selectAll("circle").transition()
-        .duration(500)
+    node.selectAll("circle")
+        .transition()
+        .duration(1500)
         .attr("r", function (d) { return d.r; })
-
-    node.filter(function (d) { return !d.children; })
-        .select("text")
-        .attr('display', d => textFits(d) ? null : 'none')
-        .style('fill', '#34444C')
-        .style('opacity', .8)
-        .text(function (d) { return d.data.name });
-
 }
-
