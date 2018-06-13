@@ -49,6 +49,7 @@ body {
     position: absolute;
     pointer-events: none;
     transition: all 200ms ease-out;
+    opacity: 0;
 }
 
 .tooltip .name {
