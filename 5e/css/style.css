@@ -33,7 +33,8 @@ text {
     letter-spacing: -.05em;
 }
 
-.node circle{
+.node circle {
+    display: none;
     fill-opacity: 0;
 }
 
@@ -42,6 +43,7 @@ text {
 }
   
 .leaf circle {
+    display: initial;
     fill-opacity: 1;
 }
 

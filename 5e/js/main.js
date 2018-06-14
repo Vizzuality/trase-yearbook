@@ -2,9 +2,7 @@ const width = 500,
     height = 500,
     maxRadius = Math.min(width, height) / 2;
 
-// const color = d3.scaleOrdinal(d3.schemeCategory20);
 const color = d3.scaleLinear()
-    // .domain([1000, 5000, 10000, 20000, 40000, 80000, 160000])
     .domain([0, 0.0005, 0.001, 0.005, 0.01])
     .range(['#60B81F', '#9FD579', '#FFF0C2', '#FA9EA8', '#F65E6E'])
     .clamp(true);
