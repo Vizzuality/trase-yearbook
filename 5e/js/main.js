@@ -19,9 +19,9 @@ var pack = d3.pack()
     .size([diameter, diameter]);
 
 const cropText = d => {
-    const CHAR_SPACE = 8;
+    const CHAR_SPACE = 6;
     const r = d.r;
-    const perimeter = r * 2 + -10;
+    const perimeter = r * 2 + -15;
     const characters = Math.floor(perimeter / CHAR_SPACE);
     if (characters >= d.data.name.length) return d.data.name;
     else if (perimeter > 50) return d.data.name.substring(0, characters) + '…'

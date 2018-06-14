@@ -30,6 +30,7 @@ text {
     dominant-baseline: middle;
     text-anchor: middle;
     stroke: none;
+    letter-spacing: -.05em;
 }
 
 .node circle{
