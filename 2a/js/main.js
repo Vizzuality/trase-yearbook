@@ -71,7 +71,7 @@ d3.json('trade2.json', (error, root) => {
 
     const slice = svg.selectAll('g.slice')
         .data(partition(root).descendants().slice(1));
-        
+
     slice.exit().remove();
 
     const newSlice = slice.enter()
