@@ -1,83 +1,161 @@
-var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
+'use strict';
 
-var fader = function(color) { return d3.interpolateRgb(color, "#fff")(0.2); },
-    color = d3.scaleOrdinal(d3.schemeCategory20.map(fader)),
-    format = d3.format(",d");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var treemap = d3.treemap()
-    .tile(d3.treemapResquarify)
-    .size([width, height])
-    .round(true)
-    .paddingInner(1);
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-d3.json("flare.json", function(error, data) {
-  if (error) throw error;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  var root = d3.hierarchy(data)
-      .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
-      .sum(sumBySize)
-      .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+var Datavis = function () {
+  _createClass(Datavis, [{
+    key: '_setListeners',
+    value: function _setListeners() {
+      window.addEventListener('setActive', this._handleEvent);
+    }
+  }]);
 
-  treemap(root);
+  function Datavis(selector) {
+    var _this = this;
 
-  var cell = svg.selectAll("g")
-    .data(root.leaves())
-    .enter().append("g")
-      .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
+    _classCallCheck(this, Datavis);
 
-  cell.append("rect")
-      .attr("id", function(d) { return d.data.id; })
-      .attr("width", function(d) { return d.x1 - d.x0; })
-      .attr("height", function(d) { return d.y1 - d.y0; })
-      .attr("fill", function(d) { return color(d.parent.data.id); });
+    this._handleEvent = function (e) {
+      return _this[e.type].apply(_this, _toConsumableArray(e.detail)) || _this.render();
+    };
 
-  cell.append("clipPath")
-      .attr("id", function(d) { return "clip-" + d.data.id; })
-    .append("use")
-      .attr("xlink:href", function(d) { return "#" + d.data.id; });
+    this.active = 2015;
+    this.title = "Pace of expansion and invesment in soy industry";
+    this.options = [1975, 1985, 1995, 2005, 2015];
 
-  cell.append("text")
-      .attr("clip-path", function(d) { return "url(#clip-" + d.data.id + ")"; })
-    .selectAll("tspan")
-      .data(function(d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g); })
-    .enter().append("tspan")
-      .attr("x", 4)
-      .attr("y", function(d, i) { return 13 + i * 10; })
-      .text(function(d) { return d; });
+    this.setActive = function (active) {
+      _this.active = active;
+    };
 
-  cell.append("title")
-      .text(function(d) { return d.data.id + "\n" + format(d.value); });
-
-  d3.selectAll("input")
-      .data([sumBySize, sumByCount], function(d) { return d ? d.name : this.value; })
-      .on("change", changed);
-
-  var timeout = d3.timeout(function() {
-    d3.select("input[value=\"sumByCount\"]")
-        .property("checked", true)
-        .dispatch("change");
-  }, 2000);
-
-  function changed(sum) {
-    timeout.stop();
-
-    treemap(root.sum(sum));
-
-    cell.transition()
-        .duration(750)
-        .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; })
-      .select("rect")
-        .attr("width", function(d) { return d.x1 - d.x0; })
-        .attr("height", function(d) { return d.y1 - d.y0; });
+    this.root = document.querySelector(selector);
+    this.render();
+    this._setListeners();
   }
+
+  _createClass(Datavis, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      this.root.innerHTML = '';
+      console.log(this.active);
+      this.root.appendChild(function () {
+        var _elem = document.createElement('div');
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _elem2 = document.createElement('p');
+
+        var _expr = _this2.title,
+            _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
+
+        if (_res instanceof Array) {
+          for (var _i3 = 0; _i3 < _res.length; _i3 += 1) {
+            _elem2.appendChild(_res[_i3] instanceof Node || _res[_i3] instanceof Array ? _res[_i3] : document.createTextNode(_res[_i3]));
+          }
+        } else _elem2.appendChild(_res);
+
+        _elem.appendChild(_elem2);
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _elem3 = document.createElement('div');
+
+        _elem3.setAttribute('class', 'map');
+
+        _elem3.setAttribute('style', 'background-image: url(assets/' + _this2.active + '.jpg)');
+
+        _elem.appendChild(_elem3);
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _expr2 = YearSelector({ options: _this2.options, title: "select a year", setActive: _this2.setActive }),
+            _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
+
+        if (_res2 instanceof Array) {
+          for (var _i4 = 0; _i4 < _res2.length; _i4 += 1) {
+            _elem.appendChild(_res2[_i4] instanceof Node || _res2[_i4] instanceof Array ? _res2[_i4] : document.createTextNode(_res2[_i4]));
+          }
+        } else _elem.appendChild(_res2);
+
+        _elem.appendChild(document.createTextNode('\n      '));
+
+        return _elem;
+      }());
+    }
+  }]);
+
+  return Datavis;
+}();
+
+document.addEventListener("DOMContentLoaded", function () {
+  return new Datavis('#root');
 });
+window.dispatch = function (event) {
+  for (var _len = arguments.length, detail = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    detail[_key - 1] = arguments[_key];
+  }
 
-function sumByCount(d) {
-  return d.children ? 0 : 1;
-}
+  return dispatchEvent(new CustomEvent(event, { detail: detail }));
+};
+"use strict";
 
-function sumBySize(d) {
-  return d.size;
+function YearSelector(props) {
+
+  return function () {
+    var _elem = document.createElement("div");
+
+    _elem.appendChild(document.createTextNode("\n      "));
+
+    var _elem2 = document.createElement("p");
+
+    var _expr = props.title,
+        _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
+
+    if (_res instanceof Array) {
+      for (var _i3 = 0; _i3 < _res.length; _i3 += 1) {
+        _elem2.appendChild(_res[_i3] instanceof Node || _res[_i3] instanceof Array ? _res[_i3] : document.createTextNode(_res[_i3]));
+      }
+    } else _elem2.appendChild(_res);
+
+    _elem.appendChild(_elem2);
+
+    _elem.appendChild(document.createTextNode("\n      "));
+
+    var _expr2 = props.options.map(function (year) {
+      return function () {
+        var _elem3 = document.createElement("button");
+
+        _elem3.setAttribute("data-value", year);
+
+        _elem3.setAttribute("onclick", "dispatch('setActive', " + year + ")");
+
+        var _expr3 = year,
+            _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
+
+        if (_res3 instanceof Array) {
+          for (var _i5 = 0; _i5 < _res3.length; _i5 += 1) {
+            _elem3.appendChild(_res3[_i5] instanceof Node || _res3[_i5] instanceof Array ? _res3[_i5] : document.createTextNode(_res3[_i5]));
+          }
+        } else _elem3.appendChild(_res3);
+
+        return _elem3;
+      }();
+    }),
+        _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
+
+    if (_res2 instanceof Array) {
+      for (var _i6 = 0; _i6 < _res2.length; _i6 += 1) {
+        _elem.appendChild(_res2[_i6] instanceof Node || _res2[_i6] instanceof Array ? _res2[_i6] : document.createTextNode(_res2[_i6]));
+      }
+    } else _elem.appendChild(_res2);
+
+    _elem.appendChild(document.createTextNode("\n    "));
+
+    return _elem;
+  }();
 }
