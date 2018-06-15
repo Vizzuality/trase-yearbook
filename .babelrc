@@ -1,0 +1,4 @@
+{
+  "presets": ["babel-preset-env", "babel-preset-stage-2"],
+  "plugins": ["babel-plugin-syntax-jsx", "babel-plugin-jsx-to-dom"]
+}
