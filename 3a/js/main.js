@@ -12,45 +12,65 @@ var Datavis = function () {
     value: function _setListeners() {
       window.addEventListener('setActive', this._handleEvent);
     }
+  }, {
+    key: '_render',
+    value: function _render() {
+      this.root.innerHTML = '';
+      this.root.appendChild(this.render());
+    }
   }]);
 
-  function Datavis(selector) {
+  function Datavis(props) {
     var _this = this;
 
     _classCallCheck(this, Datavis);
 
     this._handleEvent = function (e) {
-      return _this[e.type].apply(_this, _toConsumableArray(e.detail)) || _this.render();
+      _this[e.type].apply(_this, _toConsumableArray(e.detail)) || _this._render();
     };
 
-    this.active = 2015;
+    this.loop = null;
+    this.active = 1975;
     this.title = "Pace of expansion and invesment in soy industry";
     this.options = [1975, 1985, 1995, 2005, 2015];
 
-    this.setActive = function (active) {
+    this.setActive = function (active, loop) {
       _this.active = active;
+      if (!loop && _this.interval) {
+        clearInterval(_this.interval);
+      }
     };
 
-    this.root = document.querySelector(selector);
-    this.render();
+    this.root = document.querySelector(props.selector);
     this._setListeners();
+    this.didMount();
+    this.render();
   }
 
   _createClass(Datavis, [{
-    key: 'render',
-    value: function render() {
+    key: 'didMount',
+    value: function didMount() {
       var _this2 = this;
 
-      this.root.innerHTML = '';
-      console.log(this.active);
-      this.root.appendChild(function () {
+      this.interval = setInterval(function () {
+        var index = _this2.options.indexOf(_this2.active);
+        var option = _this2.options[index + 1] || _this2.options[0];
+        dispatch('setActive', option, true);
+      }, 500);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this3 = this;
+
+      return function () {
         var _elem = document.createElement('div');
 
         _elem.appendChild(document.createTextNode('\n        '));
 
         var _elem2 = document.createElement('p');
 
-        var _expr = _this2.title,
+        var _expr = _this3.title,
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
         if (_res instanceof Array) {
@@ -67,13 +87,13 @@ var Datavis = function () {
 
         _elem3.setAttribute('class', 'map');
 
-        _elem3.setAttribute('style', 'background-image: url(assets/' + _this2.active + '.jpg)');
+        _elem3.setAttribute('style', 'background-image: url(assets/' + _this3.active + '.jpg)');
 
         _elem.appendChild(_elem3);
 
         _elem.appendChild(document.createTextNode('\n        '));
 
-        var _expr2 = YearSelector({ options: _this2.options, title: "select a year", setActive: _this2.setActive }),
+        var _expr2 = YearSelector({ options: _this3.options, title: "select a year", setActive: _this3.setActive }),
             _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
         if (_res2 instanceof Array) {
@@ -85,7 +105,7 @@ var Datavis = function () {
         _elem.appendChild(document.createTextNode('\n      '));
 
         return _elem;
-      }());
+      }();
     }
   }]);
 
@@ -93,7 +113,7 @@ var Datavis = function () {
 }();
 
 document.addEventListener("DOMContentLoaded", function () {
-  return new Datavis('#root');
+  return new Datavis({ selector: '#root' });
 });
 window.dispatch = function (event) {
   for (var _len = arguments.length, detail = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -105,11 +125,12 @@ window.dispatch = function (event) {
 "use strict";
 
 function YearSelector(props) {
-
   return function () {
     var _elem = document.createElement("div");
 
-    _elem.appendChild(document.createTextNode("\n      "));
+    _elem.setAttribute("class", "year-selector");
+
+    _elem.appendChild(document.createTextNode("\n        "));
 
     var _elem2 = document.createElement("p");
 
@@ -124,37 +145,65 @@ function YearSelector(props) {
 
     _elem.appendChild(_elem2);
 
-    _elem.appendChild(document.createTextNode("\n      "));
+    _elem.appendChild(document.createTextNode("\n        "));
+
+    var _elem3 = document.createElement("div");
+
+    _elem3.setAttribute("class", "year-selector-list");
+
+    _elem3.appendChild(document.createTextNode("\n          "));
 
     var _expr2 = props.options.map(function (year) {
       return function () {
-        var _elem3 = document.createElement("button");
+        var _elem4 = document.createElement("div");
 
-        _elem3.setAttribute("data-value", year);
+        _elem4.setAttribute("class", "year-selector-item");
 
-        _elem3.setAttribute("onclick", "dispatch('setActive', " + year + ")");
+        _elem4.setAttribute("onClick", "dispatch('setActive', " + year + ")");
+
+        _elem4.appendChild(document.createTextNode("\n              "));
+
+        var _elem5 = document.createElement("b");
+
+        _elem5.setAttribute("class", "year-selector-circle");
+
+        _elem4.appendChild(_elem5);
+
+        _elem4.appendChild(document.createTextNode("\n              "));
+
+        var _elem6 = document.createElement("p");
+
+        _elem6.setAttribute("class", "year-selector-label");
 
         var _expr3 = year,
             _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
 
         if (_res3 instanceof Array) {
           for (var _i5 = 0; _i5 < _res3.length; _i5 += 1) {
-            _elem3.appendChild(_res3[_i5] instanceof Node || _res3[_i5] instanceof Array ? _res3[_i5] : document.createTextNode(_res3[_i5]));
+            _elem6.appendChild(_res3[_i5] instanceof Node || _res3[_i5] instanceof Array ? _res3[_i5] : document.createTextNode(_res3[_i5]));
           }
-        } else _elem3.appendChild(_res3);
+        } else _elem6.appendChild(_res3);
 
-        return _elem3;
+        _elem4.appendChild(_elem6);
+
+        _elem4.appendChild(document.createTextNode("\n            "));
+
+        return _elem4;
       }();
     }),
         _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
     if (_res2 instanceof Array) {
       for (var _i6 = 0; _i6 < _res2.length; _i6 += 1) {
-        _elem.appendChild(_res2[_i6] instanceof Node || _res2[_i6] instanceof Array ? _res2[_i6] : document.createTextNode(_res2[_i6]));
+        _elem3.appendChild(_res2[_i6] instanceof Node || _res2[_i6] instanceof Array ? _res2[_i6] : document.createTextNode(_res2[_i6]));
       }
-    } else _elem.appendChild(_res2);
+    } else _elem3.appendChild(_res2);
 
-    _elem.appendChild(document.createTextNode("\n    "));
+    _elem3.appendChild(document.createTextNode("\n        "));
+
+    _elem.appendChild(_elem3);
+
+    _elem.appendChild(document.createTextNode("\n      "));
 
     return _elem;
   }();

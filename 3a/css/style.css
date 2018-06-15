@@ -4,3 +4,53 @@
   height: 400px;
   width: 300px;
 }
+
+.year-selector-list {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.year-selector-list::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: calc(100% - 2px);
+  top: 14px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(52, 68, 76, 0.6);
+}
+
+.year-selector-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.year-selector-circle {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  border: solid 2px #34444c;
+}
+
+.year-selector-circle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 12px;
+  width: 12px;
+  background-color: #34444c;
+  border-radius: 100%;
+}
+
+.year-selector-label {
+  margin: 0;
+}
