@@ -55,7 +55,7 @@ var Datavis = function () {
         var index = _this2.options.indexOf(_this2.active);
         var option = _this2.options[index + 1] || _this2.options[0];
         dispatch('setActive', option, true);
-      }, 500);
+      }, 1000);
     }
   }, {
     key: 'render',
