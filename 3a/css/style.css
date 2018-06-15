@@ -11,11 +11,18 @@
 }
 
 .map {
+  position: relative;
   background-repeat: no-repeat;
   background-size: contain;
   height: 400px;
   width: 300px;
   margin: 0 auto;
+}
+
+.map-legend {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
 }
 
 .year-selector-title {

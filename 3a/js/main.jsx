@@ -39,7 +39,9 @@ class Datavis {
         <h1 class="title">
           Pace of expansion and invesment<br />in soy industry
         </h1>
-        <div class="map" style={`background-image: url(assets/${this.active}.jpg)`} />
+        <div class="map" style={`background-image: url(assets/${this.active}.jpg)`}>
+          <img class="map-legend" alt="map legend" src="assets/legend.svg" />
+        </div>
         {YearSelector({
           options: this.options,
           title: "select a year",

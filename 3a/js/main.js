@@ -91,6 +91,20 @@ var Datavis = function () {
 
         _elem4.setAttribute('style', 'background-image: url(assets/' + _this3.active + '.jpg)');
 
+        _elem4.appendChild(document.createTextNode('\n          '));
+
+        var _elem5 = document.createElement('img');
+
+        _elem5.setAttribute('class', 'map-legend');
+
+        _elem5.setAttribute('alt', 'map legend');
+
+        _elem5.setAttribute('src', 'assets/legend.svg');
+
+        _elem4.appendChild(_elem5);
+
+        _elem4.appendChild(document.createTextNode('\n        '));
+
         _elem.appendChild(_elem4);
 
         _elem.appendChild(document.createTextNode('\n        '));
