@@ -17,7 +17,6 @@ class Datavis {
   }
   loop = null;
   active = 1975;
-  title = "Pace of expansion and invesment in soy industry";
   options = [1975, 1985, 1995, 2005, 2015];
   setActive = (active, loop) => {
     this.active = active;
@@ -36,10 +35,16 @@ class Datavis {
 
   render() {
     return (
-      <div>
-        <p>{this.title}</p>
+      <div class="container">
+        <h1 class="title">
+          Pace of expansion and invesment<br />in soy industry
+        </h1>
         <div class="map" style={`background-image: url(assets/${this.active}.jpg)`} />
-        {YearSelector({ options: this.options, title: "select a year", setActive: this.setActive })}
+        {YearSelector({
+          options: this.options,
+          title: "select a year",
+          active: this.active
+        })}
       </div>
     );
   }
