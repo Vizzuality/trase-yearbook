@@ -109,11 +109,7 @@ var Datavis = function () {
 
         _elem.appendChild(document.createTextNode('\n        '));
 
-        var _expr = YearSelector({
-          options: _this3.options,
-          title: "select a year",
-          active: _this3.active
-        }),
+        var _expr = YearSelector({ options: _this3.options, title: "select a year", active: _this3.active }),
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
         if (_res instanceof Array) {

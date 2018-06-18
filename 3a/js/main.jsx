@@ -24,13 +24,6 @@ class Datavis {
       clearInterval(this.interval);
     }
   };
-  components = {
-    YearSelector: YearSelector({
-      options: this.options,
-      title: "select a year",
-      active: this.active
-    })
-  }
 
   didMount() {
     this.interval = setInterval(() => {
@@ -38,11 +31,9 @@ class Datavis {
       const option = this.options[index + 1] || this.options[0];
       dispatch('setActive', option, true);
     }, 1000);
-    Object.values(this.components).forEach(c => c.didMount && c.didMount());
   }
 
   render() {
-    const { YearSelector } = this.components;
     return (
       <div class="container">
         <h1 class="title">
@@ -51,7 +42,7 @@ class Datavis {
         <div class="map" style={`background-image: url(assets/${this.active}.jpg)`}>
           <img class="map-legend" alt="map legend" src="assets/legend.svg" />
         </div>
-        {YearSelector}
+        {YearSelector({ options: this.options, title: "select a year", active: this.active })}
       </div>
     );
   }
