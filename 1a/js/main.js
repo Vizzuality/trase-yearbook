@@ -54,7 +54,6 @@ var Datavis = function () {
   _createClass(Datavis, [{
     key: "didMount",
     value: function didMount() {
-      debugger;
       Object.values(this.components).forEach(function (c) {
         return c.didMount && c.didMount();
       });
@@ -117,34 +116,6 @@ var MapComponent = function () {
     value: function _render() {
       return Object.assign(this.render(), { didMount: this.didMount.bind(this) });
     }
-  }], [{
-    key: "getFeaturesBox",
-    value: function getFeaturesBox(featureBounds) {
-      var errors = [Math.abs(featureBounds[0][0]) === Infinity, Math.abs(featureBounds[0][1]) === Infinity, Math.abs(featureBounds[1][0]) === Infinity, Math.abs(featureBounds[1][1]) === Infinity];
-      if (errors.includes(true)) {
-        throw new Error('Incorrect feature bounds values.');
-      }
-      return {
-        x: featureBounds[0][0],
-        y: featureBounds[0][1],
-        width: featureBounds[1][0] - featureBounds[0][0],
-        height: featureBounds[1][1] - featureBounds[0][1]
-      };
-    }
-  }, {
-    key: "fitGeoInside",
-    value: function fitGeoInside(featureBounds, width, height) {
-      var bbox = MapComponent.getFeaturesBox(featureBounds);
-      var scale = 1 / Math.max(bbox.width / width, bbox.height / height);
-      var trans = [-(bbox.x + bbox.width / 2) * scale + width / 2, -(bbox.y + bbox.height / 2) * scale + height / 2];
-
-      return { scale: scale, trans: trans };
-    }
-  }, {
-    key: "capitalize",
-    value: function capitalize(string) {
-      string.charAt(0).toUpperCase() + string.slice(1);
-    }
   }]);
 
   function MapComponent(props) {
@@ -172,51 +143,7 @@ var MapComponent = function () {
 
   _createClass(MapComponent, [{
     key: "didMount",
-    value: function didMount() {
-      var _props = this.props,
-          selector = _props.selector,
-          features = _props.features,
-          getPolygonClassName = _props.getPolygonClassName,
-          showTooltipCallback = _props.showTooltipCallback,
-          hideTooltipCallback = _props.hideTooltipCallback,
-          customProjection = _props.customProjection;
-
-      var d3Container = d3.select(selector);
-      var containerComputedStyle = window.getComputedStyle(d3Container.node());
-      var width = parseInt(containerComputedStyle.width);
-      var height = parseInt(containerComputedStyle.height);
-
-      var svg = d3Container.append('svg').attr('width', width).attr('height', height);
-
-      var geoParent = svg.append('g');
-      var container = geoParent.append('g');
-
-      var projection = customProjection ? d3["geo" + MapComponent.capitalize(customProjection)]() : d3.geoMercator();
-      var path = d3.geoPath().projection(projection);
-
-      var polygons = container.selectAll('path').data(features).enter().append('path').attr('class', function (d) {
-        return "polygon " + getPolygonClassName(d);
-      }).attr('d', path);
-
-      if (typeof showTooltipCallback !== 'undefined') {
-        polygons.on('mousemove', function (d) {
-          return showTooltipCallback(d, d3.event.clientX + 10, d3.event.clientY + window.scrollY + 10);
-        }).on('mouseout', function () {
-          return hideTooltipCallback();
-        });
-      }
-
-      var collection = { 'type': 'FeatureCollection', 'features': features };
-      var featureBounds = path.bounds(collection);
-
-      var _MapComponent$fitGeoI = MapComponent.fitGeoInside(featureBounds, width, height),
-          scale = _MapComponent$fitGeoI.scale,
-          trans = _MapComponent$fitGeoI.trans;
-
-      container.attr('transform', "translate(" + trans + ") scale(" + scale + ")");
-
-      container.selectAll('path').style('stroke-width', .5 / scale);
-    }
+    value: function didMount() {}
   }, {
     key: "render",
     value: function render() {

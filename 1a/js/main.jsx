@@ -15,7 +15,6 @@ class Datavis {
   }
 
   didMount() {
-    debugger;
     Object.values(this.components).forEach(c => c.didMount && c.didMount());
   }
 
