@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  margin: 15px 20px 0;
+}
+
+body {
+  font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+  font-size: 11px;
+}

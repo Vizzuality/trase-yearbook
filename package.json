@@ -2,7 +2,7 @@
   "name": "trase-yearbook",
   "version": "0.0.0",
   "scripts": {
-    "build": "babel ./**/*.jsx --out-file $INIT_CWD/js/main.js"
+    "build": "babel $INIT_CWD/**/*.jsx --out-file $INIT_CWD/js/main.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
