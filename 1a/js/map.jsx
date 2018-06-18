@@ -78,7 +78,6 @@ class MapComponent {
 
     const geoParent = svg.append('g');
     const container = geoParent.append('g');
-
     const projection = customProjection ? d3[`geo${MapComponent.capitalize(customProjection)}`]() : d3.geoMercator();
     const path = d3.geoPath().projection(projection);
 

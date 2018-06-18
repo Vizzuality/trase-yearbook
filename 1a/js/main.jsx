@@ -11,31 +11,18 @@ class Datavis {
     this.root = document.querySelector(props.selector);
     this._setListeners();
     this._render();
-    this.didMount();
   }
-
-  didMount() {
-    Object.values(this.components).forEach(c => c.didMount && c.didMount());
-  }
-
-  features = [];
 
   render() {
-    const { MapComponent } = this.components;
     return (
       <div class="container">
-        {MapComponent}
+        {new MapComponent({
+          selector: '.map',
+          getPolygonClassName: () => 'poly'
+        })}
       </div>
     );
   }
-
-  components = {
-    MapComponent: new MapComponent({
-      selector: '.map',
-      features: this.features,
-      getPolygonClassName: () => 'poly'
-    })
-  };
 }
 
 document.addEventListener("DOMContentLoaded", () => new Datavis({ selector: '#root' }));

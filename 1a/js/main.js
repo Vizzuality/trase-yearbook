@@ -27,35 +27,14 @@ var Datavis = function () {
       _this[e.type].apply(_this, _toConsumableArray(e.detail)) || _this._render();
     };
 
-    this.features = [];
-    this.components = {
-      MapComponent: new MapComponent({
-        selector: '.map',
-        features: this.features,
-        getPolygonClassName: function getPolygonClassName() {
-          return 'poly';
-        }
-      })
-    };
-
     this.root = document.querySelector(props.selector);
     this._setListeners();
     this._render();
-    this.didMount();
   }
 
   _createClass(Datavis, [{
-    key: 'didMount',
-    value: function didMount() {
-      Object.values(this.components).forEach(function (c) {
-        return c.didMount && c.didMount();
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var MapComponent = this.components.MapComponent;
-
       return function () {
         var _elem = document.createElement('div');
 
@@ -63,7 +42,12 @@ var Datavis = function () {
 
         _elem.appendChild(document.createTextNode('\n        '));
 
-        var _expr = MapComponent,
+        var _expr = new MapComponent({
+          selector: '.map',
+          getPolygonClassName: function getPolygonClassName() {
+            return 'poly';
+          }
+        }),
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
         if (_res instanceof Array) {
@@ -198,7 +182,6 @@ var MapComponent = function () {
 
       var geoParent = svg.append('g');
       var container = geoParent.append('g');
-
       var projection = customProjection ? d3['geo' + MapComponent.capitalize(customProjection)]() : d3.geoMercator();
       var path = d3.geoPath().projection(projection);
 
