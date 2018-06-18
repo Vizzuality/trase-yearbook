@@ -154,7 +154,7 @@ var MapComponent = function () {
       fetch('world.topo.json').then(function (res) {
         return res.ok ? res.json() : Promise.reject(res.status);
       }).then(function (topo) {
-        return dispatch('setFeatures', topojson.feature(topo, topo.objects.world));
+        return dispatch('setFeatures', topojson.feature(topo, topo.objects.countries));
       });
     }
   }, {

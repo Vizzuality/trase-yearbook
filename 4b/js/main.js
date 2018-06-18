@@ -89,7 +89,26 @@ var Datavis = function () {
 
         _elem4.setAttribute('class', 'map');
 
-        _elem4.setAttribute('style', 'background-image: url(assets/' + _this3.active + '.jpg)');
+        _elem4.appendChild(document.createTextNode('\n          '));
+
+        var _expr = Array.from(Array(3).keys()).map(function (index) {
+          return function () {
+            var _elem6 = document.createElement('div');
+
+            _elem6.setAttribute('class', 'map-item');
+
+            _elem6.setAttribute('style', 'background-image: url(assets/' + _this3.active + '-' + index + '.jpg)');
+
+            return _elem6;
+          }();
+        }),
+            _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
+
+        if (_res instanceof Array) {
+          for (var _i3 = 0; _i3 < _res.length; _i3 += 1) {
+            _elem4.appendChild(_res[_i3] instanceof Node || _res[_i3] instanceof Array ? _res[_i3] : document.createTextNode(_res[_i3]));
+          }
+        } else _elem4.appendChild(_res);
 
         _elem4.appendChild(document.createTextNode('\n          '));
 
@@ -109,14 +128,14 @@ var Datavis = function () {
 
         _elem.appendChild(document.createTextNode('\n        '));
 
-        var _expr = YearSelector({ options: _this3.options, title: "select a year", active: _this3.active }),
-            _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
+        var _expr2 = YearSelector({ options: _this3.options, title: "select a year", active: _this3.active }),
+            _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
-        if (_res instanceof Array) {
-          for (var _i2 = 0; _i2 < _res.length; _i2 += 1) {
-            _elem.appendChild(_res[_i2] instanceof Node || _res[_i2] instanceof Array ? _res[_i2] : document.createTextNode(_res[_i2]));
+        if (_res2 instanceof Array) {
+          for (var _i4 = 0; _i4 < _res2.length; _i4 += 1) {
+            _elem.appendChild(_res2[_i4] instanceof Node || _res2[_i4] instanceof Array ? _res2[_i4] : document.createTextNode(_res2[_i4]));
           }
-        } else _elem.appendChild(_res);
+        } else _elem.appendChild(_res2);
 
         _elem.appendChild(document.createTextNode('\n      '));
 

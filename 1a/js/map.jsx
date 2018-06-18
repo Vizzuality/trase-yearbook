@@ -52,7 +52,7 @@ class MapComponent {
   willMount() {
     fetch('world.topo.json')
       .then(res => res.ok ? res.json() : Promise.reject(res.status))
-      .then(topo => dispatch('setFeatures', topojson.feature(topo, topo.objects.world)));
+      .then(topo => dispatch('setFeatures', topojson.feature(topo, topo.objects.countries)));
   }
   didMount() {}
 
