@@ -2,920 +2,6 @@
   "name": "Forest Risk Commodity",
   "children":[
   {
-    "name": "MAIZE",
-    "children": [
-      {
-        "name": "ACEITERA GENERAL DEHEZA",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 1133955
-          }
-        ]
-      },
-      {
-        "name": "ADM",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 2228558.5
-          },
-          {
-            "name": "BRAZIL",
-            "size": 2256344.342
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 152691.1099
-          }
-        ]
-      },
-      {
-        "name": "ALFRED C TOEPFER INTERNATIONAL",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 954304.384
-          }
-        ]
-      },
-      {
-        "name": "AMAGGI",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 324478.79
-          },
-          {
-            "name": "BRAZIL",
-            "size": 3447155.148
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 70747.956
-          }
-        ]
-      },
-      {
-        "name": "ASOCIACION DE COOPERATIVAS ARGENTINAS (COOP.LTDA)",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 1334837.0843
-          }
-        ]
-      },
-      {
-        "name": "BTG PACTUAL COMMODITIES",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 41601
-          }
-        ]
-      },
-      {
-        "name": "BUNGE",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 1972198.726
-          },
-          {
-            "name": "BRAZIL",
-            "size": 4511573.1944
-          }
-        ]
-      },
-      {
-        "name": "CARGILL",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 3798616.1884
-          },
-          {
-            "name": "BRAZIL",
-            "size": 4848559.1265
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 319090.46
-          }
-        ]
-      },
-      {
-        "name": "CHS",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 212700
-          },
-          {
-            "name": "BRAZIL",
-            "size": 749064.219
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 58433.02
-          }
-        ]
-      },
-      {
-        "name": "COFCO",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 4011640.4587
-          },
-          {
-            "name": "BRAZIL",
-            "size": 1634540.869
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 360025.925
-          }
-        ]
-      },
-      {
-        "name": "GLENCORE",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 123308
-          },
-          {
-            "name": "BRAZIL",
-            "size": 1887260.799
-          }
-        ]
-      },
-      {
-        "name": "LOUIS DREYFUS",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 1697606.88
-          },
-          {
-            "name": "BRAZIL",
-            "size": 1842942.8266
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 100846.02
-          }
-        ]
-      },
-      {
-        "name": "MOLINOS AGRO",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 333934
-          }
-        ]
-      },
-      {
-        "name": "OTHER",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 7565751.1515
-          },
-          {
-            "name": "BOLIVIA",
-            "size": 5824.6612
-          },
-          {
-            "name": "BRAZIL",
-            "size": 2772244.3101
-          },
-          {
-            "name": "COLOMBIA",
-            "size": 32747.1969
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 910283.328
-          },
-          {
-            "name": "PERU",
-            "size": 12362.1448
-          },
-          {
-            "name": "URUGUAY",
-            "size": 53.8704
-          }
-        ]
-      },
-      {
-        "name": "VICENTIN",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 877364.4422
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 5096
-          }
-        ]
-      },
-      {
-        "name": "ADECOAGRO",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 37746.844
-          }
-        ]
-      },
-      {
-        "name": "AGREX",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 950364.554
-          }
-        ]
-      },
-      {
-        "name": "BIOSEV",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 23300
-          }
-        ]
-      },
-      {
-        "name": "COAMO",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 771529.718
-          }
-        ]
-      },
-      {
-        "name": "ENGELHART",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 1000301.823
-          }
-        ]
-      },
-      {
-        "name": "MARUBENI",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 1351587.042
-          }
-        ]
-      },
-      {
-        "name": "MITSUI",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 930830.788
-          }
-        ]
-      },
-      {
-        "name": "OLAM INTERNATIONAL",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 481851.607
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "SOY",
-    "children": [
-      {
-        "name": "ACEITERA GENERAL DEHEZA",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 4119902.5279
-          }
-        ]
-      },
-      {
-        "name": "ADM",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 662353.422
-          },
-          {
-            "name": "BOLIVIA",
-            "size": 304027.8315
-          },
-          {
-            "name": "BRAZIL",
-            "size": 9001817.487
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 1519540.6722
-          },
-          {
-            "name": "URUGUAY",
-            "size": 132076
-          }
-        ]
-      },
-      {
-        "name": "ALFRED C TOEPFER INTERNATIONAL",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 31725
-          }
-        ]
-      },
-      {
-        "name": "AMAGGI",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 444965.0453
-          },
-          {
-            "name": "BRAZIL",
-            "size": 4864522.4893
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 187310.907
-          }
-        ]
-      },
-      {
-        "name": "ASOCIACION DE COOPERATIVAS ARGENTINAS (COOP.LTDA)",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 1504443.2031
-          }
-        ]
-      },
-      {
-        "name": "BTG PACTUAL COMMODITIES",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 327487.8836
-          }
-        ]
-      },
-      {
-        "name": "BUNGE",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 3861719.6524
-          },
-          {
-            "name": "BOLIVIA",
-            "size": 748.98
-          },
-          {
-            "name": "BRAZIL",
-            "size": 11663557.2382
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 414764.1527
-          }
-        ]
-      },
-      {
-        "name": "CARGILL",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 4335690.4589
-          },
-          {
-            "name": "BOLIVIA",
-            "size": 134219.5355
-          },
-          {
-            "name": "BRAZIL",
-            "size": 10596321.6531
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 1857968.0061
-          }
-        ]
-      },
-      {
-        "name": "CHS",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 1288582.1067
-          },
-          {
-            "name": "BRAZIL",
-            "size": 1310840.6586
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 241677.495
-          },
-          {
-            "name": "URUGUAY",
-            "size": 134268
-          }
-        ]
-      },
-      {
-        "name": "COFCO",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 4308544.1967
-          },
-          {
-            "name": "BRAZIL",
-            "size": 5301499.2244
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 954665.158
-          },
-          {
-            "name": "URUGUAY",
-            "size": 231342.0835
-          }
-        ]
-      },
-      {
-        "name": "GLENCORE",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 3129106.1821
-          },
-          {
-            "name": "BRAZIL",
-            "size": 2495012.126
-          }
-        ]
-      },
-      {
-        "name": "LOUIS DREYFUS",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 3686380.4172
-          },
-          {
-            "name": "BOLIVIA",
-            "size": 46977.6882
-          },
-          {
-            "name": "BRAZIL",
-            "size": 6431652.123
-          },
-          {
-            "name": "URUGUAY",
-            "size": 495353.496
-          }
-        ]
-      },
-      {
-        "name": "MOLINOS AGRO",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 2623994.0667
-          }
-        ]
-      },
-      {
-        "name": "OTHER",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 11762609.4074
-          },
-          {
-            "name": "BOLIVIA",
-            "size": 2463980.4168
-          },
-          {
-            "name": "BRAZIL",
-            "size": 14807400.7632
-          },
-          {
-            "name": "COLOMBIA",
-            "size": 37956.229
-          },
-          {
-            "name": "COSTARICA",
-            "size": 18725.4272
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 2324359.174
-          },
-          {
-            "name": "URUGUAY",
-            "size": 2281413.3066
-          }
-        ]
-      },
-      {
-        "name": "VICENTIN",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 4915805.2633
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 122654.053
-          }
-        ]
-      },
-      {
-        "name": "ADECOAGRO",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 815215.5569
-          }
-        ]
-      },
-      {
-        "name": "AGREX",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 1091626.776
-          }
-        ]
-      },
-      {
-        "name": "BIANCHINI",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 2082828.0213
-          }
-        ]
-      },
-      {
-        "name": "BIOSEV",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 919876.7108
-          }
-        ]
-      },
-      {
-        "name": "COAMO",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 2879619.8515
-          }
-        ]
-      },
-      {
-        "name": "ED&F MAN",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 9374.134
-          }
-        ]
-      },
-      {
-        "name": "ENGELHART",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 1836918.853
-          }
-        ]
-      },
-      {
-        "name": "MARUBENI",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 3517328.011
-          }
-        ]
-      },
-      {
-        "name": "MITSUI",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 1902874.553
-          }
-        ]
-      },
-      {
-        "name": "OLAM INTERNATIONAL",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 1000
-          }
-        ]
-      },
-      {
-        "name": "SJC BIOENERGIA",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 62912.097
-          }
-        ]
-      },
-      {
-        "name": "SODRUGESTVO",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 771477.841
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 1029885.969
-          }
-        ]
-      },
-      {
-        "name": "C I TEQUENDAMA S A S",
-        "children": [
-          {
-            "name": "COLOMBIA",
-            "size": 37.4367
-          }
-        ]
-      },
-      {
-        "name": "GRASAS Y ACEITES VEGETALES LTDA",
-        "children": [
-          {
-            "name": "COLOMBIA",
-            "size": 141.1397
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "SUGARCANE",
-    "children": [
-      {
-        "name": "OTHER",
-        "children": [
-          {
-            "name": "ARGENTINA",
-            "size": 2634354.5136
-          },
-          {
-            "name": "BRAZIL",
-            "size": 72252444.5392
-          },
-          {
-            "name": "COLOMBIA",
-            "size": 5455986.9234
-          },
-          {
-            "name": "COSTARICA",
-            "size": 2188633.6153
-          },
-          {
-            "name": "PARAGUAY",
-            "size": 674295.343
-          },
-          {
-            "name": "PERU",
-            "size": 2160655.5192
-          }
-        ]
-      },
-      {
-        "name": "ACUCAR E ALCOOL OSWALDO RIBEIRO DE MENDONCA LTDA",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 3875147.9874
-          }
-        ]
-      },
-      {
-        "name": "ADECOAGRO",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 5210925.9913
-          }
-        ]
-      },
-      {
-        "name": "BIOSEV",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 12806795.6532
-          }
-        ]
-      },
-      {
-        "name": "BP",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 2574361.2269
-          }
-        ]
-      },
-      {
-        "name": "CLEALCO ACUCAR E ALCOOL S/A",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 5164378.9331
-          }
-        ]
-      },
-      {
-        "name": "COFCO",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 9779576.2692
-          }
-        ]
-      },
-      {
-        "name": "COOPERATIVA DE PRODUTORES DE CANA-DE-ACUCAR ACUCAR E ALCOOL",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 29560698.9095
-          }
-        ]
-      },
-      {
-        "name": "ED&F MAN",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 1048531.747
-          }
-        ]
-      },
-      {
-        "name": "ENGELHART",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 195642.9606
-          }
-        ]
-      },
-      {
-        "name": "GLENCORE",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 2202696.3248
-          }
-        ]
-      },
-      {
-        "name": "GUARANI S.A.",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 3135961.5344
-          }
-        ]
-      },
-      {
-        "name": "LOUIS DREYFUS",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 2845392.8048
-          }
-        ]
-      },
-      {
-        "name": "ODEBRECHT AGROINDUSTRIAL PARTICIPACOES S.A.",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 2516801.1405
-          }
-        ]
-      },
-      {
-        "name": "RAIZEN",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 35429375.3102
-          }
-        ]
-      },
-      {
-        "name": "SAO MARTINHO",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 9354477.6
-          }
-        ]
-      },
-      {
-        "name": "SJC BIOENERGIA",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 2547831.8305
-          }
-        ]
-      },
-      {
-        "name": "SUCDEN DO BRASIL",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 6629643.1786
-          }
-        ]
-      },
-      {
-        "name": "USINA ALTO ALEGRE S/A - ACUCAR E ALCOOL",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 4390294.18
-          }
-        ]
-      },
-      {
-        "name": "USINA CORURIPE ACUCAR E ALCOOL",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 7362131.105
-          }
-        ]
-      },
-      {
-        "name": "USINA DE ACUCAR SANTA TEREZINHA",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 10581557.066
-          }
-        ]
-      },
-      {
-        "name": "USINA DELTA",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 4156781.3517
-          }
-        ]
-      },
-      {
-        "name": "VA&E TRADING DO BRASIL LTDA",
-        "children": [
-          {
-            "name": "BRAZIL",
-            "size": 2837799.7648
-          }
-        ]
-      }
-    ]
-  },
-  {
     "name": "COCOA",
     "children": [
       {
@@ -992,7 +78,7 @@
         ]
       },
       {
-        "name": "COMPANIA COLOMBIANA AGROINDUSTRIAL S A",
+        "name": "COMPANIA COLOMBIANA AGROINDUSTRIAL",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1028,7 +114,7 @@
         ]
       },
       {
-        "name": "AYD SANCHEZ ADSANCOCOA S A",
+        "name": "AYD SANCHEZ ADSANCOCOA",
         "children": [
           {
             "name": "ECUADOR",
@@ -1037,7 +123,7 @@
         ]
       },
       {
-        "name": "CHOCOLATES FINOS NACIONALES COFINA S A",
+        "name": "CHOCOLATES FINOS NACIONALES COFINA",
         "children": [
           {
             "name": "ECUADOR",
@@ -1046,7 +132,7 @@
         ]
       },
       {
-        "name": "COMERCIALIZADORA DE PRODUCTOS AGRICOLAS ZAMBRANO VELEZ AGROZAMVELSA S A",
+        "name": "COMERCIALIZADORA DE PRODUCTOS AGRICOLAS ZAMBRANO VELEZ AGROZAMVELSA",
         "children": [
           {
             "name": "ECUADOR",
@@ -1064,7 +150,7 @@
         ]
       },
       {
-        "name": "COMPANIA AGROCOMERCIAL PANCHANA Y ZAMBRANO S A",
+        "name": "COMPANIA AGROCOMERCIAL PANCHANA Y ZAMBRANO",
         "children": [
           {
             "name": "ECUADOR",
@@ -1073,7 +159,7 @@
         ]
       },
       {
-        "name": "ECO KAKAO S A",
+        "name": "ECO KAKAO",
         "children": [
           {
             "name": "ECUADOR",
@@ -1082,7 +168,7 @@
         ]
       },
       {
-        "name": "ECUADOR COCOA Y COFFEE ECUACOFFEE S A",
+        "name": "ECUADOR COCOA Y COFFEE ECUACOFFEE",
         "children": [
           {
             "name": "ECUADOR",
@@ -1091,7 +177,7 @@
         ]
       },
       {
-        "name": "EXPORTADORA MANABI EXPORTMANABI S A",
+        "name": "EXPORTADORA MANABI EXPORTMANABI",
         "children": [
           {
             "name": "ECUADOR",
@@ -1109,7 +195,7 @@
         ]
       },
       {
-        "name": "GOLDCOCOA EXPORT S A",
+        "name": "GOLDCOCOA EXPORT",
         "children": [
           {
             "name": "ECUADOR",
@@ -1118,7 +204,7 @@
         ]
       },
       {
-        "name": "GRANCACAO EXPORT S A",
+        "name": "GRANCACAO EXPORT",
         "children": [
           {
             "name": "ECUADOR",
@@ -1127,7 +213,7 @@
         ]
       },
       {
-        "name": "GRANDSOUTH S A",
+        "name": "GRANDSOUTH",
         "children": [
           {
             "name": "ECUADOR",
@@ -1154,7 +240,7 @@
         ]
       },
       {
-        "name": "MANACAO S A",
+        "name": "MANACAO",
         "children": [
           {
             "name": "ECUADOR",
@@ -1190,7 +276,7 @@
         ]
       },
       {
-        "name": "RISTOKCACAO S A",
+        "name": "RISTOKCACAO",
         "children": [
           {
             "name": "ECUADOR",
@@ -1235,7 +321,7 @@
         ]
       },
       {
-        "name": "EXPORTADORA ROMEX S A",
+        "name": "EXPORTADORA ROMEX",
         "children": [
           {
             "name": "PERU",
@@ -1296,7 +382,7 @@
         ]
       },
       {
-        "name": "ATLANTICA EXPORTACAO E IMPORTACAO LTDA",
+        "name": "ATLANTICA EXPORTACAO E IMPORTACAO",
         "children": [
           {
             "name": "BRAZIL",
@@ -1305,7 +391,7 @@
         ]
       },
       {
-        "name": "CAFEBRAS COMERCIO DE CAFES DO BRASIL S/A",
+        "name": "CAFEBRAS COMERCIO DE CAFES DO BRASIL",
         "children": [
           {
             "name": "BRAZIL",
@@ -1336,7 +422,7 @@
         ]
       },
       {
-        "name": "COSTA CAFE COMERCIO EXPORTACAO E IMPORTACAO LTDA",
+        "name": "COSTA CAFE COMERCIO EXPORTACAO E IMPORTACAO",
         "children": [
           {
             "name": "BRAZIL",
@@ -1368,6 +454,10 @@
           {
             "name": "BRAZIL",
             "size": 19725.06
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 39640.879
           }
         ]
       },
@@ -1381,7 +471,7 @@
         ]
       },
       {
-        "name": "GARDINGO TRADE",
+        "name": "GARDINGO",
         "children": [
           {
             "name": "BRAZIL",
@@ -1476,7 +566,7 @@
         ]
       },
       {
-        "name": "SAGRADOS CORACOES INDUSTRIA E COMERCIO DE ALIMENTOS LTDA",
+        "name": "SAGRADOS CORACOES INDUSTRIA E COMERCIO DE ALIMENTOS",
         "children": [
           {
             "name": "BRAZIL",
@@ -1521,16 +611,7 @@
         ]
       },
       {
-        "name": "BTG PACTUAL COMMODITIES",
-        "children": [
-          {
-            "name": "COLOMBIA",
-            "size": 39640.879
-          }
-        ]
-      },
-      {
-        "name": "CARCAFE LTDA",
+        "name": "CARCAFE",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1539,7 +620,7 @@
         ]
       },
       {
-        "name": "CIA CAFETERA LA MESETA S A",
+        "name": "CIA CAFETERA LA MESETA",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1548,7 +629,7 @@
         ]
       },
       {
-        "name": "COMPANIA COLOMBIANA AGROINDUSTRIAL S A",
+        "name": "COMPANIA COLOMBIANA AGROINDUSTRIAL",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1584,7 +665,7 @@
         ]
       },
       {
-        "name": "ECUADOR COCOA Y COFFEE ECUACOFFEE S A",
+        "name": "ECUADOR COCOA Y COFFEE ECUACOFFEE",
         "children": [
           {
             "name": "ECUADOR",
@@ -1602,7 +683,7 @@
         ]
       },
       {
-        "name": "EXPORTADORA ROMEX S A",
+        "name": "EXPORTADORA ROMEX",
         "children": [
           {
             "name": "PERU",
@@ -1622,10 +703,10 @@
     ]
   },
   {
-    "name": "PALM KERNEL",
+    "name": "PALM KERNEL OIL",
     "children": [
       {
-        "name": "AGROPALMA S/A",
+        "name": "AGROPALMA",
         "children": [
           {
             "name": "BRAZIL",
@@ -1634,7 +715,7 @@
         ]
       },
       {
-        "name": "BRF S.A.",
+        "name": "BRF",
         "children": [
           {
             "name": "BRAZIL",
@@ -1673,7 +754,7 @@
         ]
       },
       {
-        "name": "C I ACEPALMA S A",
+        "name": "C I ACEPALMA",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1682,7 +763,7 @@
         ]
       },
       {
-        "name": "C I BIOCOSTA S A",
+        "name": "C I BIOCOSTA",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1700,7 +781,7 @@
         ]
       },
       {
-        "name": "GRASAS Y ACEITES VEGETALES LTDA",
+        "name": "GRASAS Y ACEITES VEGETALES",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1727,7 +808,7 @@
         ]
       },
       {
-        "name": "SOC DE COMERCIALIZACION INTERNACIONAL MIRA LTDA",
+        "name": "SOC DE COMERCIALIZACION INTERNACIONAL MIRA",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1754,7 +835,7 @@
         ]
       },
       {
-        "name": "AZZURRA AGRONUTRIENTES S A",
+        "name": "AZZURRA AGRONUTRIENTES",
         "children": [
           {
             "name": "PERU",
@@ -1786,7 +867,7 @@
     "name": "PALM OIL",
     "children": [
       {
-        "name": "AGROPALMA S/A",
+        "name": "AGROPALMA",
         "children": [
           {
             "name": "BRAZIL",
@@ -1829,7 +910,7 @@
         ]
       },
       {
-        "name": "C I ACEPALMA S A",
+        "name": "C I ACEPALMA",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1838,7 +919,7 @@
         ]
       },
       {
-        "name": "C I BIOCOSTA S A",
+        "name": "C I BIOCOSTA",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1869,7 +950,7 @@
         ]
       },
       {
-        "name": "GRASAS Y ACEITES VEGETALES LTDA",
+        "name": "GRASAS Y ACEITES VEGETALES",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1896,7 +977,7 @@
         ]
       },
       {
-        "name": "SOC DE COMERCIALIZACION INTERNACIONAL MIRA LTDA",
+        "name": "SOC DE COMERCIALIZACION INTERNACIONAL MIRA",
         "children": [
           {
             "name": "COLOMBIA",
@@ -1977,7 +1058,7 @@
         ]
       },
       {
-        "name": "AZZURRA AGRONUTRIENTES S A",
+        "name": "AZZURRA AGRONUTRIENTES",
         "children": [
           {
             "name": "PERU",
