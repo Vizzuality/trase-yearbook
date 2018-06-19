@@ -1,12 +1,16 @@
 .container {
-  margin: 44px;
   height: 100%;
-  width: 400px;
+  margin: 44px 0 0;
 }
-
 
 .map {
   height: 400px;
-  width: 300px;
   margin: 0 auto;
+}
+
+.polygon {
+  fill: white;
+  stroke: #ededed;
+  stroke-dasharray: 4px;
+  stroke-width: 2px;
 }
