@@ -30,7 +30,7 @@ class Datavis {
       const index = this.options.indexOf(this.active);
       const option = this.options[index + 1] || this.options[0];
       dispatch('setActive', option, true);
-    }, 1000);
+    }, 2000);
   }
 
   render() {
