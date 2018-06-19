@@ -37,7 +37,7 @@ class Datavis {
     return (
       <div class="container">
         <h1 class="title">
-          Pace of expansion and invesment<br />in soy industry
+          Soy expansion in Brazil, Argentina<br />and Paraguay
         </h1>
         <div class="map" style={`background-image: url(assets/${this.active}.jpg)`}>
           <img class="map-legend" alt="map legend" src="assets/legend.svg" />
