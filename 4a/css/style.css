@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Decima Mono';
+    src: url('../fonts/decimamonopro-webfont.woff2') format('woff2'),
+         url('../fonts/decimamonopro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    margin: 15px 20px;
+}
+
+body {
+    font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+    font-size: 11px;
+}
+
+text {
+    pointer-events: none;
+    dominant-baseline: middle;
+    text-anchor: middle;
+    stroke: none;
+    letter-spacing: -.05em;
+}
+
+.node circle {
+    display: none;
+    fill-opacity: 0;
+}
+
+.leaf .node {
+    fill-opacity: 1;
+}
+
+.leaf circle {
+    display: initial;
+    fill-opacity: 1;
+}
+
+.selected {
+    stroke: #34444c;
+    stroke-width: 1px;
+}
+
+.selector {
+    margin: 15px 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+select {
+    font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+    color: #34444c;
+    background: #fff;
+    border: none;
+    font-weight: 700;
+    padding: 10px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2);
+    border-radius: 4px;
+    cursor: pointer;
+    height: 40px;
+    width: 70px;
+    margin-left: 10px;
+}
+
+.tooltip {
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2);
+    color: #34444c;
+    font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+    font-size: 13px;
+    position: absolute;
+    pointer-events: none;
+    transition: all 200ms ease-out;
+    opacity: 0;
+}
+
+.tooltip .name {
+    padding: 10px;
+    text-transform: uppercase;
+    background: #FFF0C2;
+}
+
+.tooltip .content {
+    padding: 10px;
+}
+
+.tooltip .content .unit {
+    opacity: .5;
+}

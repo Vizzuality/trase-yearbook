@@ -16,8 +16,8 @@ class Datavis {
     this.render();
   }
   loop = null;
-  active = 1975;
-  options = [1975, 1985, 1995, 2005, 2015];
+  active = 2005;
+  options = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015];
   setActive = (active, loop) => {
     this.active = active;
     if (!loop && this.interval) {
