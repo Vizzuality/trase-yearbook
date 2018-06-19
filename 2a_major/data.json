@@ -1,0 +1,873 @@
+{
+  "name": "Forest Risk Commodity",
+  "children":[
+  {
+    "name": "MAIZE",
+    "children": [
+      {
+        "name": "ACA COOP",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1334837.0843
+          }
+        ]
+      },
+      {
+        "name": "ACEITERA GENERAL DEHEZA",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1133955
+          }
+        ]
+      },
+      {
+        "name": "ADM",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 3182862.884
+          },
+          {
+            "name": "BRAZIL",
+            "size": 2256344.342
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 152691.1099
+          }
+        ]
+      },
+      {
+        "name": "AMAGGI",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 324478.79
+          },
+          {
+            "name": "BRAZIL",
+            "size": 3447155.148
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 70747.956
+          }
+        ]
+      },
+      {
+        "name": "BUNGE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1972198.726
+          },
+          {
+            "name": "BRAZIL",
+            "size": 4511573.1944
+          }
+        ]
+      },
+      {
+        "name": "CARGILL",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 3798616.1884
+          },
+          {
+            "name": "BRAZIL",
+            "size": 4848559.1265
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 319090.46
+          }
+        ]
+      },
+      {
+        "name": "CHS",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 212700
+          },
+          {
+            "name": "BRAZIL",
+            "size": 749064.219
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 58433.02
+          }
+        ]
+      },
+      {
+        "name": "COFCO",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4011640.4587
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1634540.869
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 360025.925
+          }
+        ]
+      },
+      {
+        "name": "ENGELHART",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 41601
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1000301.823
+          }
+        ]
+      },
+      {
+        "name": "GLENCORE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 123308
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1887260.799
+          }
+        ]
+      },
+      {
+        "name": "LOUIS DREYFUS",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1697606.88
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1866242.8266
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 100846.02
+          }
+        ]
+      },
+      {
+        "name": "MOLINOS AGRO",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 333934
+          }
+        ]
+      },
+      {
+        "name": "OTHER",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 7565751.1515
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 5824.6612
+          },
+          {
+            "name": "BRAZIL",
+            "size": 2772244.3101
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 32747.1969
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 910283.328
+          },
+          {
+            "name": "PERU",
+            "size": 12362.1448
+          },
+          {
+            "name": "URUGUAY",
+            "size": 53.8704
+          }
+        ]
+      },
+      {
+        "name": "VICENTIN",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 877364.4422
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 5096
+          }
+        ]
+      },
+      {
+        "name": "ADECOAGRO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 37746.844
+          }
+        ]
+      },
+      {
+        "name": "COAMO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 771529.718
+          }
+        ]
+      },
+      {
+        "name": "MARUBENI",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 1351587.042
+          }
+        ]
+      },
+      {
+        "name": "MITSUBISHI",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 950364.554
+          }
+        ]
+      },
+      {
+        "name": "MITSUI",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 930830.788
+          }
+        ]
+      },
+      {
+        "name": "OLAM",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 481851.607
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SOY",
+    "children": [
+      {
+        "name": "ACA COOP",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1504443.2031
+          }
+        ]
+      },
+      {
+        "name": "ACEITERA GENERAL DEHEZA",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4119902.5279
+          }
+        ]
+      },
+      {
+        "name": "ADM",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 694078.422
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 304027.8315
+          },
+          {
+            "name": "BRAZIL",
+            "size": 9001817.487
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 1519540.6722
+          },
+          {
+            "name": "URUGUAY",
+            "size": 132076
+          }
+        ]
+      },
+      {
+        "name": "AMAGGI",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 444965.0453
+          },
+          {
+            "name": "BRAZIL",
+            "size": 4864522.4893
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 187310.907
+          }
+        ]
+      },
+      {
+        "name": "BUNGE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 3861719.6524
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 748.98
+          },
+          {
+            "name": "BRAZIL",
+            "size": 11663557.2382
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 414764.1527
+          }
+        ]
+      },
+      {
+        "name": "CARGILL",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4335690.4589
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 134219.5355
+          },
+          {
+            "name": "BRAZIL",
+            "size": 10596321.6531
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 1857968.0061
+          }
+        ]
+      },
+      {
+        "name": "CHS",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1288582.1067
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1310840.6586
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 241677.495
+          },
+          {
+            "name": "URUGUAY",
+            "size": 134268
+          }
+        ]
+      },
+      {
+        "name": "COFCO",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4308544.1967
+          },
+          {
+            "name": "BRAZIL",
+            "size": 5301499.2244
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 954665.158
+          },
+          {
+            "name": "URUGUAY",
+            "size": 231342.0835
+          }
+        ]
+      },
+      {
+        "name": "ENGELHART",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 327487.8836
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1836918.853
+          }
+        ]
+      },
+      {
+        "name": "GLENCORE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 3129106.1821
+          },
+          {
+            "name": "BRAZIL",
+            "size": 2495012.126
+          }
+        ]
+      },
+      {
+        "name": "LOUIS DREYFUS",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 3686380.4172
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 46977.6882
+          },
+          {
+            "name": "BRAZIL",
+            "size": 7725216.3123
+          },
+          {
+            "name": "URUGUAY",
+            "size": 495353.496
+          }
+        ]
+      },
+      {
+        "name": "MOLINOS AGRO",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 2623994.0667
+          }
+        ]
+      },
+      {
+        "name": "OTHER",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 11762609.4074
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 2463980.4168
+          },
+          {
+            "name": "BRAZIL",
+            "size": 14433713.2847
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 37956.229
+          },
+          {
+            "name": "COSTARICA",
+            "size": 18725.4272
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 2324359.174
+          },
+          {
+            "name": "URUGUAY",
+            "size": 2281413.3066
+          }
+        ]
+      },
+      {
+        "name": "VICENTIN",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4915805.2633
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 122654.053
+          }
+        ]
+      },
+      {
+        "name": "ADECOAGRO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 815215.5569
+          }
+        ]
+      },
+      {
+        "name": "BIANCHINI",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2082828.0213
+          }
+        ]
+      },
+      {
+        "name": "COAMO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2879619.8515
+          }
+        ]
+      },
+      {
+        "name": "ED&F MAN",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 9374.134
+          }
+        ]
+      },
+      {
+        "name": "MARUBENI",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 3517328.011
+          }
+        ]
+      },
+      {
+        "name": "MITSUBISHI",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 1091626.776
+          }
+        ]
+      },
+      {
+        "name": "MITSUI",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 1902874.553
+          }
+        ]
+      },
+      {
+        "name": "OLAM",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 1000
+          }
+        ]
+      },
+      {
+        "name": "SJC BIOENERGIA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 62912.097
+          }
+        ]
+      },
+      {
+        "name": "SODRUGESTVO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 771477.841
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 1029885.969
+          }
+        ]
+      },
+      {
+        "name": "C I TEQUENDAMA S A S",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 37.4367
+          }
+        ]
+      },
+      {
+        "name": "GRASAS Y ACEITES VEGETALES",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 141.1397
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SUGARCANE",
+    "children": [
+      {
+        "name": "OTHER",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 2634354.5136
+          },
+          {
+            "name": "BRAZIL",
+            "size": 69249214.1891
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 5455986.9234
+          },
+          {
+            "name": "COSTARICA",
+            "size": 2188633.6153
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 674295.343
+          },
+          {
+            "name": "PERU",
+            "size": 2160655.5192
+          }
+        ]
+      },
+      {
+        "name": "ACUCAR E ALCOOL OSWALDO RIBEIRO DE MENDONCA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 3875147.9874
+          }
+        ]
+      },
+      {
+        "name": "ADECOAGRO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 5210925.9913
+          }
+        ]
+      },
+      {
+        "name": "BP",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2574361.2269
+          }
+        ]
+      },
+      {
+        "name": "BUNGE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2195708.5078
+          }
+        ]
+      },
+      {
+        "name": "CLEALCO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 5164378.9331
+          }
+        ]
+      },
+      {
+        "name": "COFCO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 9779576.2692
+          }
+        ]
+      },
+      {
+        "name": "COPERSUCAR",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 30368220.7517
+          }
+        ]
+      },
+      {
+        "name": "ED&F MAN",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 1048531.747
+          }
+        ]
+      },
+      {
+        "name": "ENGELHART",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 195642.9606
+          }
+        ]
+      },
+      {
+        "name": "GLENCORE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2202696.3248
+          }
+        ]
+      },
+      {
+        "name": "GUARANI",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 3135961.5344
+          }
+        ]
+      },
+      {
+        "name": "LOUIS DREYFUS",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 15652188.458
+          }
+        ]
+      },
+      {
+        "name": "ODEBRECHT AGROINDUSTRIAL PARTICIPACOES",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2516801.1405
+          }
+        ]
+      },
+      {
+        "name": "RAIZEN",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 35429375.3102
+          }
+        ]
+      },
+      {
+        "name": "SAO MARTINHO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 9354477.6
+          }
+        ]
+      },
+      {
+        "name": "SJC BIOENERGIA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2547831.8305
+          }
+        ]
+      },
+      {
+        "name": "SUCDEN DO BRASIL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 6629643.1786
+          }
+        ]
+      },
+      {
+        "name": "USINA ALTO ALEGRE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 4390294.18
+          }
+        ]
+      },
+      {
+        "name": "USINA CORURIPE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 7362131.105
+          }
+        ]
+      },
+      {
+        "name": "USINA DE ACUCAR SANTA TEREZINHA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 10581557.066
+          }
+        ]
+      },
+      {
+        "name": "USINA DELTA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 4156781.3517
+          }
+        ]
+      },
+      {
+        "name": "VA&E TRADING DO BRASIL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2837799.7648
+          }
+        ]
+      }
+    ]
+  }
+]
+}
