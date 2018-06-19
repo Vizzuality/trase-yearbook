@@ -1,4 +1,4 @@
-var svg = d3.select("svg"),
+var svg = d3.select("amazonia"),
     margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = svg.attr("width") - margin.left - margin.right,
     height = svg.attr("height") - margin.top - margin.bottom;
@@ -19,7 +19,7 @@ var area = d3.area()
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("data.csv", type, function(error, data) {
+d3.tsv("Amazonia.csv", type, function(error, data) {
   if (error) throw error;
 
   var keys = ["Company-specific pledges", "Soy Moratorium", "none"];
