@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "build": "babel $INIT_CWD/**/*.jsx --out-file $INIT_CWD/js/main.js",
-    "start": "babel $INIT_CWD/**/*.jsx --out-file $INIT_CWD/js/main.js --watch & http-server $INIT_CWD"
+    "start": "babel $INIT_CWD/**/*.jsx --out-file $INIT_CWD/js/main.js --watch & http-server $INIT_CWD -c-1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
