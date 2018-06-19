@@ -73,13 +73,13 @@ var Datavis = function () {
 
         _elem2.setAttribute('class', 'title');
 
-        _elem2.appendChild(document.createTextNode('\n          Pace of expansion and invesment'));
+        _elem2.appendChild(document.createTextNode('\n          Soy expansion in Brazil, Argentina'));
 
         var _elem3 = document.createElement('br');
 
         _elem2.appendChild(_elem3);
 
-        _elem2.appendChild(document.createTextNode('in soy industry\n        '));
+        _elem2.appendChild(document.createTextNode('and Paraguay\n        '));
 
         _elem.appendChild(_elem2);
 
