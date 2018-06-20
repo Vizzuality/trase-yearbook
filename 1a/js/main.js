@@ -14,6 +14,7 @@ var Datavis = function () {
     value: function _setListeners() {
       window.addEventListener('setFeatures', this._handleEvent);
       window.addEventListener('setCommodity', this._handleEvent);
+      window.addEventListener('setSelector', this._handleEvent);
     }
   }, {
     key: '_render',
@@ -29,17 +30,25 @@ var Datavis = function () {
     _classCallCheck(this, Datavis);
 
     this._handleEvent = function (e) {
+      e.stopPropagation();
       _this[e.type].apply(_this, _toConsumableArray(e.detail)) || _this._render();
       dispatch('Datavis:didUpdate');
     };
 
     this.state = {
       commodity: 'soy',
-      features: []
+      features: [],
+      selector: false
     };
 
-    this.onCommodityChange = function (e) {
-      return dispatch('setCommodity', e.currentTarget.value);
+    this.onBackgroundClick = function (_ref) {
+      var target = _ref.target;
+
+      var selector = document.querySelector('.selector');
+      if (!selector.contains(target)) {
+        window.removeEventListener('click', _this.onBackgroundClick);
+        dispatch('setSelector', false);
+      }
     };
 
     this.props = props;
@@ -57,7 +66,19 @@ var Datavis = function () {
   }, {
     key: 'setCommodity',
     value: function setCommodity(commodity) {
-      this.state = _extends({}, this.state, { commodity: commodity });
+      this.state = _extends({}, this.state, { commodity: commodity, selector: false });
+    }
+  }, {
+    key: 'setSelector',
+    value: function setSelector(selector) {
+      var _this2 = this;
+
+      if (selector) {
+        requestAnimationFrame(function () {
+          return window.addEventListener('click', _this2.onBackgroundClick);
+        });
+      }
+      this.state = _extends({}, this.state, { selector: selector });
     }
   }, {
     key: 'willMount',
@@ -71,11 +92,10 @@ var Datavis = function () {
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var _state = this.state,
           features = _state.features,
-          commodity = _state.commodity;
+          commodity = _state.commodity,
+          selector = _state.selector;
 
       return function () {
         var _elem = document.createElement('div');
@@ -85,8 +105,11 @@ var Datavis = function () {
         _elem.appendChild(document.createTextNode('\n        '));
 
         var _expr = new Selector({
+          open: selector,
+          active: commodity,
           options: ['soy', 'beef', 'coffee'],
-          onChange: _this2.onCommodityChange
+          selectOptionAction: 'setCommodity',
+          toggleOpenAction: 'setSelector'
         }),
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
@@ -199,7 +222,9 @@ var MapComponent = function () {
 
     this.didUpdate = function () {
       if (_this.props.features.length > 0) {
-        _this.renderMap();
+        if (!_this.map) {
+          _this.renderMap();
+        }
         _this.renderBubbles();
       }
     };
@@ -247,7 +272,6 @@ var MapComponent = function () {
     value: function renderBubbles() {
       var commodity = this.props.commodity;
 
-      console.log(commodity);
       var testData = [{
         "size": 189744,
         "centroid": [656.526050761282, 153.59300416971516]
@@ -348,7 +372,7 @@ var MapComponent = function () {
         return 'translate(' + d.centroid + ')';
       }).attr('r', function (d) {
         return radius(d.size);
-      });
+      }).exit().remove();
     }
   }, {
     key: 'render',
@@ -367,83 +391,93 @@ var MapComponent = function () {
 }();
 'use strict';
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+function Selector(props) {
+  var options = props.options,
+      open = props.open,
+      active = props.active,
+      selectOptionAction = props.selectOptionAction,
+      toggleOpenAction = props.toggleOpenAction;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+  return function () {
+    var _elem = document.createElement('div');
 
-var Selector = function () {
-  _createClass(Selector, [{
-    key: '_setListeners',
-    value: function _setListeners() {
-      window.addEventListener('Datavis:didUpdate', this.didMount);
-    }
-  }, {
-    key: '_render',
-    value: function _render() {
-      return this.render();
-    }
-  }]);
+    _elem.setAttribute('class', 'selector ' + (open ? '-open' : ''));
 
-  function Selector(props) {
-    var _this = this;
+    _elem.appendChild(document.createTextNode('\n      '));
 
-    _classCallCheck(this, Selector);
+    var _elem2 = document.createElement('button');
 
-    this.didMount = function () {
-      document.querySelector('.select').addEventListener('change', _this.props.onChange);
-    };
+    _elem2.setAttribute('class', 'selector-button selector-text');
 
-    this.props = props;
-    this._setListeners();
-    return this._render();
-  }
+    _elem2.setAttribute('onClick', 'dispatch(\'' + toggleOpenAction + '\', ' + !open + ')');
 
-  _createClass(Selector, [{
-    key: 'render',
-    value: function render() {
-      var options = this.props.options;
+    var _expr = active,
+        _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
+    if (_res instanceof Array) {
+      for (var _i3 = 0; _i3 < _res.length; _i3 += 1) {
+        _elem2.appendChild(_res[_i3] instanceof Node || _res[_i3] instanceof Array ? _res[_i3] : document.createTextNode(_res[_i3]));
+      }
+    } else _elem2.appendChild(_res);
+
+    _elem.appendChild(_elem2);
+
+    _elem.appendChild(document.createTextNode('\n      '));
+
+    var _elem3 = document.createElement('ul');
+
+    _elem3.setAttribute('class', 'selector-list');
+
+    _elem3.appendChild(document.createTextNode('\n        '));
+
+    var _expr2 = options.map(function (option) {
       return function () {
-        var _elem = document.createElement('select');
+        var _elem4 = document.createElement('li');
 
-        _elem.setAttribute('class', 'select');
+        _elem4.setAttribute('class', 'selector-list-item');
 
-        _elem.setAttribute('value', 'soy');
+        _elem4.setAttribute('onClick', 'dispatch(\'' + selectOptionAction + '\', \'' + option + '\')');
 
-        _elem.appendChild(document.createTextNode('\n        '));
+        _elem4.appendChild(document.createTextNode('\n            '));
 
-        var _expr = options.map(function (commodity) {
-          return function () {
-            var _elem2 = document.createElement('option');
+        var _elem5 = document.createElement('span');
 
-            _elem2.setAttribute('value', commodity);
+        _elem5.setAttribute('class', 'selector-list-item-name selector-text');
 
-            var _expr2 = commodity,
-                _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
+        _elem5.appendChild(document.createTextNode('\n              '));
 
-            if (_res2 instanceof Array) {
-              for (var _i3 = 0; _i3 < _res2.length; _i3 += 1) {
-                _elem2.appendChild(_res2[_i3] instanceof Node || _res2[_i3] instanceof Array ? _res2[_i3] : document.createTextNode(_res2[_i3]));
-              }
-            } else _elem2.appendChild(_res2);
+        var _expr3 = option,
+            _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
 
-            return _elem2;
-          }();
-        }),
-            _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
-
-        if (_res instanceof Array) {
-          for (var _i4 = 0; _i4 < _res.length; _i4 += 1) {
-            _elem.appendChild(_res[_i4] instanceof Node || _res[_i4] instanceof Array ? _res[_i4] : document.createTextNode(_res[_i4]));
+        if (_res3 instanceof Array) {
+          for (var _i5 = 0; _i5 < _res3.length; _i5 += 1) {
+            _elem5.appendChild(_res3[_i5] instanceof Node || _res3[_i5] instanceof Array ? _res3[_i5] : document.createTextNode(_res3[_i5]));
           }
-        } else _elem.appendChild(_res);
+        } else _elem5.appendChild(_res3);
 
-        _elem.appendChild(document.createTextNode('\n      '));
+        _elem5.appendChild(document.createTextNode('\n            '));
 
-        return _elem;
+        _elem4.appendChild(_elem5);
+
+        _elem4.appendChild(document.createTextNode('\n          '));
+
+        return _elem4;
       }();
-    }
-  }]);
+    }),
+        _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
-  return Selector;
-}();
+    if (_res2 instanceof Array) {
+      for (var _i6 = 0; _i6 < _res2.length; _i6 += 1) {
+        _elem3.appendChild(_res2[_i6] instanceof Node || _res2[_i6] instanceof Array ? _res2[_i6] : document.createTextNode(_res2[_i6]));
+      }
+    } else _elem3.appendChild(_res2);
+
+    _elem3.appendChild(document.createTextNode('\n      '));
+
+    _elem.appendChild(_elem3);
+
+    _elem.appendChild(document.createTextNode('\n    '));
+
+    return _elem;
+  }();
+}

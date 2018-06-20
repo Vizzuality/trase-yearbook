@@ -1,11 +1,13 @@
 class Datavis {
   _handleEvent = (e) => {
+    e.stopPropagation();
     this[e.type](...e.detail) || this._render();
     dispatch('Datavis:didUpdate');
   }
   _setListeners() {
     window.addEventListener('setFeatures', this._handleEvent);
     window.addEventListener('setCommodity', this._handleEvent);
+    window.addEventListener('setSelector', this._handleEvent);
   }
   _render() {
     this.root.innerHTML= '';
@@ -21,7 +23,8 @@ class Datavis {
 
   state = {
     commodity: 'soy',
-    features: []
+    features: [],
+    selector: false
   };
 
   setFeatures(topo) {
@@ -29,10 +32,23 @@ class Datavis {
   }
 
   setCommodity(commodity) {
-    this.state = { ...this.state, commodity };
+    this.state = { ...this.state, commodity, selector: false };
   }
 
-  onCommodityChange = e => dispatch('setCommodity', e.currentTarget.value);
+  setSelector(selector) {
+    if (selector) {
+      requestAnimationFrame(() => window.addEventListener('click', this.onBackgroundClick));
+    }
+    this.state = { ...this.state, selector };
+  }
+
+  onBackgroundClick = ({ target }) => {
+    const selector = document.querySelector('.selector');
+    if (!selector.contains(target)) {
+      window.removeEventListener('click', this.onBackgroundClick);
+      dispatch('setSelector', false);
+    }
+  };
 
   willMount() {
     fetch('world.topo.json')
@@ -41,12 +57,15 @@ class Datavis {
   }
 
   render() {
-    const { features, commodity } = this.state;
+    const { features, commodity, selector } = this.state;
     return (
       <div class="container">
         {new Selector({
+          open: selector,
+          active: commodity,
           options: ['soy', 'beef', 'coffee'],
-          onChange: this.onCommodityChange
+          selectOptionAction: 'setCommodity',
+          toggleOpenAction: 'setSelector',
         })}
         {new MapComponent({
           features,

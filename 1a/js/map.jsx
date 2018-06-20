@@ -46,7 +46,9 @@ class MapComponent {
 
   didUpdate = () => {
     if (this.props.features.length > 0) {
-      this.renderMap();
+      if (!this.map) {
+        this.renderMap();
+      }
       this.renderBubbles();
     }
   };
@@ -86,7 +88,6 @@ class MapComponent {
 
   renderBubbles() {
     const { commodity } = this.props;
-    console.log(commodity);
     const testData = [
       {
         "size": 189744,
@@ -310,7 +311,8 @@ class MapComponent {
       .data(bubbles)
       .enter().append('circle')
       .attr('transform', d => `translate(${d.centroid})`)
-      .attr('r', d => radius(d.size));
+      .attr('r', d => radius(d.size))
+      .exit().remove();
   }
 
   render() {

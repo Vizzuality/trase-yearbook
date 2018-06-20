@@ -1,29 +1,26 @@
-class Selector {
-  _setListeners() {
-    window.addEventListener('Datavis:didUpdate', this.didMount);
-  }
-  _render() {
-    return this.render();
-  }
-  constructor(props) {
-    this.props = props;
-    this._setListeners();
-    return this._render();
-  }
-
-  didMount = () => {
-    document.querySelector('.select')
-      .addEventListener('change', this.props.onChange)
-  }
-
-  render() {
-    const { options } = this.props;
-    return (
-      <select class="select" value="soy">
-        {options.map(commodity => (
-          <option value={commodity}>{commodity}</option>
+function Selector(props) {
+  const { options, open, active, selectOptionAction, toggleOpenAction } = props;
+  return (
+    <div
+      class={`selector ${open ? '-open' : ''}`}
+    >
+      <button
+        class="selector-button selector-text"
+        onClick={`dispatch('${toggleOpenAction}', ${!open})`}>{active}</button>
+      <ul class="selector-list">
+        {options.map(option => (
+          <li
+            class="selector-list-item"
+            onClick={`dispatch('${selectOptionAction}', '${option}')`}
+          >
+            <span
+              class="selector-list-item-name selector-text"
+            >
+              {option}
+            </span>
+          </li>
         ))}
-      </select>
-    );
-  }
+      </ul>
+    </div>
+  );
 }
