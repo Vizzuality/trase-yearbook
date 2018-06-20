@@ -1,7 +1,8 @@
 .container {
-  margin: 44px;
-  height: 100%;
-  width: 400px;
+  margin: 44px auto;
+  height: 500px;
+  width: 100%;
+  max-width: 1080px;
 }
 
 .title {
@@ -19,8 +20,8 @@
   position: relative;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 240px;
-  width: 33%;
+  height: 480px;
+  width: 20%;
   margin: 0 auto;
 }
 

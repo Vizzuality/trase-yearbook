@@ -1,0 +1,1081 @@
+{
+  "name": "Forest Risk Commodity",
+  "children":[
+  {
+    "name": "COCOA",
+    "children": [
+      {
+        "name": "OTHER",
+        "children": [
+          {
+            "name": "BOLIVIA",
+            "size": 247.795
+          },
+          {
+            "name": "BRAZIL",
+            "size": 2585.8512
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 17352.9066
+          },
+          {
+            "name": "ECUADOR",
+            "size": 133354.4971
+          },
+          {
+            "name": "PERU",
+            "size": 34245.7057
+          },
+          {
+            "name": "URUGUAY",
+            "size": 1338.8137
+          }
+        ]
+      },
+      {
+        "name": "BARRY CALLEBAUT BRASIL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 22592.0041
+          }
+        ]
+      },
+      {
+        "name": "CARGILL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 29457.0685
+          }
+        ]
+      },
+      {
+        "name": "NESTLE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 45.2526
+          },
+          {
+            "name": "ECUADOR",
+            "size": 47942.5801
+          }
+        ]
+      },
+      {
+        "name": "OLAM",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 20846.256
+          },
+          {
+            "name": "ECUADOR",
+            "size": 82380
+          }
+        ]
+      },
+      {
+        "name": "COMPANIA COLOMBIANA AGROINDUSTRIAL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 2922.413
+          }
+        ]
+      },
+      {
+        "name": "AGRICOLA GUANGALA S A AGRIGUANGALA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 17409.39
+          }
+        ]
+      },
+      {
+        "name": "AGROINDUSTRIAS ARRIBA DEL ECUADOR AGROARRIBA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 62567.063
+          }
+        ]
+      },
+      {
+        "name": "AROMATIC COCOA EXPORT S A AROMAEXCO",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 16008.414
+          }
+        ]
+      },
+      {
+        "name": "AYD SANCHEZ ADSANCOCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 8781.68
+          }
+        ]
+      },
+      {
+        "name": "CHOCOLATES FINOS NACIONALES COFINA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 13054.4564
+          }
+        ]
+      },
+      {
+        "name": "COMERCIALIZADORA DE PRODUCTOS AGRICOLAS ZAMBRANO VELEZ AGROZAMVELSA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 10805.5001
+          }
+        ]
+      },
+      {
+        "name": "COMERCIALIZADORA Y EXPORTADORA DE CACAO",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 8855.806
+          }
+        ]
+      },
+      {
+        "name": "COMPANIA AGROCOMERCIAL PANCHANA Y ZAMBRANO",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 17262.324
+          }
+        ]
+      },
+      {
+        "name": "ECO KAKAO",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 9884.25
+          }
+        ]
+      },
+      {
+        "name": "ECUADOR COCOA Y COFFEE ECUACOFFEE",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 17833.2557
+          }
+        ]
+      },
+      {
+        "name": "EXPORTADORA MANABI EXPORTMANABI",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 22968.918
+          }
+        ]
+      },
+      {
+        "name": "EXPORTADORA MLOPEZ CIA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 13606.8
+          }
+        ]
+      },
+      {
+        "name": "GOLDCOCOA EXPORT",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 10905.45
+          }
+        ]
+      },
+      {
+        "name": "GRANCACAO EXPORT",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 11805.9
+          }
+        ]
+      },
+      {
+        "name": "GRANDSOUTH",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 21481.66
+          }
+        ]
+      },
+      {
+        "name": "INMOBILIARIA GUANGALA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 31141.568
+          }
+        ]
+      },
+      {
+        "name": "LA NUEVA CASA DEL CACAO S A CASACAO",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 15215.58
+          }
+        ]
+      },
+      {
+        "name": "MANACAO",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 14877.946
+          }
+        ]
+      },
+      {
+        "name": "MARTINETTI MAWYIN PEDRO ANDRES",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 9252.624
+          }
+        ]
+      },
+      {
+        "name": "MARTINETTI SALTOS PEDRO FERNANDO",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 8791.842
+          }
+        ]
+      },
+      {
+        "name": "QUEVEXPORT",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 9105.24
+          }
+        ]
+      },
+      {
+        "name": "RISTOKCACAO",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 10382.8536
+          }
+        ]
+      },
+      {
+        "name": "SOCIEDAD CIVIL GERVERD",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 11355.054
+          }
+        ]
+      },
+      {
+        "name": "TRANSMAR ECUADOR",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 10621.6059
+          }
+        ]
+      },
+      {
+        "name": "AMAZONAS TRADING PERU S A C",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 8489.7776
+          }
+        ]
+      },
+      {
+        "name": "CAFETALERA AMAZONICA S.A.C.",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 11370.332
+          }
+        ]
+      },
+      {
+        "name": "EXPORTADORA ROMEX",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 8958.2897
+          }
+        ]
+      },
+      {
+        "name": "INDUSTRIAS DEL ESPINO",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 299.82
+          }
+        ]
+      },
+      {
+        "name": "MACHU PICCHU COFFEE TRADING S.A.C.",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 12983.4535
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COFFEE",
+    "children": [
+      {
+        "name": "OTHER",
+        "children": [
+          {
+            "name": "BOLIVIA",
+            "size": 3661.2717
+          },
+          {
+            "name": "BRAZIL",
+            "size": 394592.7762
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 141085.4266
+          },
+          {
+            "name": "COSTARICA",
+            "size": 62567.3098
+          },
+          {
+            "name": "ECUADOR",
+            "size": 5270.5274
+          },
+          {
+            "name": "PERU",
+            "size": 143523.2791
+          }
+        ]
+      },
+      {
+        "name": "ATLANTICA EXPORTACAO E IMPORTACAO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 75362.211
+          }
+        ]
+      },
+      {
+        "name": "CAFEBRAS COMERCIO DE CAFES DO BRASIL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 28740.053
+          }
+        ]
+      },
+      {
+        "name": "COFCO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 25936.555
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 16867.032
+          }
+        ]
+      },
+      {
+        "name": "COOPERATIVA REGIONAL DE CAFEICULTORES EM GUAXUPE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 242907.7658
+          }
+        ]
+      },
+      {
+        "name": "COSTA CAFE COMERCIO EXPORTACAO E IMPORTACAO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 27356.25
+          }
+        ]
+      },
+      {
+        "name": "ED&F MAN",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 48692.571
+          }
+        ]
+      },
+      {
+        "name": "EMPRESA INTERAGRICOLA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 104200.417
+          }
+        ]
+      },
+      {
+        "name": "ENGELHART",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 19725.06
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 39640.879
+          }
+        ]
+      },
+      {
+        "name": "EXPORTADORA DE CAFE GUAXUPE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 53059.848
+          }
+        ]
+      },
+      {
+        "name": "GARDINGO",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 47122.438
+          }
+        ]
+      },
+      {
+        "name": "LOUIS DREYFUS",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 33112.76
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 44903.309
+          },
+          {
+            "name": "PERU",
+            "size": 6214.5555
+          }
+        ]
+      },
+      {
+        "name": "MITSUI",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 11403.759
+          }
+        ]
+      },
+      {
+        "name": "NESTLE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 126.9865
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 3.6888
+          },
+          {
+            "name": "COSTARICA",
+            "size": 3.0148
+          }
+        ]
+      },
+      {
+        "name": "NEUMANN KAFFEE GRUPPE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 6130.32
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 32680.448
+          },
+          {
+            "name": "COSTARICA",
+            "size": 3204.7139
+          }
+        ]
+      },
+      {
+        "name": "NICCHIO CAFE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 34275.161
+          }
+        ]
+      },
+      {
+        "name": "OLAM",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 130082.96
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 35807.466
+          },
+          {
+            "name": "PERU",
+            "size": 34205.058
+          }
+        ]
+      },
+      {
+        "name": "SAGRADOS CORACOES INDUSTRIA E COMERCIO DE ALIMENTOS",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 32607.715
+          }
+        ]
+      },
+      {
+        "name": "STOCKLER COMERCIAL E EXPORTADORA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 105864.633
+          }
+        ]
+      },
+      {
+        "name": "TERRA FORTE EXPORTACAO E IMPORTACAO DE CAFE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 124422.063
+          }
+        ]
+      },
+      {
+        "name": "TRISTAO COMPANHIA DE COMERCIO EXTERIOR",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 30693.095
+          }
+        ]
+      },
+      {
+        "name": "UNICAFE COMPANHIA DE COMERCIO EXTERIOR",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 73627.26
+          }
+        ]
+      },
+      {
+        "name": "CARCAFE",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 65316.311
+          }
+        ]
+      },
+      {
+        "name": "CIA CAFETERA LA MESETA",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 51466.799
+          }
+        ]
+      },
+      {
+        "name": "COMPANIA COLOMBIANA AGROINDUSTRIAL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 35342.078
+          }
+        ]
+      },
+      {
+        "name": "FEDERACION NACIONAL DE CAFETEROS DE COLOMBIA",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 119920.8381
+          }
+        ]
+      },
+      {
+        "name": "RAFAEL ESPINOSA HERMANOS Y CIA S C A",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 57524.2203
+          }
+        ]
+      },
+      {
+        "name": "SOCIEDAD EXPORTADORA DE CAFE DE LAS COOPERATIVAS D",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 81876.363
+          }
+        ]
+      },
+      {
+        "name": "ECUADOR COCOA Y COFFEE ECUACOFFEE",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 0.9935
+          }
+        ]
+      },
+      {
+        "name": "CAFETALERA AMAZONICA S.A.C.",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 11034.914
+          }
+        ]
+      },
+      {
+        "name": "EXPORTADORA ROMEX",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 5167.3562
+          }
+        ]
+      },
+      {
+        "name": "PERALES HUANCARUNA S.A.C.",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 43547.883
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PALM KERNEL OIL",
+    "children": [
+      {
+        "name": "AGROPALMA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 132.5051
+          }
+        ]
+      },
+      {
+        "name": "BRF",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2269.398
+          }
+        ]
+      },
+      {
+        "name": "BUNGE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 37.7239
+          }
+        ]
+      },
+      {
+        "name": "OTHER",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 337.7712
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 421.9524
+          },
+          {
+            "name": "COSTARICA",
+            "size": 2703.7728
+          },
+          {
+            "name": "PERU",
+            "size": 0.25
+          }
+        ]
+      },
+      {
+        "name": "C I ACEPALMA",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 34513.1388
+          }
+        ]
+      },
+      {
+        "name": "C I BIOCOSTA",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 21785.6599
+          }
+        ]
+      },
+      {
+        "name": "C I TEQUENDAMA S A S",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 5994.2614
+          }
+        ]
+      },
+      {
+        "name": "GRASAS Y ACEITES VEGETALES",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 4003.4206
+          }
+        ]
+      },
+      {
+        "name": "INDUTRADE",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 5036.6626
+          }
+        ]
+      },
+      {
+        "name": "INDUTRADE SOCIEDAD DE COMERCIALIZACION INTERNACIONAL S A S",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 503.0234
+          }
+        ]
+      },
+      {
+        "name": "SOC DE COMERCIALIZACION INTERNACIONAL MIRA",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 341.3535
+          }
+        ]
+      },
+      {
+        "name": "COMPANIA INDUSTRIAL ACEITERA COTO CINCUENTA Y CUATRO",
+        "children": [
+          {
+            "name": "COSTARICA",
+            "size": 16341.7992
+          }
+        ]
+      },
+      {
+        "name": "COOPERATIVA AGROINDUSTRIAL DE SERVICIOS MULTIPLES DE PRODUCTORES DE PALMA ACEITERA",
+        "children": [
+          {
+            "name": "COSTARICA",
+            "size": 1577.4642
+          }
+        ]
+      },
+      {
+        "name": "AZZURRA AGRONUTRIENTES",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 1025.6983
+          }
+        ]
+      },
+      {
+        "name": "CARGILL",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 3148.4296
+          }
+        ]
+      },
+      {
+        "name": "INDUSTRIAS DEL ESPINO",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 858.113
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PALM OIL",
+    "children": [
+      {
+        "name": "AGROPALMA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 21940.969
+          }
+        ]
+      },
+      {
+        "name": "BIOPALMA DA AMAZONIA S.A. REFLORESTAMENTO INDUSTRIA E COMERC",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 64566.86
+          }
+        ]
+      },
+      {
+        "name": "OTHER",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 3399.295
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 17460.8856
+          },
+          {
+            "name": "COSTARICA",
+            "size": 20313.809
+          },
+          {
+            "name": "ECUADOR",
+            "size": 48222.449
+          },
+          {
+            "name": "PERU",
+            "size": 5729.9809
+          }
+        ]
+      },
+      {
+        "name": "C I ACEPALMA",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 238086.201
+          }
+        ]
+      },
+      {
+        "name": "C I BIOCOSTA",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 204751.473
+          }
+        ]
+      },
+      {
+        "name": "C I TEQUENDAMA S A S",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 24890.2332
+          }
+        ]
+      },
+      {
+        "name": "CARGILL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 10235.123
+          },
+          {
+            "name": "PERU",
+            "size": 14031.02
+          }
+        ]
+      },
+      {
+        "name": "GRASAS Y ACEITES VEGETALES",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 4610.306
+          }
+        ]
+      },
+      {
+        "name": "INDUTRADE",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 4258.18
+          }
+        ]
+      },
+      {
+        "name": "INDUTRADE SOCIEDAD DE COMERCIALIZACION INTERNACIONAL S A S",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 24183.828
+          }
+        ]
+      },
+      {
+        "name": "SOC DE COMERCIALIZACION INTERNACIONAL MIRA",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 26087.526
+          }
+        ]
+      },
+      {
+        "name": "COMPANIA INDUSTRIAL ACEITERA COTO CINCUENTA Y CUATRO",
+        "children": [
+          {
+            "name": "COSTARICA",
+            "size": 106278.94
+          }
+        ]
+      },
+      {
+        "name": "COOPERATIVA AGROINDUSTRIAL DE SERVICIOS MULTIPLES DE PRODUCTORES DE PALMA ACEITERA",
+        "children": [
+          {
+            "name": "COSTARICA",
+            "size": 26323.4381
+          }
+        ]
+      },
+      {
+        "name": "ASOCIACION ECUATORIANA DE EXTRACTORAS DE ACEITE DE PALMA Y SUS DERIVADOS AEXPALMA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 53843.12
+          }
+        ]
+      },
+      {
+        "name": "COMERCIALIZADORA INTERNACIONAL CIECOPALMA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 117428.114
+          }
+        ]
+      },
+      {
+        "name": "INDUSTRIAL DANEC",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 31615.9009
+          }
+        ]
+      },
+      {
+        "name": "LA FABRIL",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 28880.3241
+          }
+        ]
+      },
+      {
+        "name": "OLEODAVILA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 58081.949
+          }
+        ]
+      },
+      {
+        "name": "SOCIEDAD CIVIL EXPORSERVICIOS",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 23280.72
+          }
+        ]
+      },
+      {
+        "name": "AZZURRA AGRONUTRIENTES",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 4358.03
+          }
+        ]
+      },
+      {
+        "name": "INDUSTRIAS DEL ESPINO",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 12577.596
+          }
+        ]
+      }
+    ]
+  }
+]
+}

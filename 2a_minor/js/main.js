@@ -13,7 +13,7 @@ const y = d3.scaleLinear()
 
 // const color = d3.scaleOrdinal(d3.schemeCategory20);
 const color = d3.scaleLinear()
-    .domain([3000000,   5000000,    7500000,    10000000,   15000000,   20000000,   30000000,   70000000])
+    .domain([200000,   400000,    800000,    1000000,   1400000,   1800000,   2200000,   2600000])
     .range(['#FDDFE2', '#FBBFC5',  '#FBAFB7',  '#FA9EA8',  '#F98E99',  '#F87E8B',  '#F76F7E',  '#F65E6E' ])
     .clamp(true);
 

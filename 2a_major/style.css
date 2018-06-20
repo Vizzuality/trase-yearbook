@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Decima Mono';
+    src: url('../fonts/decimamonopro-webfont.woff2') format('woff2'),
+         url('../fonts/decimamonopro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Sans-serif;
+    font-size: 11px;
+}
+
+.root {
+    cursor: zoom-out;
+}
+
+.slice {
+    cursor: zoom-in;
+}
+
+.slice .main-arc {
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+.slice .hidden-arc {
+    fill: none;
+}
+
+.slice text {
+    font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+    pointer-events: none;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+
+.tooltip {
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2);
+    color: #34444c;
+    font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+    font-size: 13px;
+    position: absolute;
+    pointer-events: none;
+    transition: all 200ms ease-out;
+    opacity: 0;
+}
+
+.tooltip .name {
+    padding: 10px;
+    text-transform: uppercase;
+    background: #FFF0C2;
+}
+
+.tooltip .content {
+    padding: 10px;
+}
+
+.tooltip .content .unit {
+    opacity: .5;
+}

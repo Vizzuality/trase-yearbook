@@ -1,0 +1,2459 @@
+{
+  "name": "Forest Risk Commodity",
+  "children":[
+  {
+    "name": "ACA COOP",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1334837.0843
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1504443.2031
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ACEITERA GENERAL DEHEZA",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1133955
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4119902.5279
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ADM",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 3182862.884
+          },
+          {
+            "name": "BRAZIL",
+            "size": 2256344.342
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 152691.1099
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 694078.422
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 304027.8315
+          },
+          {
+            "name": "BRAZIL",
+            "size": 9001817.487
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 1519540.6722
+          },
+          {
+            "name": "URUGUAY",
+            "size": 132076
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AMAGGI",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 324478.79
+          },
+          {
+            "name": "BRAZIL",
+            "size": 3447155.148
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 70747.956
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 444965.0453
+          },
+          {
+            "name": "BRAZIL",
+            "size": 4864522.4893
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 187310.907
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BUNGE",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1972198.726
+          },
+          {
+            "name": "BRAZIL",
+            "size": 4511573.1944
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 3861719.6524
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 748.98
+          },
+          {
+            "name": "BRAZIL",
+            "size": 11663557.2382
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 414764.1527
+          }
+        ]
+      },
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 37.7239
+          }
+        ]
+      },
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2195708.5078
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CARGILL",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 3798616.1884
+          },
+          {
+            "name": "BRAZIL",
+            "size": 4848559.1265
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 319090.46
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4335690.4589
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 134219.5355
+          },
+          {
+            "name": "BRAZIL",
+            "size": 10596321.6531
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 1857968.0061
+          }
+        ]
+      },
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 29457.0685
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 10235.123
+          },
+          {
+            "name": "PERU",
+            "size": 14031.02
+          }
+        ]
+      },
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 3148.4296
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CHS",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 212700
+          },
+          {
+            "name": "BRAZIL",
+            "size": 749064.219
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 58433.02
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1288582.1067
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1310840.6586
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 241677.495
+          },
+          {
+            "name": "URUGUAY",
+            "size": 134268
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COFCO",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4011640.4587
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1634540.869
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 360025.925
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4308544.1967
+          },
+          {
+            "name": "BRAZIL",
+            "size": 5301499.2244
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 954665.158
+          },
+          {
+            "name": "URUGUAY",
+            "size": 231342.0835
+          }
+        ]
+      },
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 25936.555
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 16867.032
+          }
+        ]
+      },
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 9779576.2692
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ENGELHART",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 41601
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1000301.823
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 327487.8836
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1836918.853
+          }
+        ]
+      },
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 19725.06
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 39640.879
+          }
+        ]
+      },
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 195642.9606
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GLENCORE",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 123308
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1887260.799
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 3129106.1821
+          },
+          {
+            "name": "BRAZIL",
+            "size": 2495012.126
+          }
+        ]
+      },
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2202696.3248
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "LOUIS DREYFUS",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 1697606.88
+          },
+          {
+            "name": "BRAZIL",
+            "size": 1866242.8266
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 100846.02
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 3686380.4172
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 46977.6882
+          },
+          {
+            "name": "BRAZIL",
+            "size": 7725216.3123
+          },
+          {
+            "name": "URUGUAY",
+            "size": 495353.496
+          }
+        ]
+      },
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 33112.76
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 44903.309
+          },
+          {
+            "name": "PERU",
+            "size": 6214.5555
+          }
+        ]
+      },
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 15652188.458
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MOLINOS AGRO",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 333934
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 2623994.0667
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "OTHER",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 7565751.1515
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 5824.6612
+          },
+          {
+            "name": "BRAZIL",
+            "size": 2772244.3101
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 32747.1969
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 910283.328
+          },
+          {
+            "name": "PERU",
+            "size": 12362.1448
+          },
+          {
+            "name": "URUGUAY",
+            "size": 53.8704
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 11762609.4074
+          },
+          {
+            "name": "BOLIVIA",
+            "size": 2463980.4168
+          },
+          {
+            "name": "BRAZIL",
+            "size": 14433713.2847
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 37956.229
+          },
+          {
+            "name": "COSTARICA",
+            "size": 18725.4272
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 2324359.174
+          },
+          {
+            "name": "URUGUAY",
+            "size": 2281413.3066
+          }
+        ]
+      },
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 2634354.5136
+          },
+          {
+            "name": "BRAZIL",
+            "size": 69249214.1891
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 5455986.9234
+          },
+          {
+            "name": "COSTARICA",
+            "size": 2188633.6153
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 674295.343
+          },
+          {
+            "name": "PERU",
+            "size": 2160655.5192
+          }
+        ]
+      },
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "BOLIVIA",
+            "size": 247.795
+          },
+          {
+            "name": "BRAZIL",
+            "size": 2585.8512
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 17352.9066
+          },
+          {
+            "name": "ECUADOR",
+            "size": 133354.4971
+          },
+          {
+            "name": "PERU",
+            "size": 34245.7057
+          },
+          {
+            "name": "URUGUAY",
+            "size": 1338.8137
+          }
+        ]
+      },
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BOLIVIA",
+            "size": 3661.2717
+          },
+          {
+            "name": "BRAZIL",
+            "size": 394592.7762
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 141085.4266
+          },
+          {
+            "name": "COSTARICA",
+            "size": 62567.3098
+          },
+          {
+            "name": "ECUADOR",
+            "size": 5270.5274
+          },
+          {
+            "name": "PERU",
+            "size": 143523.2791
+          }
+        ]
+      },
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 337.7712
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 421.9524
+          },
+          {
+            "name": "COSTARICA",
+            "size": 2703.7728
+          },
+          {
+            "name": "PERU",
+            "size": 0.25
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 3399.295
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 17460.8856
+          },
+          {
+            "name": "COSTARICA",
+            "size": 20313.809
+          },
+          {
+            "name": "ECUADOR",
+            "size": 48222.449
+          },
+          {
+            "name": "PERU",
+            "size": 5729.9809
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "VICENTIN",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 877364.4422
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 5096
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "ARGENTINA",
+            "size": 4915805.2633
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 122654.053
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ACUCAR E ALCOOL OSWALDO RIBEIRO DE MENDONCA",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 3875147.9874
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ADECOAGRO",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 37746.844
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 815215.5569
+          }
+        ]
+      },
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 5210925.9913
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AGROPALMA",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 132.5051
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 21940.969
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ATLANTICA EXPORTACAO E IMPORTACAO",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 75362.211
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BARRY CALLEBAUT BRASIL",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 22592.0041
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BIANCHINI",
+    "children": [
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2082828.0213
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BIOPALMA DA AMAZONIA S.A. REFLORESTAMENTO INDUSTRIA E COMERC",
+    "children": [
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 64566.86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BP",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2574361.2269
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BRF",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2269.398
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CAFEBRAS COMERCIO DE CAFES DO BRASIL",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 28740.053
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CLEALCO",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 5164378.9331
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COAMO",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 771529.718
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2879619.8515
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COOPERATIVA REGIONAL DE CAFEICULTORES EM GUAXUPE",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 242907.7658
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COPERSUCAR",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 30368220.7517
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COSTA CAFE COMERCIO EXPORTACAO E IMPORTACAO",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 27356.25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ED&F MAN",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 48692.571
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 9374.134
+          }
+        ]
+      },
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 1048531.747
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "EMPRESA INTERAGRICOLA",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 104200.417
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "EXPORTADORA DE CAFE GUAXUPE",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 53059.848
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GARDINGO",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 47122.438
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GUARANI",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 3135961.5344
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MARUBENI",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 1351587.042
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 3517328.011
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MITSUBISHI",
+    "children": [
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 950364.554
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 1091626.776
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MITSUI",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 11403.759
+          }
+        ]
+      },
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 930830.788
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 1902874.553
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "NESTLE",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 45.2526
+          },
+          {
+            "name": "ECUADOR",
+            "size": 47942.5801
+          }
+        ]
+      },
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 126.9865
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 3.6888
+          },
+          {
+            "name": "COSTARICA",
+            "size": 3.0148
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "NEUMANN KAFFEE GRUPPE",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 6130.32
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 32680.448
+          },
+          {
+            "name": "COSTARICA",
+            "size": 3204.7139
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "NICCHIO CAFE",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 34275.161
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ODEBRECHT AGROINDUSTRIAL PARTICIPACOES",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2516801.1405
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "OLAM",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 20846.256
+          },
+          {
+            "name": "ECUADOR",
+            "size": 82380
+          }
+        ]
+      },
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 130082.96
+          },
+          {
+            "name": "COLOMBIA",
+            "size": 35807.466
+          },
+          {
+            "name": "PERU",
+            "size": 34205.058
+          }
+        ]
+      },
+      {
+        "name": "MAIZE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 481851.607
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "RAIZEN",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 35429375.3102
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SAGRADOS CORACOES INDUSTRIA E COMERCIO DE ALIMENTOS",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 32607.715
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SAO MARTINHO",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 9354477.6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SJC BIOENERGIA",
+    "children": [
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 62912.097
+          }
+        ]
+      },
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2547831.8305
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SODRUGESTVO",
+    "children": [
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 771477.841
+          },
+          {
+            "name": "PARAGUAY",
+            "size": 1029885.969
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "STOCKLER COMERCIAL E EXPORTADORA",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 105864.633
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SUCDEN DO BRASIL",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 6629643.1786
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TERRA FORTE EXPORTACAO E IMPORTACAO DE CAFE",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 124422.063
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TRISTAO COMPANHIA DE COMERCIO EXTERIOR",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 30693.095
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "UNICAFE COMPANHIA DE COMERCIO EXTERIOR",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 73627.26
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "USINA ALTO ALEGRE",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 4390294.18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "USINA CORURIPE",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 7362131.105
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "USINA DE ACUCAR SANTA TEREZINHA",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 10581557.066
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "USINA DELTA",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 4156781.3517
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "VA&E TRADING DO BRASIL",
+    "children": [
+      {
+        "name": "SUGARCANE",
+        "children": [
+          {
+            "name": "BRAZIL",
+            "size": 2837799.7648
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "C I ACEPALMA",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 34513.1388
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 238086.201
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "C I BIOCOSTA",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 21785.6599
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 204751.473
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "C I TEQUENDAMA S A S",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 5994.2614
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 24890.2332
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 37.4367
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CARCAFE",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 65316.311
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CIA CAFETERA LA MESETA",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 51466.799
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COMPANIA COLOMBIANA AGROINDUSTRIAL",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 2922.413
+          }
+        ]
+      },
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 35342.078
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "FEDERACION NACIONAL DE CAFETEROS DE COLOMBIA",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 119920.8381
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GRASAS Y ACEITES VEGETALES",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 4003.4206
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 4610.306
+          }
+        ]
+      },
+      {
+        "name": "SOY",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 141.1397
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "INDUTRADE",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 5036.6626
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 4258.18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "INDUTRADE SOCIEDAD DE COMERCIALIZACION INTERNACIONAL S A S",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 503.0234
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 24183.828
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "RAFAEL ESPINOSA HERMANOS Y CIA S C A",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 57524.2203
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SOC DE COMERCIALIZACION INTERNACIONAL MIRA",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 341.3535
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 26087.526
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SOCIEDAD EXPORTADORA DE CAFE DE LAS COOPERATIVAS D",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "COLOMBIA",
+            "size": 81876.363
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COMPANIA INDUSTRIAL ACEITERA COTO CINCUENTA Y CUATRO",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "COSTARICA",
+            "size": 16341.7992
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "COSTARICA",
+            "size": 106278.94
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COOPERATIVA AGROINDUSTRIAL DE SERVICIOS MULTIPLES DE PRODUCTORES DE PALMA ACEITERA",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "COSTARICA",
+            "size": 1577.4642
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "COSTARICA",
+            "size": 26323.4381
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AGRICOLA GUANGALA S A AGRIGUANGALA",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 17409.39
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AGROINDUSTRIAS ARRIBA DEL ECUADOR AGROARRIBA",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 62567.063
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AROMATIC COCOA EXPORT S A AROMAEXCO",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 16008.414
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ASOCIACION ECUATORIANA DE EXTRACTORAS DE ACEITE DE PALMA Y SUS DERIVADOS AEXPALMA",
+    "children": [
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 53843.12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AYD SANCHEZ ADSANCOCOA",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 8781.68
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CHOCOLATES FINOS NACIONALES COFINA",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 13054.4564
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COMERCIALIZADORA DE PRODUCTOS AGRICOLAS ZAMBRANO VELEZ AGROZAMVELSA",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 10805.5001
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COMERCIALIZADORA INTERNACIONAL CIECOPALMA",
+    "children": [
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 117428.114
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COMERCIALIZADORA Y EXPORTADORA DE CACAO",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 8855.806
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COMPANIA AGROCOMERCIAL PANCHANA Y ZAMBRANO",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 17262.324
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ECO KAKAO",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 9884.25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ECUADOR COCOA Y COFFEE ECUACOFFEE",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 17833.2557
+          }
+        ]
+      },
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 0.9935
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "EXPORTADORA MANABI EXPORTMANABI",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 22968.918
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "EXPORTADORA MLOPEZ CIA",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 13606.8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GOLDCOCOA EXPORT",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 10905.45
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GRANCACAO EXPORT",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 11805.9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GRANDSOUTH",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 21481.66
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "INDUSTRIAL DANEC",
+    "children": [
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 31615.9009
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "INMOBILIARIA GUANGALA",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 31141.568
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "LA FABRIL",
+    "children": [
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 28880.3241
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "LA NUEVA CASA DEL CACAO S A CASACAO",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 15215.58
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MANACAO",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 14877.946
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MARTINETTI MAWYIN PEDRO ANDRES",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 9252.624
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MARTINETTI SALTOS PEDRO FERNANDO",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 8791.842
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "OLEODAVILA",
+    "children": [
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 58081.949
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "QUEVEXPORT",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 9105.24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "RISTOKCACAO",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 10382.8536
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SOCIEDAD CIVIL EXPORSERVICIOS",
+    "children": [
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 23280.72
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SOCIEDAD CIVIL GERVERD",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 11355.054
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TRANSMAR ECUADOR",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "ECUADOR",
+            "size": 10621.6059
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AMAZONAS TRADING PERU S A C",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 8489.7776
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AZZURRA AGRONUTRIENTES",
+    "children": [
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 1025.6983
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 4358.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CAFETALERA AMAZONICA S.A.C.",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 11370.332
+          }
+        ]
+      },
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 11034.914
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "EXPORTADORA ROMEX",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 8958.2897
+          }
+        ]
+      },
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 5167.3562
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "INDUSTRIAS DEL ESPINO",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 299.82
+          }
+        ]
+      },
+      {
+        "name": "PALM KERNEL OIL",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 858.113
+          }
+        ]
+      },
+      {
+        "name": "PALM OIL",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 12577.596
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MACHU PICCHU COFFEE TRADING S.A.C.",
+    "children": [
+      {
+        "name": "COCOA",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 12983.4535
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PERALES HUANCARUNA S.A.C.",
+    "children": [
+      {
+        "name": "COFFEE",
+        "children": [
+          {
+            "name": "PERU",
+            "size": 43547.883
+          }
+        ]
+      }
+    ]
+  }
+]
+}

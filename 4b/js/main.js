@@ -30,8 +30,8 @@ var Datavis = function () {
     };
 
     this.loop = null;
-    this.active = 1975;
-    this.options = [1975, 1985, 1995, 2005, 2015];
+    this.active = 2005;
+    this.options = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015];
 
     this.setActive = function (active, loop) {
       _this.active = active;

@@ -102,7 +102,7 @@ function changeValue(newValue) {
         document.querySelector('.tooltip .content .unit').innerHTML = 'ha/t';
     }
 
-    // update value 
+    // update value
     packRoot
         .sum(function (d) { return d[newValue]; })
         .sort(function (a, b) { return b.value - a.value; });
