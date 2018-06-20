@@ -86,9 +86,7 @@ document.addEventListener("mousemove", function (e) {
 });
 
 function changeValue() {
-  var currentValue = parseInt(document.getElementById("year").value, 10);
-  document.querySelector('.title').innerHTML =
-    'Companies that comprised more than 1% of trade in ' + currentValue;
+  document.querySelector('.title').innerHTML = 'Companies that comprised more than 1% of trade in ' + currentValue;
 
   // update value
   packRoot
@@ -114,3 +112,22 @@ function changeValue() {
     .attr('r', function (d) { return d.r; })
     .style('fill', d => color(d.data[currentValue]));
 }
+
+var options = [ 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017 ];
+
+window.dispatch = function (type, value) {
+  currentValue = parseInt(value, 10);
+  renderSelector();
+  changeValue();
+};
+
+var selectorEl = document.getElementById('selector-container');
+function renderSelector() {
+  selectorEl.innerHTML = '';
+  selectorEl.appendChild(YearSelector({
+    options: options,
+    title: "Resize by",
+    active: currentValue
+  }))
+}
+document.addEventListener("DOMContentLoaded", renderSelector);

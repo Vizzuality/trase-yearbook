@@ -99,3 +99,85 @@ select {
 .tooltip .content .unit {
     opacity: .5;
 }
+
+.graph,
+.selector-container {
+  max-width: 500px;
+  margin: 15px 20px;
+}
+
+.year-selector-title {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: rgba(52, 68, 76, 0.6);
+}
+
+.year-selector-list {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0 0;
+}
+
+.year-selector-list::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: calc(100% - 25px);
+  top: 13px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(52, 68, 76, 0.6);
+}
+
+.year-selector-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  height: 40px;
+}
+
+.year-selector-circle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  flex-shrink: 0;
+}
+
+.year-selector-circle {
+  position: relative;
+  display: block;
+  border-radius: 100%;
+  background-color: #fff;
+  z-index: 1;
+  height: 10px;
+  width: 10px;
+  border: 2px solid rgba(52, 68, 76, 0.6);
+}
+
+.year-selector-circle.active {
+  height: 100%;
+  width: 100%;
+  border: solid 2px #34444c;
+}
+
+.year-selector-circle.active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 50%;
+  background-color: #34444c;
+  border-radius: 100%;
+}
+
+.year-selector-label {
+  color: rgba(52, 68, 76, 0.6);
+}
