@@ -30,9 +30,8 @@ var Datavis = function () {
     _classCallCheck(this, Datavis);
 
     this._handleEvent = function (e) {
-      e.stopPropagation();
       _this[e.type].apply(_this, _toConsumableArray(e.detail)) || _this._render();
-      dispatch('Datavis:didUpdate');
+      _this.updateSmartComponents();
     };
 
     this.state = {
@@ -49,6 +48,18 @@ var Datavis = function () {
         window.removeEventListener('click', _this.onBackgroundClick);
         dispatch('setSelector', false);
       }
+    };
+
+    this.smartComponents = {
+      map: new MapComponent({
+        features: this.state.features,
+        commodity: this.state.commodity,
+        selector: '.map',
+        customProjection: 'robinson',
+        getPolygonClassName: function getPolygonClassName() {
+          return 'poly';
+        }
+      })
     };
 
     this.props = props;
@@ -90,12 +101,24 @@ var Datavis = function () {
       });
     }
   }, {
+    key: 'updateSmartComponents',
+    value: function updateSmartComponents() {
+      var _state = this.state,
+          commodity = _state.commodity,
+          features = _state.features;
+
+      dispatch('updateMap', {
+        commodity: commodity,
+        features: features
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var _state = this.state,
-          features = _state.features,
-          commodity = _state.commodity,
-          selector = _state.selector;
+      var map = this.smartComponents.map;
+      var _state2 = this.state,
+          commodity = _state2.commodity,
+          selector = _state2.selector;
 
       return function () {
         var _elem = document.createElement('div');
@@ -121,15 +144,7 @@ var Datavis = function () {
 
         _elem.appendChild(document.createTextNode('\n        '));
 
-        var _expr2 = new MapComponent({
-          features: features,
-          commodity: commodity,
-          selector: '.map',
-          customProjection: 'robinson',
-          getPolygonClassName: function getPolygonClassName() {
-            return 'poly';
-          }
-        }),
+        var _expr2 = map,
             _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
         if (_res2 instanceof Array) {
@@ -172,12 +187,12 @@ var MapComponent = function () {
   _createClass(MapComponent, [{
     key: '_setListeners',
     value: function _setListeners() {
-      window.addEventListener('Datavis:didUpdate', this.didUpdate);
-    }
-  }, {
-    key: '_render',
-    value: function _render() {
-      return this.render();
+      var _this = this;
+
+      window.addEventListener('updateMap', this._handleEvent);
+      window.addEventListener('clickedBubble', function () {
+        return _this.renderBubbles(true);
+      });
     }
   }], [{
     key: 'getFeaturesBox',
@@ -210,28 +225,13 @@ var MapComponent = function () {
   }]);
 
   function MapComponent(props) {
-    var _this = this;
-
     _classCallCheck(this, MapComponent);
 
-    this._handleEvent = function (e) {
-      _this[e.type].apply(_this, _toConsumableArray(e.detail)) || _this._render();
-    };
-
-    this.map = null;
-
-    this.didUpdate = function () {
-      if (_this.props.features.length > 0) {
-        if (!_this.map) {
-          _this.renderMap();
-        }
-        _this.renderBubbles();
-      }
-    };
+    _initialiseProps.call(this);
 
     this.props = props;
     this._setListeners();
-    return this._render();
+    return this.render();
   }
 
   _createClass(MapComponent, [{
@@ -269,7 +269,7 @@ var MapComponent = function () {
     }
   }, {
     key: 'renderBubbles',
-    value: function renderBubbles() {
+    value: function renderBubbles(clickedBubble) {
       var commodity = this.props.commodity;
 
       var testData = [{
@@ -363,20 +363,33 @@ var MapComponent = function () {
         "size": 474360,
         "centroid": [288.69347444588027, 372.6857464621172]
       }];
+      var doubleTestData = [];
+      testData.forEach(function (t) {
+        return doubleTestData.push(_extends({}, t, { size: t.size / 15 }));
+      });
       var bubbles = commodity === 'soy' ? testData : testData.map(function (d) {
         return _extends({}, d, { centroid: [d.centroid[1], d.centroid[0]] });
       });
       var radius = d3.scaleSqrt().domain([0, 1e6]).range([0, 15]);
 
-      this.map.append('g').attr('class', 'bubble').selectAll('circle').data(bubbles).enter().append('circle').attr('transform', function (d) {
+      if (clickedBubble) {
+        bubbles = doubleTestData;
+      }
+
+      this.map.select('.bubble').remove();
+
+      this.map.append('g').attr('class', 'bubble').selectAll('circle').data(bubbles).enter().append('circle').on('click', function () {
+        return dispatch('clickedBubble');
+      }).attr('transform', function (d) {
         return 'translate(' + d.centroid + ')';
       }).attr('r', function (d) {
         return radius(d.size);
-      }).exit().remove();
+      });
     }
   }, {
     key: 'render',
     value: function render() {
+      console.log('render');
       return function () {
         var _elem = document.createElement('div');
 
@@ -389,6 +402,26 @@ var MapComponent = function () {
 
   return MapComponent;
 }();
+
+var _initialiseProps = function _initialiseProps() {
+  var _this2 = this;
+
+  this._handleEvent = function (e) {
+    _this2[e.type].apply(_this2, _toConsumableArray(e.detail));
+  };
+
+  this.map = null;
+
+  this.updateMap = function (props) {
+    _this2.props = _extends({}, _this2.props, props);
+    if (_this2.props.features.length > 0) {
+      if (!_this2.map) {
+        _this2.renderMap();
+      }
+      _this2.renderBubbles();
+    }
+  };
+};
 'use strict';
 
 function Selector(props) {

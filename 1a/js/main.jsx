@@ -1,9 +1,8 @@
 class Datavis {
   _handleEvent = (e) => {
-    e.stopPropagation();
     this[e.type](...e.detail) || this._render();
-    dispatch('Datavis:didUpdate');
-  }
+    this.updateSmartComponents();
+  };
   _setListeners() {
     window.addEventListener('setFeatures', this._handleEvent);
     window.addEventListener('setCommodity', this._handleEvent);
@@ -56,8 +55,17 @@ class Datavis {
       .then(topo => dispatch('setFeatures', topojson.feature(topo, topo.objects.countries)));
   }
 
+  updateSmartComponents() {
+    const { commodity, features } = this.state;
+    dispatch('updateMap', {
+      commodity,
+      features
+    });
+  }
+
   render() {
-    const { features, commodity, selector } = this.state;
+    const { map } = this.smartComponents;
+    const { commodity, selector } = this.state;
     return (
       <div class="container">
         {new Selector({
@@ -67,16 +75,20 @@ class Datavis {
           selectOptionAction: 'setCommodity',
           toggleOpenAction: 'setSelector',
         })}
-        {new MapComponent({
-          features,
-          commodity,
-          selector: '.map',
-          customProjection: 'robinson',
-          getPolygonClassName: () => 'poly'
-        })}
+        {map}
       </div>
     );
   }
+
+  smartComponents = {
+    map: new MapComponent({
+      features: this.state.features,
+      commodity: this.state.commodity,
+      selector: '.map',
+      customProjection: 'robinson',
+      getPolygonClassName: () => 'poly'
+    })
+  };
 }
 
 document.addEventListener("DOMContentLoaded", () => new Datavis({ selector: '#root' }));

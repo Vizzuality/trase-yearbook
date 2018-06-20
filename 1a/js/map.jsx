@@ -1,13 +1,11 @@
 
 class MapComponent {
   _handleEvent = (e) => {
-    this[e.type](...e.detail) || this._render();
+    this[e.type](...e.detail);
   };
   _setListeners() {
-    window.addEventListener('Datavis:didUpdate', this.didUpdate);
-  }
-  _render() {
-    return this.render();
+    window.addEventListener('updateMap', this._handleEvent);
+    window.addEventListener('clickedBubble', () => this.renderBubbles(true));
   }
   static getFeaturesBox(featureBounds) {
     const errors = [
@@ -39,12 +37,13 @@ class MapComponent {
   constructor(props) {
     this.props = props;
     this._setListeners();
-    return this._render();
+    return this.render();
   }
 
   map = null;
 
-  didUpdate = () => {
+  updateMap = (props) => {
+    this.props = { ...this.props, ...props };
     if (this.props.features.length > 0) {
       if (!this.map) {
         this.renderMap();
@@ -86,7 +85,7 @@ class MapComponent {
     container.attr('transform', `translate(${trans}) scale(${scale})`);
   }
 
-  renderBubbles() {
+  renderBubbles(clickedBubble) {
     const { commodity } = this.props;
     const testData = [
       {
@@ -300,22 +299,34 @@ class MapComponent {
         ]
       }
     ];
-    const bubbles = commodity === 'soy' ? testData : testData.map(d => ({ ...d, centroid: [d.centroid[1], d.centroid[0]] }));
+    const doubleTestData = [];
+    testData.forEach(t => doubleTestData.push({ ...t, size: (t.size / 15) }));
+    let bubbles = commodity === 'soy' ? testData : testData.map(d => ({ ...d, centroid: [d.centroid[1], d.centroid[0]] }));
     const radius = d3.scaleSqrt()
       .domain([0, 1e6])
       .range([0, 15]);
+
+    if (clickedBubble) {
+      bubbles = doubleTestData;
+    }
+
+
+    this.map.select('.bubble').remove();
 
     this.map.append('g')
       .attr('class', 'bubble')
       .selectAll('circle')
       .data(bubbles)
-      .enter().append('circle')
+      .enter()
+      .append('circle')
+      .on('click', () => dispatch('clickedBubble'))
       .attr('transform', d => `translate(${d.centroid})`)
-      .attr('r', d => radius(d.size))
-      .exit().remove();
+      .attr('r', d => radius(d.size));
+
   }
 
   render() {
+    console.log('render');
     return (
       <div class="map" />
     );
