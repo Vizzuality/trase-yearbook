@@ -1,7 +1,9 @@
-var svg = d3.select("amazonia"),
+var svg = d3.select("#amazonia"),
     margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = svg.attr("width") - margin.left - margin.right,
     height = svg.attr("height") - margin.top - margin.bottom;
+
+console.log('hey!');
 
 var parseDate = d3.timeParse("%Y");
 
@@ -19,9 +21,9 @@ var area = d3.area()
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("Amazonia.csv", type, function(error, data) {
+d3.csv("Amazonia.csv", type, function(error, data) {
   if (error) throw error;
-
+  console.log('data', data);
   var keys = ["Company-specific pledges", "Soy Moratorium", "none"];
 
   x.domain(d3.extent(data, function(d) { return d.date; }));
@@ -59,5 +61,6 @@ d3.tsv("Amazonia.csv", type, function(error, data) {
 
 function type(d, i, columns) {
   d.date = parseDate(d.YEAR);
+  d.key = d.total_soy_tons;
   return d;
 }
