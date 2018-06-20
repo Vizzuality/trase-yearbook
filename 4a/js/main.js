@@ -115,11 +115,20 @@ function changeValue() {
 
 var options = [ 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017 ];
 
-window.dispatch = function (type, value) {
+window.dispatch = function (type, value, loop) {
   currentValue = parseInt(value, 10);
+  if (!loop && interval) {
+    clearInterval(interval);
+  }
   renderSelector();
   changeValue();
 };
+
+var interval = setInterval(function () {
+  var index = options.indexOf(currentValue);
+  var option = options[index + 1] || options[0];
+  dispatch('setActive', option, true);
+}, 4000);
 
 var selectorEl = document.getElementById('selector-container');
 function renderSelector() {
