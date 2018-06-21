@@ -22,12 +22,16 @@ class Datavis {
 
   state = {
     commodity: 'soy',
-    features: [],
+    features: null,
     selector: false
   };
 
   setFeatures(topo) {
-    this.state = { ...this.state, features: topo.features };
+    const features = topo.features.reduce((acc, next) => ({
+      ...acc,
+      [parseInt(next.id, 10)]: next
+    }), {});
+    this.state = { ...this.state, features };
   }
 
   setCommodity(commodity) {
@@ -50,9 +54,11 @@ class Datavis {
   };
 
   willMount() {
-    fetch('world.topo.json')
+    fetch('data/world.topo.json')
       .then(res => res.ok ? res.json() : Promise.reject(res.status))
-      .then(topo => dispatch('setFeatures', topojson.feature(topo, topo.objects.countries)));
+      .then(topo => {
+        dispatch('setFeatures', topojson.feature(topo, topo.objects.countries))
+      });
   }
 
   updateSmartComponents() {
@@ -71,7 +77,7 @@ class Datavis {
         {new Selector({
           open: selector,
           active: commodity,
-          options: ['soy', 'beef', 'coffee'],
+          options: ['soy', 'sugar', 'oil-palm'],
           selectOptionAction: 'setCommodity',
           toggleOpenAction: 'setSelector',
         })}
