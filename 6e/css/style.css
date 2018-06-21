@@ -1,0 +1,90 @@
+.container {
+  height: 100%;
+  margin: 44px 0 0;
+  max-width: 345px;
+}
+
+.map {
+  height: 360px;
+  width: 345px;
+  margin: 15px;
+}
+
+.legend {
+  margin-right: 15px;
+  margin-left: 70px;
+}
+
+.polygon {
+  fill: #ececec;
+  stroke: #34444c;
+  stroke-opacity: 0.1;
+  stroke-width: 0.3px;
+}
+
+.polygon.company {
+  fill: #7BF0D8;
+}
+
+.polygon.company.p20 {
+  fill: #67DCC4;
+}
+
+.polygon.company.p40 {
+  fill: #3EB39B;
+}
+
+.polygon.company.p60 {
+  fill: #1F947C;
+}
+
+.polygon.company.p80 {
+  fill: #006954;
+}
+
+.polygon.soy {
+  fill: #D1BDFF;
+}
+
+.polygon.soy.p20 {
+  fill: #BFA4FF;
+}
+
+.polygon.soy.p40 {
+  fill: #9B74F5;
+}
+
+.polygon.soy.p60 {
+  fill: #7B54D5;
+}
+
+.polygon.soy.p80 {
+  fill: #542DAE;
+}
+
+
+.tooltip {
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2);
+  color: #34444c;
+  font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+  font-size: 13px;
+  position: absolute;
+  pointer-events: none;
+  transition: all 200ms ease-out;
+  opacity: 0;
+}
+
+.tooltip .name {
+  padding: 10px;
+  text-transform: uppercase;
+  background: #FFF0C2;
+}
+
+.tooltip .content {
+  padding: 10px;
+}
+
+.tooltip .content .unit {
+  opacity: .5;
+}
