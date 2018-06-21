@@ -10,13 +10,25 @@
   margin: 0;
 }
 
-.map {
+.map-images-container {
   position: relative;
-  background-repeat: no-repeat;
-  background-size: contain;
   height: 400px;
   width: 300px;
-  margin: 0 auto;
+  margin: 10px auto 0;
+}
+
+.map-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.map-image.hidden {
+  visibility: hidden;
 }
 
 .map-legend {

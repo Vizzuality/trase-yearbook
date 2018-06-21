@@ -4,6 +4,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36,7 +38,7 @@ var Datavis = function () {
 
     this.state = {
       commodity: 'soy',
-      features: [],
+      features: null,
       selector: false
     };
 
@@ -72,7 +74,10 @@ var Datavis = function () {
   _createClass(Datavis, [{
     key: 'setFeatures',
     value: function setFeatures(topo) {
-      this.state = _extends({}, this.state, { features: topo.features });
+      var features = topo.features.reduce(function (acc, next) {
+        return _extends({}, acc, _defineProperty({}, parseInt(next.id, 10), next));
+      }, {});
+      this.state = _extends({}, this.state, { features: features });
     }
   }, {
     key: 'setCommodity',
@@ -94,10 +99,10 @@ var Datavis = function () {
   }, {
     key: 'willMount',
     value: function willMount() {
-      fetch('world.topo.json').then(function (res) {
+      fetch('data/world.topo.json').then(function (res) {
         return res.ok ? res.json() : Promise.reject(res.status);
       }).then(function (topo) {
-        return dispatch('setFeatures', topojson.feature(topo, topo.objects.countries));
+        dispatch('setFeatures', topojson.feature(topo, topo.objects.countries));
       });
     }
   }, {
@@ -130,7 +135,7 @@ var Datavis = function () {
         var _expr = new Selector({
           open: selector,
           active: commodity,
-          options: ['soy', 'beef', 'coffee'],
+          options: ['soy', 'sugar', 'oil-palm'],
           selectOptionAction: 'setCommodity',
           toggleOpenAction: 'setSelector'
         }),
@@ -190,8 +195,9 @@ var MapComponent = function () {
       var _this = this;
 
       window.addEventListener('updateMap', this._handleEvent);
+      window.addEventListener('setFlowsData', this._handleEvent);
       window.addEventListener('clickedBubble', function () {
-        return _this.renderBubbles(true);
+        return _this.getCommodityData(true);
       });
     }
   }], [{
@@ -235,6 +241,21 @@ var MapComponent = function () {
   }
 
   _createClass(MapComponent, [{
+    key: 'setFlowsData',
+    value: function setFlowsData(flows) {
+      this.state = _extends({}, this.state, { flows: flows });
+      this.renderBubbles();
+    }
+  }, {
+    key: 'getCommodityData',
+    value: function getCommodityData() {
+      var commodity = this.props.commodity;
+
+      d3.json('data/' + commodity + '.json', function (data) {
+        return dispatch('setFlowsData', data);
+      });
+    }
+  }, {
     key: 'renderMap',
     value: function renderMap() {
       var _props = this.props,
@@ -254,11 +275,11 @@ var MapComponent = function () {
       var container = geoParent.append('g');
       var projection = customProjection ? d3['geo' + MapComponent.capitalize(customProjection)]() : d3.geoMercator();
       var path = d3.geoPath().projection(projection);
-      container.selectAll('path').data(features).enter().append('path').attr('class', function (d) {
+      container.selectAll('path').data(Object.values(features)).enter().append('path').attr('class', function (d) {
         return 'polygon ' + getPolygonClassName(d);
       }).attr('d', path);
 
-      var collection = { type: 'FeatureCollection', features: features };
+      var collection = { type: 'FeatureCollection', features: Object.values(features) };
       var featureBounds = path.bounds(collection);
 
       var _MapComponent$fitGeoI = MapComponent.fitGeoInside(featureBounds, width, height),
@@ -269,121 +290,34 @@ var MapComponent = function () {
     }
   }, {
     key: 'renderBubbles',
-    value: function renderBubbles(clickedBubble) {
-      var commodity = this.props.commodity;
+    value: function renderBubbles() {
+      var flows = this.state.flows;
+      var _props2 = this.props,
+          features = _props2.features,
+          customProjection = _props2.customProjection;
 
-      var testData = [{
-        "size": 189744,
-        "centroid": [656.526050761282, 153.59300416971516]
-      }, {
-        "size": 474360,
-        "centroid": [526.6430952165599, 283.09644598407925]
-      }, {
-        "size": 94872,
-        "centroid": [533.4723138369542, 129.25835802870276]
-      }, {
-        "size": 94872,
-        "centroid": [624.7122237279438, 184.33762334979284]
-      }, {
-        "size": 379488,
-        "centroid": [305.3703446682553, 355.4622045454013]
-      }, {
-        "size": 569232,
-        "centroid": [600.1119993205066, 132.52966376726522]
-      }, {
-        "size": 284616,
-        "centroid": [535.2563339091782, 627.758530882346]
-      }, {
-        "size": 569232,
-        "centroid": [665.6112561684752, 401.72936754876696]
-      }, {
-        "size": 284616,
-        "centroid": [839.350805377589, 322.60063032436443]
-      }, {
-        "size": 379488,
-        "centroid": [517.5938018612011, 105.04964044794005]
-      }, {
-        "size": 284616,
-        "centroid": [606.9392703698508, 132.49814615853282]
-      }, {
-        "size": 284616,
-        "centroid": [559.85328480189, 259.02335284015675]
-      }, {
-        "size": 379488,
-        "centroid": [492.2222200729133, 92.66689913382153]
-      }, {
-        "size": 0,
-        "centroid": [486.24110678369584, 224.0927085101528]
-      }, {
-        "size": 664104,
-        "centroid": [475.26708719965217, 216.85582096687196]
-      }, {
-        "size": 664104,
-        "centroid": [720.9526750731229, 184.39563522797624]
-      }, {
-        "size": 94872,
-        "centroid": [547.2654497767121, 123.4732605377174]
-      }, {
-        "size": 284616,
-        "centroid": [271.97019703385934, 179.4738834385287]
-      }, {
-        "size": 664104,
-        "centroid": [527.5511752096703, 118.2330130938836]
-      }, {
-        "size": 189744,
-        "centroid": [554.7177626937378, 80.07659908800954]
-      }, {
-        "size": 664104,
-        "centroid": [243.21383551032872, 203.37969942537543]
-      }, {
-        "size": 569232,
-        "centroid": [307.4591388895363, 295.4941220979017]
-      }, {
-        "size": 189744,
-        "centroid": [338.54254443505397, 280.1198497584087]
-      }, {
-        "size": 284616,
-        "centroid": [786.759985009227, 237.46550167453077]
-      }, {
-        "size": 758976,
-        "centroid": [721.5119805414155, 173.8090648897076]
-      }, {
-        "size": 664104,
-        "centroid": [543.4474207056993, 310.65182983046134]
-      }, {
-        "size": 0,
-        "centroid": [534.3973909194542, 232.4739177958415]
-      }, {
-        "size": 0,
-        "centroid": [221.067688274, -0.4521182625892723]
-      }, {
-        "size": 664104,
-        "centroid": [501.674448071063, 108.30091502600169]
-      }, {
-        "size": 474360,
-        "centroid": [288.69347444588027, 372.6857464621172]
-      }];
-      var doubleTestData = [];
-      testData.forEach(function (t) {
-        return doubleTestData.push(_extends({}, t, { size: t.size / 15 }));
+      var radius = d3.scaleSqrt().domain([0, 1e7]).range([0, 15]);
+      var projection = customProjection ? d3['geo' + MapComponent.capitalize(customProjection)]() : d3.geoMercator();
+      var path = d3.geoPath().projection(projection);
+
+      var bubbles = Object.keys(flows);
+
+      var centroids = bubbles.map(function (d) {
+        return features[d] && path.centroid(features[d]);
+      }).filter(function (d) {
+        return !!d;
       });
-      var bubbles = commodity === 'soy' ? testData : testData.map(function (d) {
-        return _extends({}, d, { centroid: [d.centroid[1], d.centroid[0]] });
-      });
-      var radius = d3.scaleSqrt().domain([0, 1e6]).range([0, 15]);
 
-      if (clickedBubble) {
-        bubbles = doubleTestData;
-      }
+      this.map.select('.bubbles').remove();
 
-      this.map.select('.bubble').remove();
-
-      this.map.append('g').attr('class', 'bubble').selectAll('circle').data(bubbles).enter().append('circle').on('click', function () {
+      this.map.append('g').attr('class', 'bubbles').data(bubbles).selectAll('circle').data(centroids).enter().append('circle').on('click', function () {
         return dispatch('clickedBubble');
-      }).attr('transform', function (d) {
-        return 'translate(' + d.centroid + ')';
-      }).attr('r', function (d) {
-        return radius(d.size);
+      }).attr('cx', function (d) {
+        return d[0];
+      }).attr('cy', function (d) {
+        return d[1];
+      }).attr('r', function (d, i) {
+        return radius(flows[bubbles[i]].tons);
       });
     }
   }, {
@@ -410,15 +344,22 @@ var _initialiseProps = function _initialiseProps() {
     _this2[e.type].apply(_this2, _toConsumableArray(e.detail));
   };
 
+  this.state = {
+    flows: null
+  };
   this.map = null;
 
   this.updateMap = function (props) {
-    _this2.props = _extends({}, _this2.props, props);
-    if (_this2.props.features.length > 0) {
+    var prevProps = _this2.props;
+    _this2.props = _extends({}, prevProps, props);
+    if (_this2.props.features !== null) {
       if (!_this2.map) {
         _this2.renderMap();
+        _this2.getCommodityData();
       }
-      _this2.renderBubbles();
+      if (prevProps.commodity !== _this2.props.commodity) {
+        _this2.getCommodityData();
+      }
     }
   };
 };
