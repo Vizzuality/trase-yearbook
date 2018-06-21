@@ -1,5 +1,7 @@
 'use strict';
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -27,17 +29,23 @@ var Datavis = function () {
 
     this._handleEvent = function (e) {
       _this[e.type].apply(_this, _toConsumableArray(e.detail)) || _this._render();
+      _this.updateSmartComponents();
     };
 
-    this.loop = null;
-    this.active = 1975;
-    this.options = [1975, 1985, 1995, 2005, 2015];
+    this.state = {
+      active: 1975,
+      options: [1975, 1985, 1995, 2005, 2015]
+    };
 
     this.setActive = function (active, loop) {
-      _this.active = active;
+      _this.state = _extends({}, _this.state, { active: active });
       if (!loop && _this.interval) {
         clearInterval(_this.interval);
       }
+    };
+
+    this.smartComponents = {
+      Images: new MapImages({ images: this.state.options, active: this.state.active })
     };
 
     this.root = document.querySelector(props.selector);
@@ -52,15 +60,30 @@ var Datavis = function () {
       var _this2 = this;
 
       this.interval = setInterval(function () {
-        var index = _this2.options.indexOf(_this2.active);
-        var option = _this2.options[index + 1] || _this2.options[0];
+        var index = _this2.state.options.indexOf(_this2.state.active);
+        var option = _this2.state.options[index + 1] || _this2.state.options[0];
         dispatch('setActive', option, true);
       }, 2000);
     }
   }, {
+    key: 'updateSmartComponents',
+    value: function updateSmartComponents() {
+      var _state = this.state,
+          options = _state.options,
+          active = _state.active;
+
+      dispatch('updateImages', {
+        options: options,
+        active: active
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
+      var _state2 = this.state,
+          active = _state2.active,
+          options = _state2.options;
+      var Images = this.smartComponents.Images;
 
       return function () {
         var _elem = document.createElement('div');
@@ -85,38 +108,25 @@ var Datavis = function () {
 
         _elem.appendChild(document.createTextNode('\n        '));
 
-        var _elem4 = document.createElement('div');
-
-        _elem4.setAttribute('class', 'map');
-
-        _elem4.setAttribute('style', 'background-image: url(assets/' + _this3.active + '.jpg)');
-
-        _elem4.appendChild(document.createTextNode('\n          '));
-
-        var _elem5 = document.createElement('img');
-
-        _elem5.setAttribute('class', 'map-legend');
-
-        _elem5.setAttribute('alt', 'map legend');
-
-        _elem5.setAttribute('src', 'assets/legend.svg');
-
-        _elem4.appendChild(_elem5);
-
-        _elem4.appendChild(document.createTextNode('\n        '));
-
-        _elem.appendChild(_elem4);
-
-        _elem.appendChild(document.createTextNode('\n        '));
-
-        var _expr = YearSelector({ options: _this3.options, title: "select a year", active: _this3.active }),
+        var _expr = Images,
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
         if (_res instanceof Array) {
-          for (var _i2 = 0; _i2 < _res.length; _i2 += 1) {
-            _elem.appendChild(_res[_i2] instanceof Node || _res[_i2] instanceof Array ? _res[_i2] : document.createTextNode(_res[_i2]));
+          for (var _i3 = 0; _i3 < _res.length; _i3 += 1) {
+            _elem.appendChild(_res[_i3] instanceof Node || _res[_i3] instanceof Array ? _res[_i3] : document.createTextNode(_res[_i3]));
           }
         } else _elem.appendChild(_res);
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _expr2 = YearSelector({ options: options, active: active, title: "select a year" }),
+            _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
+
+        if (_res2 instanceof Array) {
+          for (var _i4 = 0; _i4 < _res2.length; _i4 += 1) {
+            _elem.appendChild(_res2[_i4] instanceof Node || _res2[_i4] instanceof Array ? _res2[_i4] : document.createTextNode(_res2[_i4]));
+          }
+        } else _elem.appendChild(_res2);
 
         _elem.appendChild(document.createTextNode('\n      '));
 
@@ -138,6 +148,117 @@ window.dispatch = function (event) {
 
   return dispatchEvent(new CustomEvent(event, { detail: detail }));
 };
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MapImages = function () {
+  _createClass(MapImages, [{
+    key: '_setListeners',
+    value: function _setListeners() {
+      window.addEventListener('updateImages', this._handleEvent);
+    }
+  }]);
+
+  function MapImages(props) {
+    var _this = this;
+
+    _classCallCheck(this, MapImages);
+
+    this._handleEvent = function (e) {
+      _this[e.type].apply(_this, _toConsumableArray(e.detail));
+    };
+
+    this.props = props;
+    this._setListeners();
+    return this.render();
+  }
+
+  _createClass(MapImages, [{
+    key: 'updateImages',
+    value: function updateImages(props) {
+      var prevProps = this.props;
+      this.props = _extends({}, prevProps, props);
+      if (prevProps.active !== this.props.active) {
+        this.setActiveImage();
+      }
+    }
+  }, {
+    key: 'setActiveImage',
+    value: function setActiveImage() {
+      var _this2 = this;
+
+      var images = Array.from(document.querySelectorAll('.map-image'));
+      images.forEach(function (image) {
+        if (parseInt(image.id, 10) === _this2.props.active) {
+          image.classList.remove('hidden');
+        } else {
+          image.classList.add('hidden');
+        }
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          images = _props.images,
+          active = _props.active;
+
+      return function () {
+        var _elem = document.createElement('div');
+
+        _elem.setAttribute('class', 'map-images-container');
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _expr = images.map(function (image) {
+          return function () {
+            var _elem3 = document.createElement('div');
+
+            _elem3.setAttribute('id', image);
+
+            _elem3.setAttribute('class', 'map-image ' + (active === image ? '' : 'hidden'));
+
+            _elem3.setAttribute('style', 'background-image: url(assets/' + image + '.jpg)');
+
+            return _elem3;
+          }();
+        }),
+            _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
+
+        if (_res instanceof Array) {
+          for (var _i2 = 0; _i2 < _res.length; _i2 += 1) {
+            _elem.appendChild(_res[_i2] instanceof Node || _res[_i2] instanceof Array ? _res[_i2] : document.createTextNode(_res[_i2]));
+          }
+        } else _elem.appendChild(_res);
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _elem2 = document.createElement('img');
+
+        _elem2.setAttribute('class', 'map-legend');
+
+        _elem2.setAttribute('alt', 'map legend');
+
+        _elem2.setAttribute('src', 'assets/legend.svg');
+
+        _elem.appendChild(_elem2);
+
+        _elem.appendChild(document.createTextNode('\n      '));
+
+        return _elem;
+      }();
+    }
+  }]);
+
+  return MapImages;
+}();
 "use strict";
 
 function YearSelector(props) {
