@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Decima Mono';
+    src: url('../fonts/decimamonopro-webfont.woff2') format('woff2'),
+         url('../fonts/decimamonopro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    margin: 15px 20px 0;
+}
+
+body {
+    font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+    font-size: 11px;
+}
+
+.graph-container {
+  margin: 15px;
+}
+
+.axis path,
+.axis line {
+  /* display: none; */
+  fill: none;
+  stroke: #A4A2A2;
+  shape-rendering: crispEdges;
+}
+.axis text {
+  font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+  font-size: 11px;
+  fill: #A4A2A2;
+}
+
+.browser text {
+  text-anchor: end;
+}
