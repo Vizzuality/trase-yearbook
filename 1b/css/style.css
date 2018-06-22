@@ -27,21 +27,78 @@ body {
 
 .graph-container {
   margin: 15px;
+  max-width: 500px;
 }
 
+.grid path,
 .axis path,
 .axis line {
-  /* display: none; */
+  display: none;
+}
+
+.grid .tick {
   fill: none;
   stroke: #A4A2A2;
+  stroke-width: 0.2px;
   shape-rendering: crispEdges;
 }
+
 .axis text {
   font-family: 'Decima Mono', 'Courier New', Courier, monospace;
   font-size: 11px;
   fill: #A4A2A2;
 }
 
-.browser text {
-  text-anchor: end;
+.legend {
+  margin: 15px;
+  max-width: 500px;
+}
+
+.legend ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.legend ul li {
+  width: 33%;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #A4A2A2;
+}
+
+.legend ul li .icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin-right: 4px
+}
+
+.legend ul li .icon.c1 {
+  background-color: #FDDFE2;
+}
+.legend ul li .icon.c2 {
+  background-color: #FBBFC5;
+}
+.legend ul li .icon.c3 {
+  background-color: #FA9EA8;
+}
+.legend ul li .icon.c4 {
+  background-color: #F87E8B;
+}
+.legend ul li .icon.c5 {
+  background-color: #F65E6E;
+}
+.legend ul li .icon.c6 {
+  background-color: #CE5967;
+}
+.legend ul li .icon.c7 {
+  background-color: #A85360;
+}
+.legend ul li .icon.c8 {
+  background-color: #6E4C56;
+}
+.legend ul li .icon.c9 {
+  background-color: #48464F;
 }
