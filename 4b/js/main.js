@@ -55,7 +55,7 @@ var Datavis = function () {
         var index = _this2.options.indexOf(_this2.active);
         var option = _this2.options[index + 1] || _this2.options[0];
         dispatch('setActive', option, true);
-      }, 1000);
+      }, 2000);
     }
   }, {
     key: 'render',
@@ -73,58 +73,74 @@ var Datavis = function () {
 
         _elem2.setAttribute('class', 'title');
 
-        _elem2.appendChild(document.createTextNode('\n          Pace of expansion and invesment'));
-
-        var _elem3 = document.createElement('br');
-
-        _elem2.appendChild(_elem3);
-
-        _elem2.appendChild(document.createTextNode('in soy industry\n        '));
+        _elem2.appendChild(document.createTextNode('\n          Pace of expansion and invesment in soy industry\n        '));
 
         _elem.appendChild(_elem2);
 
         _elem.appendChild(document.createTextNode('\n        '));
 
-        var _elem4 = document.createElement('div');
+        var _elem3 = document.createElement('div');
 
-        _elem4.setAttribute('class', 'map');
+        _elem3.setAttribute('class', 'map');
 
-        _elem4.appendChild(document.createTextNode('\n          '));
+        _elem3.appendChild(document.createTextNode('\n          '));
 
-        var _expr = Array.from(Array(3).keys()).map(function (index) {
+        var _expr = Array.from(Array(5).keys()).map(function (index) {
           return function () {
-            var _elem6 = document.createElement('div');
+            var _elem5 = document.createElement('div');
 
-            _elem6.setAttribute('class', 'map-item');
+            _elem5.setAttribute('class', 'map-item');
 
-            _elem6.setAttribute('style', 'background-image: url(assets/' + _this3.active + '-' + index + '.jpg)');
+            _elem5.appendChild(document.createTextNode('\n                '));
 
-            return _elem6;
+            var _expr3 = _this3.options.map(function (option) {
+              var className = 'map-item-image ' + (option === _this3.active ? '-active' : '');
+              return function () {
+                var _elem6 = document.createElement('div');
+
+                _elem6.setAttribute('class', className);
+
+                _elem6.setAttribute('style', 'background-image: url(assets/' + option + '_' + (index + 1) + '.jpg)');
+
+                return _elem6;
+              }();
+            }),
+                _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
+
+            if (_res3 instanceof Array) {
+              for (var _i4 = 0; _i4 < _res3.length; _i4 += 1) {
+                _elem5.appendChild(_res3[_i4] instanceof Node || _res3[_i4] instanceof Array ? _res3[_i4] : document.createTextNode(_res3[_i4]));
+              }
+            } else _elem5.appendChild(_res3);
+
+            _elem5.appendChild(document.createTextNode('\n              '));
+
+            return _elem5;
           }();
         }),
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
         if (_res instanceof Array) {
-          for (var _i3 = 0; _i3 < _res.length; _i3 += 1) {
-            _elem4.appendChild(_res[_i3] instanceof Node || _res[_i3] instanceof Array ? _res[_i3] : document.createTextNode(_res[_i3]));
+          for (var _i5 = 0; _i5 < _res.length; _i5 += 1) {
+            _elem3.appendChild(_res[_i5] instanceof Node || _res[_i5] instanceof Array ? _res[_i5] : document.createTextNode(_res[_i5]));
           }
-        } else _elem4.appendChild(_res);
+        } else _elem3.appendChild(_res);
 
-        _elem4.appendChild(document.createTextNode('\n          '));
+        _elem3.appendChild(document.createTextNode('\n          '));
 
-        var _elem5 = document.createElement('img');
+        var _elem4 = document.createElement('img');
 
-        _elem5.setAttribute('class', 'map-legend');
+        _elem4.setAttribute('class', 'map-legend');
 
-        _elem5.setAttribute('alt', 'map legend');
+        _elem4.setAttribute('alt', 'map legend');
 
-        _elem5.setAttribute('src', 'assets/legend.svg');
+        _elem4.setAttribute('src', 'assets/legend.svg');
 
-        _elem4.appendChild(_elem5);
+        _elem3.appendChild(_elem4);
 
-        _elem4.appendChild(document.createTextNode('\n        '));
+        _elem3.appendChild(document.createTextNode('\n        '));
 
-        _elem.appendChild(_elem4);
+        _elem.appendChild(_elem3);
 
         _elem.appendChild(document.createTextNode('\n        '));
 
@@ -132,8 +148,8 @@ var Datavis = function () {
             _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
         if (_res2 instanceof Array) {
-          for (var _i4 = 0; _i4 < _res2.length; _i4 += 1) {
-            _elem.appendChild(_res2[_i4] instanceof Node || _res2[_i4] instanceof Array ? _res2[_i4] : document.createTextNode(_res2[_i4]));
+          for (var _i6 = 0; _i6 < _res2.length; _i6 += 1) {
+            _elem.appendChild(_res2[_i6] instanceof Node || _res2[_i6] instanceof Array ? _res2[_i6] : document.createTextNode(_res2[_i6]));
           }
         } else _elem.appendChild(_res2);
 
