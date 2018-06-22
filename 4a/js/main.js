@@ -86,7 +86,6 @@ document.addEventListener("mousemove", function (e) {
 });
 
 function changeValue() {
-  document.querySelector('.title').innerHTML = 'Companies that comprised more than 1% of trade in ' + currentValue;
 
   // update value
   packRoot
@@ -128,7 +127,7 @@ var interval = setInterval(function () {
   var index = options.indexOf(currentValue);
   var option = options[index + 1] || options[0];
   dispatch('setActive', option, true);
-}, 4000);
+}, 2500);
 
 var selectorEl = document.getElementById('selector-container');
 function renderSelector() {
