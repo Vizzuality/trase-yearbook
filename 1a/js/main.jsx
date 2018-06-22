@@ -29,7 +29,7 @@ class Datavis {
   setFeatures(topo) {
     const features = topo.features.reduce((acc, next) => ({
       ...acc,
-      [parseInt(next.id, 10)]: next
+      [next.properties.iso2]: next
     }), {});
     this.state = { ...this.state, features };
   }
@@ -57,7 +57,7 @@ class Datavis {
     fetch('data/world.topo.json')
       .then(res => res.ok ? res.json() : Promise.reject(res.status))
       .then(topo => {
-        dispatch('setFeatures', topojson.feature(topo, topo.objects.countries))
+        dispatch('setFeatures', topojson.feature(topo, topo.objects.world))
       });
   }
 

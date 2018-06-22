@@ -75,7 +75,7 @@ var Datavis = function () {
     key: 'setFeatures',
     value: function setFeatures(topo) {
       var features = topo.features.reduce(function (acc, next) {
-        return _extends({}, acc, _defineProperty({}, parseInt(next.id, 10), next));
+        return _extends({}, acc, _defineProperty({}, next.properties.iso2, next));
       }, {});
       this.state = _extends({}, this.state, { features: features });
     }
@@ -102,7 +102,7 @@ var Datavis = function () {
       fetch('data/world.topo.json').then(function (res) {
         return res.ok ? res.json() : Promise.reject(res.status);
       }).then(function (topo) {
-        dispatch('setFeatures', topojson.feature(topo, topo.objects.countries));
+        dispatch('setFeatures', topojson.feature(topo, topo.objects.world));
       });
     }
   }, {
@@ -192,13 +192,9 @@ var MapComponent = function () {
   _createClass(MapComponent, [{
     key: '_setListeners',
     value: function _setListeners() {
-      var _this = this;
-
       window.addEventListener('updateMap', this._handleEvent);
       window.addEventListener('setFlowsData', this._handleEvent);
-      window.addEventListener('clickedBubble', function () {
-        return _this.getCommodityData(true);
-      });
+      window.addEventListener('setChoropleth', this._handleEvent);
     }
   }], [{
     key: 'getFeaturesBox',
@@ -245,6 +241,13 @@ var MapComponent = function () {
     value: function setFlowsData(flows) {
       this.state = _extends({}, this.state, { flows: flows });
       this.renderBubbles();
+      this.renderExporterCountries();
+    }
+  }, {
+    key: 'setChoropleth',
+    value: function setChoropleth(exporter) {
+      this.state = _extends({}, this.state, { choropleth: exporter });
+      this.renderChoropleth();
     }
   }, {
     key: 'getCommodityData',
@@ -256,13 +259,34 @@ var MapComponent = function () {
       });
     }
   }, {
+    key: 'getProjectionConfig',
+    value: function getProjectionConfig(projection) {
+      var _props = this.props,
+          features = _props.features,
+          selector = _props.selector;
+
+      var d3Container = d3.select(selector);
+      var containerComputedStyle = window.getComputedStyle(d3Container.node());
+      var width = parseInt(containerComputedStyle.width);
+      var height = parseInt(containerComputedStyle.height);
+
+      var path = d3.geoPath().projection(projection);
+      var collection = { type: 'FeatureCollection', features: Object.values(features) };
+      var featureBounds = path.bounds(collection);
+
+      var _MapComponent$fitGeoI = MapComponent.fitGeoInside(featureBounds, width, height),
+          scale = _MapComponent$fitGeoI.scale,
+          trans = _MapComponent$fitGeoI.trans;
+
+      return { scale: scale, trans: trans, path: path };
+    }
+  }, {
     key: 'renderMap',
     value: function renderMap() {
-      var _props = this.props,
-          selector = _props.selector,
-          features = _props.features,
-          getPolygonClassName = _props.getPolygonClassName,
-          customProjection = _props.customProjection;
+      var _props2 = this.props,
+          selector = _props2.selector,
+          features = _props2.features,
+          customProjection = _props2.customProjection;
 
       var d3Container = d3.select(selector);
       var containerComputedStyle = window.getComputedStyle(d3Container.node());
@@ -274,56 +298,95 @@ var MapComponent = function () {
       var geoParent = this.map.append('g');
       var container = geoParent.append('g');
       var projection = customProjection ? d3['geo' + MapComponent.capitalize(customProjection)]() : d3.geoMercator();
-      var path = d3.geoPath().projection(projection);
-      container.selectAll('path').data(Object.values(features)).enter().append('path').attr('class', function (d) {
-        return 'polygon ' + getPolygonClassName(d);
+      container.selectAll('path');
+
+      var _getProjectionConfig = this.getProjectionConfig(projection),
+          path = _getProjectionConfig.path,
+          scale = _getProjectionConfig.scale,
+          trans = _getProjectionConfig.trans;
+
+      this.polygons = container.selectAll('path').data(Object.values(features)).enter().append('path').attr('class', function () {
+        return 'polygon';
       }).attr('d', path);
-
-      var collection = { type: 'FeatureCollection', features: Object.values(features) };
-      var featureBounds = path.bounds(collection);
-
-      var _MapComponent$fitGeoI = MapComponent.fitGeoInside(featureBounds, width, height),
-          scale = _MapComponent$fitGeoI.scale,
-          trans = _MapComponent$fitGeoI.trans;
 
       container.attr('transform', 'translate(' + trans + ') scale(' + scale + ')');
     }
   }, {
     key: 'renderBubbles',
     value: function renderBubbles() {
+      var customProjection = this.props.customProjection;
       var flows = this.state.flows;
-      var _props2 = this.props,
-          features = _props2.features,
-          customProjection = _props2.customProjection;
 
-      var radius = d3.scaleSqrt().domain([0, 1e7]).range([0, 15]);
+      var radius = d3.scaleSqrt().domain([0, 1e8]).range([0, 15]);
       var projection = customProjection ? d3['geo' + MapComponent.capitalize(customProjection)]() : d3.geoMercator();
-      var path = d3.geoPath().projection(projection);
+
+      var _getProjectionConfig2 = this.getProjectionConfig(projection),
+          scale = _getProjectionConfig2.scale,
+          trans = _getProjectionConfig2.trans;
 
       var bubbles = Object.keys(flows);
-
-      var centroids = bubbles.map(function (d) {
-        return features[d] && path.centroid(features[d]);
-      }).filter(function (d) {
-        return !!d;
+      var centroids = bubbles.map(function (fao) {
+        return FAO_TO_ISO2[parseInt(fao, 10)];
+      }).filter(function (iso) {
+        return typeof iso !== 'undefined';
+      }).map(function (iso) {
+        return projection(COUNTRIES_COORDINATES[iso]);
       });
+
+      var getTons = function getTons(index) {
+        var fao = parseInt(bubbles[index], 10);
+        var flow = flows[fao];
+        return flow && flow.tons;
+      };
+
+      var getExporter = function getExporter(index) {
+        return flows[bubbles[index]];
+      };
 
       this.map.select('.bubbles').remove();
 
-      this.map.append('g').attr('class', 'bubbles').data(bubbles).selectAll('circle').data(centroids).enter().append('circle').on('click', function () {
-        return dispatch('clickedBubble');
+      this.map.append('g').attr('class', 'bubbles').selectAll('circle').data(centroids).enter().append('circle').on('click', function (d, i) {
+        return dispatch('setChoropleth', getExporter(i));
       }).attr('cx', function (d) {
         return d[0];
       }).attr('cy', function (d) {
         return d[1];
+      }).attr('transform', function () {
+        return 'translate(' + trans + ') scale(' + scale + ')';
+      }).attr('fill', function () {
+        return 'pink';
       }).attr('r', function (d, i) {
-        return radius(flows[bubbles[i]].tons);
+        return radius(getTons(i));
       });
+    }
+  }, {
+    key: 'renderExporterCountries',
+    value: function renderExporterCountries() {
+      var _this = this;
+
+      var getPolygonClassName = function getPolygonClassName(d) {
+        var flows = _this.state.flows;
+
+        var fao = ISO2_TO_FAO[d.properties.iso2];
+        return flows[fao] ? 'polygon -initial' : 'polygon';
+      };
+      this.polygons.each(function (d) {
+        var polygon = d3.select(this);
+        if (polygon) {
+          polygon.attr('class', function () {
+            return getPolygonClassName(d);
+          });
+        }
+      });
+    }
+  }, {
+    key: 'renderChoropleth',
+    value: function renderChoropleth() {
+      debugger;
     }
   }, {
     key: 'render',
     value: function render() {
-      console.log('render');
       return function () {
         var _elem = document.createElement('div');
 
@@ -345,8 +408,10 @@ var _initialiseProps = function _initialiseProps() {
   };
 
   this.state = {
-    flows: null
+    flows: null,
+    choropleth: null
   };
+  this.polygons = null;
   this.map = null;
 
   this.updateMap = function (props) {
