@@ -6,7 +6,7 @@ class MapComponent {
   _setListeners() {
     window.addEventListener('updateMap', this._handleEvent);
     window.addEventListener('setFlowsData', this._handleEvent);
-    window.addEventListener('clickedBubble', () => this.getCommodityData(true));
+    window.addEventListener('setChoropleth', this._handleEvent);
   }
   static getFeaturesBox(featureBounds) {
     const errors = [
@@ -42,8 +42,10 @@ class MapComponent {
   }
 
   state = {
-    flows: null
+    flows: null,
+    choropleth: null
   };
+  polygons = null;
   map = null;
 
   updateMap = (props) => {
@@ -63,6 +65,12 @@ class MapComponent {
   setFlowsData(flows) {
     this.state = { ...this.state, flows };
     this.renderBubbles();
+    this.renderExporterCountries();
+  }
+
+  setChoropleth(exporter) {
+    this.state = { ...this.state, choropleth: exporter };
+    this.renderChoropleth();
   }
 
   getCommodityData() {
@@ -70,14 +78,27 @@ class MapComponent {
     d3.json(`data/${commodity}.json`, data => dispatch('setFlowsData', data));
   }
 
+  getProjectionConfig(projection) {
+    const { features, selector } = this.props;
+    const d3Container = d3.select(selector);
+    const containerComputedStyle = window.getComputedStyle(d3Container.node());
+    const width = parseInt(containerComputedStyle.width);
+    const height = parseInt(containerComputedStyle.height);
+
+    const path = d3.geoPath().projection(projection);
+    const collection = { type: 'FeatureCollection', features: Object.values(features) };
+    const featureBounds = path.bounds(collection);
+    const { scale, trans } = MapComponent.fitGeoInside(featureBounds, width, height);
+    return { scale, trans, path };
+  }
+
   renderMap() {
     const {
       selector,
       features,
-      getPolygonClassName,
       customProjection
     } = this.props;
-    const d3Container =  d3.select(selector);
+    const d3Container = d3.select(selector);
     const containerComputedStyle = window.getComputedStyle(d3Container.node());
     const width = parseInt(containerComputedStyle.width);
     const height = parseInt(containerComputedStyle.height);
@@ -89,53 +110,80 @@ class MapComponent {
     const geoParent = this.map.append('g');
     const container = geoParent.append('g');
     const projection = customProjection ? d3[`geo${MapComponent.capitalize(customProjection)}`]() : d3.geoMercator();
-    const path = d3.geoPath().projection(projection);
-    container.selectAll('path')
+    container.selectAll('path');
+
+    const { path, scale, trans } = this.getProjectionConfig(projection);
+
+    this.polygons = container.selectAll('path')
       .data(Object.values(features))
       .enter()
       .append('path')
-      .attr('class', d => `polygon ${getPolygonClassName(d)}`)
+      .attr('class', () => `polygon`)
       .attr('d', path);
 
-    const collection = { type: 'FeatureCollection', features: Object.values(features) };
-    const featureBounds = path.bounds(collection);
-    const { scale, trans } = MapComponent.fitGeoInside(featureBounds, width, height);
+
     container.attr('transform', `translate(${trans}) scale(${scale})`);
   }
 
   renderBubbles() {
+    const { customProjection } = this.props;
     const { flows } = this.state;
-    const { features, customProjection } = this.props;
     const radius = d3.scaleSqrt()
-      .domain([0, 1e7])
+      .domain([0, 1e8])
       .range([0, 15]);
     const projection = customProjection ? d3[`geo${MapComponent.capitalize(customProjection)}`]() : d3.geoMercator();
-    const path = d3.geoPath().projection(projection);
+    const { scale, trans } = this.getProjectionConfig(projection);
 
     const bubbles = Object.keys(flows);
-
     const centroids = bubbles
-      .map(d => features[d] && path.centroid(features[d]))
-      .filter(d => !!d);
+      .map(fao => FAO_TO_ISO2[parseInt(fao, 10)])
+      .filter(iso => typeof iso !== 'undefined')
+      .map(iso => projection(COUNTRIES_COORDINATES[iso]));
 
+    const getTons = index => {
+      const fao = parseInt(bubbles[index], 10);
+      const flow = flows[fao];
+      return flow && flow.tons;
+    };
+
+    const getExporter = index => flows[bubbles[index]];
 
     this.map.select('.bubbles').remove();
 
     this.map.append('g')
       .attr('class', 'bubbles')
-      .data(bubbles)
       .selectAll('circle')
       .data(centroids)
       .enter()
       .append('circle')
-      .on('click', () => dispatch('clickedBubble'))
+      .on('click', (d, i) => dispatch('setChoropleth', getExporter(i)))
       .attr('cx', d => d[0])
       .attr('cy', d => d[1])
-      .attr('r', (d, i) => radius(flows[bubbles[i]].tons));
+      .attr('transform', () => `translate(${trans}) scale(${scale})`)
+      .attr('fill', () => 'pink')
+      .attr('r', (d, i) => radius(getTons(i)));
+  }
+
+  renderExporterCountries() {
+    const getPolygonClassName = (d) => {
+      const { flows } = this.state;
+      const fao = ISO2_TO_FAO[d.properties.iso2];
+      return flows[fao] ? 'polygon -initial' : 'polygon'
+    };
+    this.polygons
+      .each(function (d) {
+        const polygon = d3.select(this);
+        if (polygon) {
+          polygon.attr('class', () => getPolygonClassName(d));
+        }
+      });
+  }
+
+  renderChoropleth() {
+    debugger;
   }
 
   render() {
-    console.log('render');
     return (
       <div class="map" />
     );

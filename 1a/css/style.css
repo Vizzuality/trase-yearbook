@@ -98,3 +98,7 @@
   stroke-dasharray: 4px;
   stroke-width: 2px;
 }
+
+.polygon.-initial {
+  fill: #ededed;
+}
