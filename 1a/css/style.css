@@ -94,41 +94,62 @@
 
 .polygon {
   fill: white;
-  stroke: #ededed;
+  stroke: #cacaca;
   stroke-dasharray: 4px;
-  stroke-width: 2px;
+  stroke-width: 1px;
 }
 
 .polygon.-initial {
   fill: #ededed;
+  stroke: white;
 }
 
-.polygon.-red {
-  fill: red;
+.polygon.choro {
+  stroke-dasharray: 0;
+  stroke: white;
 }
 
-.polygon.-blue {
-  fill: blue;
+.choro.-choro-1 {
+  fill: #fde0e3;
 }
 
-.polygon.-green {
-  fill: green;
+.choro.-choro-2 {
+  fill: #fbc0c6;
 }
 
-.polygon.-yellow {
-  fill: yellow;
+.choro.-choro-3 {
+  fill: #faa0a9;
 }
 
-.polygon.-orange {
-  fill: orange;
+.choro.-choro-4 {
+  fill: #f65d6e;
 }
 
-.polygon.-pink {
-  fill: pink;
+.choro.-choro-5 {
+  fill: #f47a88;
+}
+
+.choro.-choro-6 {
+  fill: #d05868;
+}
+
+.choro.-choro-7 {
+  fill: #d57682;
+}
+
+.choro.-choro-8 {
+  fill: #b7717c;
+}
+
+.choro.-choro-9 {
+  fill: #886b74;
+}
+
+.choro.-choro-10 {
+  fill: #67686e;
 }
 
 .bubble {
-  fill: lightpink;
-  stroke: white;
-  stroke-width: 1px;
+  cursor: pointer;
+  fill-opacity: 0.6;
 }

@@ -224,6 +224,13 @@ var MapComponent = function () {
     value: function capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
+  }, {
+    key: 'getChoroplethScale',
+    value: function getChoroplethScale(domain) {
+      var colors = ['-choro-1', '-choro-2', '-choro-3', '-choro-4', '-choro-5', '-choro-6', '-choro-7', '-choro-8', '-choro-9', '-choro-10'];
+
+      return d3.scaleQuantile().domain(domain).range(colors);
+    }
   }]);
 
   function MapComponent(props) {
@@ -240,15 +247,12 @@ var MapComponent = function () {
     key: 'setFlowsData',
     value: function setFlowsData(flows) {
       this.state = _extends({}, this.state, { flows: flows });
-      var onClick = function onClick(exporter) {
-        return dispatch('setSelectedBubble', exporter);
-      };
-      this.renderBubbles(this.state.flows, onClick);
-      this.renderExporterCountries();
+      this.renderOriginBubbles();
     }
   }, {
     key: 'setSelectedBubble',
-    value: function setSelectedBubble(selectedBubble) {
+    value: function setSelectedBubble(exporter, exporterCentroid) {
+      var selectedBubble = _extends({}, exporter, { exporterCentroid: exporterCentroid });
       this.state = _extends({}, this.state, { selectedBubble: selectedBubble });
       this.renderDestinationBubbles();
     }
@@ -316,10 +320,10 @@ var MapComponent = function () {
     }
   }, {
     key: 'renderBubbles',
-    value: function renderBubbles(flows, onClick) {
+    value: function renderBubbles(flows, onClick, parentBubble) {
       var customProjection = this.props.customProjection;
 
-      var radius = d3.scaleSqrt().domain([0, 1e7]).range([0, 15]);
+      var radius = d3.scaleSqrt().domain([0, 1e6]).range([5, 10]);
       var projection = customProjection ? d3['geo' + MapComponent.capitalize(customProjection)]() : d3.geoMercator();
 
       var _getProjectionConfig2 = this.getProjectionConfig(projection),
@@ -341,21 +345,40 @@ var MapComponent = function () {
         return flow && flow.tons;
       };
 
+      var colorScale = MapComponent.getChoroplethScale(Object.values(flows).map(function (f) {
+        return f.tons;
+      }));
+
       var getExporter = function getExporter(index) {
         return flows[bubbles[index]];
       };
 
       this.map.select('.bubbles').remove();
 
-      this.map.append('g').attr('class', 'bubbles').selectAll('circle').data(centroids).enter().append('circle').attr('class', 'bubble').on('click', function (d, i) {
-        return onClick(getExporter(i));
+      this.map.append('g').attr('class', 'bubbles').selectAll('circle').data(centroids).enter().append('circle').attr('class', function (d, i) {
+        return 'bubble choro ' + colorScale(getTons(i));
+      }).on('click', function (d, i) {
+        return onClick && onClick(getExporter(i), d);
       }).attr('cx', function (d) {
-        return d[0];
+        return parentBubble ? parentBubble[0] : d[0];
       }).attr('cy', function (d) {
-        return d[1];
+        return parentBubble ? parentBubble[1] : d[1];
       }).attr('transform', 'translate(' + trans + ') scale(' + scale + ')').attr('r', function (d, i) {
         return radius(getTons(i));
       });
+
+      if (parentBubble) {
+        this.map.selectAll('.bubble').each(function (d) {
+          var bubble = d3.select(this);
+          if (bubble) {
+            bubble.transition().duration(1000).attr('cx', function () {
+              return d[0];
+            }).attr('cy', function () {
+              return d[1];
+            });
+          }
+        });
+      }
     }
   }, {
     key: 'renderExporterCountries',
@@ -378,31 +401,47 @@ var MapComponent = function () {
       });
     }
   }, {
+    key: 'renderOriginBubbles',
+    value: function renderOriginBubbles() {
+      var onClick = function onClick(exporter, exporterCentroid) {
+        return dispatch('setSelectedBubble', exporter, exporterCentroid);
+      };
+      this.renderExporterCountries();
+      this.renderBubbles(this.state.flows, onClick);
+    }
+  }, {
     key: 'renderDestinationBubbles',
     value: function renderDestinationBubbles() {
-      var flows = this.state.selectedBubble.destinations;
-      this.renderBubbles(flows, this.renderChoropleth.bind(this));
+      var _this2 = this;
+
+      var _state$selectedBubble = this.state.selectedBubble,
+          destinations = _state$selectedBubble.destinations,
+          exporterCentroid = _state$selectedBubble.exporterCentroid;
+
+      this.renderBubbles(destinations, null, exporterCentroid);
+      setTimeout(function () {
+        return _this2.renderChoropleth();
+      }, 1750);
     }
   }, {
     key: 'renderChoropleth',
     value: function renderChoropleth() {
-      var _this2 = this;
+      var _this3 = this;
 
       this.map.select('.bubbles').remove();
       var getPolygonClassName = function getPolygonClassName(d) {
-        var selectedBubble = _this2.state.selectedBubble;
+        var selectedBubble = _this3.state.selectedBubble;
 
         var fao = ISO2_TO_FAO[d.properties.iso2];
         var destinations = selectedBubble.destinations;
 
         var tons = Object.values(destinations).map(function (d) {
-          return t.tons;
+          return d.tons;
         });
-        var colors = ['red', 'blue', 'green', 'yellow', 'orange', 'pink'];
-        var colorScale = d3.scale.quantile().domain(tons).range(colors);
 
+        var colorScale = MapComponent.getChoroplethScale(tons);
         var destination = destinations[fao];
-        return destination && destination.tons ? 'polygon -' + colorScale(destination.tons) : 'polygon';
+        return destination && destination.tons ? 'polygon choro ' + colorScale(destination.tons) : 'polygon';
       };
       this.polygons.each(function (d) {
         var polygon = d3.select(this);
@@ -412,6 +451,8 @@ var MapComponent = function () {
           });
         }
       });
+
+      setTimeout(this.renderOriginBubbles.bind(this), 2000);
     }
   }, {
     key: 'render',
@@ -430,10 +471,10 @@ var MapComponent = function () {
 }();
 
 var _initialiseProps = function _initialiseProps() {
-  var _this3 = this;
+  var _this4 = this;
 
   this._handleEvent = function (e) {
-    _this3[e.type].apply(_this3, _toConsumableArray(e.detail));
+    _this4[e.type].apply(_this4, _toConsumableArray(e.detail));
   };
 
   this.state = {
@@ -444,15 +485,15 @@ var _initialiseProps = function _initialiseProps() {
   this.map = null;
 
   this.updateMap = function (props) {
-    var prevProps = _this3.props;
-    _this3.props = _extends({}, prevProps, props);
-    if (_this3.props.features !== null) {
-      if (!_this3.map) {
-        _this3.renderMap();
-        _this3.getCommodityData();
+    var prevProps = _this4.props;
+    _this4.props = _extends({}, prevProps, props);
+    if (_this4.props.features !== null) {
+      if (!_this4.map) {
+        _this4.renderMap();
+        _this4.getCommodityData();
       }
-      if (prevProps.commodity !== _this3.props.commodity) {
-        _this3.getCommodityData();
+      if (prevProps.commodity !== _this4.props.commodity) {
+        _this4.getCommodityData();
       }
     }
   };

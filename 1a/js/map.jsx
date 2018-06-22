@@ -35,6 +35,25 @@ class MapComponent {
   static capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
+  static getChoroplethScale(domain) {
+    const colors = [
+      '-choro-1',
+      '-choro-2',
+      '-choro-3',
+      '-choro-4',
+      '-choro-5',
+      '-choro-6',
+      '-choro-7',
+      '-choro-8',
+      '-choro-9',
+      '-choro-10'
+    ];
+
+    return d3.scaleQuantile()
+      .domain(domain)
+      .range(colors);
+  }
+
   constructor(props) {
     this.props = props;
     this._setListeners();
@@ -64,12 +83,11 @@ class MapComponent {
 
   setFlowsData(flows) {
     this.state = { ...this.state, flows };
-    const onClick = exporter => dispatch('setSelectedBubble', exporter);
-    this.renderBubbles(this.state.flows, onClick);
-    this.renderExporterCountries();
+    this.renderOriginBubbles();
   }
 
-  setSelectedBubble(selectedBubble) {
+  setSelectedBubble(exporter, exporterCentroid) {
+    const selectedBubble = { ...exporter, exporterCentroid };
     this.state = { ...this.state, selectedBubble };
     this.renderDestinationBubbles();
   }
@@ -126,11 +144,11 @@ class MapComponent {
     container.attr('transform', `translate(${trans}) scale(${scale})`);
   }
 
-  renderBubbles(flows, onClick) {
+  renderBubbles(flows, onClick, parentBubble) {
     const { customProjection } = this.props;
     const radius = d3.scaleSqrt()
-      .domain([0, 1e7])
-      .range([0, 15]);
+      .domain([0, 1e6])
+      .range([5, 10]);
     const projection = customProjection ? d3[`geo${MapComponent.capitalize(customProjection)}`]() : d3.geoMercator();
     const { scale, trans } = this.getProjectionConfig(projection);
 
@@ -146,6 +164,8 @@ class MapComponent {
       return flow && flow.tons;
     };
 
+    const colorScale = MapComponent.getChoroplethScale(Object.values(flows).map(f => f.tons));
+
     const getExporter = index => flows[bubbles[index]];
 
     this.map.select('.bubbles').remove();
@@ -156,12 +176,24 @@ class MapComponent {
       .data(centroids)
       .enter()
       .append('circle')
-      .attr('class', 'bubble')
-      .on('click', (d, i) => onClick(getExporter(i)))
-      .attr('cx', d => d[0])
-      .attr('cy', d => d[1])
+      .attr('class', (d, i) => `bubble choro ${colorScale(getTons(i))}`)
+      .on('click', (d, i) => onClick && onClick(getExporter(i), d))
+      .attr('cx', d => parentBubble ? parentBubble[0] : d[0])
+      .attr('cy', d => parentBubble ? parentBubble[1] : d[1])
       .attr('transform', `translate(${trans}) scale(${scale})`)
       .attr('r', (d, i) => radius(getTons(i)));
+
+    if (parentBubble) {
+      this.map.selectAll('.bubble').each(function (d) {
+        const bubble = d3.select(this);
+        if (bubble) {
+          bubble.transition()
+            .duration(1000)
+            .attr('cx', () => d[0])
+            .attr('cy', () => d[1]);
+        }
+      });
+    }
   }
 
   renderExporterCountries() {
@@ -179,9 +211,16 @@ class MapComponent {
       });
   }
 
+  renderOriginBubbles() {
+    const onClick = (exporter, exporterCentroid) => dispatch('setSelectedBubble', exporter, exporterCentroid);
+    this.renderExporterCountries();
+    this.renderBubbles(this.state.flows, onClick);
+  }
+
   renderDestinationBubbles() {
-    const flows = this.state.selectedBubble.destinations;
-    this.renderBubbles(flows, this.renderChoropleth.bind(this));
+    const { destinations, exporterCentroid } = this.state.selectedBubble;
+    this.renderBubbles(destinations, null, exporterCentroid);
+    setTimeout(() => this.renderChoropleth(), 1750);
   }
 
   renderChoropleth() {
@@ -190,21 +229,11 @@ class MapComponent {
       const { selectedBubble } = this.state;
       const fao = ISO2_TO_FAO[d.properties.iso2];
       const { destinations } = selectedBubble;
-      const tons = Object.values(destinations).map(d => t.tons);
-      const colors = [
-        'red',
-        'blue',
-        'green',
-        'yellow',
-        'orange',
-        'pink'
-      ];
-      const colorScale = d3.scale.quantile()
-        .domain(tons)
-        .range(colors);
+      const tons = Object.values(destinations).map(d => d.tons);
 
+      const colorScale = MapComponent.getChoroplethScale(tons);
       const destination = destinations[fao];
-      return destination && destination.tons ? `polygon -${colorScale(destination.tons)}` : 'polygon'
+      return destination && destination.tons ? `polygon choro ${colorScale(destination.tons)}` : 'polygon'
     };
     this.polygons
       .each(function (d) {
@@ -213,6 +242,8 @@ class MapComponent {
           polygon.attr('class', () => getPolygonClassName(d));
         }
       });
+
+    setTimeout(this.renderOriginBubbles.bind(this), 2000)
   }
 
   render() {
