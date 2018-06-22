@@ -30,19 +30,29 @@ class Datavis {
       const index = this.options.indexOf(this.active);
       const option = this.options[index + 1] || this.options[0];
       dispatch('setActive', option, true);
-    }, 1000);
+    }, 2000);
   }
 
   render() {
     return (
       <div class="container">
         <h1 class="title">
-          Pace of expansion and invesment<br />in soy industry
+          Pace of expansion and invesment in soy industry
         </h1>
         <div class="map">
-          {Array.from(Array(3).keys()).map(index => (
-            <div class="map-item" style={`background-image: url(assets/${this.active}-${index}.jpg)`} />
-          ))}
+          {Array.from(Array(5).keys()).map(index => {
+            return (
+              <div class="map-item">
+                {this.options.map(option => {
+                  const className = `map-item-image ${option === this.active ? '-active' : ''}`
+                  return (<div
+                    class={className}
+                    style={`background-image: url(assets/${option}_${index + 1}.jpg)`}
+                  />)
+                })}
+              </div>
+            );
+          })}
           <img class="map-legend" alt="map legend" src="assets/legend.svg" />
         </div>
         {YearSelector({ options: this.options, title: "select a year", active: this.active })}

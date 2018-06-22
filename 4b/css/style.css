@@ -1,5 +1,6 @@
 .container {
-  margin: 44px auto;
+  margin: 0 auto;
+  padding: 15px;
   height: 500px;
   width: 100%;
   max-width: 1080px;
@@ -9,6 +10,7 @@
   font-size: 22px;
   color: #34444c;
   margin: 0;
+  margin-bottom: 15px;
 }
 
 .map {
@@ -18,11 +20,22 @@
 
 .map-item {
   position: relative;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 480px;
+  height: 260px;
   width: 20%;
   margin: 0 auto;
+}
+
+.map-item-image {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.map-item-image.-active {
+  display: block;
 }
 
 .map-legend {
