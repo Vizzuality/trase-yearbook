@@ -6,7 +6,7 @@ class MapComponent {
   _setListeners() {
     window.addEventListener('updateMap', this._handleEvent);
     window.addEventListener('setFlowsData', this._handleEvent);
-    window.addEventListener('setChoropleth', this._handleEvent);
+    window.addEventListener('setSelectedBubble', this._handleEvent);
   }
   static getFeaturesBox(featureBounds) {
     const errors = [
@@ -43,7 +43,7 @@ class MapComponent {
 
   state = {
     flows: null,
-    choropleth: null
+    selectedBubble: null
   };
   polygons = null;
   map = null;
@@ -64,13 +64,14 @@ class MapComponent {
 
   setFlowsData(flows) {
     this.state = { ...this.state, flows };
-    this.renderBubbles();
+    const onClick = exporter => dispatch('setSelectedBubble', exporter);
+    this.renderBubbles(this.state.flows, onClick);
     this.renderExporterCountries();
   }
 
-  setChoropleth(exporter) {
-    this.state = { ...this.state, choropleth: exporter };
-    this.renderChoropleth();
+  setSelectedBubble(selectedBubble) {
+    this.state = { ...this.state, selectedBubble };
+    this.renderDestinationBubbles();
   }
 
   getCommodityData() {
@@ -125,11 +126,10 @@ class MapComponent {
     container.attr('transform', `translate(${trans}) scale(${scale})`);
   }
 
-  renderBubbles() {
+  renderBubbles(flows, onClick) {
     const { customProjection } = this.props;
-    const { flows } = this.state;
     const radius = d3.scaleSqrt()
-      .domain([0, 1e8])
+      .domain([0, 1e7])
       .range([0, 15]);
     const projection = customProjection ? d3[`geo${MapComponent.capitalize(customProjection)}`]() : d3.geoMercator();
     const { scale, trans } = this.getProjectionConfig(projection);
@@ -137,7 +137,7 @@ class MapComponent {
     const bubbles = Object.keys(flows);
     const centroids = bubbles
       .map(fao => FAO_TO_ISO2[parseInt(fao, 10)])
-      .filter(iso => typeof iso !== 'undefined')
+      .filter(iso => typeof iso !== 'undefined' && typeof COUNTRIES_COORDINATES[iso] !== 'undefined')
       .map(iso => projection(COUNTRIES_COORDINATES[iso]));
 
     const getTons = index => {
@@ -156,11 +156,11 @@ class MapComponent {
       .data(centroids)
       .enter()
       .append('circle')
-      .on('click', (d, i) => dispatch('setChoropleth', getExporter(i)))
+      .attr('class', 'bubble')
+      .on('click', (d, i) => onClick(getExporter(i)))
       .attr('cx', d => d[0])
       .attr('cy', d => d[1])
-      .attr('transform', () => `translate(${trans}) scale(${scale})`)
-      .attr('fill', () => 'pink')
+      .attr('transform', `translate(${trans}) scale(${scale})`)
       .attr('r', (d, i) => radius(getTons(i)));
   }
 
@@ -179,8 +179,40 @@ class MapComponent {
       });
   }
 
+  renderDestinationBubbles() {
+    const flows = this.state.selectedBubble.destinations;
+    this.renderBubbles(flows, this.renderChoropleth.bind(this));
+  }
+
   renderChoropleth() {
-    debugger;
+    this.map.select('.bubbles').remove();
+    const getPolygonClassName = (d) => {
+      const { selectedBubble } = this.state;
+      const fao = ISO2_TO_FAO[d.properties.iso2];
+      const { destinations } = selectedBubble;
+      const tons = Object.values(destinations).map(d => t.tons);
+      const colors = [
+        'red',
+        'blue',
+        'green',
+        'yellow',
+        'orange',
+        'pink'
+      ];
+      const colorScale = d3.scale.quantile()
+        .domain(tons)
+        .range(colors);
+
+      const destination = destinations[fao];
+      return destination && destination.tons ? `polygon -${colorScale(destination.tons)}` : 'polygon'
+    };
+    this.polygons
+      .each(function (d) {
+        const polygon = d3.select(this);
+        if (polygon) {
+          polygon.attr('class', () => getPolygonClassName(d));
+        }
+      });
   }
 
   render() {

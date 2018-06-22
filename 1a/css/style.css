@@ -102,3 +102,33 @@
 .polygon.-initial {
   fill: #ededed;
 }
+
+.polygon.-red {
+  fill: red;
+}
+
+.polygon.-blue {
+  fill: blue;
+}
+
+.polygon.-green {
+  fill: green;
+}
+
+.polygon.-yellow {
+  fill: yellow;
+}
+
+.polygon.-orange {
+  fill: orange;
+}
+
+.polygon.-pink {
+  fill: pink;
+}
+
+.bubble {
+  fill: lightpink;
+  stroke: white;
+  stroke-width: 1px;
+}

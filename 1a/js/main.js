@@ -194,7 +194,7 @@ var MapComponent = function () {
     value: function _setListeners() {
       window.addEventListener('updateMap', this._handleEvent);
       window.addEventListener('setFlowsData', this._handleEvent);
-      window.addEventListener('setChoropleth', this._handleEvent);
+      window.addEventListener('setSelectedBubble', this._handleEvent);
     }
   }], [{
     key: 'getFeaturesBox',
@@ -240,14 +240,17 @@ var MapComponent = function () {
     key: 'setFlowsData',
     value: function setFlowsData(flows) {
       this.state = _extends({}, this.state, { flows: flows });
-      this.renderBubbles();
+      var onClick = function onClick(exporter) {
+        return dispatch('setSelectedBubble', exporter);
+      };
+      this.renderBubbles(this.state.flows, onClick);
       this.renderExporterCountries();
     }
   }, {
-    key: 'setChoropleth',
-    value: function setChoropleth(exporter) {
-      this.state = _extends({}, this.state, { choropleth: exporter });
-      this.renderChoropleth();
+    key: 'setSelectedBubble',
+    value: function setSelectedBubble(selectedBubble) {
+      this.state = _extends({}, this.state, { selectedBubble: selectedBubble });
+      this.renderDestinationBubbles();
     }
   }, {
     key: 'getCommodityData',
@@ -313,11 +316,10 @@ var MapComponent = function () {
     }
   }, {
     key: 'renderBubbles',
-    value: function renderBubbles() {
+    value: function renderBubbles(flows, onClick) {
       var customProjection = this.props.customProjection;
-      var flows = this.state.flows;
 
-      var radius = d3.scaleSqrt().domain([0, 1e8]).range([0, 15]);
+      var radius = d3.scaleSqrt().domain([0, 1e7]).range([0, 15]);
       var projection = customProjection ? d3['geo' + MapComponent.capitalize(customProjection)]() : d3.geoMercator();
 
       var _getProjectionConfig2 = this.getProjectionConfig(projection),
@@ -328,7 +330,7 @@ var MapComponent = function () {
       var centroids = bubbles.map(function (fao) {
         return FAO_TO_ISO2[parseInt(fao, 10)];
       }).filter(function (iso) {
-        return typeof iso !== 'undefined';
+        return typeof iso !== 'undefined' && typeof COUNTRIES_COORDINATES[iso] !== 'undefined';
       }).map(function (iso) {
         return projection(COUNTRIES_COORDINATES[iso]);
       });
@@ -345,17 +347,13 @@ var MapComponent = function () {
 
       this.map.select('.bubbles').remove();
 
-      this.map.append('g').attr('class', 'bubbles').selectAll('circle').data(centroids).enter().append('circle').on('click', function (d, i) {
-        return dispatch('setChoropleth', getExporter(i));
+      this.map.append('g').attr('class', 'bubbles').selectAll('circle').data(centroids).enter().append('circle').attr('class', 'bubble').on('click', function (d, i) {
+        return onClick(getExporter(i));
       }).attr('cx', function (d) {
         return d[0];
       }).attr('cy', function (d) {
         return d[1];
-      }).attr('transform', function () {
-        return 'translate(' + trans + ') scale(' + scale + ')';
-      }).attr('fill', function () {
-        return 'pink';
-      }).attr('r', function (d, i) {
+      }).attr('transform', 'translate(' + trans + ') scale(' + scale + ')').attr('r', function (d, i) {
         return radius(getTons(i));
       });
     }
@@ -380,9 +378,40 @@ var MapComponent = function () {
       });
     }
   }, {
+    key: 'renderDestinationBubbles',
+    value: function renderDestinationBubbles() {
+      var flows = this.state.selectedBubble.destinations;
+      this.renderBubbles(flows, this.renderChoropleth.bind(this));
+    }
+  }, {
     key: 'renderChoropleth',
     value: function renderChoropleth() {
-      debugger;
+      var _this2 = this;
+
+      this.map.select('.bubbles').remove();
+      var getPolygonClassName = function getPolygonClassName(d) {
+        var selectedBubble = _this2.state.selectedBubble;
+
+        var fao = ISO2_TO_FAO[d.properties.iso2];
+        var destinations = selectedBubble.destinations;
+
+        var tons = Object.values(destinations).map(function (d) {
+          return t.tons;
+        });
+        var colors = ['red', 'blue', 'green', 'yellow', 'orange', 'pink'];
+        var colorScale = d3.scale.quantile().domain(tons).range(colors);
+
+        var destination = destinations[fao];
+        return destination && destination.tons ? 'polygon -' + colorScale(destination.tons) : 'polygon';
+      };
+      this.polygons.each(function (d) {
+        var polygon = d3.select(this);
+        if (polygon) {
+          polygon.attr('class', function () {
+            return getPolygonClassName(d);
+          });
+        }
+      });
     }
   }, {
     key: 'render',
@@ -401,29 +430,29 @@ var MapComponent = function () {
 }();
 
 var _initialiseProps = function _initialiseProps() {
-  var _this2 = this;
+  var _this3 = this;
 
   this._handleEvent = function (e) {
-    _this2[e.type].apply(_this2, _toConsumableArray(e.detail));
+    _this3[e.type].apply(_this3, _toConsumableArray(e.detail));
   };
 
   this.state = {
     flows: null,
-    choropleth: null
+    selectedBubble: null
   };
   this.polygons = null;
   this.map = null;
 
   this.updateMap = function (props) {
-    var prevProps = _this2.props;
-    _this2.props = _extends({}, prevProps, props);
-    if (_this2.props.features !== null) {
-      if (!_this2.map) {
-        _this2.renderMap();
-        _this2.getCommodityData();
+    var prevProps = _this3.props;
+    _this3.props = _extends({}, prevProps, props);
+    if (_this3.props.features !== null) {
+      if (!_this3.map) {
+        _this3.renderMap();
+        _this3.getCommodityData();
       }
-      if (prevProps.commodity !== _this2.props.commodity) {
-        _this2.getCommodityData();
+      if (prevProps.commodity !== _this3.props.commodity) {
+        _this3.getCommodityData();
       }
     }
   };
