@@ -12,12 +12,20 @@
     box-sizing: border-box;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 20px 0;
+  max-width: 435px;
+}
+
 h1 {
     font-family: 'Merriweather', serif;
     font-size: 14px;
     line-height: 22px;
     font-weight: 300;
-    margin: 15px 20px 0;
+    color: #34444c;
 }
 
 body {
@@ -25,9 +33,26 @@ body {
     font-size: 11px;
 }
 
+select {
+  font-family: 'Decima Mono', 'Courier New', Courier, monospace;
+  color: #34444c;
+  background: #fff;
+  border: none;
+  font-weight: 700;
+  padding: 10px;
+  text-transform: uppercase;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2);
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  width: 70px;
+  margin-left: 10px;
+}
+
 .graph-container {
   margin: 15px;
   max-width: 500px;
+  min-height: 403px;
 }
 
 .grid path,
@@ -50,7 +75,7 @@ body {
 }
 
 .legend {
-  margin: 15px;
+  margin: 15px 30px;
   max-width: 500px;
 }
 
@@ -64,7 +89,8 @@ body {
   width: 33%;
   margin-bottom: 6px;
   font-size: 13px;
-  color: #A4A2A2;
+  color: #34444c;
+  text-transform: uppercase;
 }
 
 .legend ul li .icon {
@@ -75,30 +101,30 @@ body {
   margin-right: 4px
 }
 
-.legend ul li .icon.c1 {
-  background-color: #FDDFE2;
-}
-.legend ul li .icon.c2 {
-  background-color: #FBBFC5;
-}
-.legend ul li .icon.c3 {
-  background-color: #FA9EA8;
-}
-.legend ul li .icon.c4 {
-  background-color: #F87E8B;
-}
-.legend ul li .icon.c5 {
-  background-color: #F65E6E;
-}
-.legend ul li .icon.c6 {
-  background-color: #CE5967;
-}
-.legend ul li .icon.c7 {
-  background-color: #A85360;
+.legend ul li .icon.c9 {
+  background-color: #DBE0E5;
 }
 .legend ul li .icon.c8 {
-  background-color: #6E4C56;
+  background-color: #FDDFE2;
 }
-.legend ul li .icon.c9 {
-  background-color: #48464F;
+.legend ul li .icon.c7 {
+  background-color: #FBBFC5;
+}
+.legend ul li .icon.c6 {
+  background-color: #FA9EA8;
+}
+.legend ul li .icon.c5 {
+  background-color: #F87E8B;
+}
+.legend ul li .icon.c4 {
+  background-color: #F65E6E;
+}
+.legend ul li .icon.c3 {
+  background-color: #CE5967;
+}
+.legend ul li .icon.c2 {
+  background-color: #A85360;
+}
+.legend ul li .icon.c1 {
+  background-color: #6E4C56;
 }
