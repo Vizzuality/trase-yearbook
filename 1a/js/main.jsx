@@ -27,10 +27,11 @@ class Datavis {
   };
 
   setFeatures(topo) {
-    const features = topo.features.reduce((acc, next) => ({
-      ...acc,
-      [next.properties.iso2]: next
-    }), {});
+    const features = topo.features.filter(feat => feat.properties.iso2 !== 'AQ')
+      .reduce((acc, next) => ({
+        ...acc,
+        [next.properties.iso2]: next
+      }), {});
     this.state = { ...this.state, features };
   }
 
@@ -74,13 +75,16 @@ class Datavis {
     const { commodity, selector } = this.state;
     return (
       <div class="container">
-        {new Selector({
-          open: selector,
-          active: commodity,
-          options: ['soy', 'sugar', 'oil-palm'],
-          selectOptionAction: 'setCommodity',
-          toggleOpenAction: 'setSelector',
-        })}
+        <div class="map-header">
+          <h1 class="title">The global landscape of commodity production and trade</h1>
+          {new Selector({
+            open: selector,
+            active: commodity,
+            options: ['soy', 'sugar', 'oil-palm'],
+            selectOptionAction: 'setCommodity',
+            toggleOpenAction: 'setSelector',
+          })}
+        </div>
         {map}
       </div>
     );

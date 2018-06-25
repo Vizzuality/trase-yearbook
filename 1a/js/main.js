@@ -74,7 +74,9 @@ var Datavis = function () {
   _createClass(Datavis, [{
     key: 'setFeatures',
     value: function setFeatures(topo) {
-      var features = topo.features.reduce(function (acc, next) {
+      var features = topo.features.filter(function (feat) {
+        return feat.properties.iso2 !== 'AQ';
+      }).reduce(function (acc, next) {
         return _extends({}, acc, _defineProperty({}, next.properties.iso2, next));
       }, {});
       this.state = _extends({}, this.state, { features: features });
@@ -132,6 +134,22 @@ var Datavis = function () {
 
         _elem.appendChild(document.createTextNode('\n        '));
 
+        var _elem2 = document.createElement('div');
+
+        _elem2.setAttribute('class', 'map-header');
+
+        _elem2.appendChild(document.createTextNode('\n          '));
+
+        var _elem3 = document.createElement('h1');
+
+        _elem3.setAttribute('class', 'title');
+
+        _elem3.appendChild(document.createTextNode('The global landscape of commodity production and trade'));
+
+        _elem2.appendChild(_elem3);
+
+        _elem2.appendChild(document.createTextNode('\n          '));
+
         var _expr = new Selector({
           open: selector,
           active: commodity,
@@ -143,9 +161,13 @@ var Datavis = function () {
 
         if (_res instanceof Array) {
           for (var _i3 = 0; _i3 < _res.length; _i3 += 1) {
-            _elem.appendChild(_res[_i3] instanceof Node || _res[_i3] instanceof Array ? _res[_i3] : document.createTextNode(_res[_i3]));
+            _elem2.appendChild(_res[_i3] instanceof Node || _res[_i3] instanceof Array ? _res[_i3] : document.createTextNode(_res[_i3]));
           }
-        } else _elem.appendChild(_res);
+        } else _elem2.appendChild(_res);
+
+        _elem2.appendChild(document.createTextNode('\n        '));
+
+        _elem.appendChild(_elem2);
 
         _elem.appendChild(document.createTextNode('\n        '));
 
@@ -323,18 +345,20 @@ var MapComponent = function () {
     value: function renderBubbles(flows, onClick, parentBubble) {
       var customProjection = this.props.customProjection;
 
-      var radius = d3.scaleSqrt().domain([0, 1e6]).range([5, 10]);
+      var radius = d3.scaleSqrt().domain([0, 1e6]).range([0, 5, 10]);
       var projection = customProjection ? d3['geo' + MapComponent.capitalize(customProjection)]() : d3.geoMercator();
 
       var _getProjectionConfig2 = this.getProjectionConfig(projection),
           scale = _getProjectionConfig2.scale,
           trans = _getProjectionConfig2.trans;
 
-      var bubbles = Object.keys(flows);
+      var bubbles = Object.keys(flows).filter(function (fao) {
+        var iso = FAO_TO_ISO2[parseInt(fao, 10)];
+        return typeof iso !== 'undefined' && typeof COUNTRIES_COORDINATES[iso] !== 'undefined';
+      });
+
       var centroids = bubbles.map(function (fao) {
         return FAO_TO_ISO2[parseInt(fao, 10)];
-      }).filter(function (iso) {
-        return typeof iso !== 'undefined' && typeof COUNTRIES_COORDINATES[iso] !== 'undefined';
       }).map(function (iso) {
         return projection(COUNTRIES_COORDINATES[iso]);
       });
@@ -452,7 +476,7 @@ var MapComponent = function () {
         }
       });
 
-      setTimeout(this.renderOriginBubbles.bind(this), 2000);
+      setTimeout(this.renderOriginBubbles.bind(this), 4000);
     }
   }, {
     key: 'render',

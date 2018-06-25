@@ -1,0 +1,70 @@
+.map {
+  height: 400px;
+  margin: 0 auto;
+}
+
+.polygon {
+  fill: white;
+  stroke: #cacaca;
+  stroke-dasharray: 4px;
+  stroke-width: 1px;
+}
+
+.polygon.-initial {
+  fill: #ededed;
+  stroke: white;
+}
+
+.polygon.choro {
+  stroke-dasharray: 0;
+  stroke: white;
+}
+
+.choro.-choro-1 {
+  fill: #fde0e3;
+}
+
+.choro.-choro-2 {
+  fill: #fbc0c6;
+}
+
+.choro.-choro-3 {
+  fill: #faa0a9;
+}
+
+.choro.-choro-4 {
+  fill: #f65d6e;
+}
+
+.choro.-choro-5 {
+  fill: #f47a88;
+}
+
+.choro.-choro-6 {
+  fill: #d05868;
+}
+
+.choro.-choro-7 {
+  fill: #d57682;
+}
+
+.choro.-choro-8 {
+  fill: #b7717c;
+}
+
+.choro.-choro-9 {
+  fill: #886b74;
+}
+
+.choro.-choro-10 {
+  fill: #67686e;
+}
+
+.choro.-yellow {
+  fill: yellow;
+}
+
+.bubble {
+  cursor: pointer;
+  fill-opacity: 0.6;
+}

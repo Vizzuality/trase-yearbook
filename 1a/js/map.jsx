@@ -148,14 +148,17 @@ class MapComponent {
     const { customProjection } = this.props;
     const radius = d3.scaleSqrt()
       .domain([0, 1e6])
-      .range([5, 10]);
+      .range([0, 5, 10]);
     const projection = customProjection ? d3[`geo${MapComponent.capitalize(customProjection)}`]() : d3.geoMercator();
     const { scale, trans } = this.getProjectionConfig(projection);
 
-    const bubbles = Object.keys(flows);
+    const bubbles = Object.keys(flows).filter(fao => {
+      const iso = FAO_TO_ISO2[parseInt(fao, 10)];
+      return typeof iso !== 'undefined' && typeof COUNTRIES_COORDINATES[iso] !== 'undefined';
+    });
+
     const centroids = bubbles
       .map(fao => FAO_TO_ISO2[parseInt(fao, 10)])
-      .filter(iso => typeof iso !== 'undefined' && typeof COUNTRIES_COORDINATES[iso] !== 'undefined')
       .map(iso => projection(COUNTRIES_COORDINATES[iso]));
 
     const getTons = index => {
@@ -243,7 +246,7 @@ class MapComponent {
         }
       });
 
-    setTimeout(this.renderOriginBubbles.bind(this), 2000)
+    setTimeout(this.renderOriginBubbles.bind(this), 4000)
   }
 
   render() {
