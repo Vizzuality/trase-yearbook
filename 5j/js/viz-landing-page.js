@@ -7,14 +7,10 @@ const DEFAULT_COLORS = [
   d3.scaleLinear().range(["#d7a6d8","#D66ED9"]),
 ];
 
-const DEFAULT_NA_COLOR = "#ECECEC";
-const DEFAULT_RADIUS_RANGE = [1.5, 50];
-const DEFAULT_TRANSITION_DURATION = 1500;
-const SWITCH_YEARS_ANIMATED = 2000;
+const DEFAULT_RADIUS_RANGE = [0, 40];
+const DEFAULT_TRANSITION_DURATION = 3000;
+const SWITCH_YEARS_ANIMATED = 4000;
 
-const DEFAULT_LINEAR_COLOR_SCALE = ["#F8E0E2","#F2C1C6","#EDA2A9","#E9858D","#E56871","#C16069","#9D5861","#684D55","#47464D"];
-const DEFAULT_DIVERGENT_COLOR_SCALE = ["#5C873E","#76B53F","#AAD383","#FDF0C7","#EDA2A9","#E56871","#9D5861"];
-const DEFAULT_COLOR_SCALE = DEFAULT_LINEAR_COLOR_SCALE;
 
 //////////////
 const MAP_SVG_SIZE = [300,300]
@@ -44,8 +40,8 @@ const renderMap = (selector, geojson) => {
     .attr('d', geoGenerator);
 } 
 
-const updateMap = (selector, data, year, color, source) => {
-  const g = d3.select(selector).select(".map-group");
+const updateMap = (selector, data, year) => {
+  
   const circleG = d3.select(selector).select(".map-circle-group");
   const t = d3.transition().duration(DEFAULT_TRANSITION_DURATION);
 
@@ -53,7 +49,6 @@ const updateMap = (selector, data, year, color, source) => {
     .filter(loc => data[loc].data[year] && data[loc].p)
     .map(loc => {
       return {
-        color: data[loc].data[year].color[source],
         radius: data[loc].data[year].radius,
         proj: projection(data[loc].p.map(c => c/1000.0)),
         loc
@@ -69,7 +64,6 @@ const updateMap = (selector, data, year, color, source) => {
   circles
     .transition(t)
     .attr("r",d => d.radius)
-    .style("fill", d => d.color)
 
   circles.enter()
     .append('circle')
@@ -77,10 +71,8 @@ const updateMap = (selector, data, year, color, source) => {
     .attr("cx", d => d.proj[0])
     .attr("cy", d => d.proj[1])
     .attr("r", 0)
-    .style("fill", d => d.color)
     .transition(t)
     .attr("r",d => d.radius)
-
 }
 
 ////////////////////////////////////
@@ -172,49 +164,19 @@ function toGeoJson(topology, objects_title) {
 }
 
 function preprocessMapJsonData(data) {
-  const year_range = [
-    d3.min(Object.keys(data), company => {
-      return d3.min(Object.keys(data[company]), location => {
-        return d3.min(Object.keys(data[company][location].data), year => year);
-      });
-    }),
-    d3.max(Object.keys(data), company => {
-      return d3.max(Object.keys(data[company]), location => {
-        return d3.max(Object.keys(data[company][location].data), year => year);
-      });
-    })
-  ];
-  const max_risk_absolute = d3.max(Object.keys(data), company => {
-    return d3.max(Object.keys(data[company]), location => {
-      return d3.max(Object.keys(data[company][location].data), year => {
-        return data[company][location].data[year].ra / 100.0;
-      });
-    });
-  });
+  const year_range = [2006,2016];
+  const max_risk_absolute = 7400;
+  const max_soy_volume = 2251818;
 
-  const max_soy_volume = d3.max(Object.keys(data), company => {
-    return d3.max(Object.keys(data[company]), location => {
-      return d3.max(Object.keys(data[company][location].data), year => {
-        return data[company][location].data[year].v / 100.0;
-      });
-    });
-  });
-  const radiusScale = d3.scaleLinear()
+  const radiusScale = d3.scaleSqrt()
     .domain([0, max_soy_volume])
     .range(DEFAULT_RADIUS_RANGE);
-
-  const scaleSize = DEFAULT_COLOR_SCALE.length;
-  const AbsoluteRiskColor = d3.scaleLinear()
-    .domain([...[...Array(scaleSize - 1).keys()].map(i => ((i * 1.0 / scaleSize) * max_risk_absolute)), max_risk_absolute])
-    .range(DEFAULT_COLOR_SCALE);
 
   Object.keys(data).forEach(company => {
     Object.keys(data[company]).forEach(location => {
       Object.keys(data[company][location].data).forEach(year => {
         data[company][location].data[year].v = data[company][location].data[year].v / 100.0;
         data[company][location].data[year].ra = data[company][location].data[year].ra ? data[company][location].data[year].ra / 100.0 : false;
-        data[company][location].data[year].color = {};
-        data[company][location].data[year].color.absolute = data[company][location].data[year].ra ? AbsoluteRiskColor(data[company][location].data[year].ra) : DEFAULT_NA_COLOR;
         data[company][location].data[year].radius = radiusScale(data[company][location].data[year].v)
       });
     });
