@@ -15,19 +15,11 @@ var x = d3.scaleTime()
 var y = d3.scaleLinear()
   .range([height, 0]);
 
-var colors = {
-  "21": '#FDDFE2',
-  "231": '#FBBFC5',
-  "9": '#FA9EA8',
-  "169":  '#F87E8B',
-  "234": '#F65E6E',
-  "100": '#CE5967',
-  "33": '#A85360',
-  "19": '#6E4C56',
-  "others": '#48464F'
-};
-var color = function(d) {
-  return colors[d] || '#000'
+var keys;
+var colors = ['#FDDFE2', '#FBBFC5', '#FA9EA8', '#F87E8B', '#F65E6E', '#CE5967', '#A85360', '#6E4C56', '#48464F'];
+var color = function (d) {
+  const index = keys.findIndex(k => k === d);
+  return colors[index] || '#48464F'
 }
 
 var xAxis = d3.axisBottom()
@@ -52,10 +44,9 @@ var svg = d3.select('.graph-container').append('svg')
   .append('g')
   .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-(function render() {
-  d3.csv('data.csv', function (error, data) {
-    // color.domain(d3.keys(data[0]).filter(function (key) { return key !== 'year'; }));
-    var keys = data.columns.filter(function (key) { return key !== 'year'; })
+function render(commodity) {
+  d3.csv(commodity + '.csv', function (error, data) {
+    keys = data.columns.filter(function (key) { return key !== 'year'; })
     data.forEach(function (d) {
       d.year = parseDate(d.year);
     });
@@ -65,11 +56,6 @@ var svg = d3.select('.graph-container').append('svg')
       return d3.sum(vals);
     });
 
-    function make_y_gridlines() {
-      return d3.axisLeft(y)
-    }
-
-
     // Set domains for axes
     x.domain(d3.extent(data, function (d) { return d.year; }));
     y.domain([0, maxDateVal])
@@ -78,8 +64,6 @@ var svg = d3.select('.graph-container').append('svg')
 
     stack.order(d3.stackOrderNone);
     stack.offset(d3.stackOffsetNone);
-
-    console.log(stack(data));
 
     var path = svg.selectAll('.path')
       .data(stack(data))
@@ -103,9 +87,11 @@ var svg = d3.select('.graph-container').append('svg')
 
     svg.append("g")
       .attr("class", "grid")
-      .call(make_y_gridlines()
-          .tickSize(-width)
-          .tickFormat("")
+      .call(d3.axisLeft(y)
+        .tickSize(-width)
+        .tickFormat("")
       )
   });
-})();
+};
+
+render('data');
