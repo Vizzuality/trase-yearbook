@@ -63,7 +63,8 @@ var Datavis = function () {
         getPolygonClassName: function getPolygonClassName() {
           return 'poly';
         }
-      })
+      }),
+      tooltip: new Tooltip()
     };
 
     this.props = props;
@@ -129,7 +130,9 @@ var Datavis = function () {
   }, {
     key: 'render',
     value: function render() {
-      var map = this.smartComponents.map;
+      var _smartComponents = this.smartComponents,
+          map = _smartComponents.map,
+          tooltip = _smartComponents.tooltip;
       var _state2 = this.state,
           commodity = _state2.commodity,
           selector = _state2.selector,
@@ -174,8 +177,8 @@ var Datavis = function () {
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
         if (_res instanceof Array) {
-          for (var _i3 = 0; _i3 < _res.length; _i3 += 1) {
-            _elem4.appendChild(_res[_i3] instanceof Node || _res[_i3] instanceof Array ? _res[_i3] : document.createTextNode(_res[_i3]));
+          for (var _i4 = 0; _i4 < _res.length; _i4 += 1) {
+            _elem4.appendChild(_res[_i4] instanceof Node || _res[_i4] instanceof Array ? _res[_i4] : document.createTextNode(_res[_i4]));
           }
         } else _elem4.appendChild(_res);
 
@@ -215,10 +218,41 @@ var Datavis = function () {
             _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
         if (_res2 instanceof Array) {
-          for (var _i4 = 0; _i4 < _res2.length; _i4 += 1) {
-            _elem.appendChild(_res2[_i4] instanceof Node || _res2[_i4] instanceof Array ? _res2[_i4] : document.createTextNode(_res2[_i4]));
+          for (var _i5 = 0; _i5 < _res2.length; _i5 += 1) {
+            _elem.appendChild(_res2[_i5] instanceof Node || _res2[_i5] instanceof Array ? _res2[_i5] : document.createTextNode(_res2[_i5]));
           }
         } else _elem.appendChild(_res2);
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _elem7 = document.createElement('div');
+
+        _elem7.setAttribute('class', 'map-footer');
+
+        _elem7.appendChild(document.createTextNode('\n          '));
+
+        var _elem8 = document.createElement('span');
+
+        _elem8.setAttribute('class', 'map-footer-text');
+
+        _elem8.appendChild(document.createTextNode('\n            Click a production country to see the destination of the selected commodity\n          '));
+
+        _elem7.appendChild(_elem8);
+
+        _elem7.appendChild(document.createTextNode('\n        '));
+
+        _elem.appendChild(_elem7);
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _expr3 = tooltip,
+            _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
+
+        if (_res3 instanceof Array) {
+          for (var _i6 = 0; _i6 < _res3.length; _i6 += 1) {
+            _elem.appendChild(_res3[_i6] instanceof Node || _res3[_i6] instanceof Array ? _res3[_i6] : document.createTextNode(_res3[_i6]));
+          }
+        } else _elem.appendChild(_res3);
 
         _elem.appendChild(document.createTextNode('\n      '));
 
@@ -424,6 +458,13 @@ var MapComponent = function () {
         return 'bubble choro ' + colorScale(getTons(i));
       }).on('click', function (d, i) {
         return onClick && onClick(getExporter(i), d);
+      }).on('mouseover', function (d, i) {
+        var fao = bubbles[i];
+        var name = FAO_TO_COUNTRY[parseInt(fao, 10)];
+        var value = getExporter(i).tons;
+        dispatch('showTooltip', name, value);
+      }).on('mouseout', function () {
+        return dispatch('hideTooltip');
       }).attr('cx', function (d) {
         return parentBubble ? parentBubble[0] : d[0];
       }).attr('cy', function (d) {
@@ -461,7 +502,7 @@ var MapComponent = function () {
         if (polygon) {
           polygon.attr('class', function () {
             return getPolygonClassName(d);
-          });
+          }).on('mouseover', null).on('mouseout', null);
         }
       });
     }
@@ -487,7 +528,7 @@ var MapComponent = function () {
       this.renderBubbles(destinations, null, exporterCentroid);
       setTimeout(function () {
         return _this2.renderChoropleth();
-      }, 1750);
+      }, 3500);
     }
   }, {
     key: 'renderChoropleth',
@@ -509,11 +550,27 @@ var MapComponent = function () {
         var destination = destinations[fao];
         return destination && destination.tons ? 'polygon choro ' + colorScale(destination.tons) : 'polygon';
       };
+      var onMouseOver = function onMouseOver(d) {
+        var selectedBubble = _this3.state.selectedBubble;
+
+        var fao = ISO2_TO_FAO[d.properties.iso2];
+        var name = FAO_TO_COUNTRY[fao];
+        var destinations = selectedBubble.destinations;
+
+        var destination = destinations[fao];
+        var value = destination && destination.tons;
+        if (value) {
+          dispatch('showTooltip', name, value);
+        }
+      };
+
       this.polygons.each(function (d) {
         var polygon = d3.select(this);
         if (polygon) {
           polygon.attr('class', function () {
             return getPolygonClassName(d);
+          }).on('mouseover', onMouseOver).on('mouseout', function () {
+            return dispatch('hideTooltip');
           });
         }
       });
@@ -658,3 +715,120 @@ function Selector(props) {
     return _elem;
   }();
 }
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Tooltip = function () {
+  _createClass(Tooltip, [{
+    key: '_setListeners',
+    value: function _setListeners() {
+      window.addEventListener('showTooltip', this._handleEvent);
+      window.addEventListener('hideTooltip', this._handleEvent);
+      document.addEventListener('mousemove', this.setTooltipPosition);
+    }
+  }]);
+
+  function Tooltip(props) {
+    var _this = this;
+
+    _classCallCheck(this, Tooltip);
+
+    this._handleEvent = function (e) {
+      _this[e.type].apply(_this, _toConsumableArray(e.detail));
+    };
+
+    this.props = props;
+    this._setListeners();
+    return this.render();
+  }
+
+  _createClass(Tooltip, [{
+    key: 'setTooltipPosition',
+    value: function setTooltipPosition(e) {
+      var tooltip = document.querySelector('.tooltip');
+      var offsetX = 0;
+      var offsetY = 0;
+      if (e.clientX + tooltip.offsetWidth > window.innerWidth) {
+        offsetX = -tooltip.offsetWidth;
+      }
+      if (e.clientY + tooltip.offsetHeight > window.innerHeight) {
+        offsetY = -tooltip.offsetHeight;
+      }
+      tooltip.style.left = Math.max(0, e.clientX + offsetX) + 'px';
+      tooltip.style.top = e.clientY + offsetY + 'px';
+    }
+  }, {
+    key: 'showTooltip',
+    value: function showTooltip(name, value) {
+      var format = d3.format(',d');
+      document.querySelector('.tooltip').style.opacity = 1;
+      document.querySelector('.tooltip .name').innerHTML = name;
+      document.querySelector('.tooltip .content .value').innerHTML = format(value);
+    }
+  }, {
+    key: 'hideTooltip',
+    value: function hideTooltip() {
+      document.querySelector('.tooltip').style.opacity = 0;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return function () {
+        var _elem = document.createElement('div');
+
+        _elem.setAttribute('class', 'tooltip');
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _elem2 = document.createElement('div');
+
+        _elem2.setAttribute('class', 'name');
+
+        _elem2.appendChild(document.createTextNode('\n          NAME\n        '));
+
+        _elem.appendChild(_elem2);
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _elem3 = document.createElement('div');
+
+        _elem3.setAttribute('class', 'content');
+
+        _elem3.appendChild(document.createTextNode('\n          '));
+
+        var _elem4 = document.createElement('span');
+
+        _elem4.setAttribute('class', 'value');
+
+        _elem4.appendChild(document.createTextNode('XXX'));
+
+        _elem3.appendChild(_elem4);
+
+        _elem3.appendChild(document.createTextNode('\n          '));
+
+        var _elem5 = document.createElement('span');
+
+        _elem5.setAttribute('class', 'unit');
+
+        _elem5.appendChild(document.createTextNode('t'));
+
+        _elem3.appendChild(_elem5);
+
+        _elem3.appendChild(document.createTextNode('\n        '));
+
+        _elem.appendChild(_elem3);
+
+        _elem.appendChild(document.createTextNode('\n      '));
+
+        return _elem;
+      }();
+    }
+  }]);
+
+  return Tooltip;
+}();

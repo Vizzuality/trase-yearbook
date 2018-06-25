@@ -77,7 +77,7 @@ class Datavis {
   }
 
   render() {
-    const { map } = this.smartComponents;
+    const { map, tooltip } = this.smartComponents;
     const { commodity, selector, canResetMap } = this.state;
     return (
       <div class="container">
@@ -100,6 +100,12 @@ class Datavis {
           </div>
         </div>
         {map}
+        <div class="map-footer">
+          <span class="map-footer-text">
+            Click a production country to see the destination of the selected commodity
+          </span>
+        </div>
+        {tooltip}
       </div>
     );
   }
@@ -111,7 +117,8 @@ class Datavis {
       selector: '.map',
       customProjection: 'robinson',
       getPolygonClassName: () => 'poly'
-    })
+    }),
+    tooltip: new Tooltip()
   };
 }
 

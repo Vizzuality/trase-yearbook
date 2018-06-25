@@ -182,6 +182,13 @@ class MapComponent {
       .append('circle')
       .attr('class', (d, i) => `bubble choro ${colorScale(getTons(i))}`)
       .on('click', (d, i) => onClick && onClick(getExporter(i), d))
+      .on('mouseover', (d, i) => {
+        const fao = bubbles[i];
+        const name = FAO_TO_COUNTRY[parseInt(fao, 10)];
+        const value = getExporter(i).tons;
+        dispatch('showTooltip', name, value);
+      })
+      .on('mouseout', () => dispatch('hideTooltip'))
       .attr('cx', d => parentBubble ? parentBubble[0] : d[0])
       .attr('cy', d => parentBubble ? parentBubble[1] : d[1])
       .attr('transform', `translate(${trans}) scale(${scale})`)
@@ -210,7 +217,9 @@ class MapComponent {
       .each(function (d) {
         const polygon = d3.select(this);
         if (polygon) {
-          polygon.attr('class', () => getPolygonClassName(d));
+          polygon.attr('class', () => getPolygonClassName(d))
+            .on('mouseover', null)
+            .on('mouseout', null);
         }
       });
   }
@@ -225,7 +234,7 @@ class MapComponent {
   renderDestinationBubbles() {
     const { destinations, exporterCentroid } = this.state.selectedBubble;
     this.renderBubbles(destinations, null, exporterCentroid);
-    setTimeout(() => this.renderChoropleth(), 1750);
+    setTimeout(() => this.renderChoropleth(), 3500);
   }
 
   renderChoropleth() {
@@ -240,11 +249,25 @@ class MapComponent {
       const destination = destinations[fao];
       return destination && destination.tons ? `polygon choro ${colorScale(destination.tons)}` : 'polygon'
     };
+    const onMouseOver = d => {
+      const { selectedBubble } = this.state;
+      const fao = ISO2_TO_FAO[d.properties.iso2];
+      const name = FAO_TO_COUNTRY[fao];
+      const { destinations } = selectedBubble;
+      const destination = destinations[fao];
+      const value = destination && destination.tons;
+      if (value) {
+        dispatch('showTooltip', name, value);
+      }
+    };
+
     this.polygons
       .each(function (d) {
         const polygon = d3.select(this);
         if (polygon) {
-          polygon.attr('class', () => getPolygonClassName(d));
+          polygon.attr('class', () => getPolygonClassName(d))
+            .on('mouseover', onMouseOver)
+            .on('mouseout', () => dispatch('hideTooltip'));
         }
       });
 
