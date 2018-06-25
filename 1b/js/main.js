@@ -65,7 +65,7 @@ var x = d3.scaleTime().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
 
 var keys;
-var colors = ['#48464F', '#6E4C56', '#A85360', '#CE5967', '#F65E6E', '#F87E8B', '#FA9EA8', '#FBBFC5', '#FDDFE2', '#DBE0E5'];
+var colors = ['#6E4C56', '#A85360', '#CE5967', '#F65E6E', '#F87E8B', '#FA9EA8', '#FBBFC5', '#FDDFE2', '#DBE0E5'];
 var color = function color(d) {
   var index = keys.findIndex(function (k) {
     return k === d;

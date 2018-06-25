@@ -101,33 +101,30 @@ select {
   margin-right: 4px
 }
 
-.legend ul li .icon.c10 {
+.legend ul li .icon.c9 {
   background-color: #DBE0E5;
 }
-.legend ul li .icon.c9 {
+.legend ul li .icon.c8 {
   background-color: #FDDFE2;
 }
-.legend ul li .icon.c8 {
+.legend ul li .icon.c7 {
   background-color: #FBBFC5;
 }
-.legend ul li .icon.c7 {
+.legend ul li .icon.c6 {
   background-color: #FA9EA8;
 }
-.legend ul li .icon.c6 {
+.legend ul li .icon.c5 {
   background-color: #F87E8B;
 }
-.legend ul li .icon.c5 {
+.legend ul li .icon.c4 {
   background-color: #F65E6E;
 }
-.legend ul li .icon.c4 {
+.legend ul li .icon.c3 {
   background-color: #CE5967;
 }
-.legend ul li .icon.c3 {
+.legend ul li .icon.c2 {
   background-color: #A85360;
 }
-.legend ul li .icon.c2 {
-  background-color: #6E4C56;
-}
 .legend ul li .icon.c1 {
-  background-color: #48464F;
+  background-color: #6E4C56;
 }
