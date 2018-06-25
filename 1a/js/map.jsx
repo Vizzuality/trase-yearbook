@@ -7,6 +7,7 @@ class MapComponent {
     window.addEventListener('updateMap', this._handleEvent);
     window.addEventListener('setFlowsData', this._handleEvent);
     window.addEventListener('setSelectedBubble', this._handleEvent);
+    window.addEventListener('renderOriginBubbles', this._handleEvent);
   }
   static getFeaturesBox(featureBounds) {
     const errors = [
@@ -215,6 +216,7 @@ class MapComponent {
   }
 
   renderOriginBubbles() {
+    dispatch('setCanResetMap', false);
     const onClick = (exporter, exporterCentroid) => dispatch('setSelectedBubble', exporter, exporterCentroid);
     this.renderExporterCountries();
     this.renderBubbles(this.state.flows, onClick);
@@ -246,7 +248,7 @@ class MapComponent {
         }
       });
 
-    setTimeout(this.renderOriginBubbles.bind(this), 4000)
+    setTimeout(() => dispatch('setCanResetMap', true), 700);
   }
 
   render() {

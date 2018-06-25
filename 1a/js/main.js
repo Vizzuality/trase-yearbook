@@ -17,6 +17,7 @@ var Datavis = function () {
       window.addEventListener('setFeatures', this._handleEvent);
       window.addEventListener('setCommodity', this._handleEvent);
       window.addEventListener('setSelector', this._handleEvent);
+      window.addEventListener('setCanResetMap', this._handleEvent);
     }
   }, {
     key: '_render',
@@ -39,7 +40,8 @@ var Datavis = function () {
     this.state = {
       commodity: 'soy',
       features: null,
-      selector: false
+      selector: false,
+      canResetMap: false
     };
 
     this.onBackgroundClick = function (_ref) {
@@ -99,6 +101,11 @@ var Datavis = function () {
       this.state = _extends({}, this.state, { selector: selector });
     }
   }, {
+    key: 'setCanResetMap',
+    value: function setCanResetMap(canResetMap) {
+      this.state = _extends({}, this.state, { canResetMap: canResetMap });
+    }
+  }, {
     key: 'willMount',
     value: function willMount() {
       fetch('data/world.topo.json').then(function (res) {
@@ -125,7 +132,8 @@ var Datavis = function () {
       var map = this.smartComponents.map;
       var _state2 = this.state,
           commodity = _state2.commodity,
-          selector = _state2.selector;
+          selector = _state2.selector,
+          canResetMap = _state2.canResetMap;
 
       return function () {
         var _elem = document.createElement('div');
@@ -150,6 +158,12 @@ var Datavis = function () {
 
         _elem2.appendChild(document.createTextNode('\n          '));
 
+        var _elem4 = document.createElement('div');
+
+        _elem4.setAttribute('class', 'controls');
+
+        _elem4.appendChild(document.createTextNode('\n            '));
+
         var _expr = new Selector({
           open: selector,
           active: commodity,
@@ -161,9 +175,35 @@ var Datavis = function () {
 
         if (_res instanceof Array) {
           for (var _i3 = 0; _i3 < _res.length; _i3 += 1) {
-            _elem2.appendChild(_res[_i3] instanceof Node || _res[_i3] instanceof Array ? _res[_i3] : document.createTextNode(_res[_i3]));
+            _elem4.appendChild(_res[_i3] instanceof Node || _res[_i3] instanceof Array ? _res[_i3] : document.createTextNode(_res[_i3]));
           }
-        } else _elem2.appendChild(_res);
+        } else _elem4.appendChild(_res);
+
+        _elem4.appendChild(document.createTextNode('\n            '));
+
+        var _elem5 = document.createElement('button');
+
+        _elem5.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
+
+        _elem5.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
+
+        _elem5.appendChild(document.createTextNode('\n              '));
+
+        var _elem6 = document.createElement('span');
+
+        _elem6.setAttribute('class', 'selector-text');
+
+        _elem6.appendChild(document.createTextNode('Reset'));
+
+        _elem5.appendChild(_elem6);
+
+        _elem5.appendChild(document.createTextNode('\n            '));
+
+        _elem4.appendChild(_elem5);
+
+        _elem4.appendChild(document.createTextNode('\n          '));
+
+        _elem2.appendChild(_elem4);
 
         _elem2.appendChild(document.createTextNode('\n        '));
 
@@ -217,6 +257,7 @@ var MapComponent = function () {
       window.addEventListener('updateMap', this._handleEvent);
       window.addEventListener('setFlowsData', this._handleEvent);
       window.addEventListener('setSelectedBubble', this._handleEvent);
+      window.addEventListener('renderOriginBubbles', this._handleEvent);
     }
   }], [{
     key: 'getFeaturesBox',
@@ -427,6 +468,7 @@ var MapComponent = function () {
   }, {
     key: 'renderOriginBubbles',
     value: function renderOriginBubbles() {
+      dispatch('setCanResetMap', false);
       var onClick = function onClick(exporter, exporterCentroid) {
         return dispatch('setSelectedBubble', exporter, exporterCentroid);
       };
@@ -476,7 +518,9 @@ var MapComponent = function () {
         }
       });
 
-      setTimeout(this.renderOriginBubbles.bind(this), 4000);
+      setTimeout(function () {
+        return dispatch('setCanResetMap', true);
+      }, 700);
     }
   }, {
     key: 'render',

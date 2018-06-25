@@ -7,6 +7,7 @@ class Datavis {
     window.addEventListener('setFeatures', this._handleEvent);
     window.addEventListener('setCommodity', this._handleEvent);
     window.addEventListener('setSelector', this._handleEvent);
+    window.addEventListener('setCanResetMap', this._handleEvent);
   }
   _render() {
     this.root.innerHTML= '';
@@ -23,7 +24,8 @@ class Datavis {
   state = {
     commodity: 'soy',
     features: null,
-    selector: false
+    selector: false,
+    canResetMap: false
   };
 
   setFeatures(topo) {
@@ -44,6 +46,10 @@ class Datavis {
       requestAnimationFrame(() => window.addEventListener('click', this.onBackgroundClick));
     }
     this.state = { ...this.state, selector };
+  }
+
+  setCanResetMap(canResetMap) {
+    this.state = { ...this.state, canResetMap };
   }
 
   onBackgroundClick = ({ target }) => {
@@ -72,18 +78,26 @@ class Datavis {
 
   render() {
     const { map } = this.smartComponents;
-    const { commodity, selector } = this.state;
+    const { commodity, selector, canResetMap } = this.state;
     return (
       <div class="container">
         <div class="map-header">
           <h1 class="title">The global landscape of commodity production and trade</h1>
-          {new Selector({
-            open: selector,
-            active: commodity,
-            options: ['soy', 'sugar', 'oil-palm'],
-            selectOptionAction: 'setCommodity',
-            toggleOpenAction: 'setSelector',
-          })}
+          <div class="controls">
+            {new Selector({
+              open: selector,
+              active: commodity,
+              options: ['soy', 'sugar', 'oil-palm'],
+              selectOptionAction: 'setCommodity',
+              toggleOpenAction: 'setSelector',
+            })}
+            <button
+              onClick={`dispatch('renderOriginBubbles')`}
+              class={`reset ${canResetMap ? '' : '-disabled'}`}
+            >
+              <span class="selector-text">Reset</span>
+            </button>
+          </div>
         </div>
         {map}
       </div>
