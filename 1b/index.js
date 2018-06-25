@@ -26,9 +26,19 @@ csv()
         }
       });
       result.others = ~~others;
-      return result;
+
+      const ordered = []
+      ordered.push(result.year);
+      topTotals.forEach(total => {
+        ordered.push(result[total.exporter])
+      })
+      ordered.push(result.others);
+
+      return ordered;
     })
 
-    const csv = json2csv(data);
-    fs.writeFileSync('data.csv', csv);
+    // const csv = json2csv(data);
+    const header = 'year,' + topTotals.map(top => top.exporter).join(',') + ',others\n';
+    const body = data.map(el => el.join(',')).join('\n')
+    fs.writeFileSync('data.csv', header + body);
   })
