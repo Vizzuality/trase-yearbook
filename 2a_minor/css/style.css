@@ -17,6 +17,14 @@ body {
     font-size: 11px;
 }
 
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 300;
+    margin: 15px 20px;
+}
+
 .root {
     cursor: zoom-out;
 }
