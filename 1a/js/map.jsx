@@ -148,7 +148,7 @@ class MapComponent {
     const { customProjection } = this.props;
     const radius = d3.scaleSqrt()
       .domain([0, 1e6])
-      .range([0, 5, 10]);
+      .range([2, 4, 5, 6, 8, 9, 10, 12]);
     const projection = customProjection ? d3[`geo${MapComponent.capitalize(customProjection)}`]() : d3.geoMercator();
     const { scale, trans } = this.getProjectionConfig(projection);
 

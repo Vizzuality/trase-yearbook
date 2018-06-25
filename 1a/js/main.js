@@ -345,7 +345,7 @@ var MapComponent = function () {
     value: function renderBubbles(flows, onClick, parentBubble) {
       var customProjection = this.props.customProjection;
 
-      var radius = d3.scaleSqrt().domain([0, 1e6]).range([0, 5, 10]);
+      var radius = d3.scaleSqrt().domain([0, 1e6]).range([2, 4, 5, 6, 8, 9, 10, 12]);
       var projection = customProjection ? d3['geo' + MapComponent.capitalize(customProjection)]() : d3.geoMercator();
 
       var _getProjectionConfig2 = this.getProjectionConfig(projection),
