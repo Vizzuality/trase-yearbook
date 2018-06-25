@@ -82,7 +82,7 @@ class Datavis {
     return (
       <div class="container">
         <div class="map-header">
-          <h1 class="title">The global landscape of commodity production and trade</h1>
+          <h1 class="title">The global landscape of commodity production and trade (2013)</h1>
           <div class="controls">
             {new Selector({
               open: selector,

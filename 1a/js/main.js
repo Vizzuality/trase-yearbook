@@ -155,7 +155,7 @@ var Datavis = function () {
 
         _elem3.setAttribute('class', 'title');
 
-        _elem3.appendChild(document.createTextNode('The global landscape of commodity production and trade'));
+        _elem3.appendChild(document.createTextNode('The global landscape of commodity production and trade (2013)'));
 
         _elem2.appendChild(_elem3);
 
