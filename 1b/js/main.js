@@ -141,6 +141,7 @@ render(currentValue);
 
 function changeValue() {
   currentValue = document.getElementById("commodity").value;
+  document.getElementById("title").innerHTML = "Trends in " + currentValue + " exports between 1985 and 2013";
   svg.selectAll('*').remove();
   render(currentValue);
 }
