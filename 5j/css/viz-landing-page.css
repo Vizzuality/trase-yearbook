@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+#viz-lp {
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #EFEFEF;
+}
+
+#viz-lp .maps {
+  display: flex;
+  justify-content: space-between;
+}
+#viz-lp .maps .map {
+  flex: 1;
+  width: 33%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+#viz-lp .map svg path {
+  stroke:slategrey;
+  fill: #ececec;
+  stroke-width: 0.1;
+  stroke-linecap: butt;
+}
+
+#viz-lp .map svg circle.municipalities-bubble {
+  opacity: 0.7;
+  stroke-width: 0.3;
+  stroke: grey;
+}
