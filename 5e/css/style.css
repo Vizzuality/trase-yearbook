@@ -71,6 +71,14 @@ button {
     margin: 4px 4px 0 0;
 }
 
+button:focus{
+    outline: none;
+}
+
+.current {
+    border: 1px #34444c solid;
+}
+
 .tooltip {
     background: #fff;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2);
