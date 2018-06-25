@@ -3,7 +3,7 @@ var height = 500;
 var maxRadius = Math.min(width, height) / 2;
 
 var color = d3.scaleLinear()
-  .domain([0, 100000, 1000000, 6000000, 11663558])
+  .domain([0, 100000, 1000000, 6000000, 10000000])
   .range(['#60B81F', '#9FD579', '#FFF0C2', '#FA9EA8', '#F65E6E'])
   .clamp(true);
 
