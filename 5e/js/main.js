@@ -91,14 +91,22 @@ function changeValue(newValue) {
 
     currentValue = newValue;
 
+
+    document.querySelector('#resize-soy').classList.remove('current');
+    document.querySelector('#resize-total-deforestation').classList.remove('current');
+    document.querySelector('#resize-relative-deforestation').classList.remove('current');
+
     if (currentValue === 'sum_soy_vol') {
-        document.querySelector('.title').innerHTML = 'Volume of soy traded per company';
+        document.querySelector('#resize-soy').classList.add('current');
+        document.querySelector('.title').innerHTML = 'Soy export volumes of major traders exporting soy from Brazil between 2006–2016';
         document.querySelector('.tooltip .content .unit').innerHTML = 't';
     } else if (currentValue === 'dfrs_risk') {
-        document.querySelector('.title').innerHTML = 'Total deforestation risk per company';
+        document.querySelector('#resize-total-deforestation').classList.add('current');
+        document.querySelector('.title').innerHTML = 'Deforestation risk of major traders exporting soy from Brazil between 2006–2016';
         document.querySelector('.tooltip .content .unit').innerHTML = 'ha';
     } else if (currentValue === 'dfrs_risk_per_ton') {
-        document.querySelector('.title').innerHTML = 'Relative deforestation risk per company';
+        document.querySelector('#resize-relative-deforestation').classList.add('current');
+        document.querySelector('.title').innerHTML = 'Relative deforestation risk of major traders exporting soy from Brazil between 2006–2016';
         document.querySelector('.tooltip .content .unit').innerHTML = 'ha/t';
     }
 
