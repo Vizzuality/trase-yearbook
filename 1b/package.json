@@ -4,13 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -c-1",
+    "start": "babel $INIT_CWD/**/*.jsx --out-file $INIT_CWD/js/main.js --watch & http-server $INIT_CWD -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "csvtojson": "^2.0.4",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-jsx-to-dom": "^0.5.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
     "http-server": "^0.11.1",
     "json2csv": "^4.1.3"
   }
