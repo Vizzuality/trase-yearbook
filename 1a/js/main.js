@@ -528,7 +528,7 @@ var MapComponent = function () {
       this.renderBubbles(destinations, null, exporterCentroid);
       setTimeout(function () {
         return _this2.renderChoropleth();
-      }, 3500);
+      }, 2200);
     }
   }, {
     key: 'renderChoropleth',
