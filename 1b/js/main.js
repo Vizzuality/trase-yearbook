@@ -65,12 +65,12 @@ var x = d3.scaleTime().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
 
 var keys;
-var colors = ['#FDDFE2', '#FBBFC5', '#FA9EA8', '#F87E8B', '#F65E6E', '#CE5967', '#A85360', '#6E4C56', '#48464F'];
+var colors = ['#48464F', '#6E4C56', '#A85360', '#CE5967', '#F65E6E', '#F87E8B', '#FA9EA8', '#FBBFC5', '#FDDFE2', '#DBE0E5'];
 var color = function color(d) {
   var index = keys.findIndex(function (k) {
     return k === d;
   });
-  return colors[index] || '#48464F';
+  return colors[index] || '#DBE0E5';
 };
 
 var xAxis = d3.axisBottom().scale(x);
