@@ -82,7 +82,7 @@ class Datavis {
     return (
       <div class="container">
         <div class="map-header">
-          <h1 class="title">The global landscape of commodity production and trade</h1>
+          <h1 class="title">Global trade in key deforestation risk commodities in 2013</h1>
           <div class="controls">
             {new Selector({
               open: selector,
@@ -101,9 +101,12 @@ class Datavis {
         </div>
         {map}
         <div class="map-footer">
-          <span class="map-footer-text">
-            Click a production country to see the destination of the selected commodity
-          </span>
+          {!canResetMap ?
+            <span class="map-footer-text">
+              Click a production country to see the destination of the selected commodity
+            </span>
+           : ''
+          }
         </div>
         {tooltip}
       </div>

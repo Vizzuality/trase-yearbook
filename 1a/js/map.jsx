@@ -234,7 +234,8 @@ class MapComponent {
   renderDestinationBubbles() {
     const { destinations, exporterCentroid } = this.state.selectedBubble;
     this.renderBubbles(destinations, null, exporterCentroid);
-    setTimeout(() => this.renderChoropleth(), 3500);
+    setTimeout(() => dispatch('setCanResetMap', true), 700);
+    // setTimeout(() => this.renderChoropleth(), 3500);
   }
 
   renderChoropleth() {
