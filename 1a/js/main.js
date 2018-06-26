@@ -155,7 +155,7 @@ var Datavis = function () {
 
         _elem3.setAttribute('class', 'title');
 
-        _elem3.appendChild(document.createTextNode('The global landscape of commodity production and trade'));
+        _elem3.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
 
         _elem2.appendChild(_elem3);
 
@@ -177,8 +177,8 @@ var Datavis = function () {
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
         if (_res instanceof Array) {
-          for (var _i4 = 0; _i4 < _res.length; _i4 += 1) {
-            _elem4.appendChild(_res[_i4] instanceof Node || _res[_i4] instanceof Array ? _res[_i4] : document.createTextNode(_res[_i4]));
+          for (var _i5 = 0; _i5 < _res.length; _i5 += 1) {
+            _elem4.appendChild(_res[_i5] instanceof Node || _res[_i5] instanceof Array ? _res[_i5] : document.createTextNode(_res[_i5]));
           }
         } else _elem4.appendChild(_res);
 
@@ -218,8 +218,8 @@ var Datavis = function () {
             _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
         if (_res2 instanceof Array) {
-          for (var _i5 = 0; _i5 < _res2.length; _i5 += 1) {
-            _elem.appendChild(_res2[_i5] instanceof Node || _res2[_i5] instanceof Array ? _res2[_i5] : document.createTextNode(_res2[_i5]));
+          for (var _i6 = 0; _i6 < _res2.length; _i6 += 1) {
+            _elem.appendChild(_res2[_i6] instanceof Node || _res2[_i6] instanceof Array ? _res2[_i6] : document.createTextNode(_res2[_i6]));
           }
         } else _elem.appendChild(_res2);
 
@@ -231,13 +231,22 @@ var Datavis = function () {
 
         _elem7.appendChild(document.createTextNode('\n          '));
 
-        var _elem8 = document.createElement('span');
+        var _expr3 = !canResetMap ? function () {
+          var _elem8 = document.createElement('span');
 
-        _elem8.setAttribute('class', 'map-footer-text');
+          _elem8.setAttribute('class', 'map-footer-text');
 
-        _elem8.appendChild(document.createTextNode('\n            Click a production country to see the destination of the selected commodity\n          '));
+          _elem8.appendChild(document.createTextNode('\n              Click a production country to see the destination of the selected commodity\n            '));
 
-        _elem7.appendChild(_elem8);
+          return _elem8;
+        }() : '',
+            _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
+
+        if (_res3 instanceof Array) {
+          for (var _i7 = 0; _i7 < _res3.length; _i7 += 1) {
+            _elem7.appendChild(_res3[_i7] instanceof Node || _res3[_i7] instanceof Array ? _res3[_i7] : document.createTextNode(_res3[_i7]));
+          }
+        } else _elem7.appendChild(_res3);
 
         _elem7.appendChild(document.createTextNode('\n        '));
 
@@ -245,14 +254,14 @@ var Datavis = function () {
 
         _elem.appendChild(document.createTextNode('\n        '));
 
-        var _expr3 = tooltip,
-            _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
+        var _expr4 = tooltip,
+            _res4 = _expr4 instanceof Node || _expr4 instanceof Array ? _expr4 : document.createTextNode(_expr4);
 
-        if (_res3 instanceof Array) {
-          for (var _i6 = 0; _i6 < _res3.length; _i6 += 1) {
-            _elem.appendChild(_res3[_i6] instanceof Node || _res3[_i6] instanceof Array ? _res3[_i6] : document.createTextNode(_res3[_i6]));
+        if (_res4 instanceof Array) {
+          for (var _i8 = 0; _i8 < _res4.length; _i8 += 1) {
+            _elem.appendChild(_res4[_i8] instanceof Node || _res4[_i8] instanceof Array ? _res4[_i8] : document.createTextNode(_res4[_i8]));
           }
-        } else _elem.appendChild(_res3);
+        } else _elem.appendChild(_res4);
 
         _elem.appendChild(document.createTextNode('\n      '));
 
@@ -519,25 +528,24 @@ var MapComponent = function () {
   }, {
     key: 'renderDestinationBubbles',
     value: function renderDestinationBubbles() {
-      var _this2 = this;
-
       var _state$selectedBubble = this.state.selectedBubble,
           destinations = _state$selectedBubble.destinations,
           exporterCentroid = _state$selectedBubble.exporterCentroid;
 
       this.renderBubbles(destinations, null, exporterCentroid);
       setTimeout(function () {
-        return _this2.renderChoropleth();
-      }, 3500);
+        return dispatch('setCanResetMap', true);
+      }, 700);
+      // setTimeout(() => this.renderChoropleth(), 3500);
     }
   }, {
     key: 'renderChoropleth',
     value: function renderChoropleth() {
-      var _this3 = this;
+      var _this2 = this;
 
       this.map.select('.bubbles').remove();
       var getPolygonClassName = function getPolygonClassName(d) {
-        var selectedBubble = _this3.state.selectedBubble;
+        var selectedBubble = _this2.state.selectedBubble;
 
         var fao = ISO2_TO_FAO[d.properties.iso2];
         var destinations = selectedBubble.destinations;
@@ -551,7 +559,7 @@ var MapComponent = function () {
         return destination && destination.tons ? 'polygon choro ' + colorScale(destination.tons) : 'polygon';
       };
       var onMouseOver = function onMouseOver(d) {
-        var selectedBubble = _this3.state.selectedBubble;
+        var selectedBubble = _this2.state.selectedBubble;
 
         var fao = ISO2_TO_FAO[d.properties.iso2];
         var name = FAO_TO_COUNTRY[fao];
@@ -596,10 +604,10 @@ var MapComponent = function () {
 }();
 
 var _initialiseProps = function _initialiseProps() {
-  var _this4 = this;
+  var _this3 = this;
 
   this._handleEvent = function (e) {
-    _this4[e.type].apply(_this4, _toConsumableArray(e.detail));
+    _this3[e.type].apply(_this3, _toConsumableArray(e.detail));
   };
 
   this.state = {
@@ -610,15 +618,15 @@ var _initialiseProps = function _initialiseProps() {
   this.map = null;
 
   this.updateMap = function (props) {
-    var prevProps = _this4.props;
-    _this4.props = _extends({}, prevProps, props);
-    if (_this4.props.features !== null) {
-      if (!_this4.map) {
-        _this4.renderMap();
-        _this4.getCommodityData();
+    var prevProps = _this3.props;
+    _this3.props = _extends({}, prevProps, props);
+    if (_this3.props.features !== null) {
+      if (!_this3.map) {
+        _this3.renderMap();
+        _this3.getCommodityData();
       }
-      if (prevProps.commodity !== _this4.props.commodity) {
-        _this4.getCommodityData();
+      if (prevProps.commodity !== _this3.props.commodity) {
+        _this3.getCommodityData();
       }
     }
   };
