@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Decima Mono';
+  src: url('../../fonts/decimamonopro-webfont.woff2') format('woff2'),
+       url('../../fonts/decimamonopro-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+#viz-5d {
+  max-width: 1200px;
+  margin: 20px auto;
+  border: 1px solid #EFEFEF;
+  font-family: 'Decima Mono', 'Courier New', 'Courier';
+}
+
+#viz-5d .maps .legend-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  margin: 3px 10px;
+  float: left;
+}
+
+#viz-5d .maps .legend-circle-1 {
+  background: #EDCE4A;
+}
+
+#viz-5d .maps .legend-circle-2 {
+  background: #719DE0;
+}
+
+#viz-5d .maps .legend-circle-3 {
+  background: #D66ED9;
+}
+
+#viz-5d .maps {
+  display: flex;
+  justify-content: space-between;
+}
+#viz-5d .maps .map {
+  flex: 1;
+  width: 33%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+#viz-5d .maps .map select {
+  display: block;
+  width: 100%;
+}
+
+#viz-5d .map svg path {
+  stroke:slategrey;
+  fill: #ececec;
+  stroke-width: 0.1;
+  stroke-linecap: butt;
+}
+
+#viz-5d .map svg path.highlight {
+  stroke: #47464e;
+}
+
+#viz-5d .map svg circle.municipalities-bubble {
+  opacity: 0.7;
+  stroke-width: 0.3;
+  stroke: grey;
+}
+
+#viz-5d .slider {
+  max-height: 120px;
+  margin: 0 auto;
+}
+
+#viz-5d .slider svg {
+  max-height: 120px;
+}
+
+.selector-chart-bg {
+  fill: #ececec;
+}
+
+#viz-5d .slider svg .selector-axis {
+  stroke: #c3c6ca;
+  stroke-width: 1;
+}
+
+#viz-5d .slider svg .year-selector .year-selector-circle {
+  stroke: #c3c6ca;
+  fill: white;
+  stroke-width: 2;
+}
+
+#viz-5d .slider svg .year-selector .year-selector-text {
+  fill: #c3c6ca;
+  font-size: 0.8rem;
+  text-anchor: middle;
+}
+
+#viz-5d .slider svg .year-selector .year-selector-border {
+  stroke-width: 2;
+  stroke: transparent;
+  fill:transparent;
+}
+
+#viz-5d .slider svg .year-selector .year-selector-pointer-area {
+  cursor: pointer;
+}
+
+#viz-5d .slider svg .year-selector:hover .year-selector-border {
+  stroke: #35454c;
+  stroke-dasharray: 2;
+  fill: white;
+}
+
+#viz-5d .slider svg .year-selector.selected .year-selector-border {
+  stroke: #35454c;
+  stroke-dasharray: none;
+  fill: white;
+}
+
+#viz-5d .slider svg .year-selector:hover .year-selector-circle,
+#viz-5d .slider svg .year-selector.selected .year-selector-circle {
+  stroke: #35454c;
+  fill: #35454c;
+}
+
+#viz-5d .slider svg .year-selector:hover .year-selector-text,
+#viz-5d .slider svg .year-selector.selected .year-selector-text {
+  fill: #35454c;
+}
+
+#viz-5d .slider .domain {
+  opacity: 0;
+}
+
+#viz-5d .slider .aux-chart-title {
+  fill: #c3c6ca;
+  font-size: 12px;
+}
+
+#viz-5d .map svg .legend .legend-item circle {
+  opacity: 1;
+  stroke: #c3c6ca;
+  stroke-width: 0.5;
+  fill: #ECECEC;
+}
+
+#viz-5d .map svg .legend .legend-item line {
+  opacity: 1;
+  stroke: #c3c6ca;
+  stroke-width: 0.5;
+  stroke-dasharray: 2;
+}
+
+#viz-5d .map svg .legend text, #viz-5d .map svg .legend-2 text {
+  fill: #c3c6ca;
+  font-size: 8px;
+}
+
+#viz-5d .slider .selector-chart-axis {
+  font-family: 'Decima Mono', 'Courier New', 'Courier';
+}
+
+@media screen and (max-width: 768px) {
+  #viz-5d .maps {
+    display: block;
+  }
+  #viz-5d .maps .map {
+    width: 100%;
+  }
+
+  #viz-5d .slider svg {
+    max-height: 100px;
+  }
+} 
+
+#viz-5d .toggle {
+  padding-top: 10px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+#viz-5d .toggle ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#viz-5d .toggle ul li {
+  float: left;
+  line-height: 35px;
+}
+
+#viz-5d .toggle ul li:first-of-type {
+  padding-right: 6px;
+}
+
+#viz-5d .toggle ul li:last-of-type {
+  padding-left: 6px;
+}
+
+
+/*  */
+
+.tgl {
+  display: none;
+}
+.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::-moz-selection, .tgl:after::-moz-selection, .tgl:before::-moz-selection, .tgl *::-moz-selection, .tgl *:after::-moz-selection, .tgl *:before::-moz-selection, .tgl + .tgl-btn::-moz-selection {
+  background: none;
+}
+.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.tgl-light + .tgl-btn {
+  background: #f0f0f0;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all .4s ease;
+}
+.tgl-light + .tgl-btn:after {
+  border-radius: 50%;
+  background: #fff;
+  transition: all .2s ease;
+}
+.tgl-light:checked + .tgl-btn {
+  background: #ea6869;
+}

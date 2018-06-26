@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Trase Yearbook Viz 5f</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/viz-5f.css" />
+</head>
+<body>
+  <div id="viz-5d">
+    <div class="toggle">
+      <label for="">Deforestation Risk: </label>
+      <ul>
+        <li>Absolute</li>
+        <li>
+          <input class="tgl tgl-light" id="toggle_risk" type="checkbox"/>
+          <label class="tgl-btn" for="toggle_risk"></label>
+        </li>
+        <li>Relative</li>
+      </ul>
+    </div>
+    <div class="maps">
+      <div id="viz-5d-map1" class="map">
+          <h3><div class="legend-circle legend-circle-1"></div>AMAGGI</h3>
+        <div class="viz"></div>
+      </div>
+      <div id="viz-5d-map2" class="map">
+          <h3><div class="legend-circle legend-circle-2"></div>LOUIS DREYFUS</h3>
+        <div class="viz"></div>
+      </div>
+      <div id="viz-5d-map3" class="map">
+        <h3><div class="legend-circle legend-circle-3"></div>AMAGGI & LD COMMODITIES</h3>
+        <div class="viz"></div>
+      </div>
+    </div>
+    <div class="slider">
+
+    </div>
+  </div>
+  <script src="js/d3.v5.min.js"></script>
+  <script src="js/topojson.min.js"></script>
+  <script src="js/viz-5f.v4.js"></script>
+</body>
+</html>
