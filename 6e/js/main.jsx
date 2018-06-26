@@ -48,7 +48,7 @@ class Datavis {
     const { map } = this.smartComponents;
     return (
       <div class="container">
-        <h1>Zero deforestation commitment coverage</h1>
+        <h1>Proportion of soy exported from Brazil in 2016 under a Zero Deforestation Commitment</h1>
         {map}
         <img src="assets/6e-legend.svg" alt="map legend" class="legend" />
         <div id="tooltip" class="tooltip"></div>

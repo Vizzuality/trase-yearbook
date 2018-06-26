@@ -134,7 +134,7 @@ var Datavis = function () {
 
         var _elem2 = document.createElement('h1');
 
-        _elem2.appendChild(document.createTextNode('Zero deforestation commitment coverage'));
+        _elem2.appendChild(document.createTextNode('Proportion of soy exported from Brazil in 2016 under a Zero Deforestation Commitment'));
 
         _elem.appendChild(_elem2);
 
