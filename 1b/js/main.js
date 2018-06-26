@@ -47,7 +47,7 @@ function Legend(props) {
 }
 "use strict";
 
-var margin = { top: 20, right: 60, bottom: 30, left: 30 },
+var margin = { top: 20, right: 60, bottom: 30, left: 60 },
     width = 500 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
@@ -130,6 +130,15 @@ function render(commodity) {
     svg.append('g').attr('class', 'y axis').call(yAxis);
 
     svg.append("g").attr("class", "grid").call(d3.axisLeft(y).tickSize(-width).tickFormat(""));
+
+    // text label for the y axis
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Exports (million tonnes)");
 
     legend.innerHTML = '';
     legend.appendChild(Legend({ options: keys }));
