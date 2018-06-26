@@ -25,7 +25,8 @@ class Datavis {
     commodity: 'soy',
     features: null,
     selector: false,
-    canResetMap: false
+    canResetMap: false,
+    infoOpened: false
   };
 
   commoditiesText = {
@@ -101,9 +102,13 @@ class Datavis {
     });
   }
 
+  handleInfoClick() {
+    this.state = { ...this.state, infoOpened: true };
+  }
+
   render() {
     const { map, tooltip } = this.smartComponents;
-    const { commodity, selector, canResetMap } = this.state;
+    const { commodity, selector, canResetMap, infoOpened } = this.state;
     const commodityText = this.commoditiesText[commodity];
     return (
       <div class="container">
@@ -125,6 +130,12 @@ class Datavis {
             >
               <span class="selector-text">Reset</span>
             </button>
+            <button
+              onClick={this.handleInfoClick}
+              class="reset info-button"
+            >
+              i
+            </button>
           </div>
         </div>
         {map}
@@ -136,9 +147,11 @@ class Datavis {
            : ''
           }
         </div>
-        <div class="text-container">
-          {commodityText}
-        </div>
+        {infoOpened &&
+          <div class="info-container">
+            {commodityText}
+          </div>
+        }
         {tooltip}
       </div>
     );

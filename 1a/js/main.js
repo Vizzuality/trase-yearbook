@@ -41,7 +41,8 @@ var Datavis = function () {
       commodity: 'soy',
       features: null,
       selector: false,
-      canResetMap: false
+      canResetMap: false,
+      infoOpened: false
     };
     this.commoditiesText = {
       'soy': function () {
@@ -351,15 +352,23 @@ var Datavis = function () {
       });
     }
   }, {
+    key: 'handleInfoClick',
+    value: function handleInfoClick() {
+      this.state = _extends({}, this.state, { infoOpened: true });
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this3 = this;
+
       var _smartComponents = this.smartComponents,
           map = _smartComponents.map,
           tooltip = _smartComponents.tooltip;
       var _state2 = this.state,
           commodity = _state2.commodity,
           selector = _state2.selector,
-          canResetMap = _state2.canResetMap;
+          canResetMap = _state2.canResetMap,
+          infoOpened = _state2.infoOpened;
 
       var commodityText = this.commoditiesText[commodity];
       return function () {
@@ -438,6 +447,18 @@ var Datavis = function () {
 
         _elem29.appendChild(_elem30);
 
+        _elem29.appendChild(document.createTextNode('\n            '));
+
+        var _elem32 = document.createElement('button');
+
+        _elem32.setAttribute('onClick', _this3.handleInfoClick);
+
+        _elem32.setAttribute('class', 'reset info-button');
+
+        _elem32.appendChild(document.createTextNode('\n              i\n            '));
+
+        _elem29.appendChild(_elem32);
+
         _elem29.appendChild(document.createTextNode('\n          '));
 
         _elem26.appendChild(_elem29);
@@ -459,11 +480,11 @@ var Datavis = function () {
 
         _elem25.appendChild(document.createTextNode('\n        '));
 
-        var _elem32 = document.createElement('div');
+        var _elem33 = document.createElement('div');
 
-        _elem32.setAttribute('class', 'map-footer');
+        _elem33.setAttribute('class', 'map-footer');
 
-        _elem32.appendChild(document.createTextNode('\n          '));
+        _elem33.appendChild(document.createTextNode('\n          '));
 
         var _expr3 = !canResetMap ? function () {
           var _elem34 = document.createElement('span');
@@ -478,30 +499,9 @@ var Datavis = function () {
 
         if (_res3 instanceof Array) {
           for (var _i8 = 0; _i8 < _res3.length; _i8 += 1) {
-            _elem32.appendChild(_res3[_i8] instanceof Node || _res3[_i8] instanceof Array ? _res3[_i8] : document.createTextNode(_res3[_i8]));
+            _elem33.appendChild(_res3[_i8] instanceof Node || _res3[_i8] instanceof Array ? _res3[_i8] : document.createTextNode(_res3[_i8]));
           }
-        } else _elem32.appendChild(_res3);
-
-        _elem32.appendChild(document.createTextNode('\n        '));
-
-        _elem25.appendChild(_elem32);
-
-        _elem25.appendChild(document.createTextNode('\n        '));
-
-        var _elem33 = document.createElement('div');
-
-        _elem33.setAttribute('class', 'text-container');
-
-        _elem33.appendChild(document.createTextNode('\n          '));
-
-        var _expr4 = commodityText,
-            _res4 = _expr4 instanceof Node || _expr4 instanceof Array ? _expr4 : document.createTextNode(_expr4);
-
-        if (_res4 instanceof Array) {
-          for (var _i9 = 0; _i9 < _res4.length; _i9 += 1) {
-            _elem33.appendChild(_res4[_i9] instanceof Node || _res4[_i9] instanceof Array ? _res4[_i9] : document.createTextNode(_res4[_i9]));
-          }
-        } else _elem33.appendChild(_res4);
+        } else _elem33.appendChild(_res3);
 
         _elem33.appendChild(document.createTextNode('\n        '));
 
@@ -509,12 +509,42 @@ var Datavis = function () {
 
         _elem25.appendChild(document.createTextNode('\n        '));
 
+        var _expr4 = infoOpened && function () {
+          var _elem35 = document.createElement('div');
+
+          _elem35.setAttribute('class', 'info-container');
+
+          _elem35.appendChild(document.createTextNode('\n            '));
+
+          var _expr6 = commodityText,
+              _res6 = _expr6 instanceof Node || _expr6 instanceof Array ? _expr6 : document.createTextNode(_expr6);
+
+          if (_res6 instanceof Array) {
+            for (var _i10 = 0; _i10 < _res6.length; _i10 += 1) {
+              _elem35.appendChild(_res6[_i10] instanceof Node || _res6[_i10] instanceof Array ? _res6[_i10] : document.createTextNode(_res6[_i10]));
+            }
+          } else _elem35.appendChild(_res6);
+
+          _elem35.appendChild(document.createTextNode('\n          '));
+
+          return _elem35;
+        }(),
+            _res4 = _expr4 instanceof Node || _expr4 instanceof Array ? _expr4 : document.createTextNode(_expr4);
+
+        if (_res4 instanceof Array) {
+          for (var _i11 = 0; _i11 < _res4.length; _i11 += 1) {
+            _elem25.appendChild(_res4[_i11] instanceof Node || _res4[_i11] instanceof Array ? _res4[_i11] : document.createTextNode(_res4[_i11]));
+          }
+        } else _elem25.appendChild(_res4);
+
+        _elem25.appendChild(document.createTextNode('\n        '));
+
         var _expr5 = tooltip,
             _res5 = _expr5 instanceof Node || _expr5 instanceof Array ? _expr5 : document.createTextNode(_expr5);
 
         if (_res5 instanceof Array) {
-          for (var _i10 = 0; _i10 < _res5.length; _i10 += 1) {
-            _elem25.appendChild(_res5[_i10] instanceof Node || _res5[_i10] instanceof Array ? _res5[_i10] : document.createTextNode(_res5[_i10]));
+          for (var _i12 = 0; _i12 < _res5.length; _i12 += 1) {
+            _elem25.appendChild(_res5[_i12] instanceof Node || _res5[_i12] instanceof Array ? _res5[_i12] : document.createTextNode(_res5[_i12]));
           }
         } else _elem25.appendChild(_res5);
 
