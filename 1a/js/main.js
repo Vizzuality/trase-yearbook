@@ -383,195 +383,224 @@ var Datavis = function () {
 
         _elem25.appendChild(document.createTextNode('\n        '));
 
-        var _elem26 = document.createElement('div');
+        var _expr = !infoOpened ? function () {
+          var _elem26 = document.createElement('div');
 
-        _elem26.setAttribute('class', 'map-header');
+          _elem26.appendChild(document.createTextNode('\n            '));
 
-        _elem26.appendChild(document.createTextNode('\n          '));
+          var _elem27 = document.createElement('div');
 
-        var _elem27 = document.createElement('div');
+          _elem27.setAttribute('class', 'map-header');
 
-        _elem27.setAttribute('class', 'title-container');
+          _elem27.appendChild(document.createTextNode('\n              '));
 
-        _elem27.appendChild(document.createTextNode('\n            '));
+          var _elem28 = document.createElement('div');
 
-        var _elem28 = document.createElement('h1');
+          _elem28.setAttribute('class', 'title-container');
 
-        _elem28.setAttribute('class', 'title');
+          _elem28.appendChild(document.createTextNode('\n                '));
 
-        _elem28.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
+          var _elem29 = document.createElement('h1');
 
-        _elem27.appendChild(_elem28);
+          _elem29.setAttribute('class', 'title');
 
-        _elem27.appendChild(document.createTextNode('\n          '));
+          _elem29.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
 
-        _elem26.appendChild(_elem27);
+          _elem28.appendChild(_elem29);
 
-        _elem26.appendChild(document.createTextNode('\n          '));
+          _elem28.appendChild(document.createTextNode('\n              '));
 
-        var _elem29 = document.createElement('div');
+          _elem27.appendChild(_elem28);
 
-        _elem29.setAttribute('class', 'controls');
+          _elem27.appendChild(document.createTextNode('\n              '));
 
-        _elem29.appendChild(document.createTextNode('\n            '));
+          var _elem30 = document.createElement('div');
 
-        var _expr = new Selector({
-          open: selector,
-          active: commodity,
-          options: ['soy', 'sugar', 'oil-palm'],
-          selectOptionAction: 'setCommodity',
-          toggleOpenAction: 'setSelector'
-        }),
+          _elem30.setAttribute('class', 'controls');
+
+          _elem30.appendChild(document.createTextNode('\n                '));
+
+          var _expr4 = new Selector({
+            open: selector,
+            active: commodity,
+            options: ['soy', 'sugar', 'oil-palm'],
+            selectOptionAction: 'setCommodity',
+            toggleOpenAction: 'setSelector'
+          }),
+              _res4 = _expr4 instanceof Node || _expr4 instanceof Array ? _expr4 : document.createTextNode(_expr4);
+
+          if (_res4 instanceof Array) {
+            for (var _i7 = 0; _i7 < _res4.length; _i7 += 1) {
+              _elem30.appendChild(_res4[_i7] instanceof Node || _res4[_i7] instanceof Array ? _res4[_i7] : document.createTextNode(_res4[_i7]));
+            }
+          } else _elem30.appendChild(_res4);
+
+          _elem30.appendChild(document.createTextNode('\n                '));
+
+          var _elem31 = document.createElement('button');
+
+          _elem31.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
+
+          _elem31.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
+
+          _elem31.appendChild(document.createTextNode('\n                  '));
+
+          var _elem32 = document.createElement('span');
+
+          _elem32.setAttribute('class', 'selector-text');
+
+          _elem32.appendChild(document.createTextNode('Reset'));
+
+          _elem31.appendChild(_elem32);
+
+          _elem31.appendChild(document.createTextNode('\n                '));
+
+          _elem30.appendChild(_elem31);
+
+          _elem30.appendChild(document.createTextNode('\n                '));
+
+          var _elem33 = document.createElement('button');
+
+          _elem33.setAttribute('onClick', 'dispatch(\'handleInfoClick\')');
+
+          _elem33.setAttribute('class', 'reset info-button');
+
+          _elem33.appendChild(document.createTextNode('\n                  i\n                '));
+
+          _elem30.appendChild(_elem33);
+
+          _elem30.appendChild(document.createTextNode('\n              '));
+
+          _elem27.appendChild(_elem30);
+
+          _elem27.appendChild(document.createTextNode('\n            '));
+
+          _elem26.appendChild(_elem27);
+
+          _elem26.appendChild(document.createTextNode('\n            '));
+
+          var _expr5 = map,
+              _res5 = _expr5 instanceof Node || _expr5 instanceof Array ? _expr5 : document.createTextNode(_expr5);
+
+          if (_res5 instanceof Array) {
+            for (var _i8 = 0; _i8 < _res5.length; _i8 += 1) {
+              _elem26.appendChild(_res5[_i8] instanceof Node || _res5[_i8] instanceof Array ? _res5[_i8] : document.createTextNode(_res5[_i8]));
+            }
+          } else _elem26.appendChild(_res5);
+
+          _elem26.appendChild(document.createTextNode('\n            '));
+
+          var _elem34 = document.createElement('div');
+
+          _elem34.setAttribute('class', 'map-footer');
+
+          _elem34.appendChild(document.createTextNode('\n              '));
+
+          var _expr6 = !canResetMap ? function () {
+            var _elem35 = document.createElement('span');
+
+            _elem35.setAttribute('class', 'map-footer-text');
+
+            _elem35.appendChild(document.createTextNode('\n                  Click a production country to see the destination of the selected commodity\n                '));
+
+            return _elem35;
+          }() : '',
+              _res6 = _expr6 instanceof Node || _expr6 instanceof Array ? _expr6 : document.createTextNode(_expr6);
+
+          if (_res6 instanceof Array) {
+            for (var _i9 = 0; _i9 < _res6.length; _i9 += 1) {
+              _elem34.appendChild(_res6[_i9] instanceof Node || _res6[_i9] instanceof Array ? _res6[_i9] : document.createTextNode(_res6[_i9]));
+            }
+          } else _elem34.appendChild(_res6);
+
+          _elem34.appendChild(document.createTextNode('\n            '));
+
+          _elem26.appendChild(_elem34);
+
+          _elem26.appendChild(document.createTextNode('\n          '));
+
+          return _elem26;
+        }() : '',
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
         if (_res instanceof Array) {
-          for (var _i6 = 0; _i6 < _res.length; _i6 += 1) {
-            _elem29.appendChild(_res[_i6] instanceof Node || _res[_i6] instanceof Array ? _res[_i6] : document.createTextNode(_res[_i6]));
+          for (var _i10 = 0; _i10 < _res.length; _i10 += 1) {
+            _elem25.appendChild(_res[_i10] instanceof Node || _res[_i10] instanceof Array ? _res[_i10] : document.createTextNode(_res[_i10]));
           }
-        } else _elem29.appendChild(_res);
-
-        _elem29.appendChild(document.createTextNode('\n            '));
-
-        var _elem30 = document.createElement('button');
-
-        _elem30.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
-
-        _elem30.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
-
-        _elem30.appendChild(document.createTextNode('\n              '));
-
-        var _elem31 = document.createElement('span');
-
-        _elem31.setAttribute('class', 'selector-text');
-
-        _elem31.appendChild(document.createTextNode('Reset'));
-
-        _elem30.appendChild(_elem31);
-
-        _elem30.appendChild(document.createTextNode('\n            '));
-
-        _elem29.appendChild(_elem30);
-
-        _elem29.appendChild(document.createTextNode('\n            '));
-
-        var _elem32 = document.createElement('button');
-
-        _elem32.setAttribute('onClick', 'dispatch(\'handleInfoClick\')');
-
-        _elem32.setAttribute('class', 'reset info-button');
-
-        _elem32.appendChild(document.createTextNode('\n              i\n            '));
-
-        _elem29.appendChild(_elem32);
-
-        _elem29.appendChild(document.createTextNode('\n          '));
-
-        _elem26.appendChild(_elem29);
-
-        _elem26.appendChild(document.createTextNode('\n        '));
-
-        _elem25.appendChild(_elem26);
+        } else _elem25.appendChild(_res);
 
         _elem25.appendChild(document.createTextNode('\n        '));
 
-        var _expr2 = map,
-            _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
-
-        if (_res2 instanceof Array) {
-          for (var _i7 = 0; _i7 < _res2.length; _i7 += 1) {
-            _elem25.appendChild(_res2[_i7] instanceof Node || _res2[_i7] instanceof Array ? _res2[_i7] : document.createTextNode(_res2[_i7]));
-          }
-        } else _elem25.appendChild(_res2);
-
-        _elem25.appendChild(document.createTextNode('\n        '));
-
-        var _elem33 = document.createElement('div');
-
-        _elem33.setAttribute('class', 'map-footer');
-
-        _elem33.appendChild(document.createTextNode('\n          '));
-
-        var _expr3 = !canResetMap ? function () {
-          var _elem34 = document.createElement('span');
-
-          _elem34.setAttribute('class', 'map-footer-text');
-
-          _elem34.appendChild(document.createTextNode('\n              Click a production country to see the destination of the selected commodity\n            '));
-
-          return _elem34;
-        }() : '',
-            _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
-
-        if (_res3 instanceof Array) {
-          for (var _i8 = 0; _i8 < _res3.length; _i8 += 1) {
-            _elem33.appendChild(_res3[_i8] instanceof Node || _res3[_i8] instanceof Array ? _res3[_i8] : document.createTextNode(_res3[_i8]));
-          }
-        } else _elem33.appendChild(_res3);
-
-        _elem33.appendChild(document.createTextNode('\n        '));
-
-        _elem25.appendChild(_elem33);
-
-        _elem25.appendChild(document.createTextNode('\n        '));
-
-        var _expr4 = infoOpened ? function () {
-          var _elem35 = document.createElement('div');
-
-          _elem35.setAttribute('class', 'info-container');
-
-          _elem35.appendChild(document.createTextNode('\n            '));
-
+        var _expr2 = infoOpened ? function () {
           var _elem36 = document.createElement('div');
 
-          _elem36.appendChild(document.createTextNode('\n              '));
+          _elem36.setAttribute('class', 'info-container');
 
-          var _elem37 = document.createElement('button');
+          _elem36.appendChild(document.createTextNode('\n            '));
 
-          _elem37.setAttribute('class', 'reset close-button');
+          var _elem37 = document.createElement('div');
 
-          _elem37.setAttribute('onClick', 'dispatch(\'handleCloseInfo\')');
+          _elem37.setAttribute('class', 'info-container-header');
 
-          _elem37.appendChild(document.createTextNode('\n              X\n              '));
+          _elem37.appendChild(document.createTextNode('\n              '));
+
+          var _elem38 = document.createElement('button');
+
+          _elem38.setAttribute('class', 'reset close-button');
+
+          _elem38.setAttribute('onClick', 'dispatch(\'handleCloseInfo\')');
+
+          _elem38.appendChild(document.createTextNode('\n              X\n              '));
+
+          _elem37.appendChild(_elem38);
+
+          _elem37.appendChild(document.createTextNode('\n            '));
 
           _elem36.appendChild(_elem37);
 
           _elem36.appendChild(document.createTextNode('\n            '));
 
-          _elem35.appendChild(_elem36);
+          var _elem39 = document.createElement('div');
 
-          _elem35.appendChild(document.createTextNode('\n            '));
+          _elem39.setAttribute('class', 'info-text');
 
-          var _expr6 = commodityText,
-              _res6 = _expr6 instanceof Node || _expr6 instanceof Array ? _expr6 : document.createTextNode(_expr6);
+          _elem39.appendChild(document.createTextNode('\n              '));
 
-          if (_res6 instanceof Array) {
-            for (var _i10 = 0; _i10 < _res6.length; _i10 += 1) {
-              _elem35.appendChild(_res6[_i10] instanceof Node || _res6[_i10] instanceof Array ? _res6[_i10] : document.createTextNode(_res6[_i10]));
+          var _expr7 = commodityText,
+              _res7 = _expr7 instanceof Node || _expr7 instanceof Array ? _expr7 : document.createTextNode(_expr7);
+
+          if (_res7 instanceof Array) {
+            for (var _i12 = 0; _i12 < _res7.length; _i12 += 1) {
+              _elem39.appendChild(_res7[_i12] instanceof Node || _res7[_i12] instanceof Array ? _res7[_i12] : document.createTextNode(_res7[_i12]));
             }
-          } else _elem35.appendChild(_res6);
+          } else _elem39.appendChild(_res7);
 
-          _elem35.appendChild(document.createTextNode('\n          '));
+          _elem39.appendChild(document.createTextNode('\n            '));
 
-          return _elem35;
+          _elem36.appendChild(_elem39);
+
+          _elem36.appendChild(document.createTextNode('\n          '));
+
+          return _elem36;
         }() : '',
-            _res4 = _expr4 instanceof Node || _expr4 instanceof Array ? _expr4 : document.createTextNode(_expr4);
+            _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
-        if (_res4 instanceof Array) {
-          for (var _i11 = 0; _i11 < _res4.length; _i11 += 1) {
-            _elem25.appendChild(_res4[_i11] instanceof Node || _res4[_i11] instanceof Array ? _res4[_i11] : document.createTextNode(_res4[_i11]));
+        if (_res2 instanceof Array) {
+          for (var _i13 = 0; _i13 < _res2.length; _i13 += 1) {
+            _elem25.appendChild(_res2[_i13] instanceof Node || _res2[_i13] instanceof Array ? _res2[_i13] : document.createTextNode(_res2[_i13]));
           }
-        } else _elem25.appendChild(_res4);
+        } else _elem25.appendChild(_res2);
 
         _elem25.appendChild(document.createTextNode('\n        '));
 
-        var _expr5 = tooltip,
-            _res5 = _expr5 instanceof Node || _expr5 instanceof Array ? _expr5 : document.createTextNode(_expr5);
+        var _expr3 = tooltip,
+            _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
 
-        if (_res5 instanceof Array) {
-          for (var _i12 = 0; _i12 < _res5.length; _i12 += 1) {
-            _elem25.appendChild(_res5[_i12] instanceof Node || _res5[_i12] instanceof Array ? _res5[_i12] : document.createTextNode(_res5[_i12]));
+        if (_res3 instanceof Array) {
+          for (var _i14 = 0; _i14 < _res3.length; _i14 += 1) {
+            _elem25.appendChild(_res3[_i14] instanceof Node || _res3[_i14] instanceof Array ? _res3[_i14] : document.createTextNode(_res3[_i14]));
           }
-        } else _elem25.appendChild(_res5);
+        } else _elem25.appendChild(_res3);
 
         _elem25.appendChild(document.createTextNode('\n      '));
 

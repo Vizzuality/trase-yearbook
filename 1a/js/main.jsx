@@ -118,44 +118,49 @@ class Datavis {
     const commodityText = this.commoditiesText[commodity];
     return (
       <div class="container">
-        <div class="map-header">
-          <div class="title-container">
-            <h1 class="title">Global trade in key deforestation risk commodities in 2013</h1>
+        {!infoOpened ?
+          <div>
+            <div class="map-header">
+              <div class="title-container">
+                <h1 class="title">Global trade in key deforestation risk commodities in 2013</h1>
+              </div>
+              <div class="controls">
+                {new Selector({
+                  open: selector,
+                  active: commodity,
+                  options: ['soy', 'sugar', 'oil-palm'],
+                  selectOptionAction: 'setCommodity',
+                  toggleOpenAction: 'setSelector',
+                })}
+                <button
+                  onClick={`dispatch('renderOriginBubbles')`}
+                  class={`reset ${canResetMap ? '' : '-disabled'}`}
+                >
+                  <span class="selector-text">Reset</span>
+                </button>
+                <button
+                  onClick={`dispatch('handleInfoClick')`}
+                  class="reset info-button"
+                >
+                  i
+                </button>
+              </div>
+            </div>
+            {map}
+            <div class="map-footer">
+              {!canResetMap ?
+                <span class="map-footer-text">
+                  Click a production country to see the destination of the selected commodity
+                </span>
+               : ''
+              }
+            </div>
           </div>
-          <div class="controls">
-            {new Selector({
-              open: selector,
-              active: commodity,
-              options: ['soy', 'sugar', 'oil-palm'],
-              selectOptionAction: 'setCommodity',
-              toggleOpenAction: 'setSelector',
-            })}
-            <button
-              onClick={`dispatch('renderOriginBubbles')`}
-              class={`reset ${canResetMap ? '' : '-disabled'}`}
-            >
-              <span class="selector-text">Reset</span>
-            </button>
-            <button
-              onClick={`dispatch('handleInfoClick')`}
-              class="reset info-button"
-            >
-              i
-            </button>
-          </div>
-        </div>
-        {map}
-        <div class="map-footer">
-          {!canResetMap ?
-            <span class="map-footer-text">
-              Click a production country to see the destination of the selected commodity
-            </span>
-           : ''
-          }
-        </div>
+          : ''
+        }
         {infoOpened ?
           <div class="info-container">
-            <div>
+            <div class="info-container-header">
               <button
                 class="reset close-button"
                 onClick={`dispatch('handleCloseInfo')`}
@@ -163,7 +168,9 @@ class Datavis {
               X
               </button>
             </div>
-            {commodityText}
+            <div class="info-text">
+              {commodityText}
+            </div>
           </div>
           : ''
         }
