@@ -82,7 +82,9 @@ class Datavis {
     return (
       <div class="container">
         <div class="map-header">
-          <h1 class="title">Global trade in key deforestation risk commodities in 2013</h1>
+          <div class="title-container">
+            <h1 class="title">Global trade in key deforestation risk commodities in 2013</h1>
+          </div>
           <div class="controls">
             {new Selector({
               open: selector,
