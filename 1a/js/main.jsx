@@ -8,6 +8,8 @@ class Datavis {
     window.addEventListener('setCommodity', this._handleEvent);
     window.addEventListener('setSelector', this._handleEvent);
     window.addEventListener('setCanResetMap', this._handleEvent);
+    window.addEventListener('handleInfoClick', this._handleEvent);
+    window.addEventListener('handleCloseInfo', this._handleEvent);
   }
   _render() {
     this.root.innerHTML= '';
@@ -106,6 +108,10 @@ class Datavis {
     this.state = { ...this.state, infoOpened: true };
   }
 
+  handleCloseInfo() {
+    this.state = { ...this.state, infoOpened: false };
+  }
+
   render() {
     const { map, tooltip } = this.smartComponents;
     const { commodity, selector, canResetMap, infoOpened } = this.state;
@@ -131,7 +137,7 @@ class Datavis {
               <span class="selector-text">Reset</span>
             </button>
             <button
-              onClick={this.handleInfoClick}
+              onClick={`dispatch('handleInfoClick')`}
               class="reset info-button"
             >
               i
@@ -147,10 +153,19 @@ class Datavis {
            : ''
           }
         </div>
-        {infoOpened &&
+        {infoOpened ?
           <div class="info-container">
+            <div>
+              <button
+                class="reset close-button"
+                onClick={`dispatch('handleCloseInfo')`}
+              >
+              X
+              </button>
+            </div>
             {commodityText}
           </div>
+          : ''
         }
         {tooltip}
       </div>

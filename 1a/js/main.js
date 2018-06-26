@@ -18,6 +18,8 @@ var Datavis = function () {
       window.addEventListener('setCommodity', this._handleEvent);
       window.addEventListener('setSelector', this._handleEvent);
       window.addEventListener('setCanResetMap', this._handleEvent);
+      window.addEventListener('handleInfoClick', this._handleEvent);
+      window.addEventListener('handleCloseInfo', this._handleEvent);
     }
   }, {
     key: '_render',
@@ -357,10 +359,13 @@ var Datavis = function () {
       this.state = _extends({}, this.state, { infoOpened: true });
     }
   }, {
+    key: 'handleCloseInfo',
+    value: function handleCloseInfo() {
+      this.state = _extends({}, this.state, { infoOpened: false });
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
-
       var _smartComponents = this.smartComponents,
           map = _smartComponents.map,
           tooltip = _smartComponents.tooltip;
@@ -451,7 +456,7 @@ var Datavis = function () {
 
         var _elem32 = document.createElement('button');
 
-        _elem32.setAttribute('onClick', _this3.handleInfoClick);
+        _elem32.setAttribute('onClick', 'dispatch(\'handleInfoClick\')');
 
         _elem32.setAttribute('class', 'reset info-button');
 
@@ -509,10 +514,30 @@ var Datavis = function () {
 
         _elem25.appendChild(document.createTextNode('\n        '));
 
-        var _expr4 = infoOpened && function () {
+        var _expr4 = infoOpened ? function () {
           var _elem35 = document.createElement('div');
 
           _elem35.setAttribute('class', 'info-container');
+
+          _elem35.appendChild(document.createTextNode('\n            '));
+
+          var _elem36 = document.createElement('div');
+
+          _elem36.appendChild(document.createTextNode('\n              '));
+
+          var _elem37 = document.createElement('button');
+
+          _elem37.setAttribute('class', 'reset close-button');
+
+          _elem37.setAttribute('onClick', 'dispatch(\'handleCloseInfo\')');
+
+          _elem37.appendChild(document.createTextNode('\n              X\n              '));
+
+          _elem36.appendChild(_elem37);
+
+          _elem36.appendChild(document.createTextNode('\n            '));
+
+          _elem35.appendChild(_elem36);
 
           _elem35.appendChild(document.createTextNode('\n            '));
 
@@ -528,7 +553,7 @@ var Datavis = function () {
           _elem35.appendChild(document.createTextNode('\n          '));
 
           return _elem35;
-        }(),
+        }() : '',
             _res4 = _expr4 instanceof Node || _expr4 instanceof Array ? _expr4 : document.createTextNode(_expr4);
 
         if (_res4 instanceof Array) {
