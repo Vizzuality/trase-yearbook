@@ -43,6 +43,95 @@ var Datavis = function () {
       selector: false,
       canResetMap: false
     };
+    this.commoditiesText = {
+      'soy': function () {
+        var _elem = document.createElement('div');
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _elem2 = document.createElement('p');
+
+        _elem2.appendChild(document.createTextNode('Soybean is a leguminous crop, grown primarily for its application, via crushing, in vegetable oils (including as biofuel) and for its properties as a high-protein constituent of animal feed.'));
+
+        _elem.appendChild(_elem2);
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _elem3 = document.createElement('p');
+
+        _elem3.appendChild(document.createTextNode('Production has increased from 27m tonnes in 1961 to '));
+
+        var _elem4 = document.createElement('a');
+
+        _elem4.setAttribute('href', 'http://www.fao.org/faostat/en/#home');
+
+        _elem4.setAttribute('target', '_blank');
+
+        _elem4.appendChild(document.createTextNode('335m tonnes in 2016'));
+
+        _elem3.appendChild(_elem4);
+
+        _elem3.appendChild(document.createTextNode('. The US, Brazil and Argentina dominate global production (accounting for 80%), and exports (around 86%), with Brazil being the '));
+
+        var _elem5 = document.createElement('a');
+
+        _elem5.setAttribute('href', 'https://apps.fas.usda.gov/Gats/default.aspx');
+
+        _elem5.setAttribute('target', '_blank');
+
+        _elem5.appendChild(document.createTextNode('leading export player in 2016'));
+
+        _elem3.appendChild(_elem5);
+
+        _elem3.appendChild(document.createTextNode(' (35% of global total exports).'));
+
+        _elem.appendChild(_elem3);
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _elem6 = document.createElement('p');
+
+        _elem6.appendChild(document.createTextNode('Historically, key importing regions for global soy production have included the US and countries in the EU but China has quickly grown to become the dominant force in soy markets, accounting for '));
+
+        var _elem7 = document.createElement('a');
+
+        _elem7.setAttribute('href', 'http://www.bik-f.de/root/index.php?page_id=1093');
+
+        _elem7.setAttribute('target', '_blank');
+
+        _elem7.appendChild(document.createTextNode('27% of global imports in 2013'));
+
+        _elem6.appendChild(_elem7);
+
+        _elem6.appendChild(document.createTextNode('. More recent sources suggest that Chinese imports could now be as much as 60% of global imports.'));
+
+        _elem.appendChild(_elem6);
+
+        _elem.appendChild(document.createTextNode('\n        '));
+
+        var _elem8 = document.createElement('p');
+
+        _elem8.appendChild(document.createTextNode('While soy represents an economic \u2018success story\u2019 for markets and countries in, for example, South America, supply chains are associated with various '));
+
+        var _elem9 = document.createElement('a');
+
+        _elem9.setAttribute('href', 'http://wwf.panda.org/our_work/food/agriculture/soy/impacts/');
+
+        _elem9.setAttribute('target', '_blank');
+
+        _elem9.appendChild(document.createTextNode('environmental and social impacts'));
+
+        _elem8.appendChild(_elem9);
+
+        _elem8.appendChild(document.createTextNode(', including the pollution of groundwater and freshwater reserves, an increase in carbon emissions from deforestation, loss of biodiversity, and the exploitation of workers. Production in biodiversity-sensitive areas in Brazil, Argentina and Paraguay means that soy has become a key target for activity to reduce deforestation risk in supply chains.'));
+
+        _elem.appendChild(_elem8);
+
+        _elem.appendChild(document.createTextNode('\n      '));
+
+        return _elem;
+      }()
+    };
 
     this.onBackgroundClick = function (_ref) {
       var target = _ref.target;
@@ -138,40 +227,45 @@ var Datavis = function () {
           selector = _state2.selector,
           canResetMap = _state2.canResetMap;
 
+      var commodityText = this.commoditiesText[commodity];
       return function () {
-        var _elem = document.createElement('div');
+        var _elem10 = document.createElement('div');
 
-        _elem.setAttribute('class', 'container');
+        _elem10.setAttribute('class', 'container');
 
-        _elem.appendChild(document.createTextNode('\n        '));
+        _elem10.appendChild(document.createTextNode('\n        '));
 
-        var _elem2 = document.createElement('div');
+        var _elem11 = document.createElement('div');
 
-        _elem2.setAttribute('class', 'map-header');
+        _elem11.setAttribute('class', 'map-header');
 
-        _elem2.appendChild(document.createTextNode('\n          '));
+        _elem11.appendChild(document.createTextNode('\n          '));
 
-        var _elem3 = document.createElement('h1');
+        var _elem12 = document.createElement('div');
 
-        _elem3.setAttribute('class', 'title');
+        _elem12.setAttribute('class', 'title-container');
 
-        _elem3.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
+        _elem12.appendChild(document.createTextNode('\n            '));
 
-        var _elem3_1 = document.createElement('div');
+        var _elem13 = document.createElement('h1');
 
-        _elem3_1.setAttribute('class', 'title-container');
+        _elem13.setAttribute('class', 'title');
 
-        _elem3_1.appendChild(_elem3);
+        _elem13.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
 
-        _elem2.appendChild(_elem3_1);
+        _elem12.appendChild(_elem13);
 
-        _elem2.appendChild(document.createTextNode('\n          '));
+        _elem12.appendChild(document.createTextNode('\n          '));
 
-        var _elem4 = document.createElement('div');
+        _elem11.appendChild(_elem12);
 
-        _elem4.setAttribute('class', 'controls');
+        _elem11.appendChild(document.createTextNode('\n          '));
 
-        _elem4.appendChild(document.createTextNode('\n            '));
+        var _elem14 = document.createElement('div');
+
+        _elem14.setAttribute('class', 'controls');
+
+        _elem14.appendChild(document.createTextNode('\n            '));
 
         var _expr = new Selector({
           open: selector,
@@ -183,95 +277,116 @@ var Datavis = function () {
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
         if (_res instanceof Array) {
-          for (var _i5 = 0; _i5 < _res.length; _i5 += 1) {
-            _elem4.appendChild(_res[_i5] instanceof Node || _res[_i5] instanceof Array ? _res[_i5] : document.createTextNode(_res[_i5]));
+          for (var _i6 = 0; _i6 < _res.length; _i6 += 1) {
+            _elem14.appendChild(_res[_i6] instanceof Node || _res[_i6] instanceof Array ? _res[_i6] : document.createTextNode(_res[_i6]));
           }
-        } else _elem4.appendChild(_res);
+        } else _elem14.appendChild(_res);
 
-        _elem4.appendChild(document.createTextNode('\n            '));
+        _elem14.appendChild(document.createTextNode('\n            '));
 
-        var _elem5 = document.createElement('button');
+        var _elem15 = document.createElement('button');
 
-        _elem5.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
+        _elem15.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
 
-        _elem5.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
+        _elem15.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
 
-        _elem5.appendChild(document.createTextNode('\n              '));
+        _elem15.appendChild(document.createTextNode('\n              '));
 
-        var _elem6 = document.createElement('span');
+        var _elem16 = document.createElement('span');
 
-        _elem6.setAttribute('class', 'selector-text');
+        _elem16.setAttribute('class', 'selector-text');
 
-        _elem6.appendChild(document.createTextNode('Reset'));
+        _elem16.appendChild(document.createTextNode('Reset'));
 
-        _elem5.appendChild(_elem6);
+        _elem15.appendChild(_elem16);
 
-        _elem5.appendChild(document.createTextNode('\n            '));
+        _elem15.appendChild(document.createTextNode('\n            '));
 
-        _elem4.appendChild(_elem5);
+        _elem14.appendChild(_elem15);
 
-        _elem4.appendChild(document.createTextNode('\n          '));
+        _elem14.appendChild(document.createTextNode('\n          '));
 
-        _elem2.appendChild(_elem4);
+        _elem11.appendChild(_elem14);
 
-        _elem2.appendChild(document.createTextNode('\n        '));
+        _elem11.appendChild(document.createTextNode('\n        '));
 
-        _elem.appendChild(_elem2);
+        _elem10.appendChild(_elem11);
 
-        _elem.appendChild(document.createTextNode('\n        '));
+        _elem10.appendChild(document.createTextNode('\n        '));
 
         var _expr2 = map,
             _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
         if (_res2 instanceof Array) {
-          for (var _i6 = 0; _i6 < _res2.length; _i6 += 1) {
-            _elem.appendChild(_res2[_i6] instanceof Node || _res2[_i6] instanceof Array ? _res2[_i6] : document.createTextNode(_res2[_i6]));
+          for (var _i7 = 0; _i7 < _res2.length; _i7 += 1) {
+            _elem10.appendChild(_res2[_i7] instanceof Node || _res2[_i7] instanceof Array ? _res2[_i7] : document.createTextNode(_res2[_i7]));
           }
-        } else _elem.appendChild(_res2);
+        } else _elem10.appendChild(_res2);
 
-        _elem.appendChild(document.createTextNode('\n        '));
+        _elem10.appendChild(document.createTextNode('\n        '));
 
-        var _elem7 = document.createElement('div');
+        var _elem17 = document.createElement('div');
 
-        _elem7.setAttribute('class', 'map-footer');
+        _elem17.setAttribute('class', 'map-footer');
 
-        _elem7.appendChild(document.createTextNode('\n          '));
+        _elem17.appendChild(document.createTextNode('\n          '));
 
         var _expr3 = !canResetMap ? function () {
-          var _elem8 = document.createElement('span');
+          var _elem19 = document.createElement('span');
 
-          _elem8.setAttribute('class', 'map-footer-text');
+          _elem19.setAttribute('class', 'map-footer-text');
 
-          _elem8.appendChild(document.createTextNode('\n              Click a production country to see the destination of the selected commodity\n            '));
+          _elem19.appendChild(document.createTextNode('\n              Click a production country to see the destination of the selected commodity\n            '));
 
-          return _elem8;
+          return _elem19;
         }() : '',
             _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
 
         if (_res3 instanceof Array) {
-          for (var _i7 = 0; _i7 < _res3.length; _i7 += 1) {
-            _elem7.appendChild(_res3[_i7] instanceof Node || _res3[_i7] instanceof Array ? _res3[_i7] : document.createTextNode(_res3[_i7]));
+          for (var _i8 = 0; _i8 < _res3.length; _i8 += 1) {
+            _elem17.appendChild(_res3[_i8] instanceof Node || _res3[_i8] instanceof Array ? _res3[_i8] : document.createTextNode(_res3[_i8]));
           }
-        } else _elem7.appendChild(_res3);
+        } else _elem17.appendChild(_res3);
 
-        _elem7.appendChild(document.createTextNode('\n        '));
+        _elem17.appendChild(document.createTextNode('\n        '));
 
-        _elem.appendChild(_elem7);
+        _elem10.appendChild(_elem17);
 
-        _elem.appendChild(document.createTextNode('\n        '));
+        _elem10.appendChild(document.createTextNode('\n        '));
 
-        var _expr4 = tooltip,
+        var _elem18 = document.createElement('div');
+
+        _elem18.setAttribute('class', 'text-container');
+
+        _elem18.appendChild(document.createTextNode('\n          '));
+
+        var _expr4 = commodityText,
             _res4 = _expr4 instanceof Node || _expr4 instanceof Array ? _expr4 : document.createTextNode(_expr4);
 
         if (_res4 instanceof Array) {
-          for (var _i8 = 0; _i8 < _res4.length; _i8 += 1) {
-            _elem.appendChild(_res4[_i8] instanceof Node || _res4[_i8] instanceof Array ? _res4[_i8] : document.createTextNode(_res4[_i8]));
+          for (var _i9 = 0; _i9 < _res4.length; _i9 += 1) {
+            _elem18.appendChild(_res4[_i9] instanceof Node || _res4[_i9] instanceof Array ? _res4[_i9] : document.createTextNode(_res4[_i9]));
           }
-        } else _elem.appendChild(_res4);
+        } else _elem18.appendChild(_res4);
 
-        _elem.appendChild(document.createTextNode('\n      '));
+        _elem18.appendChild(document.createTextNode('\n        '));
 
-        return _elem;
+        _elem10.appendChild(_elem18);
+
+        _elem10.appendChild(document.createTextNode('\n        '));
+
+        var _expr5 = tooltip,
+            _res5 = _expr5 instanceof Node || _expr5 instanceof Array ? _expr5 : document.createTextNode(_expr5);
+
+        if (_res5 instanceof Array) {
+          for (var _i10 = 0; _i10 < _res5.length; _i10 += 1) {
+            _elem10.appendChild(_res5[_i10] instanceof Node || _res5[_i10] instanceof Array ? _res5[_i10] : document.createTextNode(_res5[_i10]));
+          }
+        } else _elem10.appendChild(_res5);
+
+        _elem10.appendChild(document.createTextNode('\n      '));
+
+        return _elem10;
       }();
     }
   }]);

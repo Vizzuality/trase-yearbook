@@ -30,6 +30,16 @@
   margin: 0 16px;
 }
 
+.text-container {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  max-width: 50%;
+  max-height: 160px;
+  overflow: auto;
+  margin: 10px;
+}
+
 .map-footer-text {
   color: rgba(52, 68, 76, 0.6);
   text-transform: uppercase;
