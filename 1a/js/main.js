@@ -130,6 +130,69 @@ var Datavis = function () {
         _elem.appendChild(document.createTextNode('\n      '));
 
         return _elem;
+      }(),
+      'palm oil': function () {
+        var _elem10 = document.createElement('div');
+
+        _elem10.appendChild(document.createTextNode('\n        '));
+
+        var _elem11 = document.createElement('p');
+
+        _elem11.appendChild(document.createTextNode('Palm oil is used in a wide range of products, including foods, cosmetics, cleaning products and fuels. It is a higher yielding crop than others used for vegetable oils, and has a lower cost of production, prompting an increasing demand and expansion of plantations.'));
+
+        _elem10.appendChild(_elem11);
+
+        _elem10.appendChild(document.createTextNode('\n        '));
+
+        var _elem12 = document.createElement('p');
+
+        _elem12.appendChild(document.createTextNode('The global production of palm oil has increased from 14 million tonnes in 1961 to '));
+
+        var _elem13 = document.createElement('a');
+
+        _elem13.setAttribute('href', 'http://www.fao.org/faostat/en/#home');
+
+        _elem13.setAttribute('target', '_blank');
+
+        _elem13.appendChild(document.createTextNode('300 million tonnes in 2016'));
+
+        _elem12.appendChild(_elem13);
+
+        _elem12.appendChild(document.createTextNode('. The top two producers, Indonesia and Malaysia, together accounted for 82% of total global production in 2016 (53% and, 29% respectively), and in 2013 accounted for 93% of global exports (54% and 39% respectively).'));
+
+        _elem10.appendChild(_elem12);
+
+        _elem10.appendChild(document.createTextNode('\n        '));
+
+        var _elem14 = document.createElement('p');
+
+        _elem14.appendChild(document.createTextNode('Imports of palm oil have rapidly increased along with production, and in 2013 the biggest importers of palm oil were India and China, together accounting for '));
+
+        var _elem15 = document.createElement('a');
+
+        _elem15.setAttribute('href', 'http://www.bik-f.de/root/index.php?page_id=1093');
+
+        _elem15.setAttribute('target', '_blank');
+
+        _elem15.appendChild(document.createTextNode('a third of global palm oil imports'));
+
+        _elem14.appendChild(_elem15);
+
+        _elem14.appendChild(document.createTextNode(' (18% and 15% respectively).'));
+
+        _elem10.appendChild(_elem14);
+
+        _elem10.appendChild(document.createTextNode('\n        '));
+
+        var _elem16 = document.createElement('p');
+
+        _elem16.appendChild(document.createTextNode('The rapid growth of palm oil production has driven a range of environmental and social problems, including the displacement of indigenous peoples, deforestation and the loss of tropical biodiversity.'));
+
+        _elem10.appendChild(_elem16);
+
+        _elem10.appendChild(document.createTextNode('\n      '));
+
+        return _elem10;
       }()
     };
 
@@ -229,43 +292,43 @@ var Datavis = function () {
 
       var commodityText = this.commoditiesText[commodity];
       return function () {
-        var _elem10 = document.createElement('div');
+        var _elem17 = document.createElement('div');
 
-        _elem10.setAttribute('class', 'container');
+        _elem17.setAttribute('class', 'container');
 
-        _elem10.appendChild(document.createTextNode('\n        '));
+        _elem17.appendChild(document.createTextNode('\n        '));
 
-        var _elem11 = document.createElement('div');
+        var _elem18 = document.createElement('div');
 
-        _elem11.setAttribute('class', 'map-header');
+        _elem18.setAttribute('class', 'map-header');
 
-        _elem11.appendChild(document.createTextNode('\n          '));
+        _elem18.appendChild(document.createTextNode('\n          '));
 
-        var _elem12 = document.createElement('div');
+        var _elem19 = document.createElement('div');
 
-        _elem12.setAttribute('class', 'title-container');
+        _elem19.setAttribute('class', 'title-container');
 
-        _elem12.appendChild(document.createTextNode('\n            '));
+        _elem19.appendChild(document.createTextNode('\n            '));
 
-        var _elem13 = document.createElement('h1');
+        var _elem20 = document.createElement('h1');
 
-        _elem13.setAttribute('class', 'title');
+        _elem20.setAttribute('class', 'title');
 
-        _elem13.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
+        _elem20.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
 
-        _elem12.appendChild(_elem13);
+        _elem19.appendChild(_elem20);
 
-        _elem12.appendChild(document.createTextNode('\n          '));
+        _elem19.appendChild(document.createTextNode('\n          '));
 
-        _elem11.appendChild(_elem12);
+        _elem18.appendChild(_elem19);
 
-        _elem11.appendChild(document.createTextNode('\n          '));
+        _elem18.appendChild(document.createTextNode('\n          '));
 
-        var _elem14 = document.createElement('div');
+        var _elem21 = document.createElement('div');
 
-        _elem14.setAttribute('class', 'controls');
+        _elem21.setAttribute('class', 'controls');
 
-        _elem14.appendChild(document.createTextNode('\n            '));
+        _elem21.appendChild(document.createTextNode('\n            '));
 
         var _expr = new Selector({
           open: selector,
@@ -278,115 +341,115 @@ var Datavis = function () {
 
         if (_res instanceof Array) {
           for (var _i6 = 0; _i6 < _res.length; _i6 += 1) {
-            _elem14.appendChild(_res[_i6] instanceof Node || _res[_i6] instanceof Array ? _res[_i6] : document.createTextNode(_res[_i6]));
+            _elem21.appendChild(_res[_i6] instanceof Node || _res[_i6] instanceof Array ? _res[_i6] : document.createTextNode(_res[_i6]));
           }
-        } else _elem14.appendChild(_res);
+        } else _elem21.appendChild(_res);
 
-        _elem14.appendChild(document.createTextNode('\n            '));
+        _elem21.appendChild(document.createTextNode('\n            '));
 
-        var _elem15 = document.createElement('button');
+        var _elem22 = document.createElement('button');
 
-        _elem15.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
+        _elem22.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
 
-        _elem15.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
+        _elem22.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
 
-        _elem15.appendChild(document.createTextNode('\n              '));
+        _elem22.appendChild(document.createTextNode('\n              '));
 
-        var _elem16 = document.createElement('span');
+        var _elem23 = document.createElement('span');
 
-        _elem16.setAttribute('class', 'selector-text');
+        _elem23.setAttribute('class', 'selector-text');
 
-        _elem16.appendChild(document.createTextNode('Reset'));
+        _elem23.appendChild(document.createTextNode('Reset'));
 
-        _elem15.appendChild(_elem16);
+        _elem22.appendChild(_elem23);
 
-        _elem15.appendChild(document.createTextNode('\n            '));
+        _elem22.appendChild(document.createTextNode('\n            '));
 
-        _elem14.appendChild(_elem15);
+        _elem21.appendChild(_elem22);
 
-        _elem14.appendChild(document.createTextNode('\n          '));
+        _elem21.appendChild(document.createTextNode('\n          '));
 
-        _elem11.appendChild(_elem14);
+        _elem18.appendChild(_elem21);
 
-        _elem11.appendChild(document.createTextNode('\n        '));
+        _elem18.appendChild(document.createTextNode('\n        '));
 
-        _elem10.appendChild(_elem11);
+        _elem17.appendChild(_elem18);
 
-        _elem10.appendChild(document.createTextNode('\n        '));
+        _elem17.appendChild(document.createTextNode('\n        '));
 
         var _expr2 = map,
             _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
         if (_res2 instanceof Array) {
           for (var _i7 = 0; _i7 < _res2.length; _i7 += 1) {
-            _elem10.appendChild(_res2[_i7] instanceof Node || _res2[_i7] instanceof Array ? _res2[_i7] : document.createTextNode(_res2[_i7]));
+            _elem17.appendChild(_res2[_i7] instanceof Node || _res2[_i7] instanceof Array ? _res2[_i7] : document.createTextNode(_res2[_i7]));
           }
-        } else _elem10.appendChild(_res2);
+        } else _elem17.appendChild(_res2);
 
-        _elem10.appendChild(document.createTextNode('\n        '));
+        _elem17.appendChild(document.createTextNode('\n        '));
 
-        var _elem17 = document.createElement('div');
+        var _elem24 = document.createElement('div');
 
-        _elem17.setAttribute('class', 'map-footer');
+        _elem24.setAttribute('class', 'map-footer');
 
-        _elem17.appendChild(document.createTextNode('\n          '));
+        _elem24.appendChild(document.createTextNode('\n          '));
 
         var _expr3 = !canResetMap ? function () {
-          var _elem19 = document.createElement('span');
+          var _elem26 = document.createElement('span');
 
-          _elem19.setAttribute('class', 'map-footer-text');
+          _elem26.setAttribute('class', 'map-footer-text');
 
-          _elem19.appendChild(document.createTextNode('\n              Click a production country to see the destination of the selected commodity\n            '));
+          _elem26.appendChild(document.createTextNode('\n              Click a production country to see the destination of the selected commodity\n            '));
 
-          return _elem19;
+          return _elem26;
         }() : '',
             _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
 
         if (_res3 instanceof Array) {
           for (var _i8 = 0; _i8 < _res3.length; _i8 += 1) {
-            _elem17.appendChild(_res3[_i8] instanceof Node || _res3[_i8] instanceof Array ? _res3[_i8] : document.createTextNode(_res3[_i8]));
+            _elem24.appendChild(_res3[_i8] instanceof Node || _res3[_i8] instanceof Array ? _res3[_i8] : document.createTextNode(_res3[_i8]));
           }
-        } else _elem17.appendChild(_res3);
+        } else _elem24.appendChild(_res3);
+
+        _elem24.appendChild(document.createTextNode('\n        '));
+
+        _elem17.appendChild(_elem24);
 
         _elem17.appendChild(document.createTextNode('\n        '));
 
-        _elem10.appendChild(_elem17);
+        var _elem25 = document.createElement('div');
 
-        _elem10.appendChild(document.createTextNode('\n        '));
+        _elem25.setAttribute('class', 'text-container');
 
-        var _elem18 = document.createElement('div');
-
-        _elem18.setAttribute('class', 'text-container');
-
-        _elem18.appendChild(document.createTextNode('\n          '));
+        _elem25.appendChild(document.createTextNode('\n          '));
 
         var _expr4 = commodityText,
             _res4 = _expr4 instanceof Node || _expr4 instanceof Array ? _expr4 : document.createTextNode(_expr4);
 
         if (_res4 instanceof Array) {
           for (var _i9 = 0; _i9 < _res4.length; _i9 += 1) {
-            _elem18.appendChild(_res4[_i9] instanceof Node || _res4[_i9] instanceof Array ? _res4[_i9] : document.createTextNode(_res4[_i9]));
+            _elem25.appendChild(_res4[_i9] instanceof Node || _res4[_i9] instanceof Array ? _res4[_i9] : document.createTextNode(_res4[_i9]));
           }
-        } else _elem18.appendChild(_res4);
+        } else _elem25.appendChild(_res4);
 
-        _elem18.appendChild(document.createTextNode('\n        '));
+        _elem25.appendChild(document.createTextNode('\n        '));
 
-        _elem10.appendChild(_elem18);
+        _elem17.appendChild(_elem25);
 
-        _elem10.appendChild(document.createTextNode('\n        '));
+        _elem17.appendChild(document.createTextNode('\n        '));
 
         var _expr5 = tooltip,
             _res5 = _expr5 instanceof Node || _expr5 instanceof Array ? _expr5 : document.createTextNode(_expr5);
 
         if (_res5 instanceof Array) {
           for (var _i10 = 0; _i10 < _res5.length; _i10 += 1) {
-            _elem10.appendChild(_res5[_i10] instanceof Node || _res5[_i10] instanceof Array ? _res5[_i10] : document.createTextNode(_res5[_i10]));
+            _elem17.appendChild(_res5[_i10] instanceof Node || _res5[_i10] instanceof Array ? _res5[_i10] : document.createTextNode(_res5[_i10]));
           }
-        } else _elem10.appendChild(_res5);
+        } else _elem17.appendChild(_res5);
 
-        _elem10.appendChild(document.createTextNode('\n      '));
+        _elem17.appendChild(document.createTextNode('\n      '));
 
-        return _elem10;
+        return _elem17;
       }();
     }
   }]);
