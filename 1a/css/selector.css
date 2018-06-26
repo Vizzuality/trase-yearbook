@@ -4,6 +4,7 @@
   align-items: flex-start;
   width: 80px;
   height: 33px;
+  background-color: white;
 }
 
 .selector-text {
@@ -69,6 +70,7 @@
   border: 1px solid rgba(52, 68, 76, 0.2);
   border-top: 0;
   cursor: pointer;
+  background-color: white;
 }
 
 .selector-list-item:first-child {
