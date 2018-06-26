@@ -34,7 +34,7 @@ d3.json('data.json', function (error, root) {
 
   packRoot = d3.hierarchy(root)
     .sum(function (d) { return d[currentValue]; })
-    .sort(function (a, b) { return b.value - a.value; });
+    // .sort(function (a, b) { return b.value - a.value; });
 
   node = g.selectAll('.node')
     .data(pack(packRoot).descendants())
@@ -90,26 +90,26 @@ function changeValue() {
   // update value
   packRoot
     .sum(function (d) { return d[currentValue]; })
-    .sort(function (a, b) { return b.value - a.value; });
+    // .sort(function (a, b) { return b.value - a.value; });
 
   // update Pack layout
   node.selectAll('g')
     .data(pack(packRoot).descendants());
 
   // relocate circles
-  node.transition()
-    .duration(1500)
+  node
+    .transition()
+    .duration(1000)
     .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; })
-    .select('text')
-    .transition()
-    .text(d => cropText(d));;
 
-  // resize circles
-  node.selectAll('circle')
-    .transition()
-    .duration(1500)
+  node
+    .select('circle')
     .attr('r', function (d) { return d.r; })
-    .style('fill', d => color(d.data[currentValue]));
+    .style('fill', d => color(d.data[currentValue]))
+  
+  node
+    .select('text')
+    .text(d => cropText(d));
 }
 
 var options = [ 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017 ];
@@ -127,14 +127,14 @@ var interval = setInterval(function () {
   var index = options.indexOf(currentValue);
   var option = options[index + 1] || options[0];
   dispatch('setActive', option, true);
-}, 2500);
+}, 3500);
 
 var selectorEl = document.getElementById('selector-container');
 function renderSelector() {
   selectorEl.innerHTML = '';
   selectorEl.appendChild(YearSelector({
     options: options,
-    title: "Resize by",
+    title: "Change year",
     active: currentValue
   }))
 }
