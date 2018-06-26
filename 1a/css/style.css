@@ -10,6 +10,13 @@
   margin: 0 16px;
 }
 
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .title {
   font-size: 22px;
   color: #34444c;

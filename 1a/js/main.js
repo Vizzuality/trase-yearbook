@@ -157,7 +157,13 @@ var Datavis = function () {
 
         _elem3.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
 
-        _elem2.appendChild(_elem3);
+        var _elem3_1 = document.createElement('div');
+
+        _elem3_1.setAttribute('class', 'title-container');
+
+        _elem3_1.appendChild(_elem3);
+
+        _elem2.appendChild(_elem3_1);
 
         _elem2.appendChild(document.createTextNode('\n          '));
 
