@@ -131,7 +131,7 @@ var Datavis = function () {
 
         return _elem;
       }(),
-      'palm oil': function () {
+      'oil-palm': function () {
         var _elem10 = document.createElement('div');
 
         _elem10.appendChild(document.createTextNode('\n        '));
@@ -193,6 +193,77 @@ var Datavis = function () {
         _elem10.appendChild(document.createTextNode('\n      '));
 
         return _elem10;
+      }(),
+      'sugar': function () {
+        var _elem17 = document.createElement('div');
+
+        _elem17.appendChild(document.createTextNode('\n        '));
+
+        var _elem18 = document.createElement('p');
+
+        _elem18.appendChild(document.createTextNode('Sugar crops, comprised of both sugarcane and beet, are refined for use in both food manufacture and in the production of biofuels and bioplastics. Sugarcane is grown in tropical regions.'));
+
+        _elem17.appendChild(_elem18);
+
+        _elem17.appendChild(document.createTextNode('\n        '));
+
+        var _elem19 = document.createElement('p');
+
+        _elem19.appendChild(document.createTextNode('Globally, production of raw sugar derived from sugarcane and beet has increased from 53 million tonnes in 1961 to 179 million tonnes in 2013. Five producers account for around '));
+
+        var _elem20 = document.createElement('a');
+
+        _elem20.setAttribute('href', 'http://www.fao.org/faostat/en/#home');
+
+        _elem20.setAttribute('target', '_blank');
+
+        _elem20.appendChild(document.createTextNode('50% of total supply'));
+
+        _elem19.appendChild(_elem20);
+
+        _elem19.appendChild(document.createTextNode(': Brazil (20%), India (14%), China (7%), Thailand (5%) and the United states (4%).'));
+
+        _elem17.appendChild(_elem19);
+
+        _elem17.appendChild(document.createTextNode('\n        '));
+
+        var _elem21 = document.createElement('p');
+
+        _elem21.appendChild(document.createTextNode('Brazil is by far the most dominant exporter (42% of global exports in 2013) and exports over '));
+
+        var _elem22 = document.createElement('a');
+
+        _elem22.setAttribute('href', 'http://www.bik-f.de/root/index.php?page_id=1093');
+
+        _elem22.setAttribute('target', '_blank');
+
+        _elem22.appendChild(document.createTextNode('four times as much'));
+
+        _elem21.appendChild(_elem22);
+
+        _elem21.appendChild(document.createTextNode(' as the next largest exporting nation (Thailand, 9%).'));
+
+        _elem17.appendChild(_elem21);
+
+        _elem17.appendChild(document.createTextNode('\n        '));
+
+        var _elem23 = document.createElement('p');
+
+        _elem23.appendChild(document.createTextNode('Import of sugar is not dominated by any country in particular, but China and the US are both significant importers each accounting for 7% of global imports.'));
+
+        _elem17.appendChild(_elem23);
+
+        _elem17.appendChild(document.createTextNode('\n        '));
+
+        var _elem24 = document.createElement('p');
+
+        _elem24.appendChild(document.createTextNode('Sugar is a highly water-intensive crop, and other environmental impacts include habitat loss from land clearing, land degradation, water and air pollution from fertilizers, eroded soils and industrial waste. Sugar production in some areas of the world is also associated with poor working conditions.'));
+
+        _elem17.appendChild(_elem24);
+
+        _elem17.appendChild(document.createTextNode('\n      '));
+
+        return _elem17;
       }()
     };
 
@@ -292,43 +363,43 @@ var Datavis = function () {
 
       var commodityText = this.commoditiesText[commodity];
       return function () {
-        var _elem17 = document.createElement('div');
+        var _elem25 = document.createElement('div');
 
-        _elem17.setAttribute('class', 'container');
+        _elem25.setAttribute('class', 'container');
 
-        _elem17.appendChild(document.createTextNode('\n        '));
+        _elem25.appendChild(document.createTextNode('\n        '));
 
-        var _elem18 = document.createElement('div');
+        var _elem26 = document.createElement('div');
 
-        _elem18.setAttribute('class', 'map-header');
+        _elem26.setAttribute('class', 'map-header');
 
-        _elem18.appendChild(document.createTextNode('\n          '));
+        _elem26.appendChild(document.createTextNode('\n          '));
 
-        var _elem19 = document.createElement('div');
+        var _elem27 = document.createElement('div');
 
-        _elem19.setAttribute('class', 'title-container');
+        _elem27.setAttribute('class', 'title-container');
 
-        _elem19.appendChild(document.createTextNode('\n            '));
+        _elem27.appendChild(document.createTextNode('\n            '));
 
-        var _elem20 = document.createElement('h1');
+        var _elem28 = document.createElement('h1');
 
-        _elem20.setAttribute('class', 'title');
+        _elem28.setAttribute('class', 'title');
 
-        _elem20.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
+        _elem28.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
 
-        _elem19.appendChild(_elem20);
+        _elem27.appendChild(_elem28);
 
-        _elem19.appendChild(document.createTextNode('\n          '));
+        _elem27.appendChild(document.createTextNode('\n          '));
 
-        _elem18.appendChild(_elem19);
+        _elem26.appendChild(_elem27);
 
-        _elem18.appendChild(document.createTextNode('\n          '));
+        _elem26.appendChild(document.createTextNode('\n          '));
 
-        var _elem21 = document.createElement('div');
+        var _elem29 = document.createElement('div');
 
-        _elem21.setAttribute('class', 'controls');
+        _elem29.setAttribute('class', 'controls');
 
-        _elem21.appendChild(document.createTextNode('\n            '));
+        _elem29.appendChild(document.createTextNode('\n            '));
 
         var _expr = new Selector({
           open: selector,
@@ -341,115 +412,115 @@ var Datavis = function () {
 
         if (_res instanceof Array) {
           for (var _i6 = 0; _i6 < _res.length; _i6 += 1) {
-            _elem21.appendChild(_res[_i6] instanceof Node || _res[_i6] instanceof Array ? _res[_i6] : document.createTextNode(_res[_i6]));
+            _elem29.appendChild(_res[_i6] instanceof Node || _res[_i6] instanceof Array ? _res[_i6] : document.createTextNode(_res[_i6]));
           }
-        } else _elem21.appendChild(_res);
+        } else _elem29.appendChild(_res);
 
-        _elem21.appendChild(document.createTextNode('\n            '));
+        _elem29.appendChild(document.createTextNode('\n            '));
 
-        var _elem22 = document.createElement('button');
+        var _elem30 = document.createElement('button');
 
-        _elem22.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
+        _elem30.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
 
-        _elem22.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
+        _elem30.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
 
-        _elem22.appendChild(document.createTextNode('\n              '));
+        _elem30.appendChild(document.createTextNode('\n              '));
 
-        var _elem23 = document.createElement('span');
+        var _elem31 = document.createElement('span');
 
-        _elem23.setAttribute('class', 'selector-text');
+        _elem31.setAttribute('class', 'selector-text');
 
-        _elem23.appendChild(document.createTextNode('Reset'));
+        _elem31.appendChild(document.createTextNode('Reset'));
 
-        _elem22.appendChild(_elem23);
+        _elem30.appendChild(_elem31);
 
-        _elem22.appendChild(document.createTextNode('\n            '));
+        _elem30.appendChild(document.createTextNode('\n            '));
 
-        _elem21.appendChild(_elem22);
+        _elem29.appendChild(_elem30);
 
-        _elem21.appendChild(document.createTextNode('\n          '));
+        _elem29.appendChild(document.createTextNode('\n          '));
 
-        _elem18.appendChild(_elem21);
+        _elem26.appendChild(_elem29);
 
-        _elem18.appendChild(document.createTextNode('\n        '));
+        _elem26.appendChild(document.createTextNode('\n        '));
 
-        _elem17.appendChild(_elem18);
+        _elem25.appendChild(_elem26);
 
-        _elem17.appendChild(document.createTextNode('\n        '));
+        _elem25.appendChild(document.createTextNode('\n        '));
 
         var _expr2 = map,
             _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
         if (_res2 instanceof Array) {
           for (var _i7 = 0; _i7 < _res2.length; _i7 += 1) {
-            _elem17.appendChild(_res2[_i7] instanceof Node || _res2[_i7] instanceof Array ? _res2[_i7] : document.createTextNode(_res2[_i7]));
+            _elem25.appendChild(_res2[_i7] instanceof Node || _res2[_i7] instanceof Array ? _res2[_i7] : document.createTextNode(_res2[_i7]));
           }
-        } else _elem17.appendChild(_res2);
+        } else _elem25.appendChild(_res2);
 
-        _elem17.appendChild(document.createTextNode('\n        '));
+        _elem25.appendChild(document.createTextNode('\n        '));
 
-        var _elem24 = document.createElement('div');
+        var _elem32 = document.createElement('div');
 
-        _elem24.setAttribute('class', 'map-footer');
+        _elem32.setAttribute('class', 'map-footer');
 
-        _elem24.appendChild(document.createTextNode('\n          '));
+        _elem32.appendChild(document.createTextNode('\n          '));
 
         var _expr3 = !canResetMap ? function () {
-          var _elem26 = document.createElement('span');
+          var _elem34 = document.createElement('span');
 
-          _elem26.setAttribute('class', 'map-footer-text');
+          _elem34.setAttribute('class', 'map-footer-text');
 
-          _elem26.appendChild(document.createTextNode('\n              Click a production country to see the destination of the selected commodity\n            '));
+          _elem34.appendChild(document.createTextNode('\n              Click a production country to see the destination of the selected commodity\n            '));
 
-          return _elem26;
+          return _elem34;
         }() : '',
             _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
 
         if (_res3 instanceof Array) {
           for (var _i8 = 0; _i8 < _res3.length; _i8 += 1) {
-            _elem24.appendChild(_res3[_i8] instanceof Node || _res3[_i8] instanceof Array ? _res3[_i8] : document.createTextNode(_res3[_i8]));
+            _elem32.appendChild(_res3[_i8] instanceof Node || _res3[_i8] instanceof Array ? _res3[_i8] : document.createTextNode(_res3[_i8]));
           }
-        } else _elem24.appendChild(_res3);
+        } else _elem32.appendChild(_res3);
 
-        _elem24.appendChild(document.createTextNode('\n        '));
+        _elem32.appendChild(document.createTextNode('\n        '));
 
-        _elem17.appendChild(_elem24);
+        _elem25.appendChild(_elem32);
 
-        _elem17.appendChild(document.createTextNode('\n        '));
+        _elem25.appendChild(document.createTextNode('\n        '));
 
-        var _elem25 = document.createElement('div');
+        var _elem33 = document.createElement('div');
 
-        _elem25.setAttribute('class', 'text-container');
+        _elem33.setAttribute('class', 'text-container');
 
-        _elem25.appendChild(document.createTextNode('\n          '));
+        _elem33.appendChild(document.createTextNode('\n          '));
 
         var _expr4 = commodityText,
             _res4 = _expr4 instanceof Node || _expr4 instanceof Array ? _expr4 : document.createTextNode(_expr4);
 
         if (_res4 instanceof Array) {
           for (var _i9 = 0; _i9 < _res4.length; _i9 += 1) {
-            _elem25.appendChild(_res4[_i9] instanceof Node || _res4[_i9] instanceof Array ? _res4[_i9] : document.createTextNode(_res4[_i9]));
+            _elem33.appendChild(_res4[_i9] instanceof Node || _res4[_i9] instanceof Array ? _res4[_i9] : document.createTextNode(_res4[_i9]));
           }
-        } else _elem25.appendChild(_res4);
+        } else _elem33.appendChild(_res4);
+
+        _elem33.appendChild(document.createTextNode('\n        '));
+
+        _elem25.appendChild(_elem33);
 
         _elem25.appendChild(document.createTextNode('\n        '));
-
-        _elem17.appendChild(_elem25);
-
-        _elem17.appendChild(document.createTextNode('\n        '));
 
         var _expr5 = tooltip,
             _res5 = _expr5 instanceof Node || _expr5 instanceof Array ? _expr5 : document.createTextNode(_expr5);
 
         if (_res5 instanceof Array) {
           for (var _i10 = 0; _i10 < _res5.length; _i10 += 1) {
-            _elem17.appendChild(_res5[_i10] instanceof Node || _res5[_i10] instanceof Array ? _res5[_i10] : document.createTextNode(_res5[_i10]));
+            _elem25.appendChild(_res5[_i10] instanceof Node || _res5[_i10] instanceof Array ? _res5[_i10] : document.createTextNode(_res5[_i10]));
           }
-        } else _elem17.appendChild(_res5);
+        } else _elem25.appendChild(_res5);
 
-        _elem17.appendChild(document.createTextNode('\n      '));
+        _elem25.appendChild(document.createTextNode('\n      '));
 
-        return _elem17;
+        return _elem25;
       }();
     }
   }]);
