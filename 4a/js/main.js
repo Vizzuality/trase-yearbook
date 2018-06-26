@@ -86,21 +86,13 @@ document.addEventListener("mousemove", function (e) {
 });
 
 function changeValue() {
-
   // update value
   packRoot
     .sum(function (d) { return d[currentValue]; })
-    // .sort(function (a, b) { return b.value - a.value; });
 
   // update Pack layout
   node.selectAll('g')
     .data(pack(packRoot).descendants());
-
-  // relocate circles
-  node
-    .transition()
-    .duration(1000)
-    .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; })
 
   node
     .select('circle')
@@ -110,6 +102,12 @@ function changeValue() {
   node
     .select('text')
     .text(d => cropText(d));
+
+  // relocate circles
+  node
+    .transition()
+    .duration(1000)
+    .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; })
 }
 
 var options = [ 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017 ];

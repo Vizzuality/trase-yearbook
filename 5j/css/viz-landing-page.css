@@ -31,5 +31,6 @@ body {
 #viz-lp .map svg circle.municipalities-bubble {
   /* fill: #FFF0C2; */
   fill: url(#bubble-gradient);
+  fill-opacity: .7;
   stroke-width: 0;
 }
