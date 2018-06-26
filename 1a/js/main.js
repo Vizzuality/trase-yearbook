@@ -50,6 +50,8 @@ var Datavis = function () {
       'soy': function () {
         var _elem = document.createElement('div');
 
+        _elem.setAttribute('class', 'info-text');
+
         _elem.appendChild(document.createTextNode('\n        '));
 
         var _elem2 = document.createElement('p');
@@ -137,6 +139,8 @@ var Datavis = function () {
       'oil-palm': function () {
         var _elem10 = document.createElement('div');
 
+        _elem10.setAttribute('class', 'info-text');
+
         _elem10.appendChild(document.createTextNode('\n        '));
 
         var _elem11 = document.createElement('p');
@@ -199,6 +203,8 @@ var Datavis = function () {
       }(),
       'sugar': function () {
         var _elem17 = document.createElement('div');
+
+        _elem17.setAttribute('class', 'info-text');
 
         _elem17.appendChild(document.createTextNode('\n        '));
 
@@ -560,24 +566,14 @@ var Datavis = function () {
 
           _elem36.appendChild(document.createTextNode('\n            '));
 
-          var _elem39 = document.createElement('div');
-
-          _elem39.setAttribute('class', 'info-text');
-
-          _elem39.appendChild(document.createTextNode('\n              '));
-
           var _expr7 = commodityText,
               _res7 = _expr7 instanceof Node || _expr7 instanceof Array ? _expr7 : document.createTextNode(_expr7);
 
           if (_res7 instanceof Array) {
             for (var _i12 = 0; _i12 < _res7.length; _i12 += 1) {
-              _elem39.appendChild(_res7[_i12] instanceof Node || _res7[_i12] instanceof Array ? _res7[_i12] : document.createTextNode(_res7[_i12]));
+              _elem36.appendChild(_res7[_i12] instanceof Node || _res7[_i12] instanceof Array ? _res7[_i12] : document.createTextNode(_res7[_i12]));
             }
-          } else _elem39.appendChild(_res7);
-
-          _elem39.appendChild(document.createTextNode('\n            '));
-
-          _elem36.appendChild(_elem39);
+          } else _elem36.appendChild(_res7);
 
           _elem36.appendChild(document.createTextNode('\n          '));
 

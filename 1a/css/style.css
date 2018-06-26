@@ -44,8 +44,8 @@
 }
 
 .info-text {
-  display: flex;
   overflow: auto;
+  width: 80%;
 }
 
 .info-text p {
