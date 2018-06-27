@@ -30,8 +30,8 @@ var Datavis = function () {
     };
 
     this.loop = null;
-    this.active = 2015;
-    this.options = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015];
+    this.active = 2016;
+    this.options = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016];
 
     this.setActive = function (active) {
       _this.active = active;
@@ -58,7 +58,7 @@ var Datavis = function () {
 
         _elem2.setAttribute('class', 'title');
 
-        _elem2.appendChild(document.createTextNode('\n          Pace of expansion and invesment in soy industry\n        '));
+        _elem2.appendChild(document.createTextNode('\n          Sourcing patterns of Bunge 2005-2016\n        '));
 
         _elem.appendChild(_elem2);
 
