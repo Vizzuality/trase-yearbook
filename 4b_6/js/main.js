@@ -58,7 +58,7 @@ var Datavis = function () {
 
         _elem2.setAttribute('class', 'title');
 
-        _elem2.appendChild(document.createTextNode('\n          Sourcing patterns of COFCO 2005-2016\n        '));
+        _elem2.appendChild(document.createTextNode('\n          Sourcing patterns of Louis Dreyfus 2005-2016\n        '));
 
         _elem.appendChild(_elem2);
 
