@@ -469,7 +469,7 @@ var Datavis = function () {
 
           _elem33.setAttribute('onClick', 'dispatch(\'handleInfoClick\')');
 
-          _elem33.setAttribute('class', 'reset info-button');
+          _elem33.setAttribute('class', 'reset info-button ' + (commodityText ? '' : '-disabled'));
 
           _elem33.appendChild(document.createTextNode('\n                  i\n                '));
 

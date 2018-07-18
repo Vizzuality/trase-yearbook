@@ -140,7 +140,7 @@ class Datavis {
                 </button>
                 <button
                   onClick={`dispatch('handleInfoClick')`}
-                  class="reset info-button"
+                  class={`reset info-button ${commodityText ? '' : '-disabled'}`}
                 >
                   i
                 </button>
