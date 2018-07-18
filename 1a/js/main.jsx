@@ -128,7 +128,7 @@ class Datavis {
                 {new Selector({
                   open: selector,
                   active: commodity,
-                  options: ['soy', 'sugar', 'oil-palm'],
+                  options: ['cocoa', 'coffee', 'cotton', 'maize', 'oil-palm', 'rubber', 'soy', 'sugar'],
                   selectOptionAction: 'setCommodity',
                   toggleOpenAction: 'setSelector',
                 })}
