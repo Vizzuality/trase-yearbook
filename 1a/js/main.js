@@ -503,9 +503,106 @@ var Datavis = function () {
 
         _elem50.setAttribute('class', 'info-text');
 
+        _elem50.appendChild(document.createTextNode('\n        '));
+
+        var _elem51 = document.createElement('p');
+
+        _elem51.appendChild(document.createTextNode('Natural rubber is used in thousands of products, including medical devices, surgical gloves, and tyres.'));
+
+        _elem50.appendChild(_elem51);
+
+        _elem50.appendChild(document.createTextNode('\n        '));
+
+        var _elem52 = document.createElement('p');
+
+        _elem52.appendChild(document.createTextNode('Global rubber production expanded by more than six times between 1961 and 2016, from 2 to 13 million tonnes. Countries in South East Asia dominate, with Thailand and Indonesia producing 32% and 23% of 2016 production respectively. These countries also dominate exports with '));
+
+        var _elem53 = document.createElement('a');
+
+        _elem53.setAttribute('href', 'http://www.fao.org/faostat/en/#home');
+
+        _elem53.setAttribute('target', '_blank');
+
+        _elem53.appendChild(document.createTextNode('41% and 33%'));
+
+        _elem52.appendChild(_elem53);
+
+        _elem52.appendChild(document.createTextNode(' respectively in 2013.'));
+
+        _elem50.appendChild(_elem52);
+
+        _elem50.appendChild(document.createTextNode('\n        '));
+
+        var _elem54 = document.createElement('p');
+
+        _elem54.appendChild(document.createTextNode('China has becomes the world\u2019s largest rubber importer, accounting for '));
+
+        var _elem55 = document.createElement('a');
+
+        _elem55.setAttribute('href', 'http://www.bik-f.de/root/index.php?page_id=1093');
+
+        _elem55.setAttribute('target', '_blank');
+
+        _elem55.appendChild(document.createTextNode('32% of global imports in 2013'));
+
+        _elem54.appendChild(_elem55);
+
+        _elem54.appendChild(document.createTextNode(', followed by the US on 12%.'));
+
+        _elem50.appendChild(_elem54);
+
+        _elem50.appendChild(document.createTextNode('\n        '));
+
+        var _elem56 = document.createElement('p');
+
+        _elem56.appendChild(document.createTextNode('Rubber tree expansion has been associated with the loss of high-biodiversity land, particularly following rapid expansion in South East Asia. It has also been linked to human and labour rights violations and land grabbing.'));
+
+        _elem50.appendChild(_elem56);
+
         _elem50.appendChild(document.createTextNode('\n      '));
 
         return _elem50;
+      }(),
+      'cotton': function () {
+        var _elem57 = document.createElement('div');
+
+        _elem57.setAttribute('class', 'info-text');
+
+        _elem57.appendChild(document.createTextNode('\n        '));
+
+        var _elem58 = document.createElement('p');
+
+        _elem58.appendChild(document.createTextNode('Cotton is a soft natural fibre that grows around the seeds of cotton plants. It\u2019s principle use in the production of textiles, although the seeds of cotton plants can also be processed into vegetable oil.'));
+
+        _elem57.appendChild(_elem58);
+
+        _elem57.appendChild(document.createTextNode('\n        '));
+
+        var _elem59 = document.createElement('p');
+
+        _elem59.appendChild(document.createTextNode('Global cotton production more than doubled between 1961 and 2016, from 27 to 65 million tonnes. China, India and the United States dominate production, with 17%, 16% and 11% respectively. The United States is the main exporter, with 29% of global exports in 2013, followed by India (19%), Australia (16%) and Brazil (7%).'));
+
+        _elem57.appendChild(_elem59);
+
+        _elem57.appendChild(document.createTextNode('\n        '));
+
+        var _elem60 = document.createElement('p');
+
+        _elem60.appendChild(document.createTextNode('As well as being the largest producer, China is also the world\u2019s largest importer of cotton, accounting for 37% of global imports in 2013.'));
+
+        _elem57.appendChild(_elem60);
+
+        _elem57.appendChild(document.createTextNode('\n        '));
+
+        var _elem61 = document.createElement('p');
+
+        _elem61.appendChild(document.createTextNode('Whilst cotton production provides income for millions of people worldwide, although problems such as low wages and forced labour remain in many locations. Cotton is typically grown as a monoculture and can be pesticide and water-intensive to produce.'));
+
+        _elem57.appendChild(_elem61);
+
+        _elem57.appendChild(document.createTextNode('\n      '));
+
+        return _elem57;
       }()
     };
 
@@ -616,48 +713,48 @@ var Datavis = function () {
 
       var commodityText = this.commoditiesText[commodity];
       return function () {
-        var _elem51 = document.createElement('div');
+        var _elem62 = document.createElement('div');
 
-        _elem51.setAttribute('class', 'container');
+        _elem62.setAttribute('class', 'container');
 
-        _elem51.appendChild(document.createTextNode('\n        '));
+        _elem62.appendChild(document.createTextNode('\n        '));
 
         var _expr = !infoOpened ? function () {
-          var _elem52 = document.createElement('div');
+          var _elem63 = document.createElement('div');
 
-          _elem52.appendChild(document.createTextNode('\n            '));
+          _elem63.appendChild(document.createTextNode('\n            '));
 
-          var _elem53 = document.createElement('div');
+          var _elem64 = document.createElement('div');
 
-          _elem53.setAttribute('class', 'map-header');
+          _elem64.setAttribute('class', 'map-header');
 
-          _elem53.appendChild(document.createTextNode('\n              '));
+          _elem64.appendChild(document.createTextNode('\n              '));
 
-          var _elem54 = document.createElement('div');
+          var _elem65 = document.createElement('div');
 
-          _elem54.setAttribute('class', 'title-container');
+          _elem65.setAttribute('class', 'title-container');
 
-          _elem54.appendChild(document.createTextNode('\n                '));
+          _elem65.appendChild(document.createTextNode('\n                '));
 
-          var _elem55 = document.createElement('h1');
+          var _elem66 = document.createElement('h1');
 
-          _elem55.setAttribute('class', 'title');
+          _elem66.setAttribute('class', 'title');
 
-          _elem55.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
+          _elem66.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
 
-          _elem54.appendChild(_elem55);
+          _elem65.appendChild(_elem66);
 
-          _elem54.appendChild(document.createTextNode('\n              '));
+          _elem65.appendChild(document.createTextNode('\n              '));
 
-          _elem53.appendChild(_elem54);
+          _elem64.appendChild(_elem65);
 
-          _elem53.appendChild(document.createTextNode('\n              '));
+          _elem64.appendChild(document.createTextNode('\n              '));
 
-          var _elem56 = document.createElement('div');
+          var _elem67 = document.createElement('div');
 
-          _elem56.setAttribute('class', 'controls');
+          _elem67.setAttribute('class', 'controls');
 
-          _elem56.appendChild(document.createTextNode('\n                '));
+          _elem67.appendChild(document.createTextNode('\n                '));
 
           var _expr4 = new Selector({
             open: selector,
@@ -670,170 +767,170 @@ var Datavis = function () {
 
           if (_res4 instanceof Array) {
             for (var _i7 = 0; _i7 < _res4.length; _i7 += 1) {
-              _elem56.appendChild(_res4[_i7] instanceof Node || _res4[_i7] instanceof Array ? _res4[_i7] : document.createTextNode(_res4[_i7]));
+              _elem67.appendChild(_res4[_i7] instanceof Node || _res4[_i7] instanceof Array ? _res4[_i7] : document.createTextNode(_res4[_i7]));
             }
-          } else _elem56.appendChild(_res4);
+          } else _elem67.appendChild(_res4);
 
-          _elem56.appendChild(document.createTextNode('\n                '));
+          _elem67.appendChild(document.createTextNode('\n                '));
 
-          var _elem57 = document.createElement('button');
+          var _elem68 = document.createElement('button');
 
-          _elem57.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
+          _elem68.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
 
-          _elem57.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
+          _elem68.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
 
-          _elem57.appendChild(document.createTextNode('\n                  '));
+          _elem68.appendChild(document.createTextNode('\n                  '));
 
-          var _elem58 = document.createElement('span');
+          var _elem69 = document.createElement('span');
 
-          _elem58.setAttribute('class', 'selector-text');
+          _elem69.setAttribute('class', 'selector-text');
 
-          _elem58.appendChild(document.createTextNode('Reset'));
+          _elem69.appendChild(document.createTextNode('Reset'));
 
-          _elem57.appendChild(_elem58);
+          _elem68.appendChild(_elem69);
 
-          _elem57.appendChild(document.createTextNode('\n                '));
+          _elem68.appendChild(document.createTextNode('\n                '));
 
-          _elem56.appendChild(_elem57);
+          _elem67.appendChild(_elem68);
 
-          _elem56.appendChild(document.createTextNode('\n                '));
+          _elem67.appendChild(document.createTextNode('\n                '));
 
-          var _elem59 = document.createElement('button');
+          var _elem70 = document.createElement('button');
 
-          _elem59.setAttribute('onClick', 'dispatch(\'handleInfoClick\')');
+          _elem70.setAttribute('onClick', 'dispatch(\'handleInfoClick\')');
 
-          _elem59.setAttribute('class', 'reset info-button ' + (commodityText ? '' : '-disabled'));
+          _elem70.setAttribute('class', 'reset info-button ' + (commodityText ? '' : '-disabled'));
 
-          _elem59.appendChild(document.createTextNode('\n                  i\n                '));
+          _elem70.appendChild(document.createTextNode('\n                  i\n                '));
 
-          _elem56.appendChild(_elem59);
+          _elem67.appendChild(_elem70);
 
-          _elem56.appendChild(document.createTextNode('\n              '));
+          _elem67.appendChild(document.createTextNode('\n              '));
 
-          _elem53.appendChild(_elem56);
+          _elem64.appendChild(_elem67);
 
-          _elem53.appendChild(document.createTextNode('\n            '));
+          _elem64.appendChild(document.createTextNode('\n            '));
 
-          _elem52.appendChild(_elem53);
+          _elem63.appendChild(_elem64);
 
-          _elem52.appendChild(document.createTextNode('\n            '));
+          _elem63.appendChild(document.createTextNode('\n            '));
 
           var _expr5 = map,
               _res5 = _expr5 instanceof Node || _expr5 instanceof Array ? _expr5 : document.createTextNode(_expr5);
 
           if (_res5 instanceof Array) {
             for (var _i8 = 0; _i8 < _res5.length; _i8 += 1) {
-              _elem52.appendChild(_res5[_i8] instanceof Node || _res5[_i8] instanceof Array ? _res5[_i8] : document.createTextNode(_res5[_i8]));
+              _elem63.appendChild(_res5[_i8] instanceof Node || _res5[_i8] instanceof Array ? _res5[_i8] : document.createTextNode(_res5[_i8]));
             }
-          } else _elem52.appendChild(_res5);
+          } else _elem63.appendChild(_res5);
 
-          _elem52.appendChild(document.createTextNode('\n            '));
+          _elem63.appendChild(document.createTextNode('\n            '));
 
-          var _elem60 = document.createElement('div');
+          var _elem71 = document.createElement('div');
 
-          _elem60.setAttribute('class', 'map-footer');
+          _elem71.setAttribute('class', 'map-footer');
 
-          _elem60.appendChild(document.createTextNode('\n              '));
+          _elem71.appendChild(document.createTextNode('\n              '));
 
           var _expr6 = !canResetMap ? function () {
-            var _elem61 = document.createElement('span');
+            var _elem72 = document.createElement('span');
 
-            _elem61.setAttribute('class', 'map-footer-text');
+            _elem72.setAttribute('class', 'map-footer-text');
 
-            _elem61.appendChild(document.createTextNode('\n                  Click a production country to see the destination of the selected commodity\n                '));
+            _elem72.appendChild(document.createTextNode('\n                  Click a production country to see the destination of the selected commodity\n                '));
 
-            return _elem61;
+            return _elem72;
           }() : '',
               _res6 = _expr6 instanceof Node || _expr6 instanceof Array ? _expr6 : document.createTextNode(_expr6);
 
           if (_res6 instanceof Array) {
             for (var _i9 = 0; _i9 < _res6.length; _i9 += 1) {
-              _elem60.appendChild(_res6[_i9] instanceof Node || _res6[_i9] instanceof Array ? _res6[_i9] : document.createTextNode(_res6[_i9]));
+              _elem71.appendChild(_res6[_i9] instanceof Node || _res6[_i9] instanceof Array ? _res6[_i9] : document.createTextNode(_res6[_i9]));
             }
-          } else _elem60.appendChild(_res6);
+          } else _elem71.appendChild(_res6);
 
-          _elem60.appendChild(document.createTextNode('\n            '));
+          _elem71.appendChild(document.createTextNode('\n            '));
 
-          _elem52.appendChild(_elem60);
+          _elem63.appendChild(_elem71);
 
-          _elem52.appendChild(document.createTextNode('\n          '));
+          _elem63.appendChild(document.createTextNode('\n          '));
 
-          return _elem52;
+          return _elem63;
         }() : '',
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
         if (_res instanceof Array) {
           for (var _i10 = 0; _i10 < _res.length; _i10 += 1) {
-            _elem51.appendChild(_res[_i10] instanceof Node || _res[_i10] instanceof Array ? _res[_i10] : document.createTextNode(_res[_i10]));
+            _elem62.appendChild(_res[_i10] instanceof Node || _res[_i10] instanceof Array ? _res[_i10] : document.createTextNode(_res[_i10]));
           }
-        } else _elem51.appendChild(_res);
+        } else _elem62.appendChild(_res);
 
-        _elem51.appendChild(document.createTextNode('\n        '));
+        _elem62.appendChild(document.createTextNode('\n        '));
 
         var _expr2 = infoOpened ? function () {
-          var _elem62 = document.createElement('div');
+          var _elem73 = document.createElement('div');
 
-          _elem62.setAttribute('class', 'info-container');
+          _elem73.setAttribute('class', 'info-container');
 
-          _elem62.appendChild(document.createTextNode('\n            '));
+          _elem73.appendChild(document.createTextNode('\n            '));
 
-          var _elem63 = document.createElement('div');
+          var _elem74 = document.createElement('div');
 
-          _elem63.setAttribute('class', 'info-container-header');
+          _elem74.setAttribute('class', 'info-container-header');
 
-          _elem63.appendChild(document.createTextNode('\n              '));
+          _elem74.appendChild(document.createTextNode('\n              '));
 
-          var _elem64 = document.createElement('button');
+          var _elem75 = document.createElement('button');
 
-          _elem64.setAttribute('class', 'reset close-button');
+          _elem75.setAttribute('class', 'reset close-button');
 
-          _elem64.setAttribute('onClick', 'dispatch(\'handleCloseInfo\')');
+          _elem75.setAttribute('onClick', 'dispatch(\'handleCloseInfo\')');
 
-          _elem64.appendChild(document.createTextNode('\n              X\n              '));
+          _elem75.appendChild(document.createTextNode('\n              X\n              '));
 
-          _elem63.appendChild(_elem64);
+          _elem74.appendChild(_elem75);
 
-          _elem63.appendChild(document.createTextNode('\n            '));
+          _elem74.appendChild(document.createTextNode('\n            '));
 
-          _elem62.appendChild(_elem63);
+          _elem73.appendChild(_elem74);
 
-          _elem62.appendChild(document.createTextNode('\n            '));
+          _elem73.appendChild(document.createTextNode('\n            '));
 
           var _expr7 = commodityText,
               _res7 = _expr7 instanceof Node || _expr7 instanceof Array ? _expr7 : document.createTextNode(_expr7);
 
           if (_res7 instanceof Array) {
             for (var _i12 = 0; _i12 < _res7.length; _i12 += 1) {
-              _elem62.appendChild(_res7[_i12] instanceof Node || _res7[_i12] instanceof Array ? _res7[_i12] : document.createTextNode(_res7[_i12]));
+              _elem73.appendChild(_res7[_i12] instanceof Node || _res7[_i12] instanceof Array ? _res7[_i12] : document.createTextNode(_res7[_i12]));
             }
-          } else _elem62.appendChild(_res7);
+          } else _elem73.appendChild(_res7);
 
-          _elem62.appendChild(document.createTextNode('\n          '));
+          _elem73.appendChild(document.createTextNode('\n          '));
 
-          return _elem62;
+          return _elem73;
         }() : '',
             _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
         if (_res2 instanceof Array) {
           for (var _i13 = 0; _i13 < _res2.length; _i13 += 1) {
-            _elem51.appendChild(_res2[_i13] instanceof Node || _res2[_i13] instanceof Array ? _res2[_i13] : document.createTextNode(_res2[_i13]));
+            _elem62.appendChild(_res2[_i13] instanceof Node || _res2[_i13] instanceof Array ? _res2[_i13] : document.createTextNode(_res2[_i13]));
           }
-        } else _elem51.appendChild(_res2);
+        } else _elem62.appendChild(_res2);
 
-        _elem51.appendChild(document.createTextNode('\n        '));
+        _elem62.appendChild(document.createTextNode('\n        '));
 
         var _expr3 = tooltip,
             _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
 
         if (_res3 instanceof Array) {
           for (var _i14 = 0; _i14 < _res3.length; _i14 += 1) {
-            _elem51.appendChild(_res3[_i14] instanceof Node || _res3[_i14] instanceof Array ? _res3[_i14] : document.createTextNode(_res3[_i14]));
+            _elem62.appendChild(_res3[_i14] instanceof Node || _res3[_i14] instanceof Array ? _res3[_i14] : document.createTextNode(_res3[_i14]));
           }
-        } else _elem51.appendChild(_res3);
+        } else _elem62.appendChild(_res3);
 
-        _elem51.appendChild(document.createTextNode('\n      '));
+        _elem62.appendChild(document.createTextNode('\n      '));
 
-        return _elem51;
+        return _elem62;
       }();
     }
   }]);

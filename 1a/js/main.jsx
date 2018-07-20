@@ -84,6 +84,17 @@ class Datavis {
       </div>,
     'rubber':
       <div class="info-text">
+        <p>Natural rubber is used in thousands of products, including medical devices, surgical gloves, and tyres.</p>
+        <p>Global rubber production expanded by more than six times between 1961 and 2016, from 2 to 13 million tonnes. Countries in South East Asia dominate, with Thailand and Indonesia producing 32% and 23% of 2016 production respectively. These countries also dominate exports with <a href="http://www.fao.org/faostat/en/#home" target="_blank">41% and 33%</a> respectively in 2013.</p>
+        <p>China has becomes the world’s largest rubber importer, accounting for <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">32% of global imports in 2013</a>, followed by the US on 12%.</p>
+        <p>Rubber tree expansion has been associated with the loss of high-biodiversity land, particularly following rapid expansion in South East Asia. It has also been linked to human and labour rights violations and land grabbing.</p>
+      </div>,
+    'cotton':
+      <div class="info-text">
+        <p>Cotton is a soft natural fibre that grows around the seeds of cotton plants. It’s principle use in the production of textiles, although the seeds of cotton plants can also be processed into vegetable oil.</p>
+        <p>Global cotton production more than doubled between 1961 and 2016, from 27 to 65 million tonnes. China, India and the United States dominate production, with 17%, 16% and 11% respectively. The United States is the main exporter, with 29% of global exports in 2013, followed by India (19%), Australia (16%) and Brazil (7%).</p>
+        <p>As well as being the largest producer, China is also the world’s largest importer of cotton, accounting for 37% of global imports in 2013.</p>
+        <p>Whilst cotton production provides income for millions of people worldwide, although problems such as low wages and forced labour remain in many locations. Cotton is typically grown as a monoculture and can be pesticide and water-intensive to produce.</p>
       </div>
   };
 
