@@ -53,6 +53,37 @@ class Datavis {
         <p>Brazil is by far the most dominant exporter (42% of global exports in 2013) and exports over <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">four times as much</a> as the next largest exporting nation (Thailand, 9%).</p>
         <p>Import of sugar is not dominated by any country in particular, but China and the US are both significant importers each accounting for 7% of global imports.</p>
         <p>Sugar is a highly water-intensive crop, and other environmental impacts include habitat loss from land clearing, land degradation, water and air pollution from fertilizers, eroded soils and industrial waste. Sugar production in some areas of the world is also associated with poor working conditions.</p>
+      </div>,
+    'coffee':
+      <div class="info-text">
+        <p>Coffee beans are the seeds of the coffea plant, used primarily for brewing one of the world’s most popular beverages.</p>
+        <p>Global coffee production has increased from 4.5 million tonnes in 1961 to 9.2 million tonnes in 2016. Brazil is by far the largest producer of coffee accounting for 32% of global production in 2016. In 2013, Brazil and Vietnam accounted for 27% and 20% of global exports respectively.</p>
+        <p>The US is the leading importer of coffee with 22% of global imports in 2013, followed by Germany with 11%.</p>
+        <p>While traditional shade-grown coffee can provide habitat and reduce soil erosion, mono-cropping sun-grown coffee has become the norm and is grown in plantations which require more fertilisers, drive deforestation and reduce biodiversity. The coffee industry has also faced criticisms for the proportion of the profit which goes to coffee farmers, and their exposure to the volatility in the market.</p>
+      </div>,
+    'beef':
+      <div class="info-text">
+        <p>Production of beef, used as a high value protein source for human consumption, typically takes place in extensive grazing systems.</p>
+        <p>Global beef production has increased from 28 million tonnes in 1961 to <a href="http://www.fao.org/faostat/en/#home" target="_blank">66 million tonnes in 2016</a>. The US has dominated production for many years (16% of global total in 2016) but production in Brazil (13% of global) and China (10% of global) has rapidly expanded, and in 2013 <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">Brazil was the largest global exporter</a> (with 17% of global exports). </p>
+        <p>Russia (9% of global total in 2013), the United States (9%) and Japan (8%) represent the largest import markets for beef.</p>
+        <p>Beef is the largest single agricultural driver of deforestation, and requires large amounts of water, land and energy, including indirectly via the provision of grain-based animal feed. Furthermore, cattle are a major source of greenhouse gases, waste from slaughterhouses and cattle production is a source of pollution, and livestock farming contributes to soil erosion.</p>
+      </div>,
+    'maize':
+      <div class="info-text">
+        <p>Maize, also known as corn, is an important cereal crop that can be processed into a range of products including starch, sweeteners, oils, beverages, glue, industrial alcohol and fuel ethanol.</p>
+        <p>Global maize production has increased from 205 million tonnes in 1961 to over a billion tonnes in 2016. The top two producers, the US and China, accounted for 58% of this total in 2016 (36% and 22% respectively) with Brazil and Argentina contributing a further 10% between them (6% and 4% respectively). While the US is also the second largest global exporter (20% of global total exports in 2013), like China, most of its production is used domestically, and Brazil (22%) was the <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">most important global exporter in 2013</a>.</p>
+        <p>Japan and South Korea were the largest global importers of maize in 2013, with 12% and 8% respectively.</p>
+        <p>Maize production is recognised as a driver of soil erosion. It can be associated with intensive water use, and generally involves the use of fertilisers which can pollute the surrounding environment. Maize is also often intercropped with soy.</p>
+      </div>,
+    'cocoa':
+      <div class="info-text">
+        <p>Cocoa trees provide the cocoa beans (or seeds, found in cocoa pods) used in producing chocolate, cocoa butter and cocoa powder.</p>
+        <p>Between 1961 and 2016, global cocoa production almost quadrupled, from 1.2 million tonnes to 4.5 million tonnes. Two African countries, Cote d’Ivoire (33%) and Ghana (19%) together accounted for more than 50% of global production in 2016, and are also the <a href="http://www.fao.org/faostat/en/#home" target="_blank">largest global exporters</a> with 41% and 23% of global exports respectively in 2013.</p>
+        <p>The US is the <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">leading importer of cocoa</a> with 19% of global imports in 2013, followed by Germany with 7%.</p>
+        <p>The expansion of cocoa production is often associated with deforestation, particularly in Cote d’Ivoire, as well as social risks such as child labour.</p>
+      </div>,
+    'rubber':
+      <div class="info-text">
       </div>
   };
 
