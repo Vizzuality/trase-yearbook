@@ -35,22 +35,22 @@ class Datavis {
     'soy':
       <div class="info-text">
         <p>Soybean is a leguminous crop, grown primarily for its application, via crushing, in vegetable oils (including as biofuel) and for its properties as a high-protein constituent of animal feed.</p>
-        <p>Production has increased from 27m tonnes in 1961 to <a href="http://www.fao.org/faostat/en/#home" target="_blank">335m tonnes in 2016</a>. The US, Brazil and Argentina dominate global production (accounting for 80%), and exports (around 86%), with Brazil being the <a href="https://apps.fas.usda.gov/Gats/default.aspx" target="_blank">leading export player in 2016</a> (35% of global total exports).</p>
-        <p>Historically, key importing regions for global soy production have included the US and countries in the EU but China has quickly grown to become the dominant force in soy markets, accounting for <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">27% of global imports in 2013</a>. More recent sources suggest that Chinese imports could now be as much as 60% of global imports.</p>
-        <p>While soy represents an economic ‘success story’ for markets and countries in, for example, South America, supply chains are associated with various <a href="http://wwf.panda.org/our_work/food/agriculture/soy/impacts/" target="_blank">environmental and social impacts</a>, including the pollution of groundwater and freshwater reserves, an increase in carbon emissions from deforestation, loss of biodiversity, and the exploitation of workers. Production in biodiversity-sensitive areas in Brazil, Argentina and Paraguay means that soy has become a key target for activity to reduce deforestation risk in supply chains.</p>
+        <p>Production has increased from 27m tonnes in 1961 to 335m tonnes in 2016. The US, Brazil and Argentina dominate global production (accounting for 80%), and exports (around 86%), with Brazil being the leading export player in 2016 (35% of global total exports).</p>
+        <p>Historically, key importing regions for global soy production have included the US and countries in the EU but China has quickly grown to become the dominant force in soy markets, accounting for 27% of global imports in 2013. More recent sources suggest that Chinese imports could now be as much as 60% of global imports.</p>
+        <p>While soy represents an economic ‘success story’ for markets and countries in, for example, South America, supply chains are associated with various environmental and social impacts, including the pollution of groundwater and freshwater reserves, an increase in carbon emissions from deforestation, loss of biodiversity, and the exploitation of workers. Production in biodiversity-sensitive areas in Brazil, Argentina and Paraguay means that soy has become a key target for activity to reduce deforestation risk in supply chains.</p>
       </div>,
     'oil-palm':
       <div class="info-text">
         <p>Palm oil is used in a wide range of products, including foods, cosmetics, cleaning products and fuels. It is a higher yielding crop than others used for vegetable oils, and has a lower cost of production, prompting an increasing demand and expansion of plantations.</p>
-        <p>The global production of palm oil has increased from 14 million tonnes in 1961 to <a href="http://www.fao.org/faostat/en/#home" target="_blank">300 million tonnes in 2016</a>. The top two producers, Indonesia and Malaysia, together accounted for 82% of total global production in 2016 (53% and, 29% respectively), and in 2013 accounted for 93% of global exports (54% and 39% respectively).</p>
-        <p>Imports of palm oil have rapidly increased along with production, and in 2013 the biggest importers of palm oil were India and China, together accounting for <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">a third of global palm oil imports</a> (18% and 15% respectively).</p>
+        <p>The global production of palm oil has increased from 14 million tonnes in 1961 to 300 million tonnes in 2016. The top two producers, Indonesia and Malaysia, together accounted for 82% of total global production in 2016 (53% and, 29% respectively), and in 2013 accounted for 93% of global exports (54% and 39% respectively).</p>
+        <p>Imports of palm oil have rapidly increased along with production, and in 2013 the biggest importers of palm oil were India and China, together accounting for a third of global palm oil imports (18% and 15% respectively).</p>
         <p>The rapid growth of palm oil production has driven a range of environmental and social problems, including the displacement of indigenous peoples, deforestation and the loss of tropical biodiversity.</p>
       </div>,
     'sugar':
       <div class="info-text">
         <p>Sugar crops, comprised of both sugarcane and beet, are refined for use in both food manufacture and in the production of biofuels and bioplastics. Sugarcane is grown in tropical regions.</p>
-        <p>Globally, production of raw sugar derived from sugarcane and beet has increased from 53 million tonnes in 1961 to 179 million tonnes in 2013. Five producers account for around <a href="http://www.fao.org/faostat/en/#home" target="_blank">50% of total supply</a>: Brazil (20%), India (14%), China (7%), Thailand (5%) and the United states (4%).</p>
-        <p>Brazil is by far the most dominant exporter (42% of global exports in 2013) and exports over <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">four times as much</a> as the next largest exporting nation (Thailand, 9%).</p>
+        <p>Globally, production of raw sugar derived from sugarcane and beet has increased from 53 million tonnes in 1961 to 179 million tonnes in 2013. Five producers account for around 50% of total supply: Brazil (20%), India (14%), China (7%), Thailand (5%) and the United states (4%).</p>
+        <p>Brazil is by far the most dominant exporter (42% of global exports in 2013) and exports over four times as much as the next largest exporting nation (Thailand, 9%).</p>
         <p>Import of sugar is not dominated by any country in particular, but China and the US are both significant importers each accounting for 7% of global imports.</p>
         <p>Sugar is a highly water-intensive crop, and other environmental impacts include habitat loss from land clearing, land degradation, water and air pollution from fertilizers, eroded soils and industrial waste. Sugar production in some areas of the world is also associated with poor working conditions.</p>
       </div>,
@@ -64,29 +64,29 @@ class Datavis {
     'beef':
       <div class="info-text">
         <p>Production of beef, used as a high value protein source for human consumption, typically takes place in extensive grazing systems.</p>
-        <p>Global beef production has increased from 28 million tonnes in 1961 to <a href="http://www.fao.org/faostat/en/#home" target="_blank">66 million tonnes in 2016</a>. The US has dominated production for many years (16% of global total in 2016) but production in Brazil (13% of global) and China (10% of global) has rapidly expanded, and in 2013 <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">Brazil was the largest global exporter</a> (with 17% of global exports). </p>
+        <p>Global beef production has increased from 28 million tonnes in 1961 to 66 million tonnes in 2016. The US has dominated production for many years (16% of global total in 2016) but production in Brazil (13% of global) and China (10% of global) has rapidly expanded, and in 2013 Brazil was the largest global exporter (with 17% of global exports). </p>
         <p>Russia (9% of global total in 2013), the United States (9%) and Japan (8%) represent the largest import markets for beef.</p>
         <p>Beef is the largest single agricultural driver of deforestation, and requires large amounts of water, land and energy, including indirectly via the provision of grain-based animal feed. Furthermore, cattle are a major source of greenhouse gases, waste from slaughterhouses and cattle production is a source of pollution, and livestock farming contributes to soil erosion.</p>
       </div>,
     'maize':
       <div class="info-text">
         <p>Maize, also known as corn, is an important cereal crop that can be processed into a range of products including starch, sweeteners, oils, beverages, glue, industrial alcohol and fuel ethanol.</p>
-        <p>Global maize production has increased from 205 million tonnes in 1961 to over a billion tonnes in 2016. The top two producers, the US and China, accounted for 58% of this total in 2016 (36% and 22% respectively) with Brazil and Argentina contributing a further 10% between them (6% and 4% respectively). While the US is also the second largest global exporter (20% of global total exports in 2013), like China, most of its production is used domestically, and Brazil (22%) was the <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">most important global exporter in 2013</a>.</p>
+        <p>Global maize production has increased from 205 million tonnes in 1961 to over a billion tonnes in 2016. The top two producers, the US and China, accounted for 58% of this total in 2016 (36% and 22% respectively) with Brazil and Argentina contributing a further 10% between them (6% and 4% respectively). While the US is also the second largest global exporter (20% of global total exports in 2013), like China, most of its production is used domestically, and Brazil (22%) was the most important global exporter in 2013.</p>
         <p>Japan and South Korea were the largest global importers of maize in 2013, with 12% and 8% respectively.</p>
         <p>Maize production is recognised as a driver of soil erosion. It can be associated with intensive water use, and generally involves the use of fertilisers which can pollute the surrounding environment. Maize is also often intercropped with soy.</p>
       </div>,
     'cocoa':
       <div class="info-text">
         <p>Cocoa trees provide the cocoa beans (or seeds, found in cocoa pods) used in producing chocolate, cocoa butter and cocoa powder.</p>
-        <p>Between 1961 and 2016, global cocoa production almost quadrupled, from 1.2 million tonnes to 4.5 million tonnes. Two African countries, Cote d’Ivoire (33%) and Ghana (19%) together accounted for more than 50% of global production in 2016, and are also the <a href="http://www.fao.org/faostat/en/#home" target="_blank">largest global exporters</a> with 41% and 23% of global exports respectively in 2013.</p>
-        <p>The US is the <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">leading importer of cocoa</a> with 19% of global imports in 2013, followed by Germany with 7%.</p>
+        <p>Between 1961 and 2016, global cocoa production almost quadrupled, from 1.2 million tonnes to 4.5 million tonnes. Two African countries, Cote d’Ivoire (33%) and Ghana (19%) together accounted for more than 50% of global production in 2016, and are also the largest global exporters with 41% and 23% of global exports respectively in 2013.</p>
+        <p>The US is the leading importer of cocoa with 19% of global imports in 2013, followed by Germany with 7%.</p>
         <p>The expansion of cocoa production is often associated with deforestation, particularly in Cote d’Ivoire, as well as social risks such as child labour.</p>
       </div>,
     'rubber':
       <div class="info-text">
         <p>Natural rubber is used in thousands of products, including medical devices, surgical gloves, and tyres.</p>
-        <p>Global rubber production expanded by more than six times between 1961 and 2016, from 2 to 13 million tonnes. Countries in South East Asia dominate, with Thailand and Indonesia producing 32% and 23% of 2016 production respectively. These countries also dominate exports with <a href="http://www.fao.org/faostat/en/#home" target="_blank">41% and 33%</a> respectively in 2013.</p>
-        <p>China has becomes the world’s largest rubber importer, accounting for <a href="http://www.bik-f.de/root/index.php?page_id=1093" target="_blank">32% of global imports in 2013</a>, followed by the US on 12%.</p>
+        <p>Global rubber production expanded by more than six times between 1961 and 2016, from 2 to 13 million tonnes. Countries in South East Asia dominate, with Thailand and Indonesia producing 32% and 23% of 2016 production respectively. These countries also dominate exports with 41% and 33% respectively in 2013.</p>
+        <p>China has becomes the world’s largest rubber importer, accounting for 32% of global imports in 2013, followed by the US on 12%.</p>
         <p>Rubber tree expansion has been associated with the loss of high-biodiversity land, particularly following rapid expansion in South East Asia. It has also been linked to human and labour rights violations and land grabbing.</p>
       </div>,
     'cotton':

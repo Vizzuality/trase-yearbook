@@ -64,144 +64,121 @@ var Datavis = function () {
 
         var _elem3 = document.createElement('p');
 
-        _elem3.appendChild(document.createTextNode('Production has increased from 27m tonnes in 1961 to '));
-
-        var _elem4 = document.createElement('a');
-
-        _elem4.setAttribute('href', 'http://www.fao.org/faostat/en/#home');
-
-        _elem4.setAttribute('target', '_blank');
-
-        _elem4.appendChild(document.createTextNode('335m tonnes in 2016'));
-
-        _elem3.appendChild(_elem4);
-
-        _elem3.appendChild(document.createTextNode('. The US, Brazil and Argentina dominate global production (accounting for 80%), and exports (around 86%), with Brazil being the '));
-
-        var _elem5 = document.createElement('a');
-
-        _elem5.setAttribute('href', 'https://apps.fas.usda.gov/Gats/default.aspx');
-
-        _elem5.setAttribute('target', '_blank');
-
-        _elem5.appendChild(document.createTextNode('leading export player in 2016'));
-
-        _elem3.appendChild(_elem5);
-
-        _elem3.appendChild(document.createTextNode(' (35% of global total exports).'));
+        _elem3.appendChild(document.createTextNode('Production has increased from 27m tonnes in 1961 to 335m tonnes in 2016. The US, Brazil and Argentina dominate global production (accounting for 80%), and exports (around 86%), with Brazil being the leading export player in 2016 (35% of global total exports).'));
 
         _elem.appendChild(_elem3);
 
         _elem.appendChild(document.createTextNode('\n        '));
 
-        var _elem6 = document.createElement('p');
+        var _elem4 = document.createElement('p');
 
-        _elem6.appendChild(document.createTextNode('Historically, key importing regions for global soy production have included the US and countries in the EU but China has quickly grown to become the dominant force in soy markets, accounting for '));
+        _elem4.appendChild(document.createTextNode('Historically, key importing regions for global soy production have included the US and countries in the EU but China has quickly grown to become the dominant force in soy markets, accounting for 27% of global imports in 2013. More recent sources suggest that Chinese imports could now be as much as 60% of global imports.'));
 
-        var _elem7 = document.createElement('a');
-
-        _elem7.setAttribute('href', 'http://www.bik-f.de/root/index.php?page_id=1093');
-
-        _elem7.setAttribute('target', '_blank');
-
-        _elem7.appendChild(document.createTextNode('27% of global imports in 2013'));
-
-        _elem6.appendChild(_elem7);
-
-        _elem6.appendChild(document.createTextNode('. More recent sources suggest that Chinese imports could now be as much as 60% of global imports.'));
-
-        _elem.appendChild(_elem6);
+        _elem.appendChild(_elem4);
 
         _elem.appendChild(document.createTextNode('\n        '));
 
-        var _elem8 = document.createElement('p');
+        var _elem5 = document.createElement('p');
 
-        _elem8.appendChild(document.createTextNode('While soy represents an economic \u2018success story\u2019 for markets and countries in, for example, South America, supply chains are associated with various '));
+        _elem5.appendChild(document.createTextNode('While soy represents an economic \u2018success story\u2019 for markets and countries in, for example, South America, supply chains are associated with various environmental and social impacts, including the pollution of groundwater and freshwater reserves, an increase in carbon emissions from deforestation, loss of biodiversity, and the exploitation of workers. Production in biodiversity-sensitive areas in Brazil, Argentina and Paraguay means that soy has become a key target for activity to reduce deforestation risk in supply chains.'));
 
-        var _elem9 = document.createElement('a');
-
-        _elem9.setAttribute('href', 'http://wwf.panda.org/our_work/food/agriculture/soy/impacts/');
-
-        _elem9.setAttribute('target', '_blank');
-
-        _elem9.appendChild(document.createTextNode('environmental and social impacts'));
-
-        _elem8.appendChild(_elem9);
-
-        _elem8.appendChild(document.createTextNode(', including the pollution of groundwater and freshwater reserves, an increase in carbon emissions from deforestation, loss of biodiversity, and the exploitation of workers. Production in biodiversity-sensitive areas in Brazil, Argentina and Paraguay means that soy has become a key target for activity to reduce deforestation risk in supply chains.'));
-
-        _elem.appendChild(_elem8);
+        _elem.appendChild(_elem5);
 
         _elem.appendChild(document.createTextNode('\n      '));
 
         return _elem;
       }(),
       'oil-palm': function () {
-        var _elem10 = document.createElement('div');
+        var _elem6 = document.createElement('div');
 
-        _elem10.setAttribute('class', 'info-text');
+        _elem6.setAttribute('class', 'info-text');
 
-        _elem10.appendChild(document.createTextNode('\n        '));
+        _elem6.appendChild(document.createTextNode('\n        '));
 
-        var _elem11 = document.createElement('p');
+        var _elem7 = document.createElement('p');
 
-        _elem11.appendChild(document.createTextNode('Palm oil is used in a wide range of products, including foods, cosmetics, cleaning products and fuels. It is a higher yielding crop than others used for vegetable oils, and has a lower cost of production, prompting an increasing demand and expansion of plantations.'));
+        _elem7.appendChild(document.createTextNode('Palm oil is used in a wide range of products, including foods, cosmetics, cleaning products and fuels. It is a higher yielding crop than others used for vegetable oils, and has a lower cost of production, prompting an increasing demand and expansion of plantations.'));
 
-        _elem10.appendChild(_elem11);
+        _elem6.appendChild(_elem7);
 
-        _elem10.appendChild(document.createTextNode('\n        '));
+        _elem6.appendChild(document.createTextNode('\n        '));
+
+        var _elem8 = document.createElement('p');
+
+        _elem8.appendChild(document.createTextNode('The global production of palm oil has increased from 14 million tonnes in 1961 to 300 million tonnes in 2016. The top two producers, Indonesia and Malaysia, together accounted for 82% of total global production in 2016 (53% and, 29% respectively), and in 2013 accounted for 93% of global exports (54% and 39% respectively).'));
+
+        _elem6.appendChild(_elem8);
+
+        _elem6.appendChild(document.createTextNode('\n        '));
+
+        var _elem9 = document.createElement('p');
+
+        _elem9.appendChild(document.createTextNode('Imports of palm oil have rapidly increased along with production, and in 2013 the biggest importers of palm oil were India and China, together accounting for a third of global palm oil imports (18% and 15% respectively).'));
+
+        _elem6.appendChild(_elem9);
+
+        _elem6.appendChild(document.createTextNode('\n        '));
+
+        var _elem10 = document.createElement('p');
+
+        _elem10.appendChild(document.createTextNode('The rapid growth of palm oil production has driven a range of environmental and social problems, including the displacement of indigenous peoples, deforestation and the loss of tropical biodiversity.'));
+
+        _elem6.appendChild(_elem10);
+
+        _elem6.appendChild(document.createTextNode('\n      '));
+
+        return _elem6;
+      }(),
+      'sugar': function () {
+        var _elem11 = document.createElement('div');
+
+        _elem11.setAttribute('class', 'info-text');
+
+        _elem11.appendChild(document.createTextNode('\n        '));
 
         var _elem12 = document.createElement('p');
 
-        _elem12.appendChild(document.createTextNode('The global production of palm oil has increased from 14 million tonnes in 1961 to '));
+        _elem12.appendChild(document.createTextNode('Sugar crops, comprised of both sugarcane and beet, are refined for use in both food manufacture and in the production of biofuels and bioplastics. Sugarcane is grown in tropical regions.'));
 
-        var _elem13 = document.createElement('a');
+        _elem11.appendChild(_elem12);
 
-        _elem13.setAttribute('href', 'http://www.fao.org/faostat/en/#home');
+        _elem11.appendChild(document.createTextNode('\n        '));
 
-        _elem13.setAttribute('target', '_blank');
+        var _elem13 = document.createElement('p');
 
-        _elem13.appendChild(document.createTextNode('300 million tonnes in 2016'));
+        _elem13.appendChild(document.createTextNode('Globally, production of raw sugar derived from sugarcane and beet has increased from 53 million tonnes in 1961 to 179 million tonnes in 2013. Five producers account for around 50% of total supply: Brazil (20%), India (14%), China (7%), Thailand (5%) and the United states (4%).'));
 
-        _elem12.appendChild(_elem13);
+        _elem11.appendChild(_elem13);
 
-        _elem12.appendChild(document.createTextNode('. The top two producers, Indonesia and Malaysia, together accounted for 82% of total global production in 2016 (53% and, 29% respectively), and in 2013 accounted for 93% of global exports (54% and 39% respectively).'));
-
-        _elem10.appendChild(_elem12);
-
-        _elem10.appendChild(document.createTextNode('\n        '));
+        _elem11.appendChild(document.createTextNode('\n        '));
 
         var _elem14 = document.createElement('p');
 
-        _elem14.appendChild(document.createTextNode('Imports of palm oil have rapidly increased along with production, and in 2013 the biggest importers of palm oil were India and China, together accounting for '));
+        _elem14.appendChild(document.createTextNode('Brazil is by far the most dominant exporter (42% of global exports in 2013) and exports over four times as much as the next largest exporting nation (Thailand, 9%).'));
 
-        var _elem15 = document.createElement('a');
+        _elem11.appendChild(_elem14);
 
-        _elem15.setAttribute('href', 'http://www.bik-f.de/root/index.php?page_id=1093');
+        _elem11.appendChild(document.createTextNode('\n        '));
 
-        _elem15.setAttribute('target', '_blank');
+        var _elem15 = document.createElement('p');
 
-        _elem15.appendChild(document.createTextNode('a third of global palm oil imports'));
+        _elem15.appendChild(document.createTextNode('Import of sugar is not dominated by any country in particular, but China and the US are both significant importers each accounting for 7% of global imports.'));
 
-        _elem14.appendChild(_elem15);
+        _elem11.appendChild(_elem15);
 
-        _elem14.appendChild(document.createTextNode(' (18% and 15% respectively).'));
-
-        _elem10.appendChild(_elem14);
-
-        _elem10.appendChild(document.createTextNode('\n        '));
+        _elem11.appendChild(document.createTextNode('\n        '));
 
         var _elem16 = document.createElement('p');
 
-        _elem16.appendChild(document.createTextNode('The rapid growth of palm oil production has driven a range of environmental and social problems, including the displacement of indigenous peoples, deforestation and the loss of tropical biodiversity.'));
+        _elem16.appendChild(document.createTextNode('Sugar is a highly water-intensive crop, and other environmental impacts include habitat loss from land clearing, land degradation, water and air pollution from fertilizers, eroded soils and industrial waste. Sugar production in some areas of the world is also associated with poor working conditions.'));
 
-        _elem10.appendChild(_elem16);
+        _elem11.appendChild(_elem16);
 
-        _elem10.appendChild(document.createTextNode('\n      '));
+        _elem11.appendChild(document.createTextNode('\n      '));
 
-        return _elem10;
+        return _elem11;
       }(),
-      'sugar': function () {
+      'coffee': function () {
         var _elem17 = document.createElement('div');
 
         _elem17.setAttribute('class', 'info-text');
@@ -210,7 +187,7 @@ var Datavis = function () {
 
         var _elem18 = document.createElement('p');
 
-        _elem18.appendChild(document.createTextNode('Sugar crops, comprised of both sugarcane and beet, are refined for use in both food manufacture and in the production of biofuels and bioplastics. Sugarcane is grown in tropical regions.'));
+        _elem18.appendChild(document.createTextNode('Coffee beans are the seeds of the coffea plant, used primarily for brewing one of the world\u2019s most popular beverages.'));
 
         _elem17.appendChild(_elem18);
 
@@ -218,169 +195,154 @@ var Datavis = function () {
 
         var _elem19 = document.createElement('p');
 
-        _elem19.appendChild(document.createTextNode('Globally, production of raw sugar derived from sugarcane and beet has increased from 53 million tonnes in 1961 to 179 million tonnes in 2013. Five producers account for around '));
-
-        var _elem20 = document.createElement('a');
-
-        _elem20.setAttribute('href', 'http://www.fao.org/faostat/en/#home');
-
-        _elem20.setAttribute('target', '_blank');
-
-        _elem20.appendChild(document.createTextNode('50% of total supply'));
-
-        _elem19.appendChild(_elem20);
-
-        _elem19.appendChild(document.createTextNode(': Brazil (20%), India (14%), China (7%), Thailand (5%) and the United states (4%).'));
+        _elem19.appendChild(document.createTextNode('Global coffee production has increased from 4.5 million tonnes in 1961 to 9.2 million tonnes in 2016. Brazil is by far the largest producer of coffee accounting for 32% of global production in 2016. In 2013, Brazil and Vietnam accounted for 27% and 20% of global exports respectively.'));
 
         _elem17.appendChild(_elem19);
 
         _elem17.appendChild(document.createTextNode('\n        '));
 
+        var _elem20 = document.createElement('p');
+
+        _elem20.appendChild(document.createTextNode('The US is the leading importer of coffee with 22% of global imports in 2013, followed by Germany with 11%.'));
+
+        _elem17.appendChild(_elem20);
+
+        _elem17.appendChild(document.createTextNode('\n        '));
+
         var _elem21 = document.createElement('p');
 
-        _elem21.appendChild(document.createTextNode('Brazil is by far the most dominant exporter (42% of global exports in 2013) and exports over '));
-
-        var _elem22 = document.createElement('a');
-
-        _elem22.setAttribute('href', 'http://www.bik-f.de/root/index.php?page_id=1093');
-
-        _elem22.setAttribute('target', '_blank');
-
-        _elem22.appendChild(document.createTextNode('four times as much'));
-
-        _elem21.appendChild(_elem22);
-
-        _elem21.appendChild(document.createTextNode(' as the next largest exporting nation (Thailand, 9%).'));
+        _elem21.appendChild(document.createTextNode('While traditional shade-grown coffee can provide habitat and reduce soil erosion, mono-cropping sun-grown coffee has become the norm and is grown in plantations which require more fertilisers, drive deforestation and reduce biodiversity. The coffee industry has also faced criticisms for the proportion of the profit which goes to coffee farmers, and their exposure to the volatility in the market.'));
 
         _elem17.appendChild(_elem21);
-
-        _elem17.appendChild(document.createTextNode('\n        '));
-
-        var _elem23 = document.createElement('p');
-
-        _elem23.appendChild(document.createTextNode('Import of sugar is not dominated by any country in particular, but China and the US are both significant importers each accounting for 7% of global imports.'));
-
-        _elem17.appendChild(_elem23);
-
-        _elem17.appendChild(document.createTextNode('\n        '));
-
-        var _elem24 = document.createElement('p');
-
-        _elem24.appendChild(document.createTextNode('Sugar is a highly water-intensive crop, and other environmental impacts include habitat loss from land clearing, land degradation, water and air pollution from fertilizers, eroded soils and industrial waste. Sugar production in some areas of the world is also associated with poor working conditions.'));
-
-        _elem17.appendChild(_elem24);
 
         _elem17.appendChild(document.createTextNode('\n      '));
 
         return _elem17;
       }(),
-      'coffee': function () {
-        var _elem25 = document.createElement('div');
+      'beef': function () {
+        var _elem22 = document.createElement('div');
 
-        _elem25.setAttribute('class', 'info-text');
+        _elem22.setAttribute('class', 'info-text');
 
-        _elem25.appendChild(document.createTextNode('\n        '));
+        _elem22.appendChild(document.createTextNode('\n        '));
+
+        var _elem23 = document.createElement('p');
+
+        _elem23.appendChild(document.createTextNode('Production of beef, used as a high value protein source for human consumption, typically takes place in extensive grazing systems.'));
+
+        _elem22.appendChild(_elem23);
+
+        _elem22.appendChild(document.createTextNode('\n        '));
+
+        var _elem24 = document.createElement('p');
+
+        _elem24.appendChild(document.createTextNode('Global beef production has increased from 28 million tonnes in 1961 to 66 million tonnes in 2016. The US has dominated production for many years (16% of global total in 2016) but production in Brazil (13% of global) and China (10% of global) has rapidly expanded, and in 2013 Brazil was the largest global exporter (with 17% of global exports). '));
+
+        _elem22.appendChild(_elem24);
+
+        _elem22.appendChild(document.createTextNode('\n        '));
+
+        var _elem25 = document.createElement('p');
+
+        _elem25.appendChild(document.createTextNode('Russia (9% of global total in 2013), the United States (9%) and Japan (8%) represent the largest import markets for beef.'));
+
+        _elem22.appendChild(_elem25);
+
+        _elem22.appendChild(document.createTextNode('\n        '));
 
         var _elem26 = document.createElement('p');
 
-        _elem26.appendChild(document.createTextNode('Coffee beans are the seeds of the coffea plant, used primarily for brewing one of the world\u2019s most popular beverages.'));
+        _elem26.appendChild(document.createTextNode('Beef is the largest single agricultural driver of deforestation, and requires large amounts of water, land and energy, including indirectly via the provision of grain-based animal feed. Furthermore, cattle are a major source of greenhouse gases, waste from slaughterhouses and cattle production is a source of pollution, and livestock farming contributes to soil erosion.'));
 
-        _elem25.appendChild(_elem26);
+        _elem22.appendChild(_elem26);
 
-        _elem25.appendChild(document.createTextNode('\n        '));
+        _elem22.appendChild(document.createTextNode('\n      '));
 
-        var _elem27 = document.createElement('p');
+        return _elem22;
+      }(),
+      'maize': function () {
+        var _elem27 = document.createElement('div');
 
-        _elem27.appendChild(document.createTextNode('Global coffee production has increased from 4.5 million tonnes in 1961 to 9.2 million tonnes in 2016. Brazil is by far the largest producer of coffee accounting for 32% of global production in 2016. In 2013, Brazil and Vietnam accounted for 27% and 20% of global exports respectively.'));
+        _elem27.setAttribute('class', 'info-text');
 
-        _elem25.appendChild(_elem27);
-
-        _elem25.appendChild(document.createTextNode('\n        '));
+        _elem27.appendChild(document.createTextNode('\n        '));
 
         var _elem28 = document.createElement('p');
 
-        _elem28.appendChild(document.createTextNode('The US is the leading importer of coffee with 22% of global imports in 2013, followed by Germany with 11%.'));
+        _elem28.appendChild(document.createTextNode('Maize, also known as corn, is an important cereal crop that can be processed into a range of products including starch, sweeteners, oils, beverages, glue, industrial alcohol and fuel ethanol.'));
 
-        _elem25.appendChild(_elem28);
+        _elem27.appendChild(_elem28);
 
-        _elem25.appendChild(document.createTextNode('\n        '));
+        _elem27.appendChild(document.createTextNode('\n        '));
 
         var _elem29 = document.createElement('p');
 
-        _elem29.appendChild(document.createTextNode('While traditional shade-grown coffee can provide habitat and reduce soil erosion, mono-cropping sun-grown coffee has become the norm and is grown in plantations which require more fertilisers, drive deforestation and reduce biodiversity. The coffee industry has also faced criticisms for the proportion of the profit which goes to coffee farmers, and their exposure to the volatility in the market.'));
+        _elem29.appendChild(document.createTextNode('Global maize production has increased from 205 million tonnes in 1961 to over a billion tonnes in 2016. The top two producers, the US and China, accounted for 58% of this total in 2016 (36% and 22% respectively) with Brazil and Argentina contributing a further 10% between them (6% and 4% respectively). While the US is also the second largest global exporter (20% of global total exports in 2013), like China, most of its production is used domestically, and Brazil (22%) was the most important global exporter in 2013.'));
 
-        _elem25.appendChild(_elem29);
+        _elem27.appendChild(_elem29);
 
-        _elem25.appendChild(document.createTextNode('\n      '));
+        _elem27.appendChild(document.createTextNode('\n        '));
 
-        return _elem25;
-      }(),
-      'beef': function () {
-        var _elem30 = document.createElement('div');
+        var _elem30 = document.createElement('p');
 
-        _elem30.setAttribute('class', 'info-text');
+        _elem30.appendChild(document.createTextNode('Japan and South Korea were the largest global importers of maize in 2013, with 12% and 8% respectively.'));
 
-        _elem30.appendChild(document.createTextNode('\n        '));
+        _elem27.appendChild(_elem30);
+
+        _elem27.appendChild(document.createTextNode('\n        '));
 
         var _elem31 = document.createElement('p');
 
-        _elem31.appendChild(document.createTextNode('Production of beef, used as a high value protein source for human consumption, typically takes place in extensive grazing systems.'));
+        _elem31.appendChild(document.createTextNode('Maize production is recognised as a driver of soil erosion. It can be associated with intensive water use, and generally involves the use of fertilisers which can pollute the surrounding environment. Maize is also often intercropped with soy.'));
 
-        _elem30.appendChild(_elem31);
+        _elem27.appendChild(_elem31);
 
-        _elem30.appendChild(document.createTextNode('\n        '));
+        _elem27.appendChild(document.createTextNode('\n      '));
 
-        var _elem32 = document.createElement('p');
+        return _elem27;
+      }(),
+      'cocoa': function () {
+        var _elem32 = document.createElement('div');
 
-        _elem32.appendChild(document.createTextNode('Global beef production has increased from 28 million tonnes in 1961 to '));
+        _elem32.setAttribute('class', 'info-text');
 
-        var _elem33 = document.createElement('a');
+        _elem32.appendChild(document.createTextNode('\n        '));
 
-        _elem33.setAttribute('href', 'http://www.fao.org/faostat/en/#home');
+        var _elem33 = document.createElement('p');
 
-        _elem33.setAttribute('target', '_blank');
-
-        _elem33.appendChild(document.createTextNode('66 million tonnes in 2016'));
+        _elem33.appendChild(document.createTextNode('Cocoa trees provide the cocoa beans (or seeds, found in cocoa pods) used in producing chocolate, cocoa butter and cocoa powder.'));
 
         _elem32.appendChild(_elem33);
 
-        _elem32.appendChild(document.createTextNode('. The US has dominated production for many years (16% of global total in 2016) but production in Brazil (13% of global) and China (10% of global) has rapidly expanded, and in 2013 '));
+        _elem32.appendChild(document.createTextNode('\n        '));
 
-        var _elem34 = document.createElement('a');
+        var _elem34 = document.createElement('p');
 
-        _elem34.setAttribute('href', 'http://www.bik-f.de/root/index.php?page_id=1093');
-
-        _elem34.setAttribute('target', '_blank');
-
-        _elem34.appendChild(document.createTextNode('Brazil was the largest global exporter'));
+        _elem34.appendChild(document.createTextNode('Between 1961 and 2016, global cocoa production almost quadrupled, from 1.2 million tonnes to 4.5 million tonnes. Two African countries, Cote d\u2019Ivoire (33%) and Ghana (19%) together accounted for more than 50% of global production in 2016, and are also the largest global exporters with 41% and 23% of global exports respectively in 2013.'));
 
         _elem32.appendChild(_elem34);
 
-        _elem32.appendChild(document.createTextNode(' (with 17% of global exports). '));
-
-        _elem30.appendChild(_elem32);
-
-        _elem30.appendChild(document.createTextNode('\n        '));
+        _elem32.appendChild(document.createTextNode('\n        '));
 
         var _elem35 = document.createElement('p');
 
-        _elem35.appendChild(document.createTextNode('Russia (9% of global total in 2013), the United States (9%) and Japan (8%) represent the largest import markets for beef.'));
+        _elem35.appendChild(document.createTextNode('The US is the leading importer of cocoa with 19% of global imports in 2013, followed by Germany with 7%.'));
 
-        _elem30.appendChild(_elem35);
+        _elem32.appendChild(_elem35);
 
-        _elem30.appendChild(document.createTextNode('\n        '));
+        _elem32.appendChild(document.createTextNode('\n        '));
 
         var _elem36 = document.createElement('p');
 
-        _elem36.appendChild(document.createTextNode('Beef is the largest single agricultural driver of deforestation, and requires large amounts of water, land and energy, including indirectly via the provision of grain-based animal feed. Furthermore, cattle are a major source of greenhouse gases, waste from slaughterhouses and cattle production is a source of pollution, and livestock farming contributes to soil erosion.'));
+        _elem36.appendChild(document.createTextNode('The expansion of cocoa production is often associated with deforestation, particularly in Cote d\u2019Ivoire, as well as social risks such as child labour.'));
 
-        _elem30.appendChild(_elem36);
+        _elem32.appendChild(_elem36);
 
-        _elem30.appendChild(document.createTextNode('\n      '));
+        _elem32.appendChild(document.createTextNode('\n      '));
 
-        return _elem30;
+        return _elem32;
       }(),
-      'maize': function () {
+      'rubber': function () {
         var _elem37 = document.createElement('div');
 
         _elem37.setAttribute('class', 'info-text');
@@ -389,7 +351,7 @@ var Datavis = function () {
 
         var _elem38 = document.createElement('p');
 
-        _elem38.appendChild(document.createTextNode('Maize, also known as corn, is an important cereal crop that can be processed into a range of products including starch, sweeteners, oils, beverages, glue, industrial alcohol and fuel ethanol.'));
+        _elem38.appendChild(document.createTextNode('Natural rubber is used in thousands of products, including medical devices, surgical gloves, and tyres.'));
 
         _elem37.appendChild(_elem38);
 
@@ -397,212 +359,70 @@ var Datavis = function () {
 
         var _elem39 = document.createElement('p');
 
-        _elem39.appendChild(document.createTextNode('Global maize production has increased from 205 million tonnes in 1961 to over a billion tonnes in 2016. The top two producers, the US and China, accounted for 58% of this total in 2016 (36% and 22% respectively) with Brazil and Argentina contributing a further 10% between them (6% and 4% respectively). While the US is also the second largest global exporter (20% of global total exports in 2013), like China, most of its production is used domestically, and Brazil (22%) was the '));
-
-        var _elem40 = document.createElement('a');
-
-        _elem40.setAttribute('href', 'http://www.bik-f.de/root/index.php?page_id=1093');
-
-        _elem40.setAttribute('target', '_blank');
-
-        _elem40.appendChild(document.createTextNode('most important global exporter in 2013'));
-
-        _elem39.appendChild(_elem40);
-
-        _elem39.appendChild(document.createTextNode('.'));
+        _elem39.appendChild(document.createTextNode('Global rubber production expanded by more than six times between 1961 and 2016, from 2 to 13 million tonnes. Countries in South East Asia dominate, with Thailand and Indonesia producing 32% and 23% of 2016 production respectively. These countries also dominate exports with 41% and 33% respectively in 2013.'));
 
         _elem37.appendChild(_elem39);
 
         _elem37.appendChild(document.createTextNode('\n        '));
 
-        var _elem41 = document.createElement('p');
+        var _elem40 = document.createElement('p');
 
-        _elem41.appendChild(document.createTextNode('Japan and South Korea were the largest global importers of maize in 2013, with 12% and 8% respectively.'));
+        _elem40.appendChild(document.createTextNode('China has becomes the world\u2019s largest rubber importer, accounting for 32% of global imports in 2013, followed by the US on 12%.'));
 
-        _elem37.appendChild(_elem41);
+        _elem37.appendChild(_elem40);
 
         _elem37.appendChild(document.createTextNode('\n        '));
 
-        var _elem42 = document.createElement('p');
+        var _elem41 = document.createElement('p');
 
-        _elem42.appendChild(document.createTextNode('Maize production is recognised as a driver of soil erosion. It can be associated with intensive water use, and generally involves the use of fertilisers which can pollute the surrounding environment. Maize is also often intercropped with soy.'));
+        _elem41.appendChild(document.createTextNode('Rubber tree expansion has been associated with the loss of high-biodiversity land, particularly following rapid expansion in South East Asia. It has also been linked to human and labour rights violations and land grabbing.'));
 
-        _elem37.appendChild(_elem42);
+        _elem37.appendChild(_elem41);
 
         _elem37.appendChild(document.createTextNode('\n      '));
 
         return _elem37;
       }(),
-      'cocoa': function () {
-        var _elem43 = document.createElement('div');
+      'cotton': function () {
+        var _elem42 = document.createElement('div');
 
-        _elem43.setAttribute('class', 'info-text');
+        _elem42.setAttribute('class', 'info-text');
 
-        _elem43.appendChild(document.createTextNode('\n        '));
+        _elem42.appendChild(document.createTextNode('\n        '));
+
+        var _elem43 = document.createElement('p');
+
+        _elem43.appendChild(document.createTextNode('Cotton is a soft natural fibre that grows around the seeds of cotton plants. It\u2019s principle use in the production of textiles, although the seeds of cotton plants can also be processed into vegetable oil.'));
+
+        _elem42.appendChild(_elem43);
+
+        _elem42.appendChild(document.createTextNode('\n        '));
 
         var _elem44 = document.createElement('p');
 
-        _elem44.appendChild(document.createTextNode('Cocoa trees provide the cocoa beans (or seeds, found in cocoa pods) used in producing chocolate, cocoa butter and cocoa powder.'));
+        _elem44.appendChild(document.createTextNode('Global cotton production more than doubled between 1961 and 2016, from 27 to 65 million tonnes. China, India and the United States dominate production, with 17%, 16% and 11% respectively. The United States is the main exporter, with 29% of global exports in 2013, followed by India (19%), Australia (16%) and Brazil (7%).'));
 
-        _elem43.appendChild(_elem44);
+        _elem42.appendChild(_elem44);
 
-        _elem43.appendChild(document.createTextNode('\n        '));
+        _elem42.appendChild(document.createTextNode('\n        '));
 
         var _elem45 = document.createElement('p');
 
-        _elem45.appendChild(document.createTextNode('Between 1961 and 2016, global cocoa production almost quadrupled, from 1.2 million tonnes to 4.5 million tonnes. Two African countries, Cote d\u2019Ivoire (33%) and Ghana (19%) together accounted for more than 50% of global production in 2016, and are also the '));
+        _elem45.appendChild(document.createTextNode('As well as being the largest producer, China is also the world\u2019s largest importer of cotton, accounting for 37% of global imports in 2013.'));
 
-        var _elem46 = document.createElement('a');
+        _elem42.appendChild(_elem45);
 
-        _elem46.setAttribute('href', 'http://www.fao.org/faostat/en/#home');
+        _elem42.appendChild(document.createTextNode('\n        '));
 
-        _elem46.setAttribute('target', '_blank');
+        var _elem46 = document.createElement('p');
 
-        _elem46.appendChild(document.createTextNode('largest global exporters'));
+        _elem46.appendChild(document.createTextNode('Whilst cotton production provides income for millions of people worldwide, although problems such as low wages and forced labour remain in many locations. Cotton is typically grown as a monoculture and can be pesticide and water-intensive to produce.'));
 
-        _elem45.appendChild(_elem46);
+        _elem42.appendChild(_elem46);
 
-        _elem45.appendChild(document.createTextNode(' with 41% and 23% of global exports respectively in 2013.'));
+        _elem42.appendChild(document.createTextNode('\n      '));
 
-        _elem43.appendChild(_elem45);
-
-        _elem43.appendChild(document.createTextNode('\n        '));
-
-        var _elem47 = document.createElement('p');
-
-        _elem47.appendChild(document.createTextNode('The US is the '));
-
-        var _elem48 = document.createElement('a');
-
-        _elem48.setAttribute('href', 'http://www.bik-f.de/root/index.php?page_id=1093');
-
-        _elem48.setAttribute('target', '_blank');
-
-        _elem48.appendChild(document.createTextNode('leading importer of cocoa'));
-
-        _elem47.appendChild(_elem48);
-
-        _elem47.appendChild(document.createTextNode(' with 19% of global imports in 2013, followed by Germany with 7%.'));
-
-        _elem43.appendChild(_elem47);
-
-        _elem43.appendChild(document.createTextNode('\n        '));
-
-        var _elem49 = document.createElement('p');
-
-        _elem49.appendChild(document.createTextNode('The expansion of cocoa production is often associated with deforestation, particularly in Cote d\u2019Ivoire, as well as social risks such as child labour.'));
-
-        _elem43.appendChild(_elem49);
-
-        _elem43.appendChild(document.createTextNode('\n      '));
-
-        return _elem43;
-      }(),
-      'rubber': function () {
-        var _elem50 = document.createElement('div');
-
-        _elem50.setAttribute('class', 'info-text');
-
-        _elem50.appendChild(document.createTextNode('\n        '));
-
-        var _elem51 = document.createElement('p');
-
-        _elem51.appendChild(document.createTextNode('Natural rubber is used in thousands of products, including medical devices, surgical gloves, and tyres.'));
-
-        _elem50.appendChild(_elem51);
-
-        _elem50.appendChild(document.createTextNode('\n        '));
-
-        var _elem52 = document.createElement('p');
-
-        _elem52.appendChild(document.createTextNode('Global rubber production expanded by more than six times between 1961 and 2016, from 2 to 13 million tonnes. Countries in South East Asia dominate, with Thailand and Indonesia producing 32% and 23% of 2016 production respectively. These countries also dominate exports with '));
-
-        var _elem53 = document.createElement('a');
-
-        _elem53.setAttribute('href', 'http://www.fao.org/faostat/en/#home');
-
-        _elem53.setAttribute('target', '_blank');
-
-        _elem53.appendChild(document.createTextNode('41% and 33%'));
-
-        _elem52.appendChild(_elem53);
-
-        _elem52.appendChild(document.createTextNode(' respectively in 2013.'));
-
-        _elem50.appendChild(_elem52);
-
-        _elem50.appendChild(document.createTextNode('\n        '));
-
-        var _elem54 = document.createElement('p');
-
-        _elem54.appendChild(document.createTextNode('China has becomes the world\u2019s largest rubber importer, accounting for '));
-
-        var _elem55 = document.createElement('a');
-
-        _elem55.setAttribute('href', 'http://www.bik-f.de/root/index.php?page_id=1093');
-
-        _elem55.setAttribute('target', '_blank');
-
-        _elem55.appendChild(document.createTextNode('32% of global imports in 2013'));
-
-        _elem54.appendChild(_elem55);
-
-        _elem54.appendChild(document.createTextNode(', followed by the US on 12%.'));
-
-        _elem50.appendChild(_elem54);
-
-        _elem50.appendChild(document.createTextNode('\n        '));
-
-        var _elem56 = document.createElement('p');
-
-        _elem56.appendChild(document.createTextNode('Rubber tree expansion has been associated with the loss of high-biodiversity land, particularly following rapid expansion in South East Asia. It has also been linked to human and labour rights violations and land grabbing.'));
-
-        _elem50.appendChild(_elem56);
-
-        _elem50.appendChild(document.createTextNode('\n      '));
-
-        return _elem50;
-      }(),
-      'cotton': function () {
-        var _elem57 = document.createElement('div');
-
-        _elem57.setAttribute('class', 'info-text');
-
-        _elem57.appendChild(document.createTextNode('\n        '));
-
-        var _elem58 = document.createElement('p');
-
-        _elem58.appendChild(document.createTextNode('Cotton is a soft natural fibre that grows around the seeds of cotton plants. It\u2019s principle use in the production of textiles, although the seeds of cotton plants can also be processed into vegetable oil.'));
-
-        _elem57.appendChild(_elem58);
-
-        _elem57.appendChild(document.createTextNode('\n        '));
-
-        var _elem59 = document.createElement('p');
-
-        _elem59.appendChild(document.createTextNode('Global cotton production more than doubled between 1961 and 2016, from 27 to 65 million tonnes. China, India and the United States dominate production, with 17%, 16% and 11% respectively. The United States is the main exporter, with 29% of global exports in 2013, followed by India (19%), Australia (16%) and Brazil (7%).'));
-
-        _elem57.appendChild(_elem59);
-
-        _elem57.appendChild(document.createTextNode('\n        '));
-
-        var _elem60 = document.createElement('p');
-
-        _elem60.appendChild(document.createTextNode('As well as being the largest producer, China is also the world\u2019s largest importer of cotton, accounting for 37% of global imports in 2013.'));
-
-        _elem57.appendChild(_elem60);
-
-        _elem57.appendChild(document.createTextNode('\n        '));
-
-        var _elem61 = document.createElement('p');
-
-        _elem61.appendChild(document.createTextNode('Whilst cotton production provides income for millions of people worldwide, although problems such as low wages and forced labour remain in many locations. Cotton is typically grown as a monoculture and can be pesticide and water-intensive to produce.'));
-
-        _elem57.appendChild(_elem61);
-
-        _elem57.appendChild(document.createTextNode('\n      '));
-
-        return _elem57;
+        return _elem42;
       }()
     };
 
@@ -713,48 +533,48 @@ var Datavis = function () {
 
       var commodityText = this.commoditiesText[commodity];
       return function () {
-        var _elem62 = document.createElement('div');
+        var _elem47 = document.createElement('div');
 
-        _elem62.setAttribute('class', 'container');
+        _elem47.setAttribute('class', 'container');
 
-        _elem62.appendChild(document.createTextNode('\n        '));
+        _elem47.appendChild(document.createTextNode('\n        '));
 
         var _expr = !infoOpened ? function () {
-          var _elem63 = document.createElement('div');
+          var _elem48 = document.createElement('div');
 
-          _elem63.appendChild(document.createTextNode('\n            '));
+          _elem48.appendChild(document.createTextNode('\n            '));
 
-          var _elem64 = document.createElement('div');
+          var _elem49 = document.createElement('div');
 
-          _elem64.setAttribute('class', 'map-header');
+          _elem49.setAttribute('class', 'map-header');
 
-          _elem64.appendChild(document.createTextNode('\n              '));
+          _elem49.appendChild(document.createTextNode('\n              '));
 
-          var _elem65 = document.createElement('div');
+          var _elem50 = document.createElement('div');
 
-          _elem65.setAttribute('class', 'title-container');
+          _elem50.setAttribute('class', 'title-container');
 
-          _elem65.appendChild(document.createTextNode('\n                '));
+          _elem50.appendChild(document.createTextNode('\n                '));
 
-          var _elem66 = document.createElement('h1');
+          var _elem51 = document.createElement('h1');
 
-          _elem66.setAttribute('class', 'title');
+          _elem51.setAttribute('class', 'title');
 
-          _elem66.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
+          _elem51.appendChild(document.createTextNode('Global trade in key deforestation risk commodities in 2013'));
 
-          _elem65.appendChild(_elem66);
+          _elem50.appendChild(_elem51);
 
-          _elem65.appendChild(document.createTextNode('\n              '));
+          _elem50.appendChild(document.createTextNode('\n              '));
 
-          _elem64.appendChild(_elem65);
+          _elem49.appendChild(_elem50);
 
-          _elem64.appendChild(document.createTextNode('\n              '));
+          _elem49.appendChild(document.createTextNode('\n              '));
 
-          var _elem67 = document.createElement('div');
+          var _elem52 = document.createElement('div');
 
-          _elem67.setAttribute('class', 'controls');
+          _elem52.setAttribute('class', 'controls');
 
-          _elem67.appendChild(document.createTextNode('\n                '));
+          _elem52.appendChild(document.createTextNode('\n                '));
 
           var _expr4 = new Selector({
             open: selector,
@@ -767,170 +587,170 @@ var Datavis = function () {
 
           if (_res4 instanceof Array) {
             for (var _i7 = 0; _i7 < _res4.length; _i7 += 1) {
-              _elem67.appendChild(_res4[_i7] instanceof Node || _res4[_i7] instanceof Array ? _res4[_i7] : document.createTextNode(_res4[_i7]));
+              _elem52.appendChild(_res4[_i7] instanceof Node || _res4[_i7] instanceof Array ? _res4[_i7] : document.createTextNode(_res4[_i7]));
             }
-          } else _elem67.appendChild(_res4);
+          } else _elem52.appendChild(_res4);
 
-          _elem67.appendChild(document.createTextNode('\n                '));
+          _elem52.appendChild(document.createTextNode('\n                '));
 
-          var _elem68 = document.createElement('button');
+          var _elem53 = document.createElement('button');
 
-          _elem68.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
+          _elem53.setAttribute('onClick', 'dispatch(\'renderOriginBubbles\')');
 
-          _elem68.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
+          _elem53.setAttribute('class', 'reset ' + (canResetMap ? '' : '-disabled'));
 
-          _elem68.appendChild(document.createTextNode('\n                  '));
+          _elem53.appendChild(document.createTextNode('\n                  '));
 
-          var _elem69 = document.createElement('span');
+          var _elem54 = document.createElement('span');
 
-          _elem69.setAttribute('class', 'selector-text');
+          _elem54.setAttribute('class', 'selector-text');
 
-          _elem69.appendChild(document.createTextNode('Reset'));
+          _elem54.appendChild(document.createTextNode('Reset'));
 
-          _elem68.appendChild(_elem69);
+          _elem53.appendChild(_elem54);
 
-          _elem68.appendChild(document.createTextNode('\n                '));
+          _elem53.appendChild(document.createTextNode('\n                '));
 
-          _elem67.appendChild(_elem68);
+          _elem52.appendChild(_elem53);
 
-          _elem67.appendChild(document.createTextNode('\n                '));
+          _elem52.appendChild(document.createTextNode('\n                '));
 
-          var _elem70 = document.createElement('button');
+          var _elem55 = document.createElement('button');
 
-          _elem70.setAttribute('onClick', 'dispatch(\'handleInfoClick\')');
+          _elem55.setAttribute('onClick', 'dispatch(\'handleInfoClick\')');
 
-          _elem70.setAttribute('class', 'reset info-button ' + (commodityText ? '' : '-disabled'));
+          _elem55.setAttribute('class', 'reset info-button ' + (commodityText ? '' : '-disabled'));
 
-          _elem70.appendChild(document.createTextNode('\n                  i\n                '));
+          _elem55.appendChild(document.createTextNode('\n                  i\n                '));
 
-          _elem67.appendChild(_elem70);
+          _elem52.appendChild(_elem55);
 
-          _elem67.appendChild(document.createTextNode('\n              '));
+          _elem52.appendChild(document.createTextNode('\n              '));
 
-          _elem64.appendChild(_elem67);
+          _elem49.appendChild(_elem52);
 
-          _elem64.appendChild(document.createTextNode('\n            '));
+          _elem49.appendChild(document.createTextNode('\n            '));
 
-          _elem63.appendChild(_elem64);
+          _elem48.appendChild(_elem49);
 
-          _elem63.appendChild(document.createTextNode('\n            '));
+          _elem48.appendChild(document.createTextNode('\n            '));
 
           var _expr5 = map,
               _res5 = _expr5 instanceof Node || _expr5 instanceof Array ? _expr5 : document.createTextNode(_expr5);
 
           if (_res5 instanceof Array) {
             for (var _i8 = 0; _i8 < _res5.length; _i8 += 1) {
-              _elem63.appendChild(_res5[_i8] instanceof Node || _res5[_i8] instanceof Array ? _res5[_i8] : document.createTextNode(_res5[_i8]));
+              _elem48.appendChild(_res5[_i8] instanceof Node || _res5[_i8] instanceof Array ? _res5[_i8] : document.createTextNode(_res5[_i8]));
             }
-          } else _elem63.appendChild(_res5);
+          } else _elem48.appendChild(_res5);
 
-          _elem63.appendChild(document.createTextNode('\n            '));
+          _elem48.appendChild(document.createTextNode('\n            '));
 
-          var _elem71 = document.createElement('div');
+          var _elem56 = document.createElement('div');
 
-          _elem71.setAttribute('class', 'map-footer');
+          _elem56.setAttribute('class', 'map-footer');
 
-          _elem71.appendChild(document.createTextNode('\n              '));
+          _elem56.appendChild(document.createTextNode('\n              '));
 
           var _expr6 = !canResetMap ? function () {
-            var _elem72 = document.createElement('span');
+            var _elem57 = document.createElement('span');
 
-            _elem72.setAttribute('class', 'map-footer-text');
+            _elem57.setAttribute('class', 'map-footer-text');
 
-            _elem72.appendChild(document.createTextNode('\n                  Click a production country to see the destination of the selected commodity\n                '));
+            _elem57.appendChild(document.createTextNode('\n                  Click a production country to see the destination of the selected commodity\n                '));
 
-            return _elem72;
+            return _elem57;
           }() : '',
               _res6 = _expr6 instanceof Node || _expr6 instanceof Array ? _expr6 : document.createTextNode(_expr6);
 
           if (_res6 instanceof Array) {
             for (var _i9 = 0; _i9 < _res6.length; _i9 += 1) {
-              _elem71.appendChild(_res6[_i9] instanceof Node || _res6[_i9] instanceof Array ? _res6[_i9] : document.createTextNode(_res6[_i9]));
+              _elem56.appendChild(_res6[_i9] instanceof Node || _res6[_i9] instanceof Array ? _res6[_i9] : document.createTextNode(_res6[_i9]));
             }
-          } else _elem71.appendChild(_res6);
+          } else _elem56.appendChild(_res6);
 
-          _elem71.appendChild(document.createTextNode('\n            '));
+          _elem56.appendChild(document.createTextNode('\n            '));
 
-          _elem63.appendChild(_elem71);
+          _elem48.appendChild(_elem56);
 
-          _elem63.appendChild(document.createTextNode('\n          '));
+          _elem48.appendChild(document.createTextNode('\n          '));
 
-          return _elem63;
+          return _elem48;
         }() : '',
             _res = _expr instanceof Node || _expr instanceof Array ? _expr : document.createTextNode(_expr);
 
         if (_res instanceof Array) {
           for (var _i10 = 0; _i10 < _res.length; _i10 += 1) {
-            _elem62.appendChild(_res[_i10] instanceof Node || _res[_i10] instanceof Array ? _res[_i10] : document.createTextNode(_res[_i10]));
+            _elem47.appendChild(_res[_i10] instanceof Node || _res[_i10] instanceof Array ? _res[_i10] : document.createTextNode(_res[_i10]));
           }
-        } else _elem62.appendChild(_res);
+        } else _elem47.appendChild(_res);
 
-        _elem62.appendChild(document.createTextNode('\n        '));
+        _elem47.appendChild(document.createTextNode('\n        '));
 
         var _expr2 = infoOpened ? function () {
-          var _elem73 = document.createElement('div');
+          var _elem58 = document.createElement('div');
 
-          _elem73.setAttribute('class', 'info-container');
+          _elem58.setAttribute('class', 'info-container');
 
-          _elem73.appendChild(document.createTextNode('\n            '));
+          _elem58.appendChild(document.createTextNode('\n            '));
 
-          var _elem74 = document.createElement('div');
+          var _elem59 = document.createElement('div');
 
-          _elem74.setAttribute('class', 'info-container-header');
+          _elem59.setAttribute('class', 'info-container-header');
 
-          _elem74.appendChild(document.createTextNode('\n              '));
+          _elem59.appendChild(document.createTextNode('\n              '));
 
-          var _elem75 = document.createElement('button');
+          var _elem60 = document.createElement('button');
 
-          _elem75.setAttribute('class', 'reset close-button');
+          _elem60.setAttribute('class', 'reset close-button');
 
-          _elem75.setAttribute('onClick', 'dispatch(\'handleCloseInfo\')');
+          _elem60.setAttribute('onClick', 'dispatch(\'handleCloseInfo\')');
 
-          _elem75.appendChild(document.createTextNode('\n              X\n              '));
+          _elem60.appendChild(document.createTextNode('\n              X\n              '));
 
-          _elem74.appendChild(_elem75);
+          _elem59.appendChild(_elem60);
 
-          _elem74.appendChild(document.createTextNode('\n            '));
+          _elem59.appendChild(document.createTextNode('\n            '));
 
-          _elem73.appendChild(_elem74);
+          _elem58.appendChild(_elem59);
 
-          _elem73.appendChild(document.createTextNode('\n            '));
+          _elem58.appendChild(document.createTextNode('\n            '));
 
           var _expr7 = commodityText,
               _res7 = _expr7 instanceof Node || _expr7 instanceof Array ? _expr7 : document.createTextNode(_expr7);
 
           if (_res7 instanceof Array) {
             for (var _i12 = 0; _i12 < _res7.length; _i12 += 1) {
-              _elem73.appendChild(_res7[_i12] instanceof Node || _res7[_i12] instanceof Array ? _res7[_i12] : document.createTextNode(_res7[_i12]));
+              _elem58.appendChild(_res7[_i12] instanceof Node || _res7[_i12] instanceof Array ? _res7[_i12] : document.createTextNode(_res7[_i12]));
             }
-          } else _elem73.appendChild(_res7);
+          } else _elem58.appendChild(_res7);
 
-          _elem73.appendChild(document.createTextNode('\n          '));
+          _elem58.appendChild(document.createTextNode('\n          '));
 
-          return _elem73;
+          return _elem58;
         }() : '',
             _res2 = _expr2 instanceof Node || _expr2 instanceof Array ? _expr2 : document.createTextNode(_expr2);
 
         if (_res2 instanceof Array) {
           for (var _i13 = 0; _i13 < _res2.length; _i13 += 1) {
-            _elem62.appendChild(_res2[_i13] instanceof Node || _res2[_i13] instanceof Array ? _res2[_i13] : document.createTextNode(_res2[_i13]));
+            _elem47.appendChild(_res2[_i13] instanceof Node || _res2[_i13] instanceof Array ? _res2[_i13] : document.createTextNode(_res2[_i13]));
           }
-        } else _elem62.appendChild(_res2);
+        } else _elem47.appendChild(_res2);
 
-        _elem62.appendChild(document.createTextNode('\n        '));
+        _elem47.appendChild(document.createTextNode('\n        '));
 
         var _expr3 = tooltip,
             _res3 = _expr3 instanceof Node || _expr3 instanceof Array ? _expr3 : document.createTextNode(_expr3);
 
         if (_res3 instanceof Array) {
           for (var _i14 = 0; _i14 < _res3.length; _i14 += 1) {
-            _elem62.appendChild(_res3[_i14] instanceof Node || _res3[_i14] instanceof Array ? _res3[_i14] : document.createTextNode(_res3[_i14]));
+            _elem47.appendChild(_res3[_i14] instanceof Node || _res3[_i14] instanceof Array ? _res3[_i14] : document.createTextNode(_res3[_i14]));
           }
-        } else _elem62.appendChild(_res3);
+        } else _elem47.appendChild(_res3);
 
-        _elem62.appendChild(document.createTextNode('\n      '));
+        _elem47.appendChild(document.createTextNode('\n      '));
 
-        return _elem62;
+        return _elem47;
       }();
     }
   }]);
