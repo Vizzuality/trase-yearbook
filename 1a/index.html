@@ -37,15 +37,14 @@
       api_key:"b13b974244c048d8baad7f6782a9cbb4",
       detectlang: function() {
         var url = window.location.href.split('/')[1];
-          if (lang == "en") {
-              return "en";
-            }else if (lang=="pt_BR"){
-               return "pt_BR";
-            }else{
-               return true;
-          }
+        if (lang == "en") {
+          return "en";
+        }else if (lang=="pt_BR"){
+          return "pt_BR";
+        }else{
+          return true;
         }
-
+      }
     };
   </script>
 </body>
