@@ -15,14 +15,25 @@
   <meta property="og:description" content="" />
   <meta property="og:image" content="https://vizzuality.github.io/trase-yearbook/6g/6g.png" />
   <title>6g</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <main>
-    <div>
-      <img src="6g.png" />
-    </div>
+    <div id="image_container" />
   </main>
 </body>
+<script>
+  const url = window.location.href;
+  const index = url.indexOf('?lang=');
+  var imageContainer = document.getElementById('image_container');
+  var image = document.createElement("img");
+  imageContainer.append(image);
+  if (index > 0) {
+    const langValue = url.substr(index + 6);
+    if (langValue.indexOf('pt_BR') == 0) {
+        image.src = '6g_portuguese.png';
+    } else {
+        image.src = '6g.png';
+    }
+  }
+</script>
 </html>
