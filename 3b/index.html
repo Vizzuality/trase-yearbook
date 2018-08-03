@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@TraseEarth">
-  <meta name="twitter:title" content="Trends in soy production in Argentina, Brazil and Paraguay" />
-	<meta name="twitter:description" content=""/>
-  <meta name="twitter:image" content="https://vizzuality.github.io/trase-yearbook/3b/3b.png" />
-  <meta property="og:url" content="https://vizzuality.github.io/trase-yearbook/3b" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Trends in soy production in Argentina, Brazil and Paraguay" />
-  <meta property="og:description" content="" />
-  <meta property="og:image" content="https://vizzuality.github.io/trase-yearbook/3b/3b.png" />
-  <title>3b</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <main>
-    <div>
-      <img src="3b.png" />
-    </div>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@TraseEarth">
+    <meta name="twitter:title" content="Trends in soy production in Argentina, Brazil and Paraguay" />
+  	<meta name="twitter:description" content=""/>
+    <meta name="twitter:image" content="https://vizzuality.github.io/trase-yearbook/3b/3b.png" />
+    <meta property="og:url" content="https://vizzuality.github.io/trase-yearbook/3b" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trends in soy production in Argentina, Brazil and Paraguay" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://vizzuality.github.io/trase-yearbook/3b/3b.png" />
+    <title>3b</title>
+  </head>
+  <body>
+    <main>
+      <div id="image_container" />
+    </main>
+  </body>
+  <script>
+    const url = window.location.href;
+    const index = url.indexOf('?lang=');
+    var imageContainer = document.getElementById('image_container');
+    var image = document.createElement("img");
+    imageContainer.append(image);
+    if (index > 0) {
+      const langValue = url.substr(index + 6);
+      if (langValue.indexOf('pt_BR') == 0) {
+          image.src = '3b_portuguese.png';
+      } else {
+          image.src = '3b.png';
+      }
+    }
+  </script>
 </html>
