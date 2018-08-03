@@ -31,9 +31,11 @@
       const langValue = url.substr(index + 6);
       if (langValue.indexOf('pt_BR') == 0) {
           image.src = '3b_portuguese.png';
-      } else {
+      } else if (langValue.indexOf('en') == 0){
           image.src = '3b.png';
       }
+    }else {
+      image.src = '3b.png';
     }
   </script>
 </html>
