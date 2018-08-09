@@ -25,16 +25,18 @@
   const index = url.indexOf('?lang=');
   var container = document.getElementById('container');
   var iframe = document.createElement("iframe");
+  iframe.frameborder = 0;
+  iframe.width = "100%";
   container.append(iframe);
   if (index > 0) {
     const langValue = url.substr(index + 6);
     if (langValue.indexOf('pt_BR') == 0) {
-        image.src = '5d_portuguese';
+        iframe.src = '5d_portuguese';
     } else if (langValue.indexOf('en') == 0) {
-        image.src = '5d';
+        iframe.src = '5d';
     }
   } else {
-    image.src = '5d';
+    iframe.src = '5d';
   }
 </script>
 </html>
