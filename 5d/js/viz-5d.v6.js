@@ -82,7 +82,7 @@ const renderMapLegend = (selector, legend1, legend2) => {
     .attr("y",d => MAX_RADIUS - d.radius - d.radius)
     .attr("dy", 2)
     .text(d => d.value < 1 ? "0.1K" : d.value < 1000000 ? (d.value/1000).toFixed(0) + "K" : (d.value/1000000).toFixed(0) + "M")
-  
+
     ////////////////////////////////
     ///////////LEGEND 2/////////////
     ////////////////////////////////
@@ -156,7 +156,7 @@ const renderMap = (selector, geojson) => {
     .append('path')
     .attr("class","municipalities")
     .attr('d', geoGenerator);
-} 
+}
 
 const updateMap = (selector, data, geojson, year, color, source) => {
   const g = d3.select(selector).select(".map-group");
@@ -198,7 +198,7 @@ const updateMap = (selector, data, geojson, year, color, source) => {
     .style("fill", d => d.color)
     .transition(t)
     .attr("r",d => d.radius)
-  
+
 }
 
 function Selector(element, select_range, default_value, source, legend, onChange) {
@@ -207,7 +207,7 @@ function Selector(element, select_range, default_value, source, legend, onChange
   this.select_range = select_range;
   this.current_value = default_value;
   this.onChange = onChange;
-  this.width = 600; 
+  this.width = 600;
   this.height = 120;
   this.legend = legend;
   this.margin = { top: 15, right: 40, bottom: 50, left: 10 };
@@ -224,7 +224,7 @@ function Selector(element, select_range, default_value, source, legend, onChange
     setTimeout(() => {
       setInterval(() => {
         if (!document.hidden && this.animation_running)
-          this.selectValue(this.current_value == this.select_range[1] ? this.select_range[0] : this.current_value + 1)  
+          this.selectValue(this.current_value == this.select_range[1] ? this.select_range[0] : this.current_value + 1)
       }, SWITCH_YEARS_ANIMATED);
     }, ANIMATION_STARTUP_DELAY);
   }
@@ -248,7 +248,7 @@ Selector.prototype.init = function() {
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    
+
   const line = g.append("line")
     .attr("class","selector-axis")
     .attr("x1", scaleX.bandwidth() / 2)
@@ -262,7 +262,7 @@ Selector.prototype.init = function() {
     .append("g")
     .attr("class", d => d == current_value ? "year-selector selected" : "year-selector")
     .attr("transform", d => `translate(${scaleX(d)},0)`);
-  
+
   selectorItem
     .append("circle")
     .attr("class", "year-selector-border")
@@ -303,7 +303,7 @@ Selector.prototype.init = function() {
 }
 
 Selector.prototype.setSource = function (source) {
-  const { svg, legend } = this; 
+  const { svg, legend } = this;
   this.source = source;
   svg.select(".aux-chart-title").text(legend[source].title);
 }
@@ -347,7 +347,7 @@ Selector.prototype.initChart = function (data, keys, colors) {
 Selector.prototype.updateChart = function (data, keys) {
   const { Yaxis, bg, g, selectorItem, scaleX, height, margin, colors, source } = this;
   const chart_height = height - margin.top - margin.bottom;
-  
+
   this.scaleY = d3.scaleLinear()
     .rangeRound([chart_height, 0])
     .domain([0, d3.max(keys, (company,i) => d3.max(Object.keys(data[i]), year => +data[i][year][source]))]).nice();
@@ -355,7 +355,7 @@ Selector.prototype.updateChart = function (data, keys) {
   const scaleY = this.scaleY;
 
   bg.select(".selector-chart-axis").transition().duration(300).call(g => this.Yaxis(g, this));
-  
+
   const x1 = d3.scaleBand()
     .domain(keys.map((d,i) => i))
     .rangeRound([0, scaleX.bandwidth()])
@@ -422,7 +422,7 @@ function MapsViz(amount, map_render, geo_data, aux_data, default_source, year_ra
 }
 
 MapsViz.prototype.init = function() {
-  for (let i = 1; i <= this.amount; ++i) 
+  for (let i = 1; i <= this.amount; ++i)
     renderMap(`${this.map_prefix}map${i}`, this.map_render);
   this.updateMaps();
 }
@@ -430,7 +430,7 @@ MapsViz.prototype.init = function() {
 MapsViz.prototype.enableLegend = function (left_range, right_range) {
   if (left_range) this.left_legend_range = left_range;
   if (right_range) this.right_legend_range = right_range;
-  for (let i = 1; i <= this.amount; ++i) 
+  for (let i = 1; i <= this.amount; ++i)
     renderMapLegend(`${this.map_prefix}map${i}`, this.left_legend_range, this.right_legend_range[this.data_source]);
 }
 
@@ -458,7 +458,7 @@ MapsViz.prototype.updateAuxData = function () {
 }
 
 MapsViz.prototype.updateMaps = function () {
-  for (let i = 1; i <= this.amount; ++i) 
+  for (let i = 1; i <= this.amount; ++i)
     updateMap(`${this.map_prefix}map${i}`, this.maps_data[i-1], this.map, this.current_selection, this.colors[i-1], this.data_source, "bubble");
 }
 
@@ -640,8 +640,8 @@ function preprocessMapJsonData(data) {
 
 (function () {
   Promise.all([
-    d3.json("br-states.json"), 
-    d3.json("risk_per_municipality.json"), 
+    d3.json("br-states.json"),
+    d3.json("risk_per_municipality.json"),
     d3.csv("risk_total.csv")
   ]).then(([border_topology, data_map, data_risk_csv]) => {
     const border = toGeoJson(border_topology, "estados");
@@ -649,23 +649,50 @@ function preprocessMapJsonData(data) {
     const { data, year_range, volume_range, absolute_risk_range, relative_risk_range } = preprocessMapJsonData(data_map);
     const viz = new MapsViz(1, border, data, data_risk, "absolute", [2006,2016], DEFAULT_SELECTION, DEFAULT_COLORS);
     fillSelectBoxes(
-      Object.keys(data_risk), 
-      ["#select-map1"], 
+      Object.keys(data_risk),
+      ["#select-map1"],
       DEFAULT_SELECTION,
       viz
     );
     startToggle(viz);
     viz.init();
+
+    // ================== Check language ===================
+    const url = window.location.href;
+    const index = url.indexOf('?lang=');
+    var titleSt = 'SOY TRADED (TON)';
+    var title1St = 'DEFORESTATION RISK (HA)';
+    var title2St = 'DEFORESTATION RISK (HA/KT)';
+    var title3St = 'ABSOLUTE DEFORESTATION RISK (HA)';
+    var title4St = 'RELATIVE DEFORESTATION RISK (HA/KT)';
+    if (index > 0) {
+      const langValue = url.substr(index + 6);
+      if (langValue.indexOf('pt_BR') == 0) {
+        titleSt = 'SOJA NEGOCIADA (TON)';
+        title1St = 'RISCO DE DESMATAMENTO (HA)';
+        title2St = 'RISCO DE DESMATAMENTO (HA/KT)';
+        title3St = 'RISCO DE DESMATAMENTO ABSOLUTO (HA)';
+        title4St = 'RISCO DE DESMATAMENTO RELATIVO (HA/KT)';
+      } else if (langValue.indexOf('en') == 0) {
+        titleSt = 'SOY TRADED (TON)';
+        title1St = 'DEFORESTATION RISK (HA)';
+        title2St = 'DEFORESTATION RISK (HA/KT)';
+        title3St = 'ABSOLUTE DEFORESTATION RISK (HA)';
+        title4St = 'RELATIVE DEFORESTATION RISK (HA/KT)';
+      }
+    }
+    // =====================================================
+
     viz.enableLegend(
-      {title: 'SOY TRADED (TON)', range: volume_range}, 
+      {title: titleSt, range: volume_range},
       {
-        absolute: {title: 'DEFORESTATION RISK (HA)', range: absolute_risk_range, unit: "HA"}, 
-        relative: {title: 'DEFORESTATION RISK (HA/KT)', range: relative_risk_range, unit: "HA/KT"}
+        absolute: {title: title1St, range: absolute_risk_range, unit: "HA"},
+        relative: {title: title2St, range: relative_risk_range, unit: "HA/KT"}
       });
-    viz.enableAuxDataChartSelector(".slider", 
+    viz.enableAuxDataChartSelector(".slider",
       {
-        absolute: {title: 'ABSOLUTE DEFORESTATION RISK (HA)', range: absolute_risk_range, unit: "HA"}, 
-        relative: {title: 'RELATIVE DEFORESTATION RISK (HA/KT)', range: relative_risk_range, unit: "HA/KT"}
+        absolute: {title: title3St, range: absolute_risk_range, unit: "HA"},
+        relative: {title: title4St, range: relative_risk_range, unit: "HA/KT"}
       });
   });
 })();
