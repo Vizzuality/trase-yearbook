@@ -18,23 +18,34 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/viz-5d.v4.css" />
 </head>
 <body>
-  <div id="container" />
+  <div id="viz-5d">
+    <div class="maps">
+      <div id="viz-5d-map1" class="map">
+        <div class="select">
+          <select name="select-map1" id="select-map1"></select>
+        </div>
+        <div class="toggle">
+          <label for="">Deforestation Risk: </label>
+          <ul>
+            <li>Absolute</li>
+            <li>
+              <input class="tgl tgl-light" id="toggle_risk" type="checkbox"/>
+              <label class="tgl-btn" for="toggle_risk"></label>
+            </li>
+            <li>Relative</li>
+          </ul>
+        </div>
+        <div class="viz"></div>
+      </div>
+    </div>
+    <div class="slider">
+
+    </div>
+  </div>
+  <script src="js/d3.v5.min.js"></script>
+  <script src="js/topojson.min.js"></script>
+  <script src="js/viz-5d.v6.js"></script>
+  <script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+  <script type="text/javascript">window.liveSettings={ api_key:"b13b974244c048d8baad7f6782a9cbb4" };</script>
 </body>
-<script>
-  const url = window.location.href;
-  const index = url.indexOf('?lang=');
-  var container = document.getElementById('container');
-  var iframe = document.createElement("iframe");
-  container.append(iframe);
-  if (index > 0) {
-    const langValue = url.substr(index + 6);
-    if (langValue.indexOf('pt_BR') == 0) {
-        image.src = '5d_portuguese';
-    } else if (langValue.indexOf('en') == 0) {
-        image.src = '5d';
-    }
-  } else {
-    image.src = '5d';
-  }
-</script>
 </html>
