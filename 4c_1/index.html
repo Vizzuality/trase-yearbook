@@ -19,9 +19,24 @@
 </head>
 <body>
   <main>
-    <div id="root">
-      <img src="4c_1.png" />
-    </div>
+    <div id="image_container" />
   </main>
 </body>
+<script>
+  const url = window.location.href;
+  const index = url.indexOf('?lang=');
+  var imageContainer = document.getElementById('image_container');
+  var image = document.createElement("img");
+  imageContainer.append(image);
+  if (index > 0) {
+    const langValue = url.substr(index + 6);
+    if (langValue.indexOf('pt_BR') == 0) {
+        image.src = '4c_1_portuguese.png';
+    } else if (langValue.indexOf('en') == 0) {
+        image.src = '4c_1.png';
+    }
+  } else {
+    image.src = '4c_1.png';
+  }
+</script>
 </html>
