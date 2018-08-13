@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: 'Decima Mono';
-  src: url('../../fonts/decimamonopro-webfont.woff2') format('woff2'),
-       url('../../fonts/decimamonopro-webfont.woff') format('woff');
+  src: url('../fonts/decimamonopro-webfont.woff2') format('woff2'),
+       url('../fonts/decimamonopro-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -177,7 +177,7 @@
   #viz-5d .slider svg {
     max-height: 100px;
   }
-} 
+}
 
 #viz-5d .toggle {
   padding-top: 10px;
